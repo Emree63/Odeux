@@ -24,5 +24,10 @@ namespace Odeux
         {
             InitializeComponent();
         }
+
+        private void Button_Connection(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

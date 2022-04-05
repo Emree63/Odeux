@@ -1,0 +1,15 @@
+C:\Users\emkartal1\Desktop\k\Odeux\bin\Debug\Odeux.exe.config
+C:\Users\emkartal1\Desktop\k\Odeux\bin\Debug\Odeux.exe
+C:\Users\emkartal1\Desktop\k\Odeux\bin\Debug\Odeux.pdb
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux.csproj.AssemblyReference.cache
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\MainWindow.g.cs
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\App.g.cs
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux_MarkupCompile.cache
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux_MarkupCompile.lref
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\MainWindow.baml
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux.g.resources
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux.Properties.Resources.resources
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux.csproj.GenerateResource.cache
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux.csproj.CoreCompileInputs.cache
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux.exe
+C:\Users\emkartal1\Desktop\k\Odeux\obj\Debug\Odeux.pdb
