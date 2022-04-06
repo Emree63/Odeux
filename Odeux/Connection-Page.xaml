@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920">
     <DockPanel >
-        <WrapPanel DockPanel.Dock="Top">
-            <Image Source="" MaxWidth="150" Margin="200"/>
+        <WrapPanel DockPanel.Dock="Top" Background="#FF999999">
+            <Image Source="UCA.png" MaxWidth="150" Margin="100"  HorizontalAlignment="Center" />
         </WrapPanel>
         <Grid>
-            <Button BorderThickness="0px" HorizontalAlignment="Center" Margin="00,381,0,0" Background="Transparent" 
+            <Button BorderThickness="0px" HorizontalAlignment="Center" Margin="00,81,0,0" Background="Transparent" 
                  VerticalAlignment="Center" Width="283" Height="52" FontSize="30" Opacity="0.8" BorderBrush="#FF33D189" Foreground="#FF39B872" Click="Button_Connection" >
                 <Grid>
                     <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="#FF979595">
@@ -19,6 +19,8 @@
                     <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF39B872"></TextBlock>
                 </Grid>
             </Button>
+            <TextBox HorizontalAlignment="Center" Height="35" Margin="25,-250,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="471"/>
+            <TextBox HorizontalAlignment="Center" Height="35" Margin="25,-150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="471"/>
         </Grid>
     </DockPanel>
 
