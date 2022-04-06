@@ -16,28 +16,13 @@ using System.Windows.Shapes;
 namespace Odeux
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Thème_affichage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Thème_affichage : UserControl
     {
-        public MainWindow()
+        public Thème_affichage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Connection(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
