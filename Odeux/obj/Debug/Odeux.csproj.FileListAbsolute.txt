@@ -41,3 +41,13 @@ C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\AideEnLigne
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Deconnexion.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\AideEnLigne.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Deconnexion.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\ConsulterLesNotes.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\ConsulterLesNotes.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Declarer.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\DernièresInfos.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Edt.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\EntrerDesNotes.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Declarer.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\DernièresInfos.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Edt.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\EntrerDesNotes.baml

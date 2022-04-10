@@ -61,8 +61,26 @@
     <Compile Include="User-Control\AideEnLigne.xaml.cs">
       <DependentUpon>AideEnLigne.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User-Control\ConsulterLesNotes.xaml.cs">
+      <DependentUpon>ConsulterLesNotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\Declarer.xaml.cs">
+      <DependentUpon>Declarer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User-Control\Deconnexion.xaml.cs">
       <DependentUpon>Deconnexion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\DernièresInfos.xaml.cs">
+      <DependentUpon>DernièresInfos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\Edt.xaml.cs">
+      <DependentUpon>Edt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\EdtProf.xaml.cs">
+      <DependentUpon>EdtProf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\EntrerDesNotes.xaml.cs">
+      <DependentUpon>EntrerDesNotes.xaml</DependentUpon>
     </Compile>
     <Compile Include="User-Control\Thème-Affichage.xaml.cs">
       <DependentUpon>Thème-Affichage.xaml</DependentUpon>
@@ -87,7 +105,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="User-Control\ConsulterLesNotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Declarer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User-Control\Deconnexion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\DernièresInfos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Edt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\EdtProf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\EntrerDesNotes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -9,7 +9,7 @@
         Title="Connection-Page" Height="1080" Width="1920">
     <DockPanel >
         <WrapPanel DockPanel.Dock="Top" Background="#FF999999">
-            <Image Source="images\UCA.png" MaxWidth="150" Margin="805,100,100,100"  HorizontalAlignment="Center" />
+            <Image Source="images\UCA.png" MaxWidth="150" Margin="805,100,100,100" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </WrapPanel>
         <Grid>
             <Button HorizontalAlignment="Center" Margin="00,81,0,0" Background="Transparent" 
