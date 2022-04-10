@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Odeux
+namespace Odeux.User_Control
 {
     /// <summary>
-    /// Logique d'interaction pour Thème_affichage.xaml
+    /// Logique d'interaction pour Thème_Affichage.xaml
     /// </summary>
-    public partial class Thème_affichage : UserControl
+    public partial class Thème_Affichage : UserControl
     {
-        public Thème_affichage()
+        public Thème_Affichage()
         {
             InitializeComponent();
         }

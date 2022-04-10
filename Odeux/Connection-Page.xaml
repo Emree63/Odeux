@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Odeux"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="Connection-Page" Height="1080" Width="1920">
     <DockPanel >
         <WrapPanel DockPanel.Dock="Top" Background="#FF999999">
             <Image Source="images\UCA.png" MaxWidth="150" Margin="805,100,100,100"  HorizontalAlignment="Center" />
@@ -19,9 +19,9 @@
                     <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF39B872"></TextBlock>
                 </Grid>
             </Button>
-            <TextBox HorizontalAlignment="Center" Text="{Binding Path=Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" CaretBrush="DimGray" Height="35"  Margin="25,-250,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" />
+            <TextBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" Text="{Binding Path=Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" CaretBrush="DimGray" Height="35"  Margin="25,-250,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" />
 
-            <PasswordBox HorizontalAlignment="Center" CaretBrush="DimGray" Height="35" Margin="25,-150,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
+            <PasswordBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" CaretBrush="DimGray" Height="35" Margin="25,-150,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
             
             <local:Thème_affichage Margin="1588,492,-50,28"/>
         </Grid>

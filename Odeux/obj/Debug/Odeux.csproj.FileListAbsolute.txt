@@ -37,3 +37,11 @@ C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.csproj.AssemblyReferenc
 C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.csproj.SuggestedBindingRedirects.cache
 C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.exe
 C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.pdb
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Aide-en-Ligne.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Deconnexion.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Aide-en-Ligne.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Deconnexion.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Page-Eleve\Accueil.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Thème-Affichage.g.cs
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Page-Eleve\Accueil.baml
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Thème-Affichage.baml

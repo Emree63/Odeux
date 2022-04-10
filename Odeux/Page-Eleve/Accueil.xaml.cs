@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Odeux
+namespace Odeux.Page_Eleve
 {
     /// <summary>
     /// Logique d'interaction pour Accueil.xaml
@@ -25,9 +25,8 @@ namespace Odeux
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           MessageBoxResult result = MessageBox.Show("Voulez-vous déclarer votre présence à tous les cours pour lesquels vous ne l'avez pas encore fait ?", " ", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            
-        }
+            MessageBoxResult result = MessageBox.Show("Voulez-vous déclarer votre présence à tous les cours pour lesquels vous ne l'avez pas encore fait ?", " ", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
+        }
     }
 }
