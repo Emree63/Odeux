@@ -33,3 +33,7 @@ C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Accueil.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Thème-affichage.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\Thème-affichage.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.exe
+C:\Users\user\source\repos\sae2.01\Odeux\obj\Debug\Odeux.pdb

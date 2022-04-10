@@ -19,9 +19,9 @@
                     <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF39B872"></TextBlock>
                 </Grid>
             </Button>
-            <TextBox HorizontalAlignment="Center" Height="35" Margin="25,-250,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" />
+            <TextBox HorizontalAlignment="Center" Text="{Binding Path=Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" CaretBrush="DimGray" Height="35"  Margin="25,-250,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" />
 
-            <PasswordBox HorizontalAlignment="Center" Height="35" Margin="25,-150,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
+            <PasswordBox HorizontalAlignment="Center" CaretBrush="DimGray" Height="35" Margin="25,-150,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
             
             <local:Thème_affichage Margin="1588,492,-50,28"/>
         </Grid>
