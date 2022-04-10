@@ -58,6 +58,12 @@
     <Compile Include="Page-Eleve\Accueil.xaml.cs">
       <DependentUpon>Accueil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User-Control\AideEnLigne.xaml.cs">
+      <DependentUpon>AideEnLigne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\Deconnexion.xaml.cs">
+      <DependentUpon>Deconnexion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User-Control\Thème-Affichage.xaml.cs">
       <DependentUpon>Thème-Affichage.xaml</DependentUpon>
     </Compile>
@@ -74,6 +80,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Page-Eleve\Accueil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\AideEnLigne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Deconnexion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

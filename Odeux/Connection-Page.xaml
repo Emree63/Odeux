@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Odeux"
+        xmlns:UserControl="clr-namespace:Odeux.User_Control"
         mc:Ignorable="d"
         Title="Connection-Page" Height="1080" Width="1920">
     <DockPanel >
@@ -23,7 +24,7 @@
 
             <PasswordBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" CaretBrush="DimGray" Height="35" Margin="25,-150,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
             
-            <local:Thème_affichage Margin="1588,492,-50,28"/>
+            <UserControl:Thème_Affichage Margin="1500,450,0,0"/>
         </Grid>
        
     </DockPanel>

@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Odeux.Page_Eleve"
+        xmlns:UserControl="clr-namespace:Odeux.User_Control"
         mc:Ignorable="d"
         Title="Accueil" Height="1080" Width="1920">
     <Grid>
         <Button Click="Button_Click_1" Content="Faire toutes les signatures manquantes" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="150"/>
+        <UserControl:Thème_Affichage Margin="1500,650,0,0"/>
+        <UserControl:Deconnexion Margin="1500,10,0,760"/>
     </Grid>
 </Window>
