@@ -1,9 +1,5 @@
 ﻿
 
-<<<<<<< HEAD
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\Accueil.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\Connection-Page.xaml;;
-=======
 FC:\Users\emkartal1\source\repos\sae2.01\Odeux\Connection-Page.xaml;;
 FC:\Users\emkartal1\source\repos\sae2.01\Odeux\Page-Eleve\Accueil.xaml;;
 FC:\Users\emkartal1\source\repos\sae2.01\Odeux\User-Control\AideEnLigne.xaml;;
@@ -14,5 +10,5 @@ FC:\Users\emkartal1\source\repos\sae2.01\Odeux\User-Control\DernièresInfos.xaml
 FC:\Users\emkartal1\source\repos\sae2.01\Odeux\User-Control\Edt.xaml;;
 FC:\Users\emkartal1\source\repos\sae2.01\Odeux\User-Control\EntrerDesNotes.xaml;;
 FC:\Users\emkartal1\source\repos\sae2.01\Odeux\User-Control\Thème-Affichage.xaml;;
->>>>>>> da8b5417d1a4a1d24b30de4a3d4960164d7e539e
+FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\User-Control\EdtProf.xaml;;
 

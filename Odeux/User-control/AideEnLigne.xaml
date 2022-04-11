@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="490">
     <Grid>
-        <Image Source="..\images\UCA.png" MaxWidth="150" Margin="0,0,0,0"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Image Source="..\images\Bouee.png" Margin="-400,0,0,0" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <Button HorizontalAlignment="Center" Margin="00,0,0,0" Background="Transparent" 
                  VerticalAlignment="Center" Width="487" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" >
             <Grid>

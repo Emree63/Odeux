@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Release\
 Odeux
 none
 false
-DEBUG;TRACE
-C:\Users\emkartal1\source\repos\sae2.01\Odeux\App.xaml
+TRACE
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\App.xaml
 11-806103600
 
-161126310419
+151968669786
 13-1505183044
 Connection-Page.xaml;Page-Eleve\Accueil.xaml;User-Control\AideEnLigne.xaml;User-Control\ConsulterLesNotes.xaml;User-Control\Declarer.xaml;User-Control\Deconnexion.xaml;User-Control\DernièresInfos.xaml;User-Control\Edt.xaml;User-Control\EdtProf.xaml;User-Control\EntrerDesNotes.xaml;User-Control\Thème-Affichage.xaml;
 

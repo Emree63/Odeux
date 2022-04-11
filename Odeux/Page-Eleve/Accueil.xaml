@@ -7,9 +7,8 @@
         xmlns:UserControl="clr-namespace:Odeux.User_Control"
         mc:Ignorable="d"
         Title="Accueil" Height="1080" Width="1920">
-    <Grid>
-        <Button Click="Button_Click_1" Content="Faire toutes les signatures manquantes" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="150"/>
+    <Grid Background="#FF999999">
+        <Button Click="Button_Click_1" Foreground="Black" Background="White" Content="Faire toutes les signatures manquantes" FontSize="20" Width="400" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-532,-222,0,0" />
         <UserControl:Thème_Affichage Margin="1500,650,0,0"/>
-        <UserControl:Deconnexion Margin="1500,10,0,760"/>
     </Grid>
 </Window>
