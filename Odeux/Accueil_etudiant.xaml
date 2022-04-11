@@ -20,7 +20,7 @@
         
         <StackPanel> <!-- Consulter les notes/ouvrir l'aide -->
             <Button>Consulter les notes</Button>
-            <Button>Ouvrir l'aide</Button>
+            <Button>Ouvrir l'aide en ligne  </Button>
         </StackPanel>
         
         <StackPanel>
@@ -36,7 +36,12 @@
         </StackPanel>
         
         <WrapPanel> <!-- Thème d'affichage -->
-            
+                
         </WrapPanel>
+
+		<ContentControl> <!-- User control Detail -->
+			
+		</ContentControl>
+	    
     </DockPanel>
 </Page>
