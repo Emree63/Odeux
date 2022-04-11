@@ -8,11 +8,35 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Template_etudiant">
 
-    <Grid>
-        <DockPanel>
-            <StackPanel Height="110" Width="110" HorizontalAlignment="Left" VerticalAlignment="Top">
-                <Image x:Name="" Width="100" Height="100" HorizontalAlignment="Left" Margin="10,10,0,0"/>
-            </StackPanel>
-        </DockPanel>
-    </Grid>
+    <DockPanel>
+        <StackPanel> <!-- bouton accueil et logo -->
+            <Button>
+                
+            </Button>
+            <Image>
+                
+            </Image>
+        </StackPanel>
+        
+        <StackPanel> <!-- Consulter les notes/ouvrir l'aide -->
+            <Button>Consulter les notes</Button>
+            <Button>Ouvrir l'aide</Button>
+        </StackPanel>
+        
+        <StackPanel>
+            <Button>
+                Se déconnecter
+            </Button>
+        </StackPanel>
+        
+        <StackPanel> <!-- déclarer présence/infos importantes/edt -->
+            <Button>Déclarer sa présence</Button>
+            <Button>Dernières informations importantes</Button>
+            <Button>Emploi du temps</Button>
+        </StackPanel>
+        
+        <WrapPanel> <!-- Thème d'affichage -->
+            
+        </WrapPanel>
+    </DockPanel>
 </Page>
