@@ -55,8 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Template_etudiant.xaml.cs">
+    <Compile Include="Page-Eleve\Template_etudiant.xaml.cs">
       <DependentUpon>Accueil_etudiant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-control\Accueil_fill_detail.xaml.cs">
+      <DependentUpon>Accueil_fill_detail.xaml</DependentUpon>
     </Compile>
     <Page Include="Accueil.xaml">
       <SubType>Designer</SubType>
@@ -74,7 +77,11 @@
       <DependentUpon>Connection-Page.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Accueil_etudiant.xaml">
+    <Page Include="Page-Eleve\Accueil_etudiant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-control\Accueil_fill_detail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
