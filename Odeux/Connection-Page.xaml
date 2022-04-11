@@ -9,21 +9,23 @@
         Title="Connection-Page" Height="1080" Width="1920">
     <DockPanel >
         <WrapPanel DockPanel.Dock="Top" Background="#FF999999">
-            <Image Source="images\UCA.png" MaxWidth="150" Margin="805,100,100,100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Image Source="images\UCA.png" MaxWidth="150" Margin="855,100,100,100" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </WrapPanel>
         <Grid>
-            <Button HorizontalAlignment="Center" Margin="00,81,0,0" Background="Transparent" 
+            <Button HorizontalAlignment="Center" Margin="00,181,0,0" Background="Transparent" 
                  VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" >
                 <Grid>
                     <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="#FF979595">
                     </Rectangle>
-                    <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF39B872"></TextBlock>
+                    <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#4acabb"></TextBlock>
                 </Grid>
             </Button>
-            <TextBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" Text="{Binding Path=Username,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" CaretBrush="DimGray" Height="35"  Margin="25,-250,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" />
+            <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Margin="00,-490,0,0"/>
+            <TextBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" CaretBrush="DimGray" Height="35"  Margin="25,-200,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" />
 
-            <PasswordBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" CaretBrush="DimGray" Height="35" Margin="25,-150,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
-            
+            <PasswordBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" CaretBrush="DimGray" Height="35" Margin="25,-100,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
+            <TextBlock Text="Identifiant :" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="34" Foreground="gray" Margin="-700,-200,0,0"/>
+            <TextBlock Text="Mot de Passe :" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="34" Foreground="gray" Margin="-700,-100,0,0"/>
             <UserControl:Thème_Affichage Margin="1500,450,0,0"/>
         </Grid>
        
