@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Page-Eleve",
+    "\\User-control"
   ],
-  "SelectedNode": "\\MainWindow.xaml",
+  "SelectedNode": "\\Connection-Page.xaml",
   "PreviewInSolutionExplorer": false
 }

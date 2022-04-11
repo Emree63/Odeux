@@ -9,12 +9,21 @@ Odeux
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\App.xaml
 395826513
 
 875805171
 13-1310406943
 Accueil.xaml;Connection-Page.xaml;Template_etudiant.xaml;
+=======
+C:\Users\emkartal1\source\repos\sae2.01\Odeux\App.xaml
+11-806103600
+
+161126310419
+13-1505183044
+Connection-Page.xaml;Page-Eleve\Accueil.xaml;User-Control\AideEnLigne.xaml;User-Control\ConsulterLesNotes.xaml;User-Control\Declarer.xaml;User-Control\Deconnexion.xaml;User-Control\DernièresInfos.xaml;User-Control\Edt.xaml;User-Control\EdtProf.xaml;User-Control\EntrerDesNotes.xaml;User-Control\Thème-Affichage.xaml;
+>>>>>>> da8b5417d1a4a1d24b30de4a3d4960164d7e539e
 
 True
 
