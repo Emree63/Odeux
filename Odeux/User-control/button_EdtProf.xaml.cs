@@ -18,7 +18,7 @@ namespace Odeux.User_Control
     /// <summary>
     /// Logique d'interaction pour EdtProf.xaml
     /// </summary>
-    public partial class EdtProf : UserControl
+    public partial class EdtProf : Window
     {
         public EdtProf()
         {

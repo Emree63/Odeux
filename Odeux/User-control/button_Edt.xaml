@@ -7,13 +7,17 @@
         mc:Ignorable="d"
         Title="Edt" Height="100" Width="400">
     <Grid>
-        <Button HorizontalAlignment="Center" Margin="00,0,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="305*"/>
+        </Grid.ColumnDefinitions>
+        <Button HorizontalAlignment="Center" Margin="52,4,52,3" Background="Transparent" 
+                 VerticalAlignment="Center" Width="288" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Grid.ColumnSpan="2" >
             <Grid>
                 <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="283" Height="52"  Fill="White">
                 </Rectangle>
                 <TextBlock Text="Emploi du temps" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="black"></TextBlock>
             </Grid>
-        </Button>    
+        </Button>
     </Grid>
 </Window>

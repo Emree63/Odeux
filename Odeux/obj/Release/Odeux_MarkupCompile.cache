@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\App.xaml
-11-806103600
+12676029296
 
-151968669786
+161982011189
 13-1505183044
-Connection-Page.xaml;Page-Eleve\Accueil.xaml;User-Control\AideEnLigne.xaml;User-Control\ConsulterLesNotes.xaml;User-Control\Declarer.xaml;User-Control\Deconnexion.xaml;User-Control\DernièresInfos.xaml;User-Control\Edt.xaml;User-Control\EdtProf.xaml;User-Control\EntrerDesNotes.xaml;User-Control\Thème-Affichage.xaml;
+Connection-Page.xaml;Page-Eleve\Accueil.xaml;User-Control\Accueil_fill_detail.xaml;User-Control\button_AideEnLigne.xaml;User-Control\button_ConsulterLesNotes.xaml;User-Control\button_Declarer.xaml;User-Control\button_Deconnexion.xaml;User-Control\button_DernièresInfos.xaml;User-Control\button_Edt.xaml;User-Control\button_EdtProf.xaml;User-Control\button_EntrerDesNotes.xaml;User-Control\button_Thème-Affichage.xaml;
 
 True
 

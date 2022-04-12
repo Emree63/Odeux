@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Odeux.User_Control"
         mc:Ignorable="d"
-        Title="Edt" Height="100" Width="400">
+        Title="EdtProf" Height="100" Width="400">
     <Grid>
         <Button HorizontalAlignment="Center" Margin="00,0,0,0" Background="Transparent" 
                  VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" >
