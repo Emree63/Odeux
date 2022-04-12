@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Odeux.Page_Eleve;
 
 namespace Odeux
 {
@@ -27,7 +28,9 @@ namespace Odeux
 
         private void Button_Connection(object sender, RoutedEventArgs e)
         {
-
+            Accueil win = new Accueil();
+            win.Show();
+            this.Close();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

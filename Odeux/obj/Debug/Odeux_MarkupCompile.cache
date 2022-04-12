@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\
 Odeux
 none
 false
 DEBUG;TRACE
-C:\Users\emkartal1\source\repos\sae2.01\Odeux\App.xaml
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\App.xaml
 12676029296
 
-171139651822
+161982011189
 13-1505183044
 Connection-Page.xaml;Page-Eleve\Accueil.xaml;User-Control\Accueil_fill_detail.xaml;User-Control\button_AideEnLigne.xaml;User-Control\button_ConsulterLesNotes.xaml;User-Control\button_Declarer.xaml;User-Control\button_Deconnexion.xaml;User-Control\button_DernièresInfos.xaml;User-Control\button_Edt.xaml;User-Control\button_EdtProf.xaml;User-Control\button_EntrerDesNotes.xaml;User-Control\button_Thème-Affichage.xaml;
 
-True
+False
 

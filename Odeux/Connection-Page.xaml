@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="Connection-Page" Height="1080" Width="1920">
     <DockPanel >
-        <WrapPanel DockPanel.Dock="Top" Background="#424549">
-            <Image Source="images\UCA.png" MaxWidth="150" Margin="855,100,100,100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <WrapPanel DockPanel.Dock="Top" Background="#178F96">
+            <Image Source="images\Logo-Odeux.png" MaxWidth="150" Margin="855,100,100,100" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </WrapPanel>
         <Grid>
             <Image Source="images\Fond.png" Width="2200" Margin="-684,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="694" />
