@@ -10,21 +10,19 @@
       Title="Template_etudiant">
 
     <DockPanel>
-        <StackPanel>
+        <!-- Boutons du haut -->
+        <Grid DockPanel.Dock="Top">
             <!-- bouton accueil et logo -->
             <Button/>
             <Image/>
-        </StackPanel>
 
-        <StackPanel>
             <!-- Consulter les notes/ouvrir l'aide -->
             <Button Content="Consulter les notes"/>
             <Button Content="Ouvrir l'aide en ligne"/>
-        </StackPanel>
-
-        <StackPanel>
+            
+            <!--  -->
             <Button Content="Se déconnecter"/>
-        </StackPanel>
+        </Grid>
 
         <StackPanel>
             <!-- déclarer présence/infos importantes/edt -->
