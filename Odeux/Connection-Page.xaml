@@ -12,7 +12,7 @@
             <Image Source="images\Logo-Odeux.png" MaxWidth="450" Margin="755,-40,0,-110" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </WrapPanel>
         <Grid>
-            <Image Source="images\Fond.png" Width="2200" Margin="-684,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="694" />
+            <Image Source="images\Fond.png" Width="2200" Margin="-1184,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="694" />
             <Button HorizontalAlignment="Center" Margin="00,181,0,0" Background="Transparent" 
                  VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" >
                 <Grid>
