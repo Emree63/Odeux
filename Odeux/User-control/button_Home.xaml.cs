@@ -12,17 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Odeux.Page_Eleve;
 
 namespace Odeux.User_Control
 {
     /// <summary>
-    /// Logique d'interaction pour EdtProf.xaml
+    /// Logique d'interaction pour button_Home.xaml
     /// </summary>
-    public partial class EdtProf : Window
+    public partial class button_Home : UserControl
     {
-        public EdtProf()
-        {
-            InitializeComponent();
-        }
+
     }
 }

@@ -8,9 +8,9 @@
              d:DesignHeight="100" d:DesignWidth="400">
     <Grid>
         <Button HorizontalAlignment="Center" Margin="00,0,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" >
+                 VerticalAlignment="Center" Width="387" Height="82" FontSize="30" Opacity="0.8" BorderBrush="Transparent" >
             <Grid>
-                <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="283" Height="52"  Fill="White">
+                <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="383" Height="72"  Fill="White">
                 </Rectangle>
                 <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="black"></TextBlock>
             </Grid>

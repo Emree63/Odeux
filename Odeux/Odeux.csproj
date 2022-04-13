@@ -79,11 +79,11 @@
     <Compile Include="User-Control\button_Edt.xaml.cs">
       <DependentUpon>button_Edt.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User-Control\button_EdtProf.xaml.cs">
-      <DependentUpon>button_EdtProf.xaml</DependentUpon>
-    </Compile>
     <Compile Include="User-Control\button_EntrerDesNotes.xaml.cs">
       <DependentUpon>button_EntrerDesNotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\button_Home.xaml.cs">
+      <DependentUpon>button_Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="User-Control\button_Thème-Affichage.xaml.cs">
       <DependentUpon>button_Thème-Affichage.xaml</DependentUpon>
@@ -132,11 +132,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="User-Control\button_EdtProf.xaml">
+    <Page Include="User-Control\button_EntrerDesNotes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="User-Control\button_EntrerDesNotes.xaml">
+    <Page Include="User-Control\button_Home.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,6 +182,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Logo-Odeux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
