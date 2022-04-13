@@ -9,7 +9,7 @@
         Title="Connection-Page" Height="1080" Width="1920">
     <DockPanel >
         <WrapPanel DockPanel.Dock="Top" Background="#178F96">
-            <Image Source="images\Logo-Odeux.png" MaxWidth="150" Margin="855,100,100,100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Image Source="images\Logo-Odeux.png" MaxWidth="450" Margin="755,-40,0,-110" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </WrapPanel>
         <Grid>
             <Image Source="images\Fond.png" Width="2200" Margin="-684,10,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="694" />
