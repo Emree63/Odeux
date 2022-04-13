@@ -42,7 +42,6 @@ C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Decl
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Deconnexion.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_DernièresInfos.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Edt.g.cs
-C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_EdtProf.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_EntrerDesNotes.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Thème-Affichage.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_ConsulterLesNotes.baml
@@ -50,8 +49,9 @@ C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Decl
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Deconnexion.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_DernièresInfos.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Edt.baml
-C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_EdtProf.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_EntrerDesNotes.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\button_Thème-Affichage.baml
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Accueil_fill_detail.g.cs
 C:\Users\emkartal1\source\repos\sae2.01\Odeux\obj\Debug\User-Control\Accueil_fill_detail.baml
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\button_Home.g.cs
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\button_Home.baml

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Odeux.User_Control
 {
     /// <summary>
-    /// Logique d'interaction pour DernièresInfos.xaml
+    /// Logique d'interaction pour button_DernièresInfos.xaml
     /// </summary>
-    public partial class DernièresInfos : Page
+    public partial class button_DernièresInfos : UserControl
     {
-        public DernièresInfos()
+        public button_DernièresInfos()
         {
             InitializeComponent();
         }
