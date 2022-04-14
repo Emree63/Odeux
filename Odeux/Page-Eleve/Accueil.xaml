@@ -8,7 +8,7 @@
         xmlns:User_control="clr-namespace:Odeux.User_control" x:Class="Odeux.Page_Eleve.Accueil"
         mc:Ignorable="d"
         Title="Accueil" Height="1080" Width="1920">
-    <Grid Background="#282b30">
+    <Grid Background="#033243">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"/>
@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -28,7 +28,7 @@
         <Image Source="..\images\Logo-Odeux.png" MaxWidth="450" Margin="0,0,0,-110" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
 
         <UserControl:button_Home Margin="-300,-150,0,0"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" />
-        <UserControl:Declarer HorizontalAlignment="Center" Height="104" Margin="0,-410,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Width="462"/>
+        <UserControl:Declarer HorizontalAlignment="Center" Height="104" Margin="0,-410,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Width="462" Loaded="Declarer_Loaded"/>
         <UserControl:button_DernièresInfos HorizontalAlignment="Center" Height="104" Margin="0,-100,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Width="462"/>
         <UserControl:button_Edt HorizontalAlignment="Center" Height="104" Margin="0,250,0,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Width="462"/>
         <UserControl:ConsulterLesNotes HorizontalAlignment="Center" Height="104" Margin="-1000,0,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="462"/>

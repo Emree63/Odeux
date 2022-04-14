@@ -1,0 +1,37 @@
+Dans ce fichier, on indique toutes les couleurs avec leur code des 3 différents thèmes d'affichage, et aussi tous les éléments importants de la charte graphique comme par exemple les marges ou les rayons des bords arrondis.
+
+
+------------------------------------
+COULEURS
+------------------------------------
+
+background :
+	sombre : #033243 (à tester)
+	clair : #EBF9FE (à tester)
+	oled : #000000
+
+background (1 plan plus près) :
+	sombre : #066A91
+	clair : à déterminer
+	oled : à déterminer
+
+police d'écriture :
+	sombre : #F1FBFE
+	clair : à déterminer
+	oled : #F1FBFE ou à déterminer
+
+line break :
+	sombre : 
+boutons :
+	sombre : 
+	clair : 
+	oled : 
+
+
+------------------------------------
+AUTRES
+------------------------------------
+
+CornerRadius/RadiusX/RadiusY :
+	15
+

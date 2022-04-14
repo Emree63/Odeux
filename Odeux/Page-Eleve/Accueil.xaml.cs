@@ -28,5 +28,10 @@ namespace Odeux.Page_Eleve
             MessageBoxResult result = MessageBox.Show("Voulez-vous déclarer votre présence à tous les cours pour lesquels vous ne l'avez pas encore fait ?", " ", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
         }
+
+        private void Declarer_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
