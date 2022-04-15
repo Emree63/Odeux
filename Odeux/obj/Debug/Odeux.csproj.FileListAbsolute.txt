@@ -88,3 +88,4 @@ C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\Page-Prof\Accueil.g.cs
 C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\DéclarerVotrePrésence.g.cs
 C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\Page-Prof\Accueil.baml
 C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\DéclarerVotrePrésence.baml
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\App.baml

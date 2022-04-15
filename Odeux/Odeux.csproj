@@ -163,10 +163,10 @@
     <Resource Include="Images\Logo-Odeux.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Fond.jpg" />
+    <Resource Include="Images\Icon2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Icon2.png" />
+    <Resource Include="Images\Fond.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

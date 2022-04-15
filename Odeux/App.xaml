@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Odeux"
              StartupUri="Connection-Page.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush Color="#033243" x:Key="BackgroundColor"/>
     </Application.Resources>
 </Application>

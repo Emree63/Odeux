@@ -9,8 +9,21 @@
         xmlns:User_control="clr-namespace:Odeux.User_control" x:Class="Odeux.Page_Eleve.Accueil"
         mc:Ignorable="d"
         Title="Accueil" Height="1080" Width="1920">
-    <Grid Background="#033243">
-
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    </Window.Resources>
+    
+    <Grid Background="{DynamicResource BackgroundColor}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"/>
             <ColumnDefinition/>
@@ -74,9 +87,8 @@
             </Grid>
         </Button>
 
-
         <UserControl:AideEnLigne HorizontalAlignment="Center" Height="104" Margin="0,0,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="562"/>
-        <UserControl:Deconnexion HorizontalAlignment="Center" Height="104" Margin="1000,-100,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="362"/>
+        <UserControl:Deconnexion HorizontalAlignment="Center" Height="104" Margin="1000,-50,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="362"/>
         <UserControl:Thème_Affichage HorizontalAlignment="Center" Height="104" Margin="1000,650,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
 
     </Grid>
