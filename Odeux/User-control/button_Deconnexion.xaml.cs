@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Odeux;
+using Odeux.Page_Eleve;
 
 namespace Odeux.User_Control
 {
@@ -24,5 +26,15 @@ namespace Odeux.User_Control
         {
             InitializeComponent();
         }
+        private void Deco(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Deconnexion", "Voulez-vous vraiment vous déconnecter", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            { 
+                Odeux.MainWindow win = new Odeux.MainWindow();
+                win.Show();
+            }
+        }
+
     }
 }
