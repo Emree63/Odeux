@@ -23,6 +23,28 @@ namespace Odeux.User_Control
         public Thème_Affichage()
         {
             InitializeComponent();
+            Clair.Height = 0;
+            Sombre.Height = 22;
+            Oled.Height = 0;
         }
+        private void Clair_button(object sender, RoutedEventArgs e)
+        {
+            Clair.Height = 22;
+            Sombre.Height = 0;
+            Oled.Height = 0;
+        }
+        private void Sombre_button(object sender, RoutedEventArgs e)
+        {
+            Clair.Height = 0;
+            Sombre.Height = 22;
+            Oled.Height = 0;
+        }
+        private void Oled_button(object sender, RoutedEventArgs e)
+        {
+            Clair.Height = 0;
+            Sombre.Height = 0;
+            Oled.Height = 22;
+        }
+
     }
 }

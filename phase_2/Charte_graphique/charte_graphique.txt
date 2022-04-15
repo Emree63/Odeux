@@ -35,3 +35,9 @@ AUTRES
 CornerRadius/RadiusX/RadiusY :
 	15
 
+Pour le style:
+
+- Mettre dans la page Consulter note(Prof): Treeview
+- Mettre dans la page Entrer des notes(Prof): ProgressBar (barre de chargement)
+
+
