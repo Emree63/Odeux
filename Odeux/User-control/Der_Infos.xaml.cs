@@ -16,17 +16,13 @@ using System.Windows.Shapes;
 namespace Odeux.User_Control
 {
     /// <summary>
-    /// Logique d'interaction pour AideEnLigne.xaml
+    /// Logique d'interaction pour Der_Infos.xaml
     /// </summary>
-    public partial class AideEnLigne : UserControl
+    public partial class Der_Infos : UserControl
     {
-        public AideEnLigne()
+        public Der_Infos()
         {
             InitializeComponent();
-        }
-        private void Aide(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29");
         }
     }
 }

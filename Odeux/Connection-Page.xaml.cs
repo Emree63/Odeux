@@ -23,9 +23,12 @@ namespace Odeux
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private int Clickedtimes;
         public MainWindow()
         {
             InitializeComponent();
+            Clickedtimes = 0;
         }
 
         private void Button_Connection(object sender, RoutedEventArgs e)
@@ -91,7 +94,19 @@ namespace Odeux
             translateTransform.BeginAnimation(TranslateTransform3D.OffsetXProperty, translateAnimation[0]);
             translateTransform.BeginAnimation(TranslateTransform3D.OffsetYProperty, translateAnimation[1]);
             translateTransform.BeginAnimation(TranslateTransform3D.OffsetZProperty, translateAnimation[2]);
+            Clickedtimes++;
+            MainLabel.Content = Clickedtimes;
+            if(Clickedtimes>99)
+            {
+                MainLabel.Content = "Congratulation";
+                Clickedtimes = 0;
+            }
+        }
 
+        private void Aide(object sender, EventArgs e)
+        { 
+            System.Diagnostics.Process.Start("https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29");
+            this.Close();
         }
 
     }

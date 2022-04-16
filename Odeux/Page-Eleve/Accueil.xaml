@@ -44,9 +44,9 @@
         <Button HorizontalAlignment="Center" Background="Transparent" 
                  VerticalAlignment="Center" Width="388" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent"  Margin="0,250,0,0" Grid.Row="1" Grid.Column="0" >
             <Grid>
-                <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="383" Height="52"  Fill="White">
+                <Rectangle RadiusX="15" RadiusY="15" Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
-                <TextBlock Text="Emploi du temps" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="black"></TextBlock>
+                <TextBlock Text="Emploi du temps" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>
 
@@ -58,11 +58,11 @@
         </Button>
 
         <Button HorizontalAlignment="Center" Margin="0,-110,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="387" Height="112" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0">
+                 VerticalAlignment="Center" Width="387" Height="112" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0" Click="Der_Infos">
             <Grid>
-                <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="383" Height="102"  Fill="White">
+                <Rectangle RadiusX="15" RadiusY="15" Width="383" Height="102"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="black">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
                     Dernières Informations<LineBreak/>importantes
                 </TextBlock>
             </Grid>
@@ -72,18 +72,18 @@
         <Button HorizontalAlignment="Center" Margin="00,-410,0,0" Background="Transparent" 
                  VerticalAlignment="Center" Width="381" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Click="Declarer_Loaded" Grid.Row="1" Grid.Column="0" >
             <Grid>
-                <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="375" Height="52"  Fill="White">
+                <Rectangle RadiusX="15" RadiusY="15" Width="375" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
-                <TextBlock Text="Déclarer votre présence" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="black"></TextBlock>
+                <TextBlock Text="Déclarer votre présence" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>
 
         <Button HorizontalAlignment="Center" Margin="-1000,0,0,0" Background="Transparent" 
                  VerticalAlignment="Center" Width="387" Height="82" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Grid.Row="0" Grid.Column="1">
             <Grid>
-                <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="383" Height="72"  Fill="White">
+                <Rectangle RadiusX="15" RadiusY="15" Width="383" Height="72" Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
-                <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="black"></TextBlock>
+                <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"></TextBlock>
             </Grid>
         </Button>
 

@@ -12,7 +12,7 @@
             <Grid>
                 <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="Black">
                 </Rectangle>
-                <TextBlock Text="Se Déconnecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                <TextBlock Text="Se Déconnecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>
     </Grid>

@@ -39,5 +39,10 @@ namespace Odeux.Page_Eleve
             contentControl.Content = new User_control.Accueil_fill_detail();
         }
 
+        private void Der_Infos(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new Der_Infos();
+        }
+
     }
 }
