@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Odeux.User_Control;
 
 namespace Odeux.Page_Eleve
 {
@@ -31,7 +32,17 @@ namespace Odeux.Page_Eleve
 
         private void Declarer_Loaded(object sender, RoutedEventArgs e)
         {
-
+            contentControl.Content = new DéclarerVotrePrésence();
         }
+        private void Home(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new User_control.Accueil_fill_detail();
+        }
+
+        private void Der_Infos(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new Der_Infos();
+        }
+
     }
 }

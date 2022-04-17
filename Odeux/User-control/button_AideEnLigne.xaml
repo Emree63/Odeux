@@ -11,11 +11,11 @@
         <Image Source="..\images\Bouee.png" Margin="-400,0,0,0" Width="40" HorizontalAlignment="Center" VerticalAlignment="Center" />
         
         <Button HorizontalAlignment="Center" Margin="00,0,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="487" Height="68" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" >
+                 VerticalAlignment="Center" Width="487" Height="68" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" Click="Aide">
             <Grid>
                 <Rectangle  RadiusX="15" RadiusY="15" Width="483" Height="62" Fill="#4E5761">
                 </Rectangle>
-                <TextBlock Text="Ouvrir l'aide en ligne" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                <TextBlock Text="Ouvrir l'aide en ligne" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>
         

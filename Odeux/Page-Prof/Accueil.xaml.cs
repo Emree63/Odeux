@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Odeux.User_Control
+namespace Odeux.Page_Prof
 {
     /// <summary>
-    /// Logique d'interaction pour Declarer.xaml
+    /// Logique d'interaction pour Accueil.xaml
     /// </summary>
-    public partial class Declarer : UserControl
+    public partial class Accueil : Window
     {
-        public Declarer()
+        public Accueil()
         {
             InitializeComponent();
         }

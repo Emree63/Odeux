@@ -24,5 +24,9 @@ namespace Odeux.User_Control
         {
             InitializeComponent();
         }
+        private void Aide(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29");
+        }
     }
 }

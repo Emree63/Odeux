@@ -58,35 +58,29 @@
     <Compile Include="Page-Eleve\Accueil.xaml.cs">
       <DependentUpon>Accueil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page-Prof\Accueil.xaml.cs">
+      <DependentUpon>Accueil.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User-Control\Accueil_fill_detail.xaml.cs">
       <DependentUpon>Accueil_fill_detail.xaml</DependentUpon>
     </Compile>
     <Compile Include="User-Control\button_AideEnLigne.xaml.cs">
       <DependentUpon>button_AideEnLigne.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User-Control\button_ConsulterLesNotes.xaml.cs">
-      <DependentUpon>button_ConsulterLesNotes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="User-Control\button_Declarer.xaml.cs">
-      <DependentUpon>button_Declarer.xaml</DependentUpon>
-    </Compile>
     <Compile Include="User-Control\button_Deconnexion.xaml.cs">
       <DependentUpon>button_Deconnexion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="User-Control\button_DernièresInfos.xaml.cs">
-      <DependentUpon>button_DernièresInfos.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="User-Control\button_Edt.xaml.cs">
-      <DependentUpon>button_Edt.xaml</DependentUpon>
     </Compile>
     <Compile Include="User-Control\button_EntrerDesNotes.xaml.cs">
       <DependentUpon>button_EntrerDesNotes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="User-Control\button_Home.xaml.cs">
-      <DependentUpon>button_Home.xaml</DependentUpon>
-    </Compile>
     <Compile Include="User-Control\button_Thème-Affichage.xaml.cs">
       <DependentUpon>button_Thème-Affichage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\Der_Infos.xaml.cs">
+      <DependentUpon>Der_Infos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\DéclarerVotrePrésence.xaml.cs">
+      <DependentUpon>DéclarerVotrePrésence.xaml</DependentUpon>
     </Compile>
     <Page Include="Connection-Page.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page-Prof\Accueil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User-Control\Accueil_fill_detail.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -112,23 +110,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="User-Control\button_ConsulterLesNotes.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="User-Control\button_Declarer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="User-Control\button_Deconnexion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="User-Control\button_DernièresInfos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="User-Control\button_Edt.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,11 +118,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="User-Control\button_Home.xaml">
+    <Page Include="User-Control\button_Thème-Affichage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="User-Control\button_Thème-Affichage.xaml">
+    <Page Include="User-Control\Der_Infos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\DéclarerVotrePrésence.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,7 +158,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Page-Prof\" />
+    <Resource Include="Images\Icon1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Bouee.png" />
@@ -181,10 +167,13 @@
     <Resource Include="Images\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Fond.png" />
+    <Resource Include="Images\Logo-Odeux.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Logo-Odeux.png" />
+    <Resource Include="Images\Icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Fond.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

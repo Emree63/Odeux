@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Odeux.User_Control
 {
     /// <summary>
-    /// Logique d'interaction pour button_Edt.xaml
+    /// Logique d'interaction pour Der_Infos.xaml
     /// </summary>
-    public partial class button_Edt : UserControl
+    public partial class Der_Infos : UserControl
     {
-        public button_Edt()
+        public Der_Infos()
         {
             InitializeComponent();
         }

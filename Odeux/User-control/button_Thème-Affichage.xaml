@@ -5,10 +5,45 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control"
              mc:Ignorable="d" 
-             d:DesignHeight="150" d:DesignWidth="280">
+             d:DesignHeight="90" d:DesignWidth="250">
     <Grid>
-        <Button Content="Clair" Height="70" VerticalAlignment="Center" HorizontalAlignment="Center" Width="75" Margin="92,0,0,00"/>
-        <Button Content="Sombre" Height="70" VerticalAlignment="Center" HorizontalAlignment="Center" Width="75" Margin="-52,0,0,00"/>
-        <Button Content="Noir" Height="70" VerticalAlignment="Center" HorizontalAlignment="Center" Width="75" Margin="-200,0,0,00"/>
+
+        <Button HorizontalAlignment="Center" Background="Transparent" 
+                 VerticalAlignment="Center" Width="50" Height="50" Opacity="0.8" BorderBrush="Transparent"  Margin="-130,20,0,0" Click="Clair_button" >
+            <Grid>
+                <Rectangle Stroke="#178F96" RadiusX="360" RadiusY="360" Width="46" Height="46" />
+            </Grid>
+        </Button>
+
+        <TextBlock Text="Clair" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Margin="-130,-51,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+        
+        <Button HorizontalAlignment="Center" Background="Transparent" 
+                 VerticalAlignment="Center" Width="50" Height="50" Opacity="0.8" BorderBrush="Transparent"  Margin="0,20,0,0" Click="Sombre_button">
+            <Grid>
+                <Rectangle Stroke="#178F96" RadiusX="360" RadiusY="360" Width="46" Height="46" />
+            </Grid>
+        </Button>
+
+
+        <TextBlock Text="Sombre" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Margin="0,-50,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+
+
+        <Button HorizontalAlignment="Center" Background="Transparent" 
+                 VerticalAlignment="Center" Width="50" Height="50" Opacity="0.8" BorderBrush="Transparent"  Margin="130,20,0,0" Click="Oled_button">
+            <Grid>
+                <Rectangle Stroke="#178F96" RadiusX="360" RadiusY="360" Width="46" Height="46"/>
+
+            </Grid>
+        </Button>
+
+
+        <TextBlock Text="Oled" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Margin="130,-51,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+        
+        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Margin="-130,21,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Clair"/>
+
+        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Margin="0,21,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Sombre"/>
+
+        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Margin="130,21,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Oled"/>
+
     </Grid>
 </UserControl>

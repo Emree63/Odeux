@@ -10,19 +10,54 @@ background :
 	clair : #EBF9FE (à tester)
 	oled : #000000
 
+background (hover) :
+	sombre : #95DFFB
+	clair : #023346
+	oled : #95DFFB
+
 background (1 plan plus près) :
 	sombre : #066A91
-	clair : à déterminer
-	oled : à déterminer
+	clair : #C6EEFD
+	oled : #032C3A
+
+background (1 plans plus près, hover) :
+	sombre : #0AA4DE
+	clair : #05749E
+	oled : #0A8EBA
 
 police d'écriture :
 	sombre : #F1FBFE
-	clair : à déterminer
+	clair : #021B22
 	oled : #F1FBFE ou à déterminer
+
+police d'écriture (hover) :
+	sombre : #021B22
+	clair : #F1FBFE
+	oled : #021B22
+
+background bouton ouvrir l'aide en ligne :
+	#EA5211
+
+background bouton ouvrir l'aide en ligne (hover) : 
+	##812E0A
+
+police d'écriture bouton ouvrir l'aide en ligne :
+	#FFFFFF
+
+police d'écriture bouton ouvrir l'aide en ligne (hover) :
+	#010101
+
+bouton home :
+	sombre : #F5F4FD
+	clair : #353535
+	oled : #F5F4FD
 
 line break :
 	sombre : 
-boutons :
+	clair : #F5F4FD
+	sombre : #353535
+	oled : #F5F4FD
+boutons (hover) :
 	sombre : 
 	clair : 
 	oled : 
@@ -34,4 +69,10 @@ AUTRES
 
 CornerRadius/RadiusX/RadiusY :
 	15
+
+Pour le style:
+
+- Mettre dans la page Consulter note(Prof): Treeview
+- Mettre dans la page Entrer des notes(Prof): ProgressBar (barre de chargement)
+
 
