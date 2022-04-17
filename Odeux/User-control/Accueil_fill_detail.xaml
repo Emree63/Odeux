@@ -35,7 +35,7 @@
         <Grid.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="FontSize" Value="30" />
-                <Setter Property="Foreground" Value="#F1FBFE" />
+                <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
                 <Setter Property="TextWrapping" Value="Wrap"/>
             </Style>
             <Style TargetType="Rectangle">

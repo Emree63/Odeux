@@ -15,5 +15,6 @@
                 <TextBlock Text="Se Déconnecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>
+
     </Grid>
 </UserControl>

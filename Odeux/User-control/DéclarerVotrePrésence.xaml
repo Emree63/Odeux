@@ -8,7 +8,7 @@
              d:DesignHeight="750" d:DesignWidth="1000">
     <Grid>
         <Grid Margin="20,20,100,100">
-            <Border BorderBrush="White" BorderThickness="3"/>
+            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3"/>
             <ScrollBar Background="Transparent" HorizontalAlignment="Right" BorderBrush="#FF178F96" Cursor="Hand"/>
             <Grid.RowDefinitions>
                 <RowDefinition/>
