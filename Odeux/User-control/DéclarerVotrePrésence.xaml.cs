@@ -23,6 +23,14 @@ namespace Odeux.User_Control
         public DéclarerVotrePrésence()
         {
             InitializeComponent();
+
+            List<Presence> LesPresence = new List<Presence>()
+            {
+                new Presence{date = new DateTime(2022,03,25), Matiere = "Math", groupe=3, Salle="A13", Intervenant = "Marc"},
+                new Presence{date = new DateTime(2022,03,26), Matiere = "Anglais", groupe=3, Salle="B18", Intervenant = "Astier"},
+            };
+
+            ListBox.ItemsSource = LesPresence;
         }
     }
 }

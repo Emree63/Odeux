@@ -61,6 +61,7 @@
     <Compile Include="Page-Prof\Accueil.xaml.cs">
       <DependentUpon>Accueil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presence.cs" />
     <Compile Include="User-Control\Accueil_fill_detail.xaml.cs">
       <DependentUpon>Accueil_fill_detail.xaml</DependentUpon>
     </Compile>

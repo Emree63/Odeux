@@ -9,14 +9,21 @@
     <Grid>
 
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,100,100">
-            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" Width="1375" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Height="627">
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,20,0,0" Width="900">
-                    <StackPanel>
-                        <Label Foreground="Red" Content="&#x9;&#x9;Le 25/03/2022 de 13h30 à 15h30" FontSize="25"/>
-                        <Label Foreground="{DynamicResource TextColor}" Content="&#x9;&#x9;&#x9;&#x9;R2.01: Math &#xA;&#x9;&#x9;&#x9;&#x9;groupe : 3 &#xA;&#x9;&#x9;&#x9;&#x9;salle : a18 &#xA;&#x9;&#x9;&#x9;       Intervenant : Marc" FontSize="20"/>
-                    </StackPanel>
-                </Border>
-                <Button Content="Déclarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Cursor="Hand"/>
+            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" Width="1375" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="Transparent" Height="627" x:Name="ListBox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,20,0,0" Width="900">
+                            <StackPanel>
+                                <Label Foreground="Red" Content="&#x9;&#x9;Le 25/03/{Binding date.year} de 13h30 à 15h30" FontSize="25"/>
+                                <Label Foreground="{DynamicResource TextColor}" Content="&#x9;&#x9;&#x9;&#x9;R2.01: Math &#xA;&#x9;&#x9;&#x9;&#x9;groupe : 3 &#xA;&#x9;&#x9;&#x9;&#x9;salle : a18 &#xA;&#x9;&#x9;&#x9;       Intervenant : Marc" FontSize="20"/>
+                            </StackPanel>
+                            </Border>
+                        <Button Content="Déclarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Cursor="Hand"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
                 
             </ListBox>
         </Border>
