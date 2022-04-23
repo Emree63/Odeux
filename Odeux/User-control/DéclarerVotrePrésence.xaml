@@ -15,9 +15,25 @@
                         <StackPanel>
                             <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,20,0,0" Width="900">
                             <StackPanel>
-                                <Label Foreground="Red" Content="&#x9;&#x9;Le 25/03/{Binding date.year} de 13h30 à 15h30" FontSize="25"/>
-                                <Label Foreground="{DynamicResource TextColor}" Content="&#x9;&#x9;&#x9;&#x9;R2.01: Math &#xA;&#x9;&#x9;&#x9;&#x9;groupe : 3 &#xA;&#x9;&#x9;&#x9;&#x9;salle : a18 &#xA;&#x9;&#x9;&#x9;       Intervenant : Marc" FontSize="20"/>
-                            </StackPanel>
+                                <TextBlock Foreground="Red" FontSize="25">
+                                    <Run Text="&#x9;&#x9;Le "/>
+                                    <Run Text="{Binding dateCour.Day}"/>
+                                    <Run Text="/"/>
+                                    <Run Text="{Binding dateCour.Month}"/>
+                                    <Run Text="/"/>
+                                    <Run Text="{Binding dateCour.Year}"/>
+                                </TextBlock>
+                                    <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20">
+                                    <Run Text="&#x9;&#x9;&#x9;&#x9;"/>
+                                    <Run Text="{Binding Matiere}"/>
+                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; groupe : "/>
+                                    <Run Text="{Binding groupe}"/>
+                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9;"/>
+                                    <Run Text="{Binding Salle}"/>
+                                    <Run Text="&#xA;&#x9;&#x9;&#x9;         Intervenant : "/>
+                                    <Run Text="{Binding Intervenant}"/>
+                                </TextBlock>
+                                </StackPanel>
                             </Border>
                         <Button Content="Déclarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Cursor="Hand"/>
                         </StackPanel>

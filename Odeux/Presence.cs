@@ -8,7 +8,7 @@ namespace Odeux
 {
     class Presence
     {
-        public DateTime date { get; set; }
+        public DateTime dateCour { get; set; }
 
         public string Matiere { get; set; }
 
@@ -20,7 +20,7 @@ namespace Odeux
 
         public override string ToString()
         {
-            return $"{date}";
+            return $"{dateCour}";
         }
 
     }
