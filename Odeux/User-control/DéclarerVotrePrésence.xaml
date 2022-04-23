@@ -5,33 +5,33 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control"
              mc:Ignorable="d" 
-             d:DesignHeight="750" d:DesignWidth="1000">
+             d:DesignHeight="750" d:DesignWidth="1500">
     <Grid>
-        <Grid Margin="20,20,100,100">
-            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3"/>
-            <ScrollBar Background="Transparent" HorizontalAlignment="Right" BorderBrush="#FF178F96" Cursor="Hand"/>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-        </Grid>
 
-        <Button Content="Déclarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Margin="600,-500,0,0" Grid.Row="0" Cursor="Hand"/>
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,100,100">
+            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" Width="1375" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="Transparent" Height="627">
 
-        <WrapPanel Grid.Row="0">
-            <Label Foreground="{DynamicResource TextColor}">
+                <WrapPanel Grid.Row="0">
+                    <Label Foreground="{DynamicResource TextColor}">
                         Le 25/03/2022 de 13h30 à 15h30
-            </Label>
-            <Separator/>
-            <Label Foreground="{DynamicResource TextColor}">
-                        
-                Test dolor ipsum lorem sat imet
+                    </Label>
+                    <Separator/>
+                    <Label Foreground="{DynamicResource TextColor}">
+
+                        Test dolor ipsum lorem sat imet
                 R2.01: Math
                 groupe 3
                 salle : a18
                 Intervenant : Marc
- 
-            </Label>
-        </WrapPanel>
+
+                    </Label>
+                </WrapPanel>
+
+            </ListBox>
+        </Border>
+
+        <Button Content="Déclarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Margin="600,-500,0,0" Grid.Row="0" Cursor="Hand"/>
+
 
     </Grid>
 </UserControl>
