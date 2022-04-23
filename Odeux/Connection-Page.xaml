@@ -36,7 +36,7 @@
                 <Grid>
                     <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="#1ABC9C" Opacity="0.6">
                     </Rectangle>
-                    <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                    <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
                 </Grid>
                 <Button.ContextMenu>
                     <ContextMenu Width="150" Height="90">

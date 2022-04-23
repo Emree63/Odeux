@@ -88,3 +88,5 @@ D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\obj\Debug\App.baml
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\obj\Debug\Page-Prof\Accueil.baml
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\obj\Debug\User-Control\Der_Infos.baml
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\obj\Debug\User-Control\DéclarerVotrePrésence.baml
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\Edt_Eleve.g.cs
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\Edt_Eleve.baml

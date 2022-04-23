@@ -8,11 +8,11 @@
              d:DesignHeight="100" d:DesignWidth="400">
     <Grid>
         <Button HorizontalAlignment="Center" Margin="00,0,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" >
+                 VerticalAlignment="Center" Width="388" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" >
             <Grid>
-                <Rectangle Stroke="Black" RadiusX="15" RadiusY="15" Width="283" Height="52"  Fill="White">
+                <Rectangle RadiusX="15" RadiusY="15"  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
-                <TextBlock Text="Entrer des notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="black"></TextBlock>
+                <TextBlock Text="Entrer des notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>            
     </Grid>

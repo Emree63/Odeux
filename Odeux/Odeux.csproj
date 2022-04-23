@@ -61,7 +61,7 @@
     <Compile Include="Page-Prof\Accueil.xaml.cs">
       <DependentUpon>Accueil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presence.cs" />
+    <Compile Include="Cour.cs" />
     <Compile Include="User-Control\Accueil_fill_detail.xaml.cs">
       <DependentUpon>Accueil_fill_detail.xaml</DependentUpon>
     </Compile>
@@ -82,6 +82,9 @@
     </Compile>
     <Compile Include="User-Control\DéclarerVotrePrésence.xaml.cs">
       <DependentUpon>DéclarerVotrePrésence.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\Edt_Eleve.xaml.cs">
+      <DependentUpon>Edt_Eleve.xaml</DependentUpon>
     </Compile>
     <Page Include="Connection-Page.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -128,6 +131,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="User-Control\DéclarerVotrePrésence.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Edt_Eleve.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

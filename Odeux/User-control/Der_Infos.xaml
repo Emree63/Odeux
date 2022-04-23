@@ -45,7 +45,7 @@
                         </TextBlock>
                     </StackPanel>
                     </Border>
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,0,0,0">
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,20,0,0">
                         <StackPanel>
                             <TextBlock FontSize="35" 
                                        Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" 

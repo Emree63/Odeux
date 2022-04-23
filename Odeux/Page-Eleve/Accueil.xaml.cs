@@ -43,6 +43,10 @@ namespace Odeux.Page_Eleve
         {
             contentControl.Content = new Der_Infos();
         }
+        private void Button_edt(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new Edt_Eleve();
+        }
 
     }
 }
