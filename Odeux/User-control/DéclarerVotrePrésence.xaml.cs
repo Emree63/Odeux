@@ -28,6 +28,8 @@ namespace Odeux.User_Control
             {
                 new Presence{dateCour = new DateTime(2022,03,25), Matiere = "R2.01 : Math", groupe=3, Salle="A13", Intervenant = "Marc"},
                 new Presence{dateCour = new DateTime(2022,03,26), Matiere = "R2.04 : Anglais", groupe=3, Salle="B18", Intervenant = "Astier"},
+                new Presence{dateCour = new DateTime(2022,03,25), Matiere = "R2.01 : Math", groupe=3, Salle="A13", Intervenant = "Marc"},
+                new Presence{dateCour = new DateTime(2022,03,26), Matiere = "R2.04 : Anglais", groupe=3, Salle="B18", Intervenant = "Astier"},
             };
 
             ListBox.ItemsSource = LesPresence;

@@ -5,43 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control"
              mc:Ignorable="d" 
-             d:DesignHeight="750" d:DesignWidth="1000">
+             d:DesignHeight="750" d:DesignWidth="1500">
     <Grid>
-        <ScrollViewer Cursor="Hand">
-            <Grid Margin="20,20,100,100">
-                <Grid.RowDefinitions>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.4*"/>
-                <RowDefinition Height="0.2*"/>
-            </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-500,-100,0,0">
-                    Nouveau logiciel disponible<LineBreak/>
-                </TextBlock>
-                <TextBlock Grid.Row="0" FontSize="16" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-100,30,0,0">
-                    Un nouvel outil est disponible pour les étudiants et les professeurs<LineBreak/>
-                    du département informatique ! Directement inspiré de son "grand frère" <LineBreak/>
-                    Odin et conçu par deux étudiants de première année,<LineBreak/>
-                    Odeux va permettre un plus grand confort d'utilisation et <LineBreak/>
-                    bénéficie d'une ergonomie renforcée afin de rendre son usage quotidien plus efficace et plus fluide.
-                </TextBlock>
-            
-                <TextBlock Grid.Row="1" FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-500,-100,0,0">
-                    Nouveau logiciel disponible<LineBreak/>
-                </TextBlock>
-                <TextBlock Grid.Row="1" FontSize="16" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-100,40,0,0">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <LineBreak/>
-                    labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<LineBreak/>
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor<LineBreak/>
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<LineBreak/>
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <LineBreak/>
-                    officia deserunt mollit anim id est laborum.
-                </TextBlock>
 
-                <TextBlock Grid.Row="2" FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-500,0,0,0">
-                    LISEZ VOS MAILS<LineBreak/>
-                </TextBlock>
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,100,100">
+            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                      Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" Height="627" x:Name="ListBox">
+               
+            </ListBox>
+        </Border>
 
-            </Grid>
-        </ScrollViewer>
     </Grid>
 </UserControl>
