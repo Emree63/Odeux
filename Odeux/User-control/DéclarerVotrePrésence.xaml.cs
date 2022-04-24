@@ -26,10 +26,10 @@ namespace Odeux.User_Control
 
             List<Cour> LesPresence = new List<Cour>()
             {
-                new Cour{dateCour = new DateTime(2022,03,25), Matiere = "R2.01 : Math", groupe=3, Salle="A13", Intervenant = "Marc"},
-                new Cour{dateCour = new DateTime(2022,03,26), Matiere = "R2.04 : Anglais", groupe=3, Salle="B18", Intervenant = "Astier"},
-                new Cour{dateCour = new DateTime(2022,03,25), Matiere = "R2.01 : Math", groupe=3, Salle="A13", Intervenant = "Marc"},
-                new Cour{dateCour = new DateTime(2022,03,26), Matiere = "R2.04 : Anglais", groupe=3, Salle="B18", Intervenant = "Astier"},
+                new Cour{DateCour = new DateTime(2022,03,25,14,30,00), Matiere = "R2.01 : Math", Groupe=3, Salle="A13", Intervenant = "Marc"},
+                new Cour{DateCour = new DateTime(2022,03,26,13,30,00), Matiere = "R2.04 : Anglais", Groupe=3, Salle="B18", Intervenant = "Astier"},
+                new Cour{DateCour = new DateTime(2022,03,25,14,30,00), Matiere = "R2.01 : Math", Groupe=3, Salle="A13", Intervenant = "Marc"},
+                new Cour{DateCour = new DateTime(2022,03,26,13,30,00), Matiere = "R2.04 : Anglais", Groupe=3, Salle="B18", Intervenant = "Astier"},
             };
 
             ListBox.ItemsSource = LesPresence;

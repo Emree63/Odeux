@@ -55,13 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cour.cs" />
     <Compile Include="Page-Eleve\Accueil.xaml.cs">
       <DependentUpon>Accueil.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page-Prof\Accueil.xaml.cs">
       <DependentUpon>Accueil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Cour.cs" />
     <Compile Include="User-Control\Accueil_fill_detail.xaml.cs">
       <DependentUpon>Accueil_fill_detail.xaml</DependentUpon>
     </Compile>
