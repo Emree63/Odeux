@@ -20,7 +20,7 @@ namespace Odeux
 
         public override string ToString()
         {
-            return $"{DateCour}";
+            return $"{DateCour.Year}";
         }
 
     }

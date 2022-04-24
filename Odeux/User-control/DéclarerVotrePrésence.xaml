@@ -17,16 +17,16 @@
                             <StackPanel>
                                 <TextBlock Foreground="Red" FontSize="25">
                                     <Run Text="&#x9;&#x9;Le "/>
-                                    <Run Text="{Binding dateCour.Day}"/>
+                                    <Run Text="{Binding DateCour.Day}"/>
                                     <Run Text="/"/>
-                                    <Run Text="{Binding dateCour.Month}"/>
+                                    <Run Text="{Binding DateCour.Month}"/>
                                     <Run Text="/"/>
-                                    <Run Text="{Binding dateCour.Year}"/>
+                                    <Run Text="{Binding DateCour.Year}"/>
                                 </TextBlock>
-                                    <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20">
+                                <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20">
                                     <Run Text="&#x9;&#x9;&#x9;&#x9;"/>
                                     <Run Text="{Binding Matiere}"/>
-                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; groupe : "/>
+                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Groupe : "/>
                                     <Run Text="{Binding groupe}"/>
                                     <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Salle : "/>
                                     <Run Text="{Binding Salle}"/>
