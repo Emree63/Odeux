@@ -6,28 +6,27 @@
              xmlns:local="clr-namespace:Odeux.User_Control"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1500">
-    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,100">
+    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,200">
             <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                       Background="Transparent" Height="627" x:Name="ListBox">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel>
-                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,20,0,0" Width="900">
+                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,10,0,10" Width="900">
                             <StackPanel>
                                 <TextBlock Foreground="Red" FontSize="25">
-                                    <Run Text="&#x9;&#x9;Le "/>
-                                    <Run Text="{Binding DateCour.Day}"/>
-                                    <Run Text="/"/>
-                                    <Run Text="{Binding DateCour.Month}"/>
-                                    <Run Text="/"/>
-                                    <Run Text="{Binding DateCour.Year}"/>
-                                </TextBlock>
+                                    <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding DateCour.Day,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Month,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Year,Mode=OneWay}"/>
+							        de
+                                    <Run Text="{Binding DateCour.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding DateCour.Minute,Mode=OneWay,StringFormat=00}"/>
+									à
+                                    <Run Text="{Binding DateCourFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateCourFin.Minute,Mode=OneWay,StringFormat=00}"/>
+								</TextBlock>
                                 <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20">
                                     <Run Text="&#x9;&#x9;&#x9;&#x9;"/>
                                     <Run Text="{Binding Matiere}"/>
                                     <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Groupe : "/>
-                                    <Run Text="{Binding groupe}"/>
+                                    <Run Text="{Binding Groupe[0]}"/> <Run Text="{Binding Groupe[1]}"/>
                                     <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Salle : "/>
                                     <Run Text="{Binding Salle}"/>
                                     <Run Text="&#xA;&#x9;&#x9;&#x9;         Intervenant : "/>
