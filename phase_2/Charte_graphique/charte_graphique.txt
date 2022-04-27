@@ -74,5 +74,6 @@ Pour le style:
 
 - Mettre dans la page Consulter note(Prof): Treeview
 - Mettre dans la page Entrer des notes(Prof): ProgressBar (barre de chargement)
-- combobox et listView pour la page Consulter note
+- combobox et listView pour la page Consulter note, button qui passe de Semestre 1 à 2
+- Pour emploie du temps regarde le calendar (dernière vidéo de Marc)
 
