@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="Odeux.User_Control.Etu.Accueil_fill_detail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Odeux.User_Control.Etu"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1000">
+    <!--<DockPanel Background="#282b30">
+        --><!-- Widget EDT --><!--
+        <Grid DockPanel.Dock="Right" Width="400" Height="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Dernières notes" FontSize="30" Grid.Row="0" Foreground="White"/>
+            <TextBlock FontSize="30" Grid.Row="1" Foreground="White">
+                R2.10 : Gestion de projet informatique<LineBreak/>11/20
+            </TextBlock>
+        </Grid>
+
+        --><!-- Widget signatures et notes --><!--
+        <DockPanel DockPanel.Dock="Left"   Width="400" Height="600">
+            <TextBlock Text="EDT d'Aujourd'hui" FontSize="30" Foreground="White"/>
+            <TextBlock FontSize="30" Foreground="White" Width="400">
+                R2.10 : Gestion de projet informatique<LineBreak/>9:00-10:00
+            </TextBlock>
+            <Button Click="Button_Click_1" Foreground="Black" Background="#424549" Content="Faire toutes les signatures manquantes"
+                FontSize="20" Width="400" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </DockPanel>
+
+    </DockPanel>-->
+
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                <Setter Property="TextWrapping" Value="Wrap"/>
+            </Style>
+            <Style TargetType="Rectangle">
+                <Setter Property="Fill" Value="#110E3D"/>
+                <Setter Property="RadiusX" Value="5"/>
+                <Setter Property="RadiusY" Value="15" />
+            </Style>
+        </Grid.Resources>
+        
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Signatures et dernières notes -->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock Text="EDT D'aujourd'hui" Margin="20, 10, 0, 0" Grid.Row="0" TextAlignment="Center"/>
+                
+                <Border Grid.Row="1"> <!-- LineBreak du bled -->
+
+                    <Rectangle/>
+                </Border>
+                
+                <WrapPanel Grid.Row="2">
+                    <TextBlock>
+                        8-10h | B12 | R.12 Anglais S2 | ISINDEKITCHEN Bryan - G1
+                    </TextBlock>
+                    <Separator/>
+                    <TextBlock>
+                        Test dolor ipsum lorem sat imet
+                    </TextBlock>
+                </WrapPanel>
+            </Grid>
+        </Grid>
+
+        <!-- Widget EDT -->
+        <Canvas Grid.Column="2">
+        </Canvas>
+    </Grid>
+</UserControl>
+

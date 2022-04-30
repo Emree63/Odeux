@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using Odeux.User_Control.General;
+
+namespace Odeux.Page_Prof
+{
+    /// <summary>
+    /// Logique d'interaction pour Accueil.xaml
+    /// </summary>
+    public partial class Accueil_Prof : Window
+    {
+        public Accueil_Prof()
+        {
+            InitializeComponent();
+        }
+
+        private void Der_Infos(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new Der_Infos();
+        }
+    }
+}
