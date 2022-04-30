@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Odeux.User_Control;
+using Odeux.User_Control.General;
+using Odeux.User_Control.Etu;
 
 namespace Odeux.Page_Eleve
 {
@@ -24,11 +25,6 @@ namespace Odeux.Page_Eleve
         {
             InitializeComponent();
         }
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            MessageBoxResult result = MessageBox.Show("Voulez-vous déclarer votre présence à tous les cours pour lesquels vous ne l'avez pas encore fait ?", " ", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-        }
 
         private void Declarer_Loaded(object sender, RoutedEventArgs e)
         {
@@ -36,7 +32,7 @@ namespace Odeux.Page_Eleve
         }
         private void Home(object sender, RoutedEventArgs e)
         {
-            contentControl.Content = new User_control.Accueil_fill_detail();
+            contentControl.Content = new Accueil_fill_detail();
         }
 
         private void Der_Infos(object sender, RoutedEventArgs e)

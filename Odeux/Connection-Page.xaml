@@ -6,6 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Odeux"
         xmlns:UserControl="clr-namespace:Odeux.User_Control"
+        xmlns:User_Control="clr-namespace:Odeux.User_Control.General"
         mc:Ignorable="d"
         Title="Connection-Page" Height="1080" Width="1920">
     <Window.Resources>
@@ -81,7 +82,7 @@
             
             <TextBlock Text="Mot de Passe :" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="34" Foreground="gray" Margin="-700,-100,0,0"/>
             
-            <UserControl:Thème_Affichage Margin="1500,450,0,0"/>
+            <User_Control:Thème_Affichage Margin="1500,450,0,0"/>
 
             <Button Content="Animation :)" Cursor="Hand" Click="Button_Click_1" Height="50" Width="90" Margin="1200,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Foreground="gray"/>
 

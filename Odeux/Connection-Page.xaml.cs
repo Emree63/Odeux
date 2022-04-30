@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Media3D;
 using Odeux.Page_Eleve;
+using Odeux.Page_Prof;
 
 namespace Odeux
 {

@@ -2,13 +2,12 @@
 FD:\IUT\sae2.01\Odeux\App.xaml;;
 FD:\IUT\sae2.01\Odeux\Connection-Page.xaml;;
 FD:\IUT\sae2.01\Odeux\Page-Eleve\Accueil.xaml;;
-FD:\IUT\sae2.01\Odeux\Page-Prof\Accueil.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\Accueil_fill_detail.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\button_AideEnLigne.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\button_Deconnexion.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\button_EntrerDesNotes.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\button_Thème-Affichage.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\Der_Infos.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\DéclarerVotrePrésence.xaml;;
-FD:\IUT\sae2.01\Odeux\User-Control\Edt_Eleve.xaml;;
+FD:\IUT\sae2.01\Odeux\Page-Prof\Accueil_Prof.xaml;;
+FD:\IUT\sae2.01\Odeux\User-Control\Etu\Accueil_fill_detail.xaml;;
+FD:\IUT\sae2.01\Odeux\User-Control\General\button_AideEnLigne.xaml;;
+FD:\IUT\sae2.01\Odeux\User-Control\General\button_Deconnexion.xaml;;
+FD:\IUT\sae2.01\Odeux\User-Control\General\button_Thème-Affichage.xaml;;
+FD:\IUT\sae2.01\Odeux\User-Control\General\Der_Infos.xaml;;
+FD:\IUT\sae2.01\Odeux\User-Control\Etu\DéclarerVotrePrésence.xaml;;
+FD:\IUT\sae2.01\Odeux\User-Control\Etu\Edt_Eleve.xaml;;
 
