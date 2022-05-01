@@ -24,6 +24,8 @@ namespace Odeux.User_Control.Etu
         {
             InitializeComponent();
 
+            mCalendar.DisplayDateStart = DateTime.Now;
+
             List<Cour> LesPresence = new List<Cour>()
             {
                 new Cour(new DateTime(2022,03,25,14,30,00),  "R2.01 : Math", "A13", "Marc", 1.5,2,3,4),

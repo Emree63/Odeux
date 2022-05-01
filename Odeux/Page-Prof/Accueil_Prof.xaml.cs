@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Odeux.User_Control.General;
+using Odeux.User_Control.Prof;
 
 namespace Odeux.Page_Prof
 {
@@ -28,6 +29,15 @@ namespace Odeux.Page_Prof
         private void Der_Infos(object sender, RoutedEventArgs e)
         {
             contentControl.Content = new Der_Infos();
+        }
+
+        private void Edt(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new Edt_Prof();
+        }
+        private void Consulter(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new ConsulterNotes();
         }
     }
 }

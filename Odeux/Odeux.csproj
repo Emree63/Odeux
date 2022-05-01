@@ -62,6 +62,9 @@
     <Compile Include="Page-Prof\Accueil_Prof.xaml.cs">
       <DependentUpon>Accueil_Prof.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User-Control\Etu\Notes.xaml.cs">
+      <DependentUpon>Notes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User-Control\Etu\Accueil_fill_detail.xaml.cs">
       <DependentUpon>Accueil_fill_detail.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,15 @@
     <Compile Include="User-Control\Etu\Edt_Eleve.xaml.cs">
       <DependentUpon>Edt_Eleve.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User-Control\Prof\Accueil_fill_detail.xaml.cs">
+      <DependentUpon>Accueil_fill_detail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\Prof\ConsulterNotes.xaml.cs">
+      <DependentUpon>ConsulterNotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User-Control\Prof\Edt_Prof.xaml.cs">
+      <DependentUpon>Edt_Prof.xaml</DependentUpon>
+    </Compile>
     <Page Include="Connection-Page.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page-Prof\Accueil_Prof.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Etu\Notes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +144,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="User-Control\Etu\Edt_Eleve.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Prof\Accueil_fill_detail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Prof\ConsulterNotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Prof\Edt_Prof.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -176,8 +204,6 @@
   <ItemGroup>
     <Resource Include="Images\Fond.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User-Control\Prof\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

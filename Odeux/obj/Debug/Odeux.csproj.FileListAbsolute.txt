@@ -124,3 +124,11 @@ D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Etu\DéclarerVotrePrésence.baml
 D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Etu\Edt_Eleve.baml
 D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\General\Der_Infos.g.cs
 D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\General\Der_Infos.baml
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Etu\Notes.g.cs
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Prof\ConsulterNotes.g.cs
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Prof\Edt_Prof.g.cs
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Etu\Notes.baml
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Prof\ConsulterNotes.baml
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Prof\Edt_Prof.baml
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Prof\Accueil_fill_detail.g.cs
+D:\IUT\sae2.01\Odeux\obj\Debug\User-Control\Prof\Accueil_fill_detail.baml

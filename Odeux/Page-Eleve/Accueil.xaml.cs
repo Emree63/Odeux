@@ -43,6 +43,10 @@ namespace Odeux.Page_Eleve
         {
             contentControl.Content = new Edt_Eleve();
         }
+        private void Consulter(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new Notes();
+        }
 
     }
 }
