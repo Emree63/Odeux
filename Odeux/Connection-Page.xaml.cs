@@ -38,10 +38,10 @@ namespace Odeux
             this.Close();
         }
 
+        private static Random MyRandomGenerator = new Random();
         private void Button_Connection(object sender, RoutedEventArgs e)
         {
-            Random aleatoire = new Random();
-            int entierUnChiffre = aleatoire.Next(3);
+            int entierUnChiffre = MyRandomGenerator.Next(3);
             Accueil win = new Accueil();
             win.Show();
             this.Close();
