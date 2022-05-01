@@ -9,7 +9,17 @@
     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,200">
         <Grid>
             <WrapPanel>
-                <Label x:Name="Semestre" Margin="80,0,0,0" HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30">Semestre 1</Label>
+                <Button Background="Transparent" Margin="80,0,0,0" >
+                    <Grid>
+                        <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}"/>
+                    </Grid>
+                </Button>
+                <Label x:Name="Semestre"  HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30">Semestre 1</Label>
+                <Button Background="Transparent">
+                    <Grid>
+                        <TextBlock Text=">" FontSize="25" Foreground="{DynamicResource TextColor}"/>
+                    </Grid>
+                </Button>
                 <Label x:Name="Groupe" Margin="250,0,0,0" HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30">Groupe 1</Label>
                 <ComboBox Margin="300,0,0,0" SelectedIndex="0" Width="400" Height="40">
                     <ComboBoxItem>Jean</ComboBoxItem>
@@ -17,17 +27,26 @@
                 </ComboBox>
             </WrapPanel>
             <StackPanel Margin="100,50,100,0">
-                <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Top" Width="887" Height="72" FontSize="30" Opacity="0.8" BorderBrush="Transparent" >
+                <WrapPanel>
+                    <Button Background="Transparent" Margin="80,0,20,0" >
+                        <Grid>
+                            <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}"/>
+                        </Grid>
+                    </Button>
                     <Grid>
                         <Rectangle RadiusX="15" RadiusY="15" Width="883" Height="62"  Fill="{DynamicResource BackgroundColor2}"/>
-                        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
+                        <Label FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
                             UE 1 - Développer des applications informatiques simples
                         </Label>
                     </Grid>
-                </Button>
+                    <Button Background="Transparent" Margin="20,0,0,0">
+                        <Grid>
+                            <TextBlock Text=">" FontSize="25" Foreground="{DynamicResource TextColor}"/>
+                        </Grid>
+                    </Button>
+                </WrapPanel>
                 <WrapPanel Margin="0,10,0,0">
-                    <Label VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center"  Width="350" Height="50" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="200,0,0,0" FontSize="25">
+                    <Label VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center"  Width="350" Height="50" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="150,0,0,0" FontSize="25">
                         Moyenne Générale : 14,5
                     </Label>
                     <Label VerticalAlignment="Top" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Foreground="{DynamicResource TextColor}" Width="350" Height="50" Background="{DynamicResource BackgroundColor2}" Margin="110,0,0,0" FontSize="25">

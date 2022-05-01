@@ -17,6 +17,7 @@ using System.Windows.Media.Media3D;
 using Odeux.Page_Eleve;
 using Odeux.Page_Prof;
 
+
 namespace Odeux
 {
     /// <summary>
@@ -24,20 +25,28 @@ namespace Odeux
     /// </summary>
     public partial class MainWindow : Window
     {
-
         private int Clickedtimes;
         public MainWindow()
         {
             InitializeComponent();
             Clickedtimes = 0;
         }
+        private void Prof(object sender, RoutedEventArgs e)
+        {
+            Accueil_Prof win = new Accueil_Prof(); //Juste pour aller sur l appli du prof
+            win.Show();
+            this.Close();
+        }
 
         private void Button_Connection(object sender, RoutedEventArgs e)
         {
+            Random aleatoire = new Random();
+            int entierUnChiffre = aleatoire.Next(3);
             Accueil win = new Accueil();
             win.Show();
             this.Close();
-            MessageBox.Show("C'est important et ça fait gagner du temps et de l'énergie à tout le monde !","Lisez vos mails tous les jours !", MessageBoxButton.OK, MessageBoxImage.Information,MessageBoxResult.OK);
+            if(entierUnChiffre==1)
+                MessageBox.Show("C'est important et ça fait gagner du temps et de l'énergie à tout le monde !","Lisez vos mails tous les jours !", MessageBoxButton.OK, MessageBoxImage.Information,MessageBoxResult.OK);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

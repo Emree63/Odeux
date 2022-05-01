@@ -9,7 +9,8 @@
     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,200">
         <Grid>
             <DockPanel>
-                <Calendar DockPanel.Dock="Top" SelectionMode="None" Name="mCalendar"/>
+                <Calendar DockPanel.Dock="Top" SelectionMode="None" Name="mCalendar" DisplayMode="Month"/>
+
             </DockPanel>
             <WrapPanel Margin="100,80,0,0">
                 <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">

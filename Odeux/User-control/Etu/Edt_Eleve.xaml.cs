@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,8 @@ namespace Odeux.User_Control.Etu
             };
 
             ListBox.ItemsSource = LesPresence;
+
+/*int D = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear;*/
         }
     }
 }

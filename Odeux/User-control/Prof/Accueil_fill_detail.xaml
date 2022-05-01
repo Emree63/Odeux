@@ -21,7 +21,7 @@
             </Style>
         </Grid.Resources>
 
-        <Button Click="Button_Click_1" Foreground="Black" Background="#424549" Content="Confirmer la présence de tous les élèves"
+        <Button Click="MaMessageBox" Foreground="Black" Background="#424549" Content="Confirmer la présence de tous les élèves"
                 FontSize="20" Width="450" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0"/>
 
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Margin="150,-670,0,0"/>
