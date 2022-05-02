@@ -25,7 +25,7 @@
                 <WrapPanel>
                     <Button Background="Transparent" Margin="80,0,20,0" >
                         <Grid>
-                            <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}"/>
+                            <TextBlock Text="&lt;" FontSize="35" Foreground="{DynamicResource TextColor}"/>
                         </Grid>
                     </Button>
                     <Grid>
@@ -36,7 +36,7 @@
                     </Grid>
                     <Button Background="Transparent" Margin="20,0,0,0">
                         <Grid>
-                            <TextBlock Text=">" FontSize="25" Foreground="{DynamicResource TextColor}"/>
+                            <TextBlock Text=">" FontSize="35" Foreground="{DynamicResource TextColor}"/>
                         </Grid>
                     </Button>
                 </WrapPanel>

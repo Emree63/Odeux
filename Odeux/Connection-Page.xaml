@@ -33,7 +33,7 @@
         <Grid Background="{DynamicResource BackgroundColor}">
             <Image Source="images\Fond.png" Width="2100" Margin="-1330,90,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="664" />
             <Button HorizontalAlignment="Center" Margin="00,181,0,0" Background="Transparent" Cursor="Hand"
-                 VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" ToolTip="Cliquez pour vous connecter!">
+                 VerticalAlignment="Center" Width="287" Height="62" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" ToolTip="Cliquez pour vous connecter!">
                 <Grid>
                     <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="#1ABC9C" Opacity="0.6">
                     </Rectangle>

@@ -27,7 +27,7 @@ namespace Odeux.User_Control.Etu
 
             List<Cour> LesPresence = new List<Cour>()
             {
-                new Cour(new DateTime(2022,03,25,14,30,00),  "R2.01 : Math", "A13", "Marc", 1.5,2,3,4),
+                new Cour(DateTime.Now,  "R2.01 : Math", "A13", "Marc", 1.5,2,3,4),
                 new Cour(new DateTime(2022,03,26,13,30,00),  "R2.04 : Anglais", "B18", "Astier", 1.5,1,3),
                 new Cour(new DateTime(2022,03,25,14,30,00),  "R2.01 : Math",  "A13", "Marc", 1.3,1,3),
                 new Cour(new DateTime(2022,03,26,13,30,00),  "R2.04 : Anglais",  "B18", "Astier", 2.5,2,3,4),

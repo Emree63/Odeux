@@ -13,42 +13,42 @@
 
             </DockPanel>
             <WrapPanel Margin="100,80,0,0">
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
+                <Button  Background="Transparent" Width="158" Height="62" FontSize="30"  BorderBrush="Transparent" Margin="0,0,20,0">
                     <Grid>
                         <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                         </Rectangle>
                         <TextBlock Text="Lundi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
                     </Grid>
                 </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
+                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" BorderBrush="Transparent" Margin="0,0,20,0">
                     <Grid>
                         <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                         </Rectangle>
                         <TextBlock Text="Mardi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
                     </Grid>
                 </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
+                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" BorderBrush="Transparent" Margin="0,0,20,0">
                     <Grid>
                         <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                         </Rectangle>
                         <TextBlock Text="Mercredi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
                     </Grid>
                 </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
+                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" BorderBrush="Transparent" Margin="0,0,20,0">
                     <Grid>
                         <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                         </Rectangle>
                         <TextBlock Text="Jeudi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
                     </Grid>
                 </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
+                <Button  Background="Transparent" Width="158" Height="62" FontSize="30"  BorderBrush="Transparent" Margin="0,0,20,0">
                     <Grid>
                         <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                         </Rectangle>
                         <TextBlock Text="Vendredi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
                     </Grid>
                 </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent">
+                <Button  Background="Transparent" Width="158" Height="62" FontSize="30"  BorderBrush="Transparent">
                     <Grid>
                         <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
                         </Rectangle>
