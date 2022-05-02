@@ -26,6 +26,8 @@ namespace Odeux.User_Control.General
         {
             InitializeComponent();
         }
+
+        public event RoutedEventHandler ClickMenu;
         private void Deco(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Deconnexion", "Voulez-vous vraiment vous déconnecter", MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -33,6 +35,10 @@ namespace Odeux.User_Control.General
             { 
                 Odeux.MainWindow win = new Odeux.MainWindow();
                 win.Show();
+                if(ClickMenu != null)
+                {
+                    ClickMenu(this, e);
+                }
             }
         }
 

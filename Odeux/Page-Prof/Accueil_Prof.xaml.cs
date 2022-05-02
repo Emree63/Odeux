@@ -39,5 +39,9 @@ namespace Odeux.Page_Prof
         {
             contentControl.Content = new ConsulterNotes();
         }
+        private void Deco(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

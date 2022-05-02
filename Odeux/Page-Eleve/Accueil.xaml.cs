@@ -47,6 +47,10 @@ namespace Odeux.Page_Eleve
         {
             contentControl.Content = new Notes();
         }
+        private void Deco(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
     }
 }

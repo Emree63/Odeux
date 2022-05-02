@@ -25,7 +25,7 @@
                 FontSize="20" Width="450" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0"/>
 
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Margin="150,-670,0,0"/>
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="680,70,175,150">
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="680,70,175,150" VerticalAlignment="Center" HorizontalAlignment="Center">
             <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="620" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                       Background="Transparent" Height="622" x:Name="ListBox_Edt" Margin="0,40,0,0">
@@ -61,7 +61,7 @@
         </Border>
 
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Dernières notes" Foreground="{DynamicResource TextColor}" Margin="-1100,-200,0,0"/>
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="70,300,955,150" >
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="70,300,955,150"  VerticalAlignment="Center" HorizontalAlignment="Center">
             <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="450" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                       Background="Transparent" Height="422" x:Name="ListBox_Note" Margin="0,40,0,0">

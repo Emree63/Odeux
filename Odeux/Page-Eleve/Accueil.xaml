@@ -88,7 +88,7 @@
         </Button>
 
         <User_Control:AideEnLigne HorizontalAlignment="Center" Height="104" Margin="0,0,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="562"/>
-        <User_Control:Deconnexion HorizontalAlignment="Center" Height="104" Margin="1000,-50,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="362"/>
+        <User_Control:Deconnexion HorizontalAlignment="Center" Height="104" Margin="1000,-50,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="362" ClickMenu="Deco"/>
         <User_Control:Thème_Affichage HorizontalAlignment="Center" Height="104" Margin="1000,650,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
 
     </Grid>

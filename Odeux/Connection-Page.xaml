@@ -63,7 +63,7 @@
             
             <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Margin="00,-490,0,0"/>
 
-            <TextBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" Background="Transparent" CaretBrush="DimGray" Height="35"  Margin="25,-200,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}">
+            <TextBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Height="35"  Margin="25,-200,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}">
                 <Validation.ErrorTemplate>
                     <ControlTemplate>
                         <StackPanel>
