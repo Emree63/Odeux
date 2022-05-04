@@ -11,56 +11,57 @@
         Title="Accueil" Height="1080" Width="1920">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Background="{TemplateBinding Background}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
-    
     <Grid Background="{DynamicResource BackgroundColor}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"/>
             <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.2*"/>
             <RowDefinition/>
+            <RowDefinition Height="0.15*"/>
         </Grid.RowDefinitions>
 
-		<!-- User control Detail -->
+        <!-- User control Detail -->
         <ContentControl x:Name="contentControl" Grid.Column="1" Grid.Row="1">
             <UserControl:Accueil_fill_detail/>
         </ContentControl>
 
-        <Image Source="..\images\Logo-Odeux.png" MaxWidth="450" Margin="0,0,0,-110" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+        <Image Source="..\images\Logo-Odeux.png"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
 
-        <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Center" Width="388" Height="62" FontSize="30" BorderBrush="Transparent"  Margin="0,250,0,0" Grid.Row="1" Grid.Column="0" Click="Button_edt" >
+        <Button HorizontalAlignment="Center" Background="Transparent" Margin="0,160"
+                 VerticalAlignment="Bottom" Width="388" Height="62" FontSize="30" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0" Click="Button_edt" >
             <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
+                <Rectangle RadiusX="15" RadiusY="15" Width="388" Height="62"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
                 <TextBlock Text="Emploi du temps" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>
 
-        <Button HorizontalAlignment="Center" Margin="-300,-50,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="80" BorderBrush="Transparent" Grid.Column="0" Grid.Row="0" Click="Home">
+        <Button HorizontalAlignment="Left" Background="Transparent" 
+                 VerticalAlignment="Top" Width="80" BorderBrush="Transparent" Grid.Column="0" Grid.Row="0" Click="Home">
             <Grid>
-                <Image Source="..\images\Home.png" MaxWidth="90" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Image Source="..\images\Home.png" MaxWidth="90" VerticalAlignment="Center" HorizontalAlignment="Center" />
             </Grid>
         </Button>
 
-        <Button HorizontalAlignment="Center" Margin="0,-110,0,0" Background="Transparent" 
+        <Button HorizontalAlignment="Center" Background="Transparent" 
                  VerticalAlignment="Center" Width="387" Height="112" FontSize="30" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0" Click="Der_Infos">
             <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Width="383" Height="102"  Fill="{DynamicResource BackgroundColor2}">
+                <Rectangle RadiusX="15" RadiusY="15" Width="387" Height="112"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
                     Dernières Informations<LineBreak/>importantes
@@ -69,27 +70,27 @@
         </Button>
 
 
-        <Button HorizontalAlignment="Center" Margin="00,-410,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="381" Height="62" FontSize="30" BorderBrush="Transparent" Click="Declarer_Loaded" Grid.Row="1" Grid.Column="0" >
+        <Button HorizontalAlignment="Center" Margin="0,160" Background="Transparent" 
+                 VerticalAlignment="Top" Width="381" Height="62" FontSize="30" BorderBrush="Transparent" Click="Declarer_Loaded" Grid.Row="1" Grid.Column="0" >
             <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Width="375" Height="52"  Fill="{DynamicResource BackgroundColor2}">
+                <Rectangle RadiusX="15" RadiusY="15" Width="381" Height="62"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
                 <TextBlock Text="Déclarer votre présence" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>
 
-        <Button HorizontalAlignment="Center" Margin="-1000,0,0,0" Background="Transparent" 
-                 VerticalAlignment="Center" Width="387" Height="82" FontSize="30" BorderBrush="Transparent" Grid.Row="0" Grid.Column="1" Click="Consulter">
+        <Button HorizontalAlignment="Left" Background="Transparent" 
+                 VerticalAlignment="Center" Width="387" Height="82" FontSize="30" BorderBrush="Transparent" Grid.Row="0" Grid.Column="1" Click="Consulter" Margin="40,0">
             <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Width="383" Height="72" Fill="{DynamicResource BackgroundColor2}">
+                <Rectangle RadiusX="15" RadiusY="15" Width="387" Height="82" Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
-                <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"></TextBlock>
+                <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" ></TextBlock>
             </Grid>
         </Button>
 
-        <User_Control:AideEnLigne HorizontalAlignment="Center" Height="104" Margin="0,0,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="562"/>
-        <User_Control:Deconnexion HorizontalAlignment="Center" Height="104" Margin="1000,-50,0,0" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Width="362" ClickMenu="Deco"/>
-        <User_Control:Thème_Affichage HorizontalAlignment="Center" Height="104" Margin="1000,650,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+        <User_Control:AideEnLigne HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" />
+        <User_Control:Deconnexion HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Margin="30" ClickMenu="Deco"/>
+        <User_Control:Thème_Affichage HorizontalAlignment="Right" Height="104" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="80,0"/>
 
     </Grid>
 </Window>

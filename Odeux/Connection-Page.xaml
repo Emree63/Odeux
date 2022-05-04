@@ -25,13 +25,13 @@
     
     <DockPanel >
 
-        <WrapPanel DockPanel.Dock="Top" Background="#178F96">
-            <Image Source="images\Logo-Odeux.png" MaxWidth="250" Margin="855,0,0,10" VerticalAlignment="Center" HorizontalAlignment="Center" />
-        </WrapPanel>
+        <Grid DockPanel.Dock="Top" Background="#178F96" >
+            <Image Source="images\Logo-Odeux.png" MaxWidth="250" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        </Grid>
         
         
         <Grid Background="{DynamicResource BackgroundColor}">
-            <Image Source="images\Fond.png" Width="2100" Margin="-1330,90,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="664" />
+            <Image Source="images\Fond.png" Width="2100" VerticalAlignment="Bottom" HorizontalAlignment="Left" Height="auto" />
             <Button HorizontalAlignment="Center" Margin="00,181,0,0" Background="Transparent" Cursor="Hand"
                  VerticalAlignment="Center" Width="287" Height="62" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" ToolTip="Cliquez pour vous connecter!">
                 <Grid>
@@ -63,18 +63,7 @@
             
             <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Margin="00,-490,0,0"/>
 
-            <TextBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Height="35"  Margin="25,-200,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}">
-                <Validation.ErrorTemplate>
-                    <ControlTemplate>
-                        <StackPanel>
-                            <Border BorderBrush="Red" BorderThickness="1">
-                                <AdornedElementPlaceholder/>
-                            </Border>
-                            <TextBlock Text="{Binding [0].ErrorContent}" Foreground="Red"/>
-                        </StackPanel>
-                    </ControlTemplate>
-                </Validation.ErrorTemplate>
-            </TextBox>
+            <TextBox HorizontalAlignment="Center" BorderThickness="0 0 0 1" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Height="35"  Margin="25,-200,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="471" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}"/>
 
             <PasswordBox HorizontalAlignment="Center" Background="Transparent" BorderThickness="0 0 0 1" CaretBrush="DimGray" Height="35" Margin="25,-100,0,0"   VerticalAlignment="Center" Width="471" FontSize="20"/>
             

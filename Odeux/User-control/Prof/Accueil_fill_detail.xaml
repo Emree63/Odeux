@@ -6,42 +6,52 @@
              xmlns:local="clr-namespace:Odeux.User_Control.Prof"
              mc:Ignorable="d" 
             d:DesignHeight="750" d:DesignWidth="1500">
+    <Viewbox>
 
-    <Grid>
-        <Grid.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="FontSize" Value="30" />
-                <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
-                <Setter Property="TextWrapping" Value="Wrap"/>
-            </Style>
-            <Style TargetType="Rectangle">
-                <Setter Property="Fill" Value="#110E3D"/>
-                <Setter Property="RadiusX" Value="5"/>
-                <Setter Property="RadiusY" Value="15" />
-            </Style>
-        </Grid.Resources>
+        <Grid Width="1500" Height="750">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="30" />
+                    <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                    <Setter Property="TextWrapping" Value="Wrap"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
 
-        <Button Click="MaMessageBox" Foreground="Black" Background="#424549" Content="Confirmer la présence de tous les élèves"
-                FontSize="20" Width="450" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Margin="150,-670,0,0"/>
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="680,70,175,150">
-            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+            <Button Click="MaMessageBox" Foreground="Black" Background="#424549" Content="Confirmer la présence de tous les élèves"
+                FontSize="20" Width="450" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+
+            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
+                    <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="620" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Margin="0,40,0,0">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <WrapPanel>
-                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="10,10,0,10" Width="550">
-                                <StackPanel >
-                                    <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
+                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Grid.Row="1">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="10,10,0,10" Width="550">
+                                        <StackPanel >
+                                            <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
                                     <Run Text="Le "/><Run Text="{Binding DateCour.Day,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Month,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Year,Mode=OneWay}"/>
 							        de
                                     <Run Text="{Binding DateCour.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding DateCour.Minute,Mode=OneWay,StringFormat=00}"/>
 									à
                                     <Run Text="{Binding DateCourFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateCourFin.Minute,Mode=OneWay,StringFormat=00}"/>
-                                    </TextBlock>
-                                    <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
+                                            </TextBlock>
+                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
                                     <Run Text="{Binding Matiere}"/>
                                     <Run Text="&#xA;Groupe : "/>
                                     <Run Text="{Binding Groupe[0]}"/> <Run Text="{Binding Groupe[1]}"/>
@@ -49,17 +59,16 @@
                                     <Run Text="{Binding Salle}"/>
                                     <Run Text="&#xA;Intervenant : "/>
                                     <Run Text="{Binding Intervenant}"/>
-                                    </TextBlock>
-                                </StackPanel>
-                            </Border>
-                        </WrapPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </Border>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
 
-
-            </ListBox>
-        </Border>
-
-
-    </Grid>
+        </Grid>
+    </Viewbox>
 </UserControl>

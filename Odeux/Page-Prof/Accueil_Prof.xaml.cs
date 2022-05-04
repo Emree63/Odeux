@@ -25,6 +25,11 @@ namespace Odeux.Page_Prof
         {
             InitializeComponent();
         }
+        private void Home(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new Accueil_fill_detail();
+        }
+
 
         private void Der_Infos(object sender, RoutedEventArgs e)
         {
