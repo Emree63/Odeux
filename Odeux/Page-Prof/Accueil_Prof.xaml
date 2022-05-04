@@ -81,9 +81,9 @@
         </Button>
 
         <Button HorizontalAlignment="Left" Background="Transparent" 
-                 VerticalAlignment="Center" Width="387" Height="82" FontSize="30" BorderBrush="Transparent" Grid.Row="0" Grid.Column="1" Click="Consulter" Margin="40,0">
+                 VerticalAlignment="Center" Width="387" Height="62" FontSize="30" BorderBrush="Transparent" Grid.Row="0" Grid.Column="1" Click="Consulter" Margin="40,0">
             <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Width="387" Height="82" Fill="{DynamicResource BackgroundColor2}">
+                <Rectangle RadiusX="15" RadiusY="15" Width="387" Height="62" Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
                 <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" ></TextBlock>
             </Grid>

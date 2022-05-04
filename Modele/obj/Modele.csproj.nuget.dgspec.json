@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IUT\\SAE2.01\\Modele\\Modele.csproj": {}
+    "D:\\IUT\\sae2.01\\Modele\\Modele.csproj": {}
   },
   "projects": {
-    "D:\\IUT\\SAE2.01\\Modele\\Modele.csproj": {
+    "D:\\IUT\\sae2.01\\Modele\\Modele.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IUT\\SAE2.01\\Modele\\Modele.csproj",
+        "projectUniqueName": "D:\\IUT\\sae2.01\\Modele\\Modele.csproj",
         "projectName": "Modele",
-        "projectPath": "D:\\IUT\\SAE2.01\\Modele\\Modele.csproj",
+        "projectPath": "D:\\IUT\\sae2.01\\Modele\\Modele.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\IUT\\SAE2.01\\Modele\\obj\\",
+        "outputPath": "D:\\IUT\\sae2.01\\Modele\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
