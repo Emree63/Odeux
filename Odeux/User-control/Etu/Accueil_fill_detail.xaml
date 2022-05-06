@@ -29,7 +29,7 @@
         <Button Click="MaMessageBox" Foreground="Black" Background="#424549" Content="Faire toutes les signatures manquantes"
                 FontSize="20" Width="450" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
             <Grid >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.2*"/>
@@ -71,7 +71,7 @@
             </Grid>
         </Border>
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1">
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.2*"/>

@@ -8,12 +8,12 @@
              d:DesignHeight="750" d:DesignWidth="1500">
     <Viewbox>
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,200">
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
             <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="627" x:Name="ListBox">
+                      Background="Transparent" Height="750" x:Name="ListBox">
 
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,20" >
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,20" >
                     <StackPanel>
                         <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" >
                     Nouveau logiciel disponible<LineBreak/>
@@ -30,7 +30,7 @@
 
                 </Border>
 
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,0,0,0" >
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,0,0,0" >
                     <StackPanel>
                         <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" >
                     Nouveau logiciel disponible<LineBreak/>
@@ -45,7 +45,7 @@
                         </TextBlock>
                     </StackPanel>
                 </Border>
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,20,0,0">
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,20,0,0">
                     <StackPanel>
                         <TextBlock FontSize="35" 
                                        Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" 
