@@ -16,5 +16,5 @@ git status (Regarder les changements)
 git commit -m ‘_’  (message)
 
 git push (envoyer)
-
+.
 git pull  (récupérer)
