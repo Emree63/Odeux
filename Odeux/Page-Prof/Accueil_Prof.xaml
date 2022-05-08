@@ -72,11 +72,11 @@
 
 
         <Button HorizontalAlignment="Center" Margin="0,160" Background="Transparent" 
-                 VerticalAlignment="Top" Width="381" Height="62" FontSize="30" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0" >
+                 VerticalAlignment="Top" Width="381" Height="62" FontSize="30" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0" Click="Button_Notes">
             <Grid>
                 <Rectangle RadiusX="15" RadiusY="15" Width="381" Height="62"  Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
-                <TextBlock Text="Déclarer votre présence" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
+                <TextBlock Text="Entrer des notes" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="{DynamicResource TextColor}" Margin="0,11,83,11"/>
             </Grid>
         </Button>
 

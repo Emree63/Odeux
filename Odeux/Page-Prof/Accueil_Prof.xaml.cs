@@ -44,6 +44,11 @@ namespace Odeux.Page_Prof
         {
             contentControl.Content = new ConsulterNotes();
         }
+
+        private void Button_Notes(object sender, RoutedEventArgs e)
+        {
+            contentControl.Content = new EntrerDesNotes();
+        }
         private void Deco(object sender, RoutedEventArgs e)
         {
             Close();

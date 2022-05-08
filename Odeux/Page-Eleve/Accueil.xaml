@@ -54,7 +54,7 @@
         <Button HorizontalAlignment="Left" Background="Transparent" 
                  VerticalAlignment="Top" Width="80" BorderBrush="Transparent" Grid.Column="0" Grid.Row="0" Click="Home">
             <Grid>
-                <Image Source="..\images\Home.png" MaxWidth="90" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Image Source="..\images\Home.png" MaxWidth="90" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
         </Button>
 
