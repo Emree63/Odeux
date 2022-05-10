@@ -34,7 +34,7 @@ namespace Modele
         public string password { get => PassWord; set => PassWord = value; }
 
         /// <summary>
-        /// 
+        ///  Constructeur
         /// </summary>
         /// <param name="nom">Nom de la Personne</param>
         /// <param name="prénom">Prénom de la Personne</param>

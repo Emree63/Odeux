@@ -6,14 +6,29 @@ using System.Threading.Tasks;
 
 namespace Modele
 {
-    class Note
+    public class Note
     {
+        /// <summary>
+        /// Nom de la note
+        /// </summary>
         public string Nom { get; set; }
 
-        public int note { get; set; }
+        /// <summary>
+        /// Nombre d'une note
+        /// </summary>
+        public float note { get; set; }
 
-        public Note(string nom, int Note)
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="nom">Nom de la note</param>
+        /// <param name="Note">Nombre obtenu de la note note</param>
+        public Note(string nom, float Note)
         {
+            if (string.IsNullOrWhiteSpace(nom) || Note<0)
+            {
+                throw new ArgumentException("La note n'est pas conforme, veuillez rentrer des informations valables !");
+            }
             Nom = nom;
             note = Note;
         }

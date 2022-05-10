@@ -6,7 +6,7 @@ namespace Test_Etudiant
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test de la Classe Personne");
+            Console.WriteLine("Test de la classe Etudiant :");
         }
     }
 }
