@@ -18,6 +18,8 @@ namespace Test_Matière
             Note n2 = new Note("DS", 15);
             notes.Add(n2);
 
+            Note n4 = new Note("Td noté", 11.1);
+
             // Liste Vide
             List<Note> notes2 = new List<Note>();
 
@@ -44,6 +46,17 @@ namespace Test_Matière
             {
                 Console.WriteLine(msg);
             }
+
+            // Aprés avoir rajouter une nouvel note
+            Console.WriteLine("Apres un ajout d'une nouvel note :");
+            mat.AddNote(n4);
+            Console.WriteLine(mat);
+
+            //On teste la fonction Supprimer
+            Console.WriteLine("Apres une Suppresion d'une note :");
+            mat.SuppNote(n4);
+            Console.WriteLine(mat);
+
         }
     }
 }

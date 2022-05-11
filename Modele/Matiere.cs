@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +22,7 @@ namespace Modele
         /// <summary>
         /// Constructeur
         /// </summary>
-        /// <param name="nom"></param>
+        /// <param name="nom">Nom de la matiere</param>
         /// <param name="Notes">Listes des notes concernants la matière</param>
         public Matiere(string nom, List<Note> Notes)
         {
@@ -31,16 +31,36 @@ namespace Modele
         }
 
         /// <summary>
+        /// Constructeur sans Liste
+        /// </summary>
+        /// <param name="nom">Nom de la matiere</param>
+        public Matiere(string nom)
+        {
+            List<Note> n = new List<Note>();
+            Nom = nom;
+            notes = n;
+        }
+
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="Notes">Listes des notes concernants la matière</param>
+        public Matiere(List<Note> Notes): this(null,Notes)
+        {
+
+        }
+
+        /// <summary>
         /// Calcul de la moyenne d'une matière
         /// </summary>
         /// <returns>float : Moyenne</returns>
-        public float MoyMatière()
+        public double MoyMatière()
         {
             if (notes.Count==0)
             {
                 throw new ArgumentException("Il n'y a pas de note dans la matière");
             }
-            float total = 0;
+            double total = 0;
             foreach (Note note in notes)
             {
                 total += note.note;
@@ -48,9 +68,26 @@ namespace Modele
             return total / notes.Count(); 
         }
 
+        /// <summary>
+        /// Ajouter une nouvelle note à la matière
+        /// </summary>
+        /// <param name="NouvelNote">La nouvelle note à inserer</param>
+        public void AddNote(Note NouvelNote)
+        {
+            notes.Add(NouvelNote);
+        }
+
+        /// <summary>
+        /// Supprimer une note de la matière
+        /// </summary>
+        /// <param name="note">La note à supprimer</param>
+        public void SuppNote(Note note)
+        {
+            notes.Remove(note);
+        }
         public override string ToString()
         {
-            Console.WriteLine(Nom + " :");
+            if(Nom !=  null) Console.WriteLine(Nom + " :");
 
             foreach(Note note in notes)
             {

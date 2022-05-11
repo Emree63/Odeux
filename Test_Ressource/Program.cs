@@ -32,21 +32,31 @@ namespace Test_Ressource
             List<Matiere> matieres2 = new List<Matiere>();
 
             Matiere mat1 = new Matiere("Structure de données", notes);
-
-            Matiere mat2 = new Matiere("Algorithme", notes);
+            Matiere mat2 = new Matiere("Algorithme", notes2);
 
             matieres.Add(mat1);
             matieres.Add(mat2);
-            matieres2.Add(mat1);
+
             //Creation des Ressource
 
             Ressource res = new Ressource("R1.01", "Initiation au développement", 42, matieres);
-            Ressource res2 = new Ressource("R1.02", 12,matieres2);
+            Ressource res2 = new Ressource("R1.02", 12, matieres2);
+            res2.AddMatiere(mat1);
 
             //Test des Ressources
 
             Console.WriteLine(res);
             Console.WriteLine(res2);
+
+            Console.WriteLine("Moyenne de la première Ressource :");
+            Console.WriteLine(res.MoyRessource());
+
+            //Test suppresion
+            Console.WriteLine("Supprime la matière dans la deuxième Ressource :");
+            res2.SuppMatiere(mat1);
+            Console.WriteLine(res2);
+
+
 
 
         }

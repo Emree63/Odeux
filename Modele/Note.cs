@@ -16,14 +16,14 @@ namespace Modele
         /// <summary>
         /// Nombre d'une note
         /// </summary>
-        public float note { get; set; }
+        public double note { get; set; }
 
         /// <summary>
         /// Constructeur
         /// </summary>
         /// <param name="nom">Nom de la note</param>
         /// <param name="Note">Nombre obtenu de la note note</param>
-        public Note(string nom, float Note)
+        public Note(string nom, double Note)
         {
             if (string.IsNullOrWhiteSpace(nom) || Note<0)
             {
