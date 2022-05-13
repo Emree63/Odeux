@@ -129,22 +129,6 @@ namespace Modele
             return null;
         }
 
-        /// <summary>
-        /// Compare deux UE par rapport au Semestre et leur numéro
-        /// </summary>
-        /// <param name="other">L'UE avec laquelle on compare</param>
-        /// <returns>False or True</returns>
-        public bool Equals(UE other)
-        {
-            return (Semestre == other.semestre && Num == other.Num);
-        }
-
-        public override bool Equals(object obj)
-        {
-
-            return Equals(obj);
-        }
-
 
     }
 }

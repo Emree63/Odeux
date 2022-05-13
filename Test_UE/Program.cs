@@ -64,7 +64,6 @@ namespace Test_UE
 
             Write("Moyenne de l'UE :" + ue.MoyUE());
 
-            Write(ue == ue2);
         }
     }
 }
