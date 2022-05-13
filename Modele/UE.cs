@@ -25,9 +25,15 @@ namespace Modele
         /// </summary>
         public string Description { get; set; }
 
+        /// <summary>
+        /// Liste des Ressouces dans l'UE
+        /// </summary>
         private List<Ressource> ressources;
-        public List<Ressource> Res { get => ressources;  }
+        public List<Ressource> Res { get => ressources; set => ressources = value; }
 
+        /// <summary>
+        /// SAE concernant l'UE
+        /// </summary>
         public SAE sae;
 
         /// <summary>
@@ -41,6 +47,8 @@ namespace Modele
             Semestre = semestre;
             Num = num;
             Description = Des;
+            sae = null;
+            ressources = new List<Ressource>();
         }
 
         /// <summary>
@@ -51,6 +59,24 @@ namespace Modele
         public UE(int semestre, string num): this(semestre,num,null)
         {
 
+        }
+
+        /// <summary>
+        /// Ajouter une ressource à la liste des ressources de l'UE
+        /// </summary>
+        /// <param name="res">Ressource à ajouter</param>
+        public void AddRessource(Ressource res)
+        {
+            ressources.Add(res);
+        }
+
+        /// <summary>
+        /// Suppresion d'une ressource
+        /// </summary>
+        /// <param name="res">Resource qu'on veut supprimer</param>
+        public void SuppRessource(Ressource res)
+        {
+            ressources.Remove(res);
         }
 
         /// <summary>
@@ -70,12 +96,26 @@ namespace Modele
                 total += res.MoyRessource()*res.Coef;
                 Coef += res.Coef;
             }
+            if(sae != null)
+            {
+                total += sae.getNote() * sae.Coef;
+                Coef += sae.Coef;
+            }
             return total / Coef;
         }
 
+        /// <summary>
+        /// Ajouter une SAE à l'UE
+        /// </summary>
+        /// <param name="sae1">SAE à ajouter</param>
+        public void AddSAE(SAE sae1)
+        {
+            sae = sae1;
+        }
         public override string ToString()
         {
-            if(Description != null) Console.WriteLine(Num + Description +":");
+
+            if(Description != null) Console.WriteLine(Num +" - "+ Description +":");
             else Console.WriteLine(Num + ":");
             if (ressources.Count == 0)
             {
@@ -85,8 +125,26 @@ namespace Modele
             {
                 Console.WriteLine("         " +res);
             }
+            if (sae != null) Console.WriteLine(sae);
             return null;
         }
+
+        /// <summary>
+        /// Compare deux UE par rapport au Semestre et leur numéro
+        /// </summary>
+        /// <param name="other">L'UE avec laquelle on compare</param>
+        /// <returns>False or True</returns>
+        public bool Equals(UE other)
+        {
+            return (Semestre == other.semestre && Num == other.Num);
+        }
+
+        public override bool Equals(object obj)
+        {
+
+            return Equals(obj);
+        }
+
 
     }
 }

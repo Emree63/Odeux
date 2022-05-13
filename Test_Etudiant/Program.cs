@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 
 namespace Test_Etudiant
 {
@@ -6,7 +7,7 @@ namespace Test_Etudiant
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test de la classe Etudiant :");
+            WriteLine("Test de la classe Etudiant :");
         }
     }
 }

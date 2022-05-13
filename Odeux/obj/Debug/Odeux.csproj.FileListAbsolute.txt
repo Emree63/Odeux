@@ -141,3 +141,5 @@ C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\Prof\Consul
 C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\Prof\Edt_Prof.baml
 D:\IUT\SAE2.01\Odeux\obj\Debug\User-Control\Prof\EntrerDesNotes.g.cs
 D:\IUT\SAE2.01\Odeux\obj\Debug\User-Control\Prof\EntrerDesNotes.baml
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\Prof\EntrerDesNotes.g.cs
+C:\Users\emkartal1\Source\Repos\sae2.01\Odeux\obj\Debug\User-Control\Prof\EntrerDesNotes.baml

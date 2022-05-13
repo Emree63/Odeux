@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Modele;
+using static System.Console;
 
 namespace Test_Ressource
 {
@@ -8,6 +9,7 @@ namespace Test_Ressource
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Test de la classe Ressource :");
 
             // Creation des Liste de note
@@ -45,18 +47,16 @@ namespace Test_Ressource
 
             //Test des Ressources
 
-            Console.WriteLine(res);
-            Console.WriteLine(res2);
+            WriteLine(res);
+            WriteLine(res2);
 
-            Console.WriteLine("Moyenne de la première Ressource :");
-            Console.WriteLine(res.MoyRessource());
+            WriteLine("Moyenne de la première Ressource :");
+            WriteLine(res.MoyRessource());
 
             //Test suppresion
-            Console.WriteLine("Supprime la matière dans la deuxième Ressource :");
+            WriteLine("Supprime la matière dans la deuxième Ressource :");
             res2.SuppMatiere(mat1);
-            Console.WriteLine(res2);
-
-
+            WriteLine(res2);
 
 
         }

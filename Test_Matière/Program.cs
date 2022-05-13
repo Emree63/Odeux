@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Modele;
+using static System.Console;
 
 namespace Test_Matière
 {
@@ -8,7 +9,8 @@ namespace Test_Matière
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test de la classe Matiere :");
+            Console.ForegroundColor = ConsoleColor.Green;
+            WriteLine("Test de la classe Matiere :");
             
             // Création d'une liste de note
             List<Note> notes = new List<Note>();
@@ -29,33 +31,33 @@ namespace Test_Matière
             }
             catch(Exception msg)
             {
-                Console.WriteLine(msg);
+                WriteLine(msg);
             }
 
             Matiere mat = new Matiere("Structure de données",notes);
-            Console.WriteLine(mat);
-            Console.WriteLine("Moyenne :"+mat.MoyMatière());
+            WriteLine(mat);
+            WriteLine("Moyenne :"+mat.MoyMatière());
 
             // Test de calcul de la moyenne d'une matière, contenant aucune notes
             Matiere mat1 = new Matiere("Bases de données", notes2);
             try
             {
-                Console.WriteLine("Moyenne :" + mat1.MoyMatière());
+                WriteLine("Moyenne :" + mat1.MoyMatière());
             }
             catch (Exception msg)
             {
-                Console.WriteLine(msg);
+                WriteLine(msg);
             }
 
             // Aprés avoir rajouter une nouvel note
-            Console.WriteLine("Apres un ajout d'une nouvel note :");
+            WriteLine("Apres un ajout d'une nouvel note :");
             mat.AddNote(n4);
-            Console.WriteLine(mat);
+            WriteLine(mat);
 
             //On teste la fonction Supprimer
-            Console.WriteLine("Apres une Suppresion d'une note :");
+            WriteLine("Apres une Suppresion d'une note :");
             mat.SuppNote(n4);
-            Console.WriteLine(mat);
+            WriteLine(mat);
 
         }
     }

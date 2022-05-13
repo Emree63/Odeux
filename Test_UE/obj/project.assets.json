@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Modele/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Modele.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modele.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Modele/1.0.0": {
+      "type": "project",
+      "path": "../Modele/Modele.csproj",
+      "msbuildProject": "../Modele/Modele.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Modele >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\emkartal1\\.nuget\\packages\\": {},
@@ -41,7 +60,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj": {
+              "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
