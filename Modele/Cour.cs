@@ -35,6 +35,8 @@ namespace Modele
         private Professeur Enseignant;
         private Professeur enseignant { get => Enseignant; set => Enseignant = value; }
 
+
+
         public Cour(DateTime date, TimeSpan duree, string salle, string mat)
         {
             Date = date;

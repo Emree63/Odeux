@@ -95,6 +95,7 @@ namespace Test_Professeur
             Professeur prof = new Professeur("Chevaldonne", "Marc", nais2, "`@&;UCCy8ab{*d9V");
             Write(prof);
             prof.Noter(1, "UE 1", "R1.01", mat1, etu1);
+            WriteLine("---------------Apres l'ajout de la note !-------------------");
             Write(etu1.semestre1);
             WriteLine(etu1.MoyGeneral());
         }

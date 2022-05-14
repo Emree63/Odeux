@@ -10,3 +10,11 @@ C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\Modele.csproj.Co
 C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\Modele.dll
 C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\ref\Modele.dll
 C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\Modele.pdb
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.csproj.AssemblyReference.cache
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.GeneratedMSBuildEditorConfig.editorconfig
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.AssemblyInfoInputs.cache
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.AssemblyInfo.cs
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.csproj.CoreCompileInputs.cache
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.dll
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\ref\Modele.dll
+D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.pdb
