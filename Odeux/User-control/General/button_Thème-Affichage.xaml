@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:Odeux.User_Control.General"
              mc:Ignorable="d" 
              d:DesignHeight="90" d:DesignWidth="200">
+    <Viewbox>
+        
     <Grid Height="90" Width="200">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -47,4 +49,5 @@
         <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Oled"/>
 
     </Grid>
+    </Viewbox>
 </UserControl>
