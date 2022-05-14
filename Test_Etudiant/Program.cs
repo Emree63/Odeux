@@ -10,9 +10,7 @@ namespace Test_Etudiant
         static void Main(string[] args)
         {
             WriteLine("Test de la classe Etudiant :");
-
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Test de la classe UE :");
 
             // Creation des Liste de note
             List<Note> notes = new List<Note>();
@@ -82,7 +80,13 @@ namespace Test_Etudiant
 
             //Creation d'un Joueur
 
-            Etudiant etu1 = new Etudiant("Khedair ", "Rami");
+            DateTime nais = new DateTime(2002, 10, 22);
+            Etudiant etu1 = new Etudiant("Khedair ", "Rami",nais, "Cinq combattants distinguent des esquives et les rêves.",s1,s2);
+
+            WriteLine(etu1);
+            WriteLine(etu1.semestre1.MoySemestre());
+            WriteLine(etu1.semestre2.MoySemestre());
+            WriteLine("Ma moyenne est de :" + etu1.MoyGeneral());
         }
     }
 }

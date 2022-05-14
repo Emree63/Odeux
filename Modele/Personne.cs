@@ -42,10 +42,6 @@ namespace Modele
         /// <param name="password">Mot de Passe</param>
         public Personne(string nomP, string prénomP, DateTime naissanceP, string passwordP)
         {
-            if(string.IsNullOrWhiteSpace(nom) || string.IsNullOrWhiteSpace(prénom) || string.IsNullOrWhiteSpace(password))
-            {
-                throw new ArgumentException("Une personne doit avoir un Nom, un Prénom, une date de Naissance communiqué et un Mot de Passe");
-            }
             Nom = nomP;
             Prénom = prénomP;
             Naissance = naissanceP;
