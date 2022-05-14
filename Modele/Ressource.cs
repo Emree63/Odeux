@@ -27,8 +27,8 @@ namespace Modele
         /// <summary>
         /// Liste des Matières dans une Ressource
         /// </summary>
-        private List<Matiere> matieres;
-        public List<Matiere> mat { get => matieres; set => matieres = value; }
+        public List<Matiere> matieres { get; set; }
+
 
         /// <summary>
         /// Constructeur

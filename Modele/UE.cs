@@ -28,8 +28,7 @@ namespace Modele
         /// <summary>
         /// Liste des Ressouces dans l'UE
         /// </summary>
-        private List<Ressource> ressources;
-        public List<Ressource> Res { get => ressources; set => ressources = value; }
+        public List<Ressource> ressources { get; set; }
 
         /// <summary>
         /// SAE concernant l'UE

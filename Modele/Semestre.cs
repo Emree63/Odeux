@@ -16,8 +16,8 @@ namespace Modele
         /// <summary>
         /// Liste des UE du Semestre
         /// </summary>
-        private List<UE> LesUE;
-        public List<UE> UE { get => LesUE; set => LesUE = value; }
+        public List<UE> LesUE { get; set; }
+
 
         /// <summary>
         /// Constructeur d'un Semestre

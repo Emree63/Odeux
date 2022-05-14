@@ -16,8 +16,8 @@ namespace Modele
         /// <summary>
         /// Listes des notes d'una matière
         /// </summary>
-        private List<Note> notes;
-        public List<Note>Notes1 { get => notes; set => notes= value;}
+        public List<Note> notes { get; set; }
+
 
         /// <summary>
         /// Constructeur

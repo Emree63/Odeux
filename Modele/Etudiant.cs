@@ -46,7 +46,6 @@ namespace Modele
         /// <returns>double : Moyenne</returns>
         public double MoyGeneral()
         {
-
             double total = 0;
 
             try
@@ -59,6 +58,77 @@ namespace Modele
                 return 0;
             }
             return total / 2;
+        }
+
+        /// <summary>
+        /// return une note
+        /// </summary>
+        /// <param name="sem">Semestre concernant la note</param>
+        /// <param name="UE">UE concernant la note</param>
+        /// <param name="Ressource">Ressource concernant la note</param>
+        /// <param name="mat">matière</param>
+        /// <param name="note">nom de la note qu'on veut obtenir</param>
+        /// <returns>double : note</returns>
+        public double getNote(int sem, string UE, string Ressource ,string mat,string note)
+        {
+
+            if(semestre1.NumSemestre== sem)
+            {
+                foreach(UE ue in semestre1.LesUE)
+                {
+                    if(ue.num == UE)
+                    {
+                        foreach (Ressource res in ue.ressources)
+                        {
+                            if(res.num == Ressource)
+                            {
+                                foreach(Matiere mat1 in res.matieres)
+                                {
+                                   if(mat1.Nom == mat)
+                                    {
+                                        foreach(Note n in mat1.notes)
+                                        {
+                                            if(n.Nom==note)
+                                            {
+                                                return n.note;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (semestre2.NumSemestre == sem)
+            {
+                foreach (UE ue in semestre2.LesUE)
+                {
+                    if (ue.num == UE)
+                    {
+                        foreach (Ressource res in ue.ressources)
+                        {
+                            if (res.num == Ressource)
+                            {
+                                foreach (Matiere mat1 in res.matieres)
+                                {
+                                    if (mat1.Nom == mat)
+                                    {
+                                        foreach (Note n in mat1.notes)
+                                        {
+                                            if (n.Nom == note)
+                                            {
+                                                return n.note;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            throw new ArgumentException("Erreur");
         }
     }
     

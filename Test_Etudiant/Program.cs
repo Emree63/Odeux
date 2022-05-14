@@ -78,7 +78,7 @@ namespace Test_Etudiant
             Semestre s1 = new Semestre(1, lesUE);
             Semestre s2 = new Semestre(2, lesUE2);
 
-            //Creation d'un Joueur
+            //Creation d'un Etudiant
 
             DateTime nais = new DateTime(2002, 10, 22);
             Etudiant etu1 = new Etudiant("Khedair ", "Rami",nais, "Cinq combattants distinguent des esquives et les rêves.",s1,s2);
@@ -87,6 +87,7 @@ namespace Test_Etudiant
             WriteLine(etu1.semestre1.MoySemestre());
             WriteLine(etu1.semestre2.MoySemestre());
             WriteLine("Ma moyenne est de :" + etu1.MoyGeneral());
+            WriteLine(etu1.getNote(1, "UE 1", "R1.01", "Algorithme", "Tp noté"));
         }
     }
 }
