@@ -34,13 +34,14 @@
 
         <Viewbox Grid.Row="1" HorizontalAlignment="Right">
             <WrapPanel Margin="0,0,0,0" Background="{DynamicResource BackgroundColor}" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <Grid Height="Auto" Margin="10, 50" Panel.ZIndex="0">
+                <Grid Height="Auto" Margin="10, 110" Panel.ZIndex="0">
+
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Padding="15"/>
+                    <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontFamily="Poppins" FontSize="32" Foreground="#6F8DAD" Padding="15" />
 
                     <Grid Grid.Row="1" Grid.ColumnSpan="2">
                         <Grid.RowDefinitions>
@@ -114,49 +115,6 @@
 
                             <User_Control:Thème_Affichage Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 30, 30"/>
 
-                            <!--<Button Content="Animation :)" Cursor="Hand" Click="Button_Click_1" Height="50" Width="90" Margin="1200,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Foreground="gray"/>-->
-
-                            <!--<Viewport3D>
-                            <Viewport3D.Camera>
-                                <PerspectiveCamera Position="-21, 0, 60" LookDirection="0,0,-1" FieldOfView="60"/>
-                            </Viewport3D.Camera>
-                            <Viewport3D.Children>
-                                <ModelVisual3D>
-                                    <ModelVisual3D.Content>
-                                        <DirectionalLight Direction="-0.3,-0.4,-0.5" />
-                                    </ModelVisual3D.Content>
-                                </ModelVisual3D>
-                                <ModelUIElement3D>
-                                    <ModelUIElement3D.Model>
-                                        <GeometryModel3D x:Name="mCube">
-                                            <GeometryModel3D.Transform>
-                                                <Transform3DGroup>
-                                                    <TranslateTransform3D/>
-                                                    <RotateTransform3D />
-                                                </Transform3DGroup>
-                                            </GeometryModel3D.Transform>
-                                            <GeometryModel3D.Material>
-                                                <DiffuseMaterial>
-                                                    <DiffuseMaterial.Brush>
-                                                        <SolidColorBrush Color="#178F96" x:Name="CubeBrush"/>
-                                                    </DiffuseMaterial.Brush>
-                                                </DiffuseMaterial>
-                                            </GeometryModel3D.Material>
-                                            <GeometryModel3D.Geometry>
-                                                <MeshGeometry3D
-                                            Positions="-1,1,-1 1,1,-1 1,-1,-1 -1,-1,-1 -1,1,1 1,1,1 1,-1,1 -1,-1,1"
-                                            TriangleIndices="0 1 2 0 2 3
-                                                                0 4 1 1 4 5
-                                                                0 7 4 0 3 7
-                                                                1 5 6 1 6 2
-                                                                2 6 7 2 7 3
-                                                                4 6 5 4 7 6"/>
-                                            </GeometryModel3D.Geometry>
-                                        </GeometryModel3D>
-                                    </ModelUIElement3D.Model>
-                                </ModelUIElement3D>
-                            </Viewport3D.Children>
-                        </Viewport3D>-->
                         </Grid>
                     </Grid>
                 </Grid>
