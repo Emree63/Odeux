@@ -95,6 +95,9 @@
     <Compile Include="User-Control\Prof\Edt_Prof.xaml.cs">
       <DependentUpon>Edt_Prof.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User-Control\Prof\EntrerDesNotes.xaml.cs">
+      <DependentUpon>EntrerDesNotes.xaml</DependentUpon>
+    </Compile>
     <Page Include="Connection-Page.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="User-Control\Prof\Edt_Prof.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User-Control\Prof\EntrerDesNotes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

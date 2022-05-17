@@ -6,29 +6,39 @@
              xmlns:local="clr-namespace:Odeux.User_Control.Etu"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1500">
-
-    <Grid>
+    <Viewbox>
+        
+    <Grid Width="1500" Height="750">
         <Grid.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="FontSize" Value="30" />
                 <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
                 <Setter Property="TextWrapping" Value="Wrap"/>
             </Style>
-            <Style TargetType="Rectangle">
-                <Setter Property="Fill" Value="#110E3D"/>
-                <Setter Property="RadiusX" Value="5"/>
-                <Setter Property="RadiusY" Value="15" />
-            </Style>
         </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
         <Button Click="MaMessageBox" Foreground="Black" Background="#424549" Content="Faire toutes les signatures manquantes"
-                FontSize="20" Width="450" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,70,0,0"/>
+                FontSize="20" Width="450" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
 
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Margin="150,-670,0,0"/>
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="680,70,175,150" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
+                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="620" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Margin="0,40,0,0">
+                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Grid.Row="1">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel>
@@ -58,25 +68,33 @@
 
 
             </ListBox>
+            </Grid>
         </Border>
 
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Dernières notes" Foreground="{DynamicResource TextColor}" Margin="-1100,-200,0,0"/>
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="70,300,955,150"  VerticalAlignment="Center" HorizontalAlignment="Center">
-            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="Dernières notes" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
+                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="450" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="422" x:Name="ListBox_Note" Margin="0,40,0,0">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <WrapPanel>
-                          
-                        </WrapPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
+                      Background="Transparent" Height="422" x:Name="ListBox_Note" Grid.Row="1">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
 
 
-            </ListBox>
+                </ListBox>
+            </Grid>
         </Border>
 
     </Grid>
+    </Viewbox>
 </UserControl>
 

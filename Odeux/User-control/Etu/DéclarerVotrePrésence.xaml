@@ -6,14 +6,15 @@
              xmlns:local="clr-namespace:Odeux.User_Control.Etu"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1500">
-    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,200">
-            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="627" x:Name="ListBox">
+    <Viewbox>
+        
+    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
+            <ListBox  Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" Height="750" x:Name="ListBox">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel>
-                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="20,10,0,10" Width="900">
+                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,10,0,10" Width="900">
                             <StackPanel>
                                 <TextBlock Foreground="Red" FontSize="25">
                                     <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding DateCour.Day,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Month,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Year,Mode=OneWay}"/>
@@ -42,5 +43,6 @@
                 
             </ListBox>
         </Border>
+    </Viewbox>
 
 </UserControl>

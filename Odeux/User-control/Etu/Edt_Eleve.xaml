@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:Odeux.User_Control.Etu"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1500">
-    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,200">
+    <Viewbox>
+
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
         <Grid>
             <DockPanel>
                 <Calendar DockPanel.Dock="Top" SelectionMode="None" Name="mCalendar" DisplayMode="Month"/>
@@ -102,4 +104,5 @@
         </ListBox>
         </Grid>
     </Border>
+    </Viewbox>
 </UserControl>

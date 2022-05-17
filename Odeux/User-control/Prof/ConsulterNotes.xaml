@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:Odeux.User_Control.Prof"
              mc:Ignorable="d" 
             d:DesignHeight="750" d:DesignWidth="1500">
-    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Margin="20,20,80,200">
+    <Viewbox>
+
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10"  Height="750" Width="1375">
         <Grid>
             <WrapPanel>
                 <Button Background="Transparent" Margin="80,0,0,0" >
@@ -55,8 +57,8 @@
                 </WrapPanel>
             </StackPanel>
             <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="627" x:Name="ListBox" Margin="0,200,0,0">
+                      Width="1500" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" Height="725" x:Name="ListBox" Margin="0,200,0,0">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel>
@@ -67,4 +69,5 @@
             </ListBox>
         </Grid>
     </Border>
+    </Viewbox>
 </UserControl>
