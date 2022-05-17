@@ -128,7 +128,7 @@ namespace Modele
                     }
                 }
             }
-            throw new ArgumentException("Erreur");
+            return -1;
         }
     }
     

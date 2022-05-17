@@ -24,7 +24,7 @@ namespace Odeux.User_Control.General
         {
             InitializeComponent();
             Clair.Height = 0;
-            Sombre.Height = 0;
+            Sombre.Height = 22;
             Oled.Height = 0;
         }
         private void Clair_button(object sender, RoutedEventArgs e)

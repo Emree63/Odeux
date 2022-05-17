@@ -1574,16 +1574,16 @@
 										"$ref": "AAAAAAGAhN/VuJUBlEs="
 									},
 									"font": "Arial;11;0",
-									"left": 550,
+									"left": 615,
 									"top": 808,
 									"width": 242.0869140625,
 									"height": 11,
-									"alpha": 0.1769542392983814,
-									"distance": 105.72133181151285,
+									"alpha": 0.4485079162836647,
+									"distance": 43.382023926967726,
 									"hostEdge": {
 										"$ref": "AAAAAAGAhN/VuJUDjf4="
 									},
-									"text": "-groupes : Dictionary<Groupe,étudiants>"
+									"text": "-groupes"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7058,7 +7058,7 @@
 								"_parent": {
 									"$ref": "AAAAAAGAhN/VuJT/uZ0="
 								},
-								"name": "groupes : Dictionary<Groupe,étudiants>",
+								"name": "groupes",
 								"reference": {
 									"$ref": "AAAAAAGAhM4aMI9+xLc="
 								},
