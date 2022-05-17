@@ -71,7 +71,7 @@
             
             <TextBlock Text="Mot de Passe :" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="34" Foreground="gray" Margin="-700,-100,0,0"/>
             
-            <User_Control:Thème_Affichage Margin="1500,450,0,0"/>
+            <User_Control:Thème_Affichage Width="300" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
 
             <Button Content="Test" Click="Prof" Width="30" Height="30"/>
 

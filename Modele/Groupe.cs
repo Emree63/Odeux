@@ -20,6 +20,11 @@ namespace Modele
         private List<Etudiant> étudiants;
         public List<Etudiant> etudiants { get => étudiants; set => étudiants = value; }
         
+        /// <summary>
+        /// Constructeur de la classe Groupe
+        /// </summary>
+        /// <param name="num">Numéro du groupe</param>
+        /// <param name="etu">Liste des étudiants constituant le groupe</param>
         public Groupe(int num, List<Etudiant> etu)
         {
             Num = num;
@@ -43,9 +48,12 @@ namespace Modele
             foreach(Etudiant etu in étudiants)
             {
                 y = etu.getNote(sem, UE, Ressource, mat, note);
-                if (y < pireNote)
+                if (y >= 0)
                 {
-                    pireNote = y;
+                    if (y > pireNote)
+                    {
+                        pireNote = y;
+                    }
                 }
             }
             return pireNote;
@@ -62,15 +70,18 @@ namespace Modele
         /// <returns>double : note le plus haut du groupe</returns>
         public double MaxNote(int sem, string UE, string Ressource, string mat, string note)
         {
-            double BestNote = 20, y;
+            double BestNote = 0, y;
 
 
             foreach (Etudiant etu in étudiants)
             {
                 y = etu.getNote(sem, UE, Ressource, mat, note);
-                if (y > BestNote)
+                if (y >= 0)
                 {
-                    BestNote = y;
+                    if (y > BestNote)
+                    {
+                        BestNote = y;
+                    }
                 }
             }
             return BestNote;
@@ -87,10 +98,14 @@ namespace Modele
         /// <returns>double : moyenne de tout les élèves sur la note</returns>
         public double MoyNote(int sem, string UE, string Ressource, string mat, string note)
         {
-            double total = 0;
+            double total = 0, y;
             foreach (Etudiant etu in étudiants)
             {
-                total += etu.getNote(sem, UE, Ressource, mat, note);
+                y = etu.getNote(sem, UE, Ressource, mat, note);
+                if (y >= 0)
+                {
+                    total += y;
+                }
             }
             return total / etudiants.Count();
         }
