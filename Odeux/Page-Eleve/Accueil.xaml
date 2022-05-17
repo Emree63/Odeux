@@ -8,7 +8,7 @@
         xmlns:UserControl="clr-namespace:Odeux.User_Control.Etu"
         xmlns:User_Control="clr-namespace:Odeux.User_Control.General" x:Class="Odeux.Page_Eleve.Accueil"
         mc:Ignorable="d"
-        Title="Accueil" Height="1080" Width="1920">
+        Title="Accueil">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
         <Setter Property="Template">
@@ -42,9 +42,9 @@
         <Image Source="..\images\Logo-Odeux.png" MaxWidth="450" Margin="0,0,0,-110" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
 
         <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Center" Width="388" Height="62" FontSize="30" BorderBrush="Transparent"  Margin="0,250,0,0" Grid.Row="1" Grid.Column="0" Click="Button_edt" >
+                 VerticalAlignment="Center" FontSize="30" BorderBrush="Transparent"  Margin="0,250,0,0" Grid.Row="1" Grid.Column="0" Click="Button_edt" >
             <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
+                <Rectangle RadiusX="15" RadiusY="15" Fill="{DynamicResource BackgroundColor2}">
                 </Rectangle>
                 <TextBlock Text="Emploi du temps" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
