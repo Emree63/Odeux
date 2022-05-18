@@ -50,7 +50,7 @@ namespace Modele
                 y = etu.getNote(sem, UE, Ressource, mat, note);
                 if (y >= 0)
                 {
-                    if (y > pireNote)
+                    if (y < pireNote)
                     {
                         pireNote = y;
                     }
@@ -64,18 +64,18 @@ namespace Modele
         /// </summary>
         /// <param name="sem">Semestre concernant la note</param>
         /// <param name="UE">UE concernant la note</param>
-        /// <param name="Ressource">Ressource concernant la note</param>
+        /// <param name="Res">Ressource concernant la note</param>
         /// <param name="mat">matière</param>
         /// <param name="note">nom de la note qu'on veut obtenir</param>
         /// <returns>double : note le plus haut du groupe</returns>
-        public double MaxNote(int sem, string UE, string Ressource, string mat, string note)
+        public double MaxNote(int sem, string UE, string Res, string mat, string note)
         {
             double BestNote = 0, y;
 
 
             foreach (Etudiant etu in étudiants)
             {
-                y = etu.getNote(sem, UE, Ressource, mat, note);
+                y = etu.getNote(sem, UE, Res, mat, note);
                 if (y >= 0)
                 {
                     if (y > BestNote)
@@ -108,6 +108,11 @@ namespace Modele
                 }
             }
             return total / etudiants.Count();
+        }
+
+        public override string ToString()
+        {
+            return $"Groupe {Num}: ";
         }
     }
 }

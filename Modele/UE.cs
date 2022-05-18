@@ -8,11 +8,6 @@ namespace Modele
 {
     public class UE
     {
-        /// <summary>
-        /// Numéro du Semestre
-        /// </summary>
-        private int Semestre;
-        public int semestre { get => Semestre; set => Semestre = value; }
 
         /// <summary>
         /// Code de l'UE
@@ -38,12 +33,10 @@ namespace Modele
         /// <summary>
         /// Constructeur
         /// </summary>
-        /// <param name="semestre"> Semestre de l'UE</param>
         /// <param name="num">Code de l'UE</param>
         /// <param name="Des">Description de l'UE</param>
-        public UE(int semestre, string num, string Des)
+        public UE(string num, string Des)
         {
-            Semestre = semestre;
             Num = num;
             Description = Des;
             sae = null;
@@ -53,9 +46,8 @@ namespace Modele
         /// <summary>
         /// Constructeur
         /// </summary>
-        /// <param name="semestre"> Semestre de l'UE</param>
         /// <param name="num">Code de l'UE</param>
-        public UE(int semestre, string num): this(semestre,num,null)
+        public UE(string num): this(num,null)
         {
 
         }

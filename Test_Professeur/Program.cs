@@ -52,8 +52,8 @@ namespace Test_Professeur
             List<UE> lesUE = new List<UE>();
             List<UE> lesUE2 = new List<UE>();
 
-            UE ue = new UE(1, "UE 1", "Développer des applications informatiques simples");
-            UE ue2 = new UE(1, "UE 2", "Appréhender et construire des algorithmes");
+            UE ue = new UE("UE 1", "Développer des applications informatiques simples");
+            UE ue2 = new UE("UE 2", "Appréhender et construire des algorithmes");
 
             ue.AddRessource(res);
             ue.AddRessource(res2);
