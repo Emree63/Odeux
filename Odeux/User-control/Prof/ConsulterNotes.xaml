@@ -57,8 +57,8 @@
                 </WrapPanel>
             </StackPanel>
             <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1500" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="725" x:Name="ListBox" Margin="0,200,0,0">
+                      Width="1350" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" Height="525" x:Name="ListBox" Margin="0,200,0,0">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel>
