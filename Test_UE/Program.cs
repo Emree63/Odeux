@@ -49,8 +49,8 @@ namespace Test_UE
 
             //Creation d'une UE
 
-            UE ue = new UE(1, "UE 1", "Développer des applications informatiques simples");
-            UE ue2 = new UE(1, "UE 1", "Développer des applications informatiques simples");
+            UE ue = new UE("UE 1", "Développer des applications informatiques simples");
+            UE ue2 = new UE("UE 1", "Développer des applications informatiques simples");
 
             ue.AddRessource(res);
             ue.AddRessource(res2);

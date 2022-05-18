@@ -25,12 +25,10 @@ namespace Modele
         /// <param name="Note">Nombre obtenu de la note note</param>
         public Note(string nom, double Note)
         {
-            if (string.IsNullOrWhiteSpace(nom) || Note<0)
-            {
-                throw new ArgumentException("La note n'est pas conforme, veuillez rentrer des informations valables !");
-            }
-            Nom = nom;
-            note = Note;
+            if (string.IsNullOrWhiteSpace(nom)) Nom = "Aucun Nom";
+            else Nom = nom;
+            if (Note < 0) note = 0;
+            else    note = Note;
         }
 
         public override string ToString()
