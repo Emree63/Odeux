@@ -18,3 +18,15 @@ D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.csproj.CoreCompileInputs.cache
 D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.dll
 D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\ref\Modele.dll
 D:\IUT\SAE2.01\Modele\obj\Debug\net5.0\Modele.pdb
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\bin\Debug\net5.0\Modele.deps.json
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\bin\Debug\net5.0\Modele.dll
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\bin\Debug\net5.0\Modele.pdb
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\Modele.csproj.AssemblyReference.cache
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\Modele.GeneratedMSBuildEditorConfig.editorconfig
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\Modele.AssemblyInfoInputs.cache
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\Modele.AssemblyInfo.cs
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\Modele.csproj.CoreCompileInputs.cache
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\Modele.dll
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\refint\Modele.dll
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\Modele.pdb
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Modele\obj\Debug\net5.0\ref\Modele.dll

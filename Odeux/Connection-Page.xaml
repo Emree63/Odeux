@@ -33,14 +33,14 @@
         <Image Source="images\Fond.png" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Panel.ZIndex="1" Margin="0,50,0,0" d:LayoutOverrides="TopMargin, BottomMargin" Opacity="0.6" Visibility="Visible"/>
 
         <Viewbox Grid.Row="1" HorizontalAlignment="Right">
-            <WrapPanel Margin="0,0,0,0" Background="{DynamicResource BackgroundColor}" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <Grid Height="Auto" Margin="10, 50" Panel.ZIndex="0">
+            <WrapPanel Background="{DynamicResource BackgroundColor}" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid Height="Auto" Panel.ZIndex="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Left" TextWrapping="Wrap" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Padding="15"/>
+                    <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Padding="60"/>
 
                     <Grid Grid.Row="1" Grid.ColumnSpan="2">
                         <Grid.RowDefinitions>
@@ -49,9 +49,9 @@
 
                         <Grid Grid.Row="0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition MinWidth="250"/>
-                                <ColumnDefinition MinWidth="700"/>
-                                <ColumnDefinition MinWidth="250"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="2*"/>
                             </Grid.ColumnDefinitions>
 
 
@@ -85,7 +85,7 @@
 
                                 </Grid>
 
-                                <Button Margin="15" HorizontalAlignment="Center" Background="Transparent" Cursor="Hand"
+                                <Button Margin="35" HorizontalAlignment="Center" Background="Transparent" Cursor="Hand"
                  VerticalAlignment="Center" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" ToolTip="Cliquez pour vous connecter!" Grid.Row="1">
                                     <Grid>
                                         <Rectangle RadiusX="15" RadiusY="15" Fill="#1ABC9C" Opacity="0.6"/>
@@ -109,8 +109,11 @@
                                         </ContextMenu>
                                     </Button.ContextMenu>
                                 </Button>
-
                             </Grid>
+
+
+
+
 
                             <User_Control:Thème_Affichage Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 30, 30"/>
 
@@ -119,29 +122,6 @@
                             <!--<Viewport3D>
                             <Viewport3D.Camera>
                                 <PerspectiveCamera Position="-21, 0, 60" LookDirection="0,0,-1" FieldOfView="60"/>
-                            </Viewport3D.Camera>
-                            <Viewport3D.Children>
-                                <ModelVisual3D>
-                                    <ModelVisual3D.Content>
-                                        <DirectionalLight Direction="-0.3,-0.4,-0.5" />
-                                    </ModelVisual3D.Content>
-                                </ModelVisual3D>
-                                <ModelUIElement3D>
-                                    <ModelUIElement3D.Model>
-                                        <GeometryModel3D x:Name="mCube">
-                                            <GeometryModel3D.Transform>
-                                                <Transform3DGroup>
-                                                    <TranslateTransform3D/>
-                                                    <RotateTransform3D />
-                                                </Transform3DGroup>
-                                            </GeometryModel3D.Transform>
-                                            <GeometryModel3D.Material>
-                                                <DiffuseMaterial>
-                                                    <DiffuseMaterial.Brush>
-                                                        <SolidColorBrush Color="#178F96" x:Name="CubeBrush"/>
-                                                    </DiffuseMaterial.Brush>
-                                                </DiffuseMaterial>
-                                            </GeometryModel3D.Material>
                                             <GeometryModel3D.Geometry>
                                                 <MeshGeometry3D
                                             Positions="-1,1,-1 1,1,-1 1,-1,-1 -1,-1,-1 -1,1,1 1,1,1 1,-1,1 -1,-1,1"
