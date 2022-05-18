@@ -10,55 +10,10 @@
         
     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="730">
         <Grid>
-            <DockPanel>
-                <Calendar DockPanel.Dock="Top" SelectionMode="None" Name="mCalendar"/>
-            </DockPanel>
-            <WrapPanel Margin="100,80,0,0">
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
-                    <Grid>
-                        <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
-                        </Rectangle>
-                        <TextBlock Text="Lundi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
-                    <Grid>
-                        <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
-                        </Rectangle>
-                        <TextBlock Text="Mardi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
-                    <Grid>
-                        <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
-                        </Rectangle>
-                        <TextBlock Text="Mercredi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
-                    <Grid>
-                        <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
-                        </Rectangle>
-                        <TextBlock Text="Jeudi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Margin="0,0,20,0">
-                    <Grid>
-                        <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
-                        </Rectangle>
-                        <TextBlock Text="Vendredi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
-                <Button  Background="Transparent" Width="158" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent">
-                    <Grid>
-                        <Rectangle  Width="383" Height="52"  Fill="{DynamicResource BackgroundColor2}">
-                        </Rectangle>
-                        <TextBlock Text="Samedi" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
-
-            </WrapPanel>
-            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                <DockPanel>
+                    <Calendar DockPanel.Dock="Top" SelectionMode="None" Name="mCalendar"/>
+                </DockPanel>
+                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                       Background="Transparent" Height="627" x:Name="ListBox" Margin="0,160,0,0">
                 <ListBox.ItemTemplate>

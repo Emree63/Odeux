@@ -30,12 +30,6 @@ namespace Odeux
         {
             InitializeComponent();
         }
-        private void Prof(object sender, RoutedEventArgs e)
-        {
-            Accueil_Prof win = new Accueil_Prof(); //Juste pour aller sur l appli du prof
-            win.Show();
-            this.Close();
-        }
 
         private static Random MyRandomGenerator = new Random();
         private void Button_Connection(object sender, RoutedEventArgs e)

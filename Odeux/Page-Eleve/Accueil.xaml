@@ -26,7 +26,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"/> <!-- Bouton home -->
             <ColumnDefinition Width="1*"/> <!-- logo, boutons master gauche-->
-            <ColumnDefinition Width="6*"/> <!-- fill detail, boutons master haut, bouton déconnexion-->
+            <ColumnDefinition Width="0.5*"/> <!-- fill detail, boutons master haut, bouton déconnexion-->
 
         </Grid.ColumnDefinitions>
 
@@ -34,7 +34,7 @@
             <RowDefinition /> <!-- Boutons home et déconnexion -->
             <RowDefinition Height="0.5*"/> <!-- Logo et boutons master du haut -->
             <RowDefinition/> <!-- Boutons master de gauche et fill detail -->
-            <RowDefinition Height="15*"/> <!-- User control thème affichage -->
+            <RowDefinition Height="1*"/> <!-- User control thème affichage -->
         </Grid.RowDefinitions>
 
         
@@ -74,7 +74,7 @@
 
 
 
-        <Button HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Center" Width="387" Height="112" FontSize="30" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0" Click="Der_Infos">
+        <Button HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Center" FontSize="30" BorderBrush="Transparent" Grid.Row="1" Grid.Column="0" Click="Der_Infos">
             <!-- Bouton Dernières infos -->
             <Grid>
                 <Rectangle RadiusX="15" RadiusY="15" Width="387" Height="112"  Fill="{DynamicResource BackgroundColor2}">
@@ -86,7 +86,7 @@
         </Button>
 
 
-        <Button HorizontalAlignment="Center" Margin="0,160" Background="Transparent" VerticalAlignment="Top" Width="381" Height="62" FontSize="30" BorderBrush="Transparent" Click="Declarer_Loaded" Grid.Row="1" Grid.Column="0" >
+        <Button HorizontalAlignment="Center" Margin="0,160" Background="Transparent" VerticalAlignment="Top"  FontSize="30" BorderBrush="Transparent" Click="Declarer_Loaded" Grid.Row="1" Grid.Column="0" >
             <!-- Bouton déclaration prés. -->
             <Grid>
                 <Rectangle RadiusX="15" RadiusY="15" Width="381" Height="62"  Fill="{DynamicResource BackgroundColor2}">
@@ -105,8 +105,8 @@
         </Button>
 
         <User_Control:AideEnLigne HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" /> <!-- Bouton aide en ligne -->
-        <User_Control:Deconnexion HorizontalAlignment="Right" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Margin="30" ClickMenu="Deco"/> <!-- Bouton Déconnexion -->
-        <User_Control:Thème_Affichage HorizontalAlignment="Right" Height="104" Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Margin="80,0"/> <!-- Boutons thème affichage -->
+        <User_Control:Deconnexion HorizontalAlignment="Right" Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" Margin="30" ClickMenu="Deco"/> <!-- Bouton Déconnexion -->
+        <User_Control:Thème_Affichage HorizontalAlignment="Right" Height="104" Grid.Row="3" Grid.Column="3" VerticalAlignment="Top" Margin="80,0"/> <!-- Boutons thème affichage -->
 
     </Grid>
 </Window>

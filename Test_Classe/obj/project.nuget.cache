@@ -1,19 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "MEGdot8l91LxQ1Oy/tDINfL/Oc0PfYIGS3bjoDY/PCdEdZcp2wLZgpYYgJpoTwUxvmOAvmAVtX95K12vDEKxow==",
+  "dgSpecHash": "aTdm+OcPu0yAGzzqFOqX/hYUZavTOAMYRKIE33uvwm7mNWX84R+0G4eULCIgBjX8E3HQGygkol5li0SQ/vhC7w==",
   "success": true,
-  "projectFilePath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Test_Classe\\Test_Classe.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
-=======
-  "dgSpecHash": "6k+tZYT/GCub/kpYh8ClHTtdDtt9nmgSR2nSDxblgTpr/JvqxtKIW1tlTgPE23BzTzYghv/u7AWrJ1y02DEOrg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Test_Classe\\Test_Classe.csproj",
+  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Test_Classe\\Test_Classe.csproj",
   "expectedPackageFiles": [],
->>>>>>> 02e54e6a5d340aebd8485642895a613a88080f69
   "logs": []
 }

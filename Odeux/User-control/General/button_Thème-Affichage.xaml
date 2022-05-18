@@ -42,9 +42,8 @@
 
         <TextBlock Text="Oled" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
 
-        <TextBlock Text="Oled" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Margin="130,-51,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
-        
-        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Margin="-130,21,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Clair"/>
+
+        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Clair"/>
 
         <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Sombre"/>
 

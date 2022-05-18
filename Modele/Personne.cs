@@ -48,6 +48,17 @@ namespace Modele
             PassWord = passwordP;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(obj, null)) return false;
+            if (ReferenceEquals(obj, this)) return true;
+            if (GetType() != obj.GetType()) return false;
+            return base.Equals(obj as Personne);
+        }
+
+        public bool Equals(Personne other)
+            => nom == other.nom;
+
         public override string ToString()
         {
             return $"{Nom} {Prénom}";
