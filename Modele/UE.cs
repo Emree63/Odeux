@@ -47,7 +47,7 @@ namespace Modele
         /// Constructeur
         /// </summary>
         /// <param name="num">Code de l'UE</param>
-        public UE(int semestre, string num): this(num,null)
+        public UE(string num): this(num,null)
         {
 
         }

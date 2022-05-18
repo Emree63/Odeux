@@ -60,6 +60,9 @@ namespace Modele
             groupes = grps;
         }
 
-
+        public override string ToString()
+        {
+            return $"Cour du {Date.Day}/{Date.Month}/{Date.Year} à {Date.Hour}h{Date.Minute} jusqu'a {Date.Hour+Durée.Hours}h{Date.Minute+Durée.Minutes}  avec : {enseignant.nom}";
+        }
     }
 }

@@ -87,7 +87,9 @@ namespace Test_Etudiant
             WriteLine(etu1.semestre1.MoySemestre());
             WriteLine(etu1.semestre2.MoySemestre());
             WriteLine("Ma moyenne est de :" + etu1.MoyGeneral());
-            WriteLine(etu1.getNote(1, "UE 1", "R1.01", "Algorithme", "Tp noté"));
+            WriteLine(etu1.getNote(1, "UE 1", "R1.01", "Algorithme", "DS"));
+
+
         }
     }
 }
