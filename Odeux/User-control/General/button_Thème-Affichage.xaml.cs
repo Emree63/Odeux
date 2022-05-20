@@ -55,5 +55,6 @@ namespace Odeux.User_Control.General
             Application.Current.Resources["TextColor"] = new SolidColorBrush(Color.FromRgb(241, 251, 254));
         }
 
+
     }
 }

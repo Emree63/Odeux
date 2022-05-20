@@ -4,52 +4,90 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control.General"
-             mc:Ignorable="d" 
-             d:DesignHeight="90" d:DesignWidth="200">
-    <Viewbox>
-        
-    <Grid Height="90" Width="200">
+             mc:Ignorable="d" Height="70" Width="210"
+             >
+
+    <Control.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="21" />
+            <Setter Property="Foreground" Value="#178F96" />
+            <Setter Property="FontFamily" Value="MS PGothic" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Les boutons et leurs contours -->
+        <Style TargetType="Rectangle" x:Key="recButton">
+            <Setter Property="Fill" Value="#178F96" />
+            <Setter Property="RadiusX" Value="360" />
+            <Setter Property="RadiusY" Value="360" />
+            <Setter Property="Width" Value="22"/>
+            <Setter Property="Height" Value="22"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="Rectangle" x:Key="recButtonBig">
+            <Setter Property="Stroke" Value="#178F96"/>
+            <Setter Property="RadiusX" Value="360"/>
+            <Setter Property="RadiusY" Value="360"/>
+            <Setter Property="Width" Value="46"/>
+            <Setter Property="Height" Value="46"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="Opacity" Value="0.8"/>
+        </Style>
+    </Control.Resources>
+    
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Center" Width="50" Height="50" Opacity="0.8" BorderBrush="Transparent" Grid.Column="0" Click="Clair_button" >
-            <Grid>
-                <Rectangle Stroke="#178F96" RadiusX="360" RadiusY="360" Width="46" Height="46" />
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Clair" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock Text="Sombre" Grid.Column="1"/>
+        <TextBlock Text="Oled" Grid.Row="0" Grid.Column="2"/>
+
+
+        <Button Grid.Column="0" Click="Clair_button"> <!-- Clair -->
+            <Grid> <!-- Utilisation de la grid pour ne pas dépasser le nombre d'élément max de Button (1) -->
+                <Rectangle Style="{StaticResource recButtonBig}" />
+                <Rectangle Grid.Column="0" x:Name="Clair" Style="{StaticResource recButton}"/>
+                <!-- Continuer ici : faire une deuxième resource pour les petits rectangles et c/c deux rectangles comme ça dans sombre et oled -->
             </Grid>
         </Button>
 
-        <TextBlock Text="Clair" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         
-        <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Center" Width="50" Height="50" BorderBrush="Transparent"  Grid.Column="1" Click="Sombre_button">
+
+        <Button Click="Sombre_button" Grid.Column="1" > <!-- Sombre -->
             <Grid>
-                <Rectangle Stroke="#178F96" RadiusX="360" RadiusY="360" Width="46" Height="46" />
+                <Rectangle Style="{StaticResource recButtonBig}" />
+                <Rectangle x:Name="Sombre" Style="{StaticResource recButton}"/>
             </Grid>
         </Button>
 
-        <TextBlock Text="Sombre" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Grid.Column="1" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
-
-        <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Center" Width="50" Height="50" Opacity="0.8" BorderBrush="Transparent"  Grid.Column="2" Click="Oled_button">
-            <Grid>
-                <Rectangle Stroke="#178F96" RadiusX="360" RadiusY="360" Width="46" Height="46"/>
-
-            </Grid>
-        </Button>
-
-        <TextBlock Text="Oled" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Grid.Column="2" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
-
-        <TextBlock Text="Oled" FontSize="21" FontFamily="MS PGothic" Foreground="#178F96" Margin="130,-51,0,0" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
         
-        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Margin="-130,21,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Clair"/>
 
-        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Sombre"/>
-
-        <Rectangle Fill="#178F96" RadiusX="360" RadiusY="360" Width="22" Height="22" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="Oled"/>
+        <Button Grid.Column="2" Click="Oled_button"> <!-- Oled -->
+            <Grid>
+                <Rectangle Style="{StaticResource recButtonBig}"/>
+                <Rectangle x:Name="Oled" Style="{StaticResource recButton}"/>
+            </Grid>
+        </Button>
 
     </Grid>
-    </Viewbox>
+    
 </UserControl>
