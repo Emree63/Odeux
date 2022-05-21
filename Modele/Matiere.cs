@@ -26,7 +26,8 @@ namespace Modele
         /// <param name="Notes">Listes des notes concernants la matière</param>
         public Matiere(string nom, List<Note> Notes)
         {
-            Nom = nom;
+            if (string.IsNullOrWhiteSpace(nom)) new ArgumentException("Le nom doit être renseigner");
+            else Nom = nom;
             notes = Notes;
         }
 
@@ -37,8 +38,9 @@ namespace Modele
         public Matiere(string nom)
         {
             List<Note> n = new List<Note>();
-            Nom = nom;
             notes = n;
+            if (string.IsNullOrWhiteSpace(nom)) new ArgumentException("Le nom doit être renseigner");
+            else Nom = nom;
         }
 
         /// <summary>

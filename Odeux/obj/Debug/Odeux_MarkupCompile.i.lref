@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿D:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\App.xaml;;
 FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\Connection-Page.xaml;;
@@ -16,3 +17,12 @@ FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Prof\ConsulterNote
 FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Prof\Edt_Prof.xaml;;
 FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Prof\EntrerDesNotes.xaml;;
 
+=======
+﻿
+
+FC:\Users\emkartal1\source\repos\sae2.01\Odeux\Connection-Page.xaml;;
+FC:\Users\emkartal1\source\repos\sae2.01\Odeux\Page-Eleve\Accueil.xaml;;
+FC:\Users\emkartal1\source\repos\sae2.01\Odeux\User-Control\General\button_Thème-Affichage.xaml;;
+FC:\Users\emkartal1\source\repos\sae2.01\Odeux\User-Control\Prof\Edt_Prof.xaml;;
+
+>>>>>>> d4e6fc62e0eb0622eae27c82e6dc6dbadb6e85ff
