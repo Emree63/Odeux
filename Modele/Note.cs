@@ -31,9 +31,7 @@ namespace Modele
             else    note = Note;
         }
 
-        public override string ToString()
-        {
-            return $"{Nom} {note}";
-        }
+        public override string ToString() => $"{Nom} {note}";
+        
     }
 }

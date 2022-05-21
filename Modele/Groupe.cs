@@ -11,13 +11,13 @@ namespace Modele
         /// <summary>
         /// Numéro du groupe
         /// </summary>
-        private int Num;
+        int Num;
         public int num { get => Num; set => Num = value; }
 
         /// <summary>
         /// Liste des étudiant concernant le groupe
         /// </summary>
-        private List<Etudiant> étudiants;
+        List<Etudiant> étudiants;
         public List<Etudiant> etudiants { get => étudiants; set => étudiants = value; }
         
         /// <summary>
@@ -57,6 +57,7 @@ namespace Modele
                 }
             }
             return pireNote;
+
         }
 
         /// <summary>
@@ -110,9 +111,7 @@ namespace Modele
             return total / etudiants.Count();
         }
 
-        public override string ToString()
-        {
-            return $"Groupe {Num}: ";
-        }
+        public override string ToString() => $"Groupe {Num}: ";
+        
     }
 }

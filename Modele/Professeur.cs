@@ -92,14 +92,10 @@ namespace Modele
 
         }
 
-        public void AddCour(Cour nvCour)
-        {
-            LesCours.Add(nvCour);
-        }
+        public void AddCour(Cour nvCour) => LesCours.Add(nvCour);
+        
 
-        public override string ToString()
-        {
-            return $"Je suis professeur et je m 'appelle {nom} {prénom} \n";
-        }
+        public override string ToString() => $"Je suis professeur et je m 'appelle {nom} {prénom} \n";
+        
     }
 }

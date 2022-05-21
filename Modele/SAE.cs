@@ -41,14 +41,9 @@ namespace Modele
         /// Renvoie la note de la SAE
         /// </summary>
         /// <returns>double : note</returns>
-        public double getNote()
-        {
-            return note.note;
-        }
+        public double getNote() => note.note;
 
-        public override string ToString()
-        {
-            return $"{Nom} - {Coef}\n\t {note.Nom}: {note.note}";
-        }
+        public override string ToString() => $"{Nom} - {Coef}\n\t {note.Nom}: {note.note}";
+        
     }
 }

@@ -56,13 +56,9 @@ namespace Modele
             return base.Equals(obj as Personne);
         }
 
-        public bool Equals(Personne other)
-            => nom == other.nom;
+        public bool Equals(Personne other) => nom == other.nom;
 
-        public override string ToString()
-        {
-            return $"{Nom} {Prénom}";
-        }
+        public override string ToString() => Nom;
 
-}
+       }
 }

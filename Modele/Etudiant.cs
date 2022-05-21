@@ -35,10 +35,8 @@ namespace Modele
             Semestre2 = s2;
         }
 
-        public override string ToString()
-        {
-            return $"Je suis un étudiant et je m'appelle : {nom} {prénom}";
-        }
+        public override string ToString() => $"Je suis un étudiant et je m'appelle : {nom} {prénom}";
+
 
         /// <summary>
         /// Moyenne General de l'eleve sur toute son année
@@ -86,13 +84,7 @@ namespace Modele
                                 {
                                    if(mat1.Nom == mat)
                                     {
-                                        foreach(Note n in mat1.notes)
-                                        {
-                                            if(n.Nom==note)
-                                            {
-                                                return n.note;
-                                            }
-                                        }
+                                        foreach(Note n in mat1.notes)  if(n.Nom==note)  return n.note;   
                                     }
                                 }
                             }
@@ -116,10 +108,7 @@ namespace Modele
                                     {
                                         foreach (Note n in mat1.notes)
                                         {
-                                            if (n.Nom == note)
-                                            {
-                                                return n.note;
-                                            }
+                                            if (n.Nom == note) return n.note;
                                         }
                                     }
                                 }

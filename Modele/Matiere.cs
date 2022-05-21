@@ -74,19 +74,14 @@ namespace Modele
         /// Ajouter une nouvelle note à la matière
         /// </summary>
         /// <param name="NouvelNote">La nouvelle note à inserer</param>
-        public void AddNote(Note NouvelNote)
-        {
-            notes.Add(NouvelNote);
-        }
+        public void AddNote(Note NouvelNote) => notes.Add(NouvelNote);
 
         /// <summary>
         /// Supprimer une note de la matière
         /// </summary>
         /// <param name="note">La note à supprimer</param>
-        public void SuppNote(Note note)
-        {
-            notes.Remove(note);
-        }
+        public void SuppNote(Note note) => notes.Remove(note);
+        
         public override string ToString()
         {
             if(Nom !=  null) Console.WriteLine(Nom + " :");

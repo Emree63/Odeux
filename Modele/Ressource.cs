@@ -60,9 +60,7 @@ namespace Modele
         /// <param name="coef">Coefficient de la nouvelle Ressource</param>
         /// <param name="mat">Listes des matieres</param>
         public Ressource(string num, int coef, List<Matiere> mat) : this(num,"Aucune Description",coef, mat)
-        {
-
-        }
+        { }
 
         /// <summary>
         /// Calcul de la moyenne d'une UE d'un élève
@@ -86,19 +84,14 @@ namespace Modele
         /// Ajouter une nouvel matiere à la Ressource.
         /// </summary>
         /// <param name="Mat">Nouvelle Matière</param>
-        public void AddMatiere(Matiere Mat)
-        {
-            matieres.Add(Mat);
-        }
+        public void AddMatiere(Matiere Mat) => matieres.Add(Mat);
+        
 
         /// <summary>
         ///  Matiere qu'on veut supprimer.
         /// </summary>
         /// <param name="Mat">Matiere à supprimer</param>
-        public void SuppMatiere(Matiere Mat)
-        {
-            matieres.Remove(Mat);
-        }
+        public void SuppMatiere(Matiere Mat) => matieres.Remove(Mat);
 
         public override string ToString()
         {

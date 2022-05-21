@@ -107,7 +107,6 @@ namespace Test_Classe
             SAE sae4 = new SAE("S1.02 : Comparaison d’approches algorithmiques", n8, 40);
             ue4.AddSAE(sae4);
 
-
             //Creation de deux Semestre
 
             Semestre s1 = new Semestre(1, lesUE);
@@ -118,11 +117,9 @@ namespace Test_Classe
 
             //Creation d'un Etudiant
 
-            DateTime nais = new DateTime(2002, 10, 22);
-            Etudiant etu1 = new Etudiant("Khedair ", "Rami", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
+            Etudiant etu1 = new Etudiant("Khedair ", "Rami", new DateTime(2002, 10, 22), "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
-            DateTime nais2 = new DateTime(1978, 10, 12);
-            Etudiant etu2 = new Etudiant("Jean", "Pierre", nais2, "0000", s3, s4);
+            Etudiant etu2 = new Etudiant("Jean", "Pierre", new DateTime(1978, 10, 12), "0000", s3, s4);
 
             //Creation d'un groupe de classe
             List<Etudiant> etu = new List<Etudiant>();
@@ -138,12 +135,9 @@ namespace Test_Classe
 
             //Creation d'un prof et un cour
 
-            DateTime nais3 = new DateTime(1989, 10, 2);
-            Professeur prof = new Professeur("Chevaldonne", "Marc", nais3, "`@&;UCCy8ab{*d9V");
+            Professeur prof = new Professeur("Chevaldonne", "Marc", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
 
-            DateTime Jour = new DateTime(2022, 06, 12,14,30,0);
-            TimeSpan durée = new TimeSpan(2,0,0);
-            Cour c = new Cour(Jour,durée,"A18", "Structure de données",prof,grps);
+            Cour c = new Cour(new DateTime(2022, 06, 12, 14, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données",prof,grps);
             WriteLine(c);
 
             //Creation Classe
