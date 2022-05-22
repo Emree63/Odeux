@@ -30,7 +30,7 @@
 
         <Image Source="images\Logo-Odeux.png" VerticalAlignment="Center" HorizontalAlignment="Center" MaxHeight="600" Height="Auto" Width="Auto" Grid.Row="0"/>
 
-        <Image Source="images\Fond.png" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Panel.ZIndex="1" Margin="0,50,0,0" d:LayoutOverrides="TopMargin, BottomMargin" Opacity="0.6" Visibility="Visible"/>
+        <Image Source="images\Fond.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Panel.ZIndex="1" Margin="0,50,0,0" d:LayoutOverrides="TopMargin, BottomMargin" Opacity="0.6" />
 
         <Viewbox Grid.Row="1" HorizontalAlignment="Stretch">
             <WrapPanel Background="{DynamicResource BackgroundColor}" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
@@ -111,32 +111,8 @@
                                 </Button>
                             </Grid>
 
-
-
-
-
                             <User_Control:Thème_Affichage Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 30, 30"/>
 
-                            <!--<Button Content="Animation :)" Cursor="Hand" Click="Button_Click_1" Height="50" Width="90" Margin="1200,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Foreground="gray"/>-->
-
-                            <!--<Viewport3D>
-                            <Viewport3D.Camera>
-                                <PerspectiveCamera Position="-21, 0, 60" LookDirection="0,0,-1" FieldOfView="60"/>
-                                            <GeometryModel3D.Geometry>
-                                                <MeshGeometry3D
-                                            Positions="-1,1,-1 1,1,-1 1,-1,-1 -1,-1,-1 -1,1,1 1,1,1 1,-1,1 -1,-1,1"
-                                            TriangleIndices="0 1 2 0 2 3
-                                                                0 4 1 1 4 5
-                                                                0 7 4 0 3 7
-                                                                1 5 6 1 6 2
-                                                                2 6 7 2 7 3
-                                                                4 6 5 4 7 6"/>
-                                            </GeometryModel3D.Geometry>
-                                        </GeometryModel3D>
-                                    </ModelUIElement3D.Model>
-                                </ModelUIElement3D>
-                            </Viewport3D.Children>
-                        </Viewport3D>-->
                         </Grid>
                     </Grid>
                 </Grid>

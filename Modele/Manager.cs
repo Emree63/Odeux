@@ -49,7 +49,7 @@ namespace Modele
         /// </summary>
         /// <param name="date">date concerner</param>
         /// <returns>IEnumerable : Liste des cours</returns>
-        public IEnumerable<Cour> RechCourEtu(DateTime date) => LesCours.Where(d => d.Date == date)
+        public IEnumerable<Cour> RechCourEtu(DateTime date) => LesCours.Where(d => d.Date == date )
                                                                        .OrderBy(d => d.Date);
 
         
@@ -59,7 +59,7 @@ namespace Modele
         /// <param name="date">date concerner</param>
         /// <returns>IEnumerable : Liste des cours</returns>
         public IEnumerable<Cour> RechCourProf(DateTime date) => from d in LesCours
-                                                                where d.Date == date
+                                                                where d.Date == date && d.Enseignant.nom == personneActuel.nom && d.Enseignant.prénom == personneActuel.prénom
                                                                 orderby d.Date
                                                                 select d;
 

@@ -32,14 +32,13 @@ namespace Modele
         /// <summary>
         /// Enseignant charger de s'occuper du cour.
         /// </summary>
-        private Professeur Enseignant;
-        private Professeur enseignant { get => Enseignant; set => Enseignant = value; }
+        public Professeur Enseignant { get; set; }
 
         /// <summary>
         /// Groupes à qui sont dédiers le cour.
         /// </summary>
-        private List<Groupe> groupes;
-        public List<Groupe> groupes2 { get => groupes; set => groupes = value; }
+        private IEnumerable<Groupe> groupes => groupes2;
+        public List<Groupe> groupes2 = new List<Groupe>();
 
         /// <summary>
         /// Constructeur de la Classe Cour .
@@ -57,10 +56,10 @@ namespace Modele
             Salle = salle;
             matière = mat;
             Enseignant = ens;
-            groupes = grps;
+            groupes2.AddRange(grps);
         }
 
-        public override string ToString() => $"Cour du {Date.Day}/{Date.Month}/{Date.Year} à {Date.Hour}h{Date.Minute} jusqu'a {Date.Hour+Durée.Hours}h{Date.Minute+Durée.Minutes}  avec : {enseignant.nom}";
+        public override string ToString() => $"Cour du {Date.Day}/{Date.Month}/{Date.Year} à {Date.Hour}h{Date.Minute} jusqu'a {Date.Hour+Durée.Hours}h{Date.Minute+Durée.Minutes}  avec : {Enseignant.nom}";
         
     }
 }
