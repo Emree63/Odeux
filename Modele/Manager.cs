@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace Modele
 {
-    class Manager
+    public class Manager
     {
         Personne personneActuel { get; set; }
 
@@ -35,7 +35,7 @@ namespace Modele
         /// <param name="desPersonnes">Liste des personnes</param>
         /// <param name="cours">Listes des cours</param>
         /// <param name="promo">Promo concerner</param>
-        public Manager(List<Cour> cours, Promo promo, params Personne[] desPersonnes)
+        public Manager(List<Cour> cours, Promo promo, List<Personne> desPersonnes)
         {
             Personnes.AddRange(desPersonnes);
             LesCours = cours;
@@ -49,17 +49,18 @@ namespace Modele
         /// </summary>
         /// <param name="date">date concerner</param>
         /// <returns>IEnumerable : Liste des cours</returns>
-        public IEnumerable<Cour> RechCourEtu(DateTime date) => LesCours.Where(d => d.Date == date )
+        public IEnumerable<Cour> RechCourEtu(DateTime date) => LesCours.Where(d => d.Date.Day == date.Day && d.Date.Month == date.Month && d.Date.Year == date.Year )
                                                                        .OrderBy(d => d.Date);
 
-        
+
         /// <summary>
         /// Recherche la liste des cours du professeur de la date concerner.
         /// </summary>
         /// <param name="date">date concerner</param>
         /// <returns>IEnumerable : Liste des cours</returns>
         public IEnumerable<Cour> RechCourProf(DateTime date) => from d in LesCours
-                                                                where d.Date == date && d.Enseignant.nom == personneActuel.nom && d.Enseignant.prénom == personneActuel.prénom
+                                                                where d.Enseignant.nom == personneActuel.nom && d.Enseignant.prénom == personneActuel.prénom
+                                                                && d.Date.Day == date.Day && d.Date.Month == date.Month && d.Date.Year == date.Year
                                                                 orderby d.Date
                                                                 select d;
 
