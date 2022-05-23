@@ -25,6 +25,12 @@ namespace Test_Manager
 
             Manager Man = new Manager(cours, Iut, pers);
 
+
+            foreach (Personne e in pers)
+            {
+                WriteLine(e);
+            }
+
             Test_MethodeProf(Man);
             Test_MethodeEtu(Man);
 
@@ -51,7 +57,7 @@ namespace Test_Manager
                 WriteLine("La connexion est réussi !");
             else
                 WriteLine("La connexion à échouer !");
-            var cours = man.RechCourProf(new DateTime(2022, 06, 15));
+            var cours = man.RechCourEtu(new DateTime(2022, 06, 15));
             WriteLine("Cour de l'Eleve :");
             foreach (Cour c in cours)
                 WriteLine(c);

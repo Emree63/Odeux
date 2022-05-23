@@ -49,9 +49,28 @@ namespace Modele
         /// </summary>
         /// <param name="date">date concerner</param>
         /// <returns>IEnumerable : Liste des cours</returns>
-        public IEnumerable<Cour> RechCourEtu(DateTime date) => LesCours.Where(d => d.Date.Day == date.Day && d.Date.Month == date.Month && d.Date.Year == date.Year )
-                                                                       .OrderBy(d => d.Date);
+        public IEnumerable<Cour> RechCourEtu(DateTime date)
+        {
+            var e = LesCours.Where(d => d.Date.Day == date.Day && d.Date.Month == date.Month && d.Date.Year == date.Year)
+                                                                         .OrderBy(d => d.Date);
+            List<Cour> cour = new List<Cour>();
+            foreach (Cour c in e )
+            {
+                foreach(Groupe g in c.groupes2)
+                {
+                    foreach(Etudiant etu in g.etudiants)
+                    {
+                        if(etu.nom == personneActuel.nom && etu.prénom == personneActuel.prénom)
+                        {
+                            cour.Add(c);
+                        }
+                    }
+                }
+            }
 
+            return cour;
+
+        }
 
         /// <summary>
         /// Recherche la liste des cours du professeur de la date concerner.
