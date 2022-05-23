@@ -83,7 +83,15 @@ namespace Modele
                                                                 orderby d.Date
                                                                 select d;
 
-
+        /// <summary>
+        /// Regarde si le mot de passe et le nom existe pour la connexion dans l'application
+        /// </summary>
+        /// <param name="Nom">Nom qu'on va rechercher</param>
+        /// <param name="PassWord">Mot de passe qui correspond à l'utilisateur</param>
+        /// <returns>Renvoie le code correspondant au solution: 
+        ///  1- On trouve un professeur
+        ///  2- On trouve un Etudiant
+        ///  0- Rien trouver</returns>
         public int Connection(string Nom, string PassWord)
         {
             var Per = personnes.FirstOrDefault(d => d.nom == Nom && d.password == PassWord);

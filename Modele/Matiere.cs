@@ -26,7 +26,7 @@ namespace Modele
         /// <param name="Notes">Listes des notes concernants la matière</param>
         public Matiere(string nom, List<Note> Notes)
         {
-            if (string.IsNullOrWhiteSpace(nom)) new ArgumentException("Le nom doit être renseigner");
+            if (string.IsNullOrWhiteSpace(nom)) throw new ArgumentException("Le nom doit être renseigner");
             else Nom = nom;
             notes = Notes;
         }
@@ -35,19 +35,15 @@ namespace Modele
         /// Constructeur sans Liste
         /// </summary>
         /// <param name="nom">Nom de la matiere</param>
-        public Matiere(string nom)
+        public Matiere(string nom) : this(nom, new List<Note>())
         {
-            List<Note> n = new List<Note>();
-            notes = n;
-            if (string.IsNullOrWhiteSpace(nom)) new ArgumentException("Le nom doit être renseigner");
-            else Nom = nom;
         }
 
         /// <summary>
         /// Constructeur
         /// </summary>
         /// <param name="Notes">Listes des notes concernants la matière</param>
-        public Matiere(List<Note> Notes): this(null,Notes)
+        public Matiere(List<Note> Notes): this("Aucun Nom",Notes)
         {
 
         }
