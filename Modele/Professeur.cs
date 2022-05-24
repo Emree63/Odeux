@@ -9,12 +9,6 @@ namespace Modele
     public class Professeur : Personne
     {
         /// <summary>
-        /// Listes des cours du prof
-        /// </summary>
-        private List<Cour> LesCours ;
-        public List<Cour> lescours { get => LesCours; set => LesCours = value; }
-
-        /// <summary>
         /// Constructeur
         /// </summary>
         /// <param name="nom">Nom du Professeur</param>
@@ -92,14 +86,7 @@ namespace Modele
 
         }
 
-        public void AddCour(Cour nvCour)
-        {
-            LesCours.Add(nvCour);
-        }
-
-        public override string ToString()
-        {
-            return $"Je suis professeur et je m 'appelle {nom} {prénom} \n";
-        }
+        public override string ToString() => $"Je suis professeur et je m 'appelle {nom} {prénom} \n";
+        
     }
 }

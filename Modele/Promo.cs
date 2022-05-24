@@ -11,13 +11,15 @@ namespace Modele
         /// <summary>
         /// Tout les groupes d'éléves constituant la promo
         /// </summary>
-        private List<Groupe> groupes;
-        public List<Groupe> groupes2 { get => groupes; set => groupes = value; }
+        private IEnumerable<Groupe> groupes => groupes2;
+        public List<Groupe> groupes2 = new List<Groupe>();
 
-        public Promo(List<Groupe> grp)
-        {
-            groupes = grp;
-        }
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+        /// <param name="grp">Groupes concernant la promo</param>
+        public Promo(List<Groupe> grp) => groupes2.AddRange(grp);
+        
 
         /// <summary>
         /// Moyenne General de tout les élèves
@@ -197,9 +199,6 @@ namespace Modele
         }
 
 
-        public override string ToString()
-        {
-            return "Promo";
-        }
+        public override string ToString() => "Promo";
     }
 }

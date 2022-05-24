@@ -34,19 +34,15 @@ namespace Modele
         /// Ajouter une UE
         /// </summary>
         /// <param name="ue">UE concerner</param>
-        public void AddUE(UE ue)
-        {
-            LesUE.Add(ue);
-        }
+        public void AddUE(UE ue) => LesUE.Add(ue);
+       
 
        /// <summary>
        /// UE qu'on veut supprimer
        /// </summary>
        /// <param name="ue">UE concerner</param>
-        public void SuppUE(UE ue)
-        {
-            LesUE.Remove(ue);
-        }
+        public void SuppUE(UE ue) => LesUE.Remove(ue);
+        
         public override string ToString()
         {
             Console.WriteLine("Semestre " + NumSemestre);
@@ -54,7 +50,6 @@ namespace Modele
             {
                 Console.WriteLine(ue);
             }
-            ///return $"Semestre {NumSemestre}";
             return null;
         }
 

@@ -359,7 +359,7 @@
 											"font": "Arial;13;1",
 											"left": 965,
 											"top": 366,
-											"width": 87.42626953125,
+											"width": 89,
 											"height": 13,
 											"text": "SemestreNote"
 										},
@@ -390,7 +390,7 @@
 									"font": "Arial;13;0",
 									"left": 960,
 									"top": 359,
-									"width": 97.42626953125,
+									"width": 99,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGAigE5R0mw72Y="
@@ -410,7 +410,7 @@
 							"containerChangeable": true,
 							"left": 960,
 							"top": 344,
-							"width": 97.42626953125,
+							"width": 99,
 							"height": 64,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAigE5R0mvzJc="

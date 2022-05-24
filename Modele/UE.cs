@@ -37,6 +37,7 @@ namespace Modele
         /// <param name="Des">Description de l'UE</param>
         public UE(string num, string Des)
         {
+            if (string.IsNullOrWhiteSpace(num)) throw new ArgumentException("Le nom doit être renseigner");
             Num = num;
             Description = Des;
             sae = null;
@@ -56,19 +57,15 @@ namespace Modele
         /// Ajouter une ressource à la liste des ressources de l'UE
         /// </summary>
         /// <param name="res">Ressource à ajouter</param>
-        public void AddRessource(Ressource res)
-        {
-            ressources.Add(res);
-        }
+        public void AddRessource(Ressource res) => ressources.Add(res);
+
 
         /// <summary>
         /// Suppresion d'une ressource
         /// </summary>
         /// <param name="res">Resource qu'on veut supprimer</param>
-        public void SuppRessource(Ressource res)
-        {
-            ressources.Remove(res);
-        }
+        public void SuppRessource(Ressource res) => ressources.Remove(res);
+        
 
         /// <summary>
         /// Calcule la Moyenne d'une UE sur l'ensemble de ses Ressources
@@ -99,14 +96,12 @@ namespace Modele
         /// Ajouter une SAE à l'UE
         /// </summary>
         /// <param name="sae1">SAE à ajouter</param>
-        public void AddSAE(SAE sae1)
-        {
-            sae = sae1;
-        }
+        public void AddSAE(SAE sae1) => sae = sae1;
+        
         public override string ToString()
         {
 
-            if(Description != null) Console.WriteLine(Num +" - "+ Description +":");
+            if (!string.IsNullOrWhiteSpace(Description)) Console.WriteLine(Num +" - "+ Description +":");
             else Console.WriteLine(Num + ":");
             if (ressources.Count == 0)
             {

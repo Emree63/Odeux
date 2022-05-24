@@ -26,7 +26,7 @@ namespace Modele
         /// <param name="Notes">Listes des notes concernants la matière</param>
         public Matiere(string nom, List<Note> Notes)
         {
-            if (string.IsNullOrWhiteSpace(nom)) new ArgumentException("Le nom doit être renseigner");
+            if (string.IsNullOrWhiteSpace(nom)) throw new ArgumentException("Le nom doit être renseigner");
             else Nom = nom;
             notes = Notes;
         }
@@ -35,19 +35,15 @@ namespace Modele
         /// Constructeur sans Liste
         /// </summary>
         /// <param name="nom">Nom de la matiere</param>
-        public Matiere(string nom)
+        public Matiere(string nom) : this(nom, new List<Note>())
         {
-            List<Note> n = new List<Note>();
-            notes = n;
-            if (string.IsNullOrWhiteSpace(nom)) new ArgumentException("Le nom doit être renseigner");
-            else Nom = nom;
         }
 
         /// <summary>
         /// Constructeur
         /// </summary>
         /// <param name="Notes">Listes des notes concernants la matière</param>
-        public Matiere(List<Note> Notes): this(null,Notes)
+        public Matiere(List<Note> Notes): this("Aucun Nom",Notes)
         {
 
         }
@@ -74,19 +70,14 @@ namespace Modele
         /// Ajouter une nouvelle note à la matière
         /// </summary>
         /// <param name="NouvelNote">La nouvelle note à inserer</param>
-        public void AddNote(Note NouvelNote)
-        {
-            notes.Add(NouvelNote);
-        }
+        public void AddNote(Note NouvelNote) => notes.Add(NouvelNote);
 
         /// <summary>
         /// Supprimer une note de la matière
         /// </summary>
         /// <param name="note">La note à supprimer</param>
-        public void SuppNote(Note note)
-        {
-            notes.Remove(note);
-        }
+        public void SuppNote(Note note) => notes.Remove(note);
+        
         public override string ToString()
         {
             if(Nom !=  null) Console.WriteLine(Nom + " :");

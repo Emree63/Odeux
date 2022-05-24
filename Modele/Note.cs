@@ -27,13 +27,19 @@ namespace Modele
         {
             if (string.IsNullOrWhiteSpace(nom)) Nom = "Aucun Nom";
             else Nom = nom;
-            if (Note < 0) note = 0;
-            else    note = Note;
+            if (Note < 0 || Note> 20) note = 0;
+            else note = Note;
         }
 
-        public override string ToString()
+        public void Modifier(double NouvelNote)
         {
-            return $"{Nom} {note}";
+            if(NouvelNote<0 || NouvelNote>20)
+            {
+                return;
+            }
+            this.note = NouvelNote;
         }
+        public override string ToString() => $"{Nom} {note}";
+        
     }
 }
