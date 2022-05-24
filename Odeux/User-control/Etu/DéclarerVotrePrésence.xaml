@@ -16,8 +16,8 @@
                         <WrapPanel>
                             <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,10,0,10" Width="900">
                             <StackPanel>
-                                <TextBlock Foreground="Red" FontSize="25">
-                                    <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding DateCour.Day,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Month,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Year,Mode=OneWay}"/>
+                                    <TextBlock Foreground="Red" FontSize="25">
+                                    <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding DateCour, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
 							        de
                                     <Run Text="{Binding DateCour.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding DateCour.Minute,Mode=OneWay,StringFormat=00}"/>
 									à

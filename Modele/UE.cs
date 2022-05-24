@@ -37,6 +37,7 @@ namespace Modele
         /// <param name="Des">Description de l'UE</param>
         public UE(string num, string Des)
         {
+            if (string.IsNullOrWhiteSpace(num)) throw new ArgumentException("Le nom doit être renseigner");
             Num = num;
             Description = Des;
             sae = null;

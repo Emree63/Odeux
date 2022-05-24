@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-
 namespace TestUnit
 {
     public class UT_Matiere
@@ -52,14 +51,17 @@ namespace TestUnit
         }
 
         [Theory]
-        [InlineData(10, 10, 10, "10")]
-        [InlineData(16, 10, 9, "11,67")]
-        public void TestMoyenne(double premièreNote, double deuxièmeNote, double troisièmeNote, string expectedNote)
+        [InlineData(10, 10, 10, 20 ,"10")]
+        [InlineData(16, 10, 9, 10 ,"11,67")]
+        public void TestMoyenne(double premièreNote, double deuxièmeNote, double troisièmeNote, double quatrièmeNote, string expectedNote)
         {
             Matiere mat = new Matiere("Test");
             mat.AddNote(new Note("Test1", premièreNote));
             mat.AddNote(new Note("Test2", deuxièmeNote));
             mat.AddNote(new Note("Test3", troisièmeNote));
+            Note n = new Note("Test4", quatrièmeNote);
+            mat.AddNote(n);
+            mat.SuppNote(n);//On verifie qu'on peut bien supprimer une note
             string final = mat.MoyMatière().ToString(".##");
             Assert.Equal(final, expectedNote);
         }
