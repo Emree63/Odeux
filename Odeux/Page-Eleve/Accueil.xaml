@@ -9,8 +9,7 @@
         xmlns:User_Control="clr-namespace:Odeux.User_Control.General" x:Class="Odeux.Page_Eleve.Accueil"
         mc:Ignorable="d"
         Title="Accueil"
-        Width="1600"
-        Height="900">
+        MinWidth="480" MinHeight="360" MaxHeight="1080" MaxWidth="1920">
     <Window.Resources>
         <Style TargetType="{x:Type Button}" x:Key="masterButton">
             <Setter Property="Template">
@@ -66,21 +65,25 @@
             </Grid.RowDefinitions>
 
             <!-- PREMIERE COLONNE -->
-            <Grid Grid.Column="0" Grid.Row="0" Margin="30,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                
-                <Button Grid.Column="0" Click="Home" HorizontalAlignment="Left" VerticalAlignment="Center"  Background="{DynamicResource BackgroundColor}" BorderBrush="Transparent" Margin="50,0,0,0" Style="{StaticResource masterButton}">
-                    <!-- Bouton Home -->
-                    <Grid>
-                        <Image Source="..\images\Home.png" MaxWidth="90"/>
-                    </Grid>
-                </Button>
 
-                <Image Source="..\images\Logo-Odeux.png"  VerticalAlignment="Center" HorizontalAlignment="Left" MaxWidth="200" Grid.Column="1"/>
-            </Grid>
+            <Viewbox>
+                <Grid Grid.Column="0" Grid.Row="0" Margin="30,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Button Grid.Column="0" Click="Home" Background="{DynamicResource BackgroundColor}" BorderBrush="Transparent" Style="{StaticResource masterButton}">
+                        <!-- Bouton Home -->
+                        <Grid>
+                            <Image Source="..\images\Home.png" />
+                        </Grid>
+                    </Button>
+
+                    <Image Source="..\images\Logo-Odeux.png"  VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1"/>
+                </Grid>
+            </Viewbox>
 
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
@@ -153,12 +156,12 @@
             <Viewbox Grid.Column="1" Grid.Row="1">
                 <ContentControl x:Name="contentControl">
                     <!-- User control Fill Detail -->
-                    <UserControl:Accueil_fill_detail/>
+                    <UserControl:Accueil_fill_detail HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                 </ContentControl>
             </Viewbox>
 
-            <Viewbox HorizontalAlignment="Left" Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" Margin="30">
-                <User_Control:Deconnexion ClickMenu="Deco" Loaded="Deconnexion_Loaded"/>
+            <Viewbox HorizontalAlignment="Left" Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" Margin="0">
+                <User_Control:Deconnexion ClickMenu="Deco" Loaded="Deconnexion_Loaded" Margin="30"/>
                 <!-- Bouton Déconnexion -->
             </Viewbox>
 

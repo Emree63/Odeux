@@ -6,7 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:User_Control="clr-namespace:Odeux.User_Control.General"
         mc:Ignorable="d"
-        Title="Odeux - Connexion" MaxHeight="1080" MaxWidth="1920" d:DesignHeight="922.884" d:DesignWidth="1805.045">
+        Title="Odeux - Connexion"
+        MinWidth="480" MinHeight="360" MaxHeight="1080" MaxWidth="1920">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -23,103 +24,101 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.38*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="38*"/>
         </Grid.RowDefinitions>
 
 
         <Image Source="images\Logo-Odeux.png" VerticalAlignment="Center" HorizontalAlignment="Center" MaxHeight="600" Height="Auto" Width="Auto" Grid.Row="0"/>
 
-        <Image Source="images\Fond.png" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Panel.ZIndex="1" Margin="0,50,0,0" d:LayoutOverrides="TopMargin, BottomMargin" Opacity="0.6" Visibility="Visible"/>
+        <Image Source="images\Fond.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Panel.ZIndex="1" Margin="0,50,0,0" d:LayoutOverrides="TopMargin, BottomMargin" Opacity="0.6" Visibility="Visible"/>
 
-        <Viewbox Grid.Row="1" HorizontalAlignment="Stretch">
-            <WrapPanel Background="{DynamicResource BackgroundColor}" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <Grid Height="Auto" Panel.ZIndex="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
 
-                    <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Padding="83"/>
+        <Grid Background="{DynamicResource BackgroundColor}" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1">
 
-                    <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            
+            
+            <Viewbox Grid.Row="0">
+                <TextBlock Text="Bienvenue sur Odeux ! Connectez vous pour accéder à votre espace." VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontFamily="Poppins" FontSize="38" Foreground="#6F8DAD" Padding="30"/>
+            </Viewbox>
+
+            <Grid Height="Auto" Panel.ZIndex="0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                
+                    <Grid Grid.Row="0">
+                        <!-- Champs id/mdp -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
                         <Grid.RowDefinitions>
+                            <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="6*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
+
+                        <Viewbox HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0">
+                            <TextBlock Margin="150,0, 0, 0" Text="Identifiant :"  FontSize="34" Foreground="gray" />
+                        </Viewbox>
+
+                        <Viewbox HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1">
+                            <TextBlock Margin="150,0, 0, 0" Text="Mot de Passe :" FontSize="34" Foreground="gray"/>
+                        </Viewbox>
+
+                        <TextBox BorderThickness="0 0 0 1" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="30, 0" TextWrapping="Wrap" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                        <PasswordBox Background="Transparent" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="30, 0" VerticalAlignment="Center"/>
+                    </Grid>
 
 
-
-                            <Grid Grid.Column="1">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="2*"/>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
-
-                                <Grid Grid.Row="0">
-                                    <!-- Champs id/mdp -->
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="3*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition/>
-                                        <RowDefinition/>
-                                    </Grid.RowDefinitions>
-
-                                    <TextBlock Text="Identifiant :" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="34" Foreground="gray" Grid.Column="0" Grid.Row="0"/>
-
-                                    <TextBlock Text="Mot de Passe :" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="34" Foreground="gray" Grid.Column="0" Grid.Row="1"/>
-
-
-                                    <TextBox BorderThickness="0 0 0 1" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="10, 0" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Grid.Column="1" Grid.Row="0"/>
-
-                                    <PasswordBox Background="Transparent" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="10, 0" VerticalAlignment="Center"/>
-
-                                </Grid>
-
-                                <Button Margin="35" HorizontalAlignment="Center" Background="Transparent" Cursor="Hand"
-                 VerticalAlignment="Bottom" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" ToolTip="Cliquez pour vous connecter!" Grid.Row="1">
-                                    <Grid>
-                                        <Rectangle RadiusX="15" RadiusY="15" Fill="#1ABC9C" Opacity="0.6"/>
-                                        <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Padding="30, 10"/>
-                                    </Grid>
-                                    <Button.ContextMenu>
-                                        <ContextMenu>
-                                            <MenuItem Header="Cliquer" Click="Button_Connection">
-                                                <MenuItem.Icon>
-                                                    <Image Source="Images/Icon1.png" />
-                                                </MenuItem.Icon>
-                                            </MenuItem>
-                                            <MenuItem Header=" " >
-                                            </MenuItem>
-                                            <Separator />
-                                            <MenuItem Header="Aide" Click="Aide">
-                                                <MenuItem.Icon>
-                                                    <Image Source="Images/Icon2.png" />
-                                                </MenuItem.Icon>
-                                            </MenuItem>
-                                        </ContextMenu>
-                                    </Button.ContextMenu>
-                                </Button>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox HorizontalAlignment="Right">
+                        <Button Margin="35" HorizontalAlignment="Center" Background="Transparent" Cursor="Hand"
+                 VerticalAlignment="Bottom" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" ToolTip="Cliquez pour vous connecter!" >
+                            <Grid>
+                                <Rectangle RadiusX="15" RadiusY="15" Fill="#1ABC9C" Opacity="0.6"/>
+                                <TextBlock Text="Se connecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" Padding="30, 10"/>
                             </Grid>
+                            <Button.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Cliquer" Click="Button_Connection">
+                                        <MenuItem.Icon>
+                                            <Image Source="Images/Icon1.png" />
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                    <MenuItem Header=" " >
+                                    </MenuItem>
+                                    <Separator />
+                                    <MenuItem Header="Aide" Click="Aide">
+                                        <MenuItem.Icon>
+                                            <Image Source="Images/Icon2.png" />
+                                        </MenuItem.Icon>
+                                    </MenuItem>
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                    </Viewbox> <!-- Bouton se connecter -->
+                    <Viewbox HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="2">
+                        <User_Control:Thème_Affichage Margin="0, 30, 30, 10"/>
+                    </Viewbox>
+                </Grid>
 
 
 
+                <!--<Button Content="Animation :)" Cursor="Hand" Click="Button_Click_1" Height="50" Width="90" Margin="1200,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Foreground="gray"/>-->
 
-
-                            <User_Control:Thème_Affichage Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 30, 30"/>
-
-                            <!--<Button Content="Animation :)" Cursor="Hand" Click="Button_Click_1" Height="50" Width="90" Margin="1200,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Foreground="gray"/>-->
-
-                            <!--<Viewport3D>
+                    <!--<Viewport3D>
                             <Viewport3D.Camera>
                                 <PerspectiveCamera Position="-21, 0, 60" LookDirection="0,0,-1" FieldOfView="60"/>
                                             <GeometryModel3D.Geometry>
@@ -137,10 +136,7 @@
                                 </ModelUIElement3D>
                             </Viewport3D.Children>
                         </Viewport3D>-->
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </WrapPanel>
-        </Viewbox>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

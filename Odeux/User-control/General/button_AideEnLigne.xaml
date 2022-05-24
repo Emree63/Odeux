@@ -8,18 +8,23 @@
              Height="110" Width="360">
     <Grid>
         <Rectangle  RadiusX="15" RadiusY="15" Fill="#EA5211"/>
-        <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Center" Width="487" Height="80" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Aide">
-            <Grid>
+        
+        <Button HorizontalAlignment="Stretch" Background="Transparent" 
+                 VerticalAlignment="Stretch" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Aide">
+            <Grid HorizontalAlignment="Stretch" Width="350">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image Source="..\..\images\Bouee.png"  Width="0" Grid.Column="0"/>
-                <TextBlock Text="Aide en ligne" Foreground="#FFFFFF" Grid.Column="1"/>
                 
+                <Image Source="..\..\images\Bouee.png"  Width="Auto" Grid.Column="0" Margin="15"/>
+                
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Aide en ligne" Foreground="#FFFFFF" Grid.Column="2"/>
+
+
             </Grid>
+
         </Button>
     </Grid>
 </UserControl>

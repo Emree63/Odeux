@@ -2,7 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Odeux"
-             StartupUri="Connection-Page.xaml">
+             StartupUri="Connection-Page.xaml"
+             >
     <Application.Resources>
         <SolidColorBrush Color="#033243" x:Key="BackgroundColor"/>
         <SolidColorBrush Color="#F1FBFE" x:Key="TextColor"/>
