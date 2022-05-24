@@ -8,7 +8,9 @@
         xmlns:UserControl="clr-namespace:Odeux.User_Control.Etu"
         xmlns:User_Control="clr-namespace:Odeux.User_Control.General" x:Class="Odeux.Page_Eleve.Accueil"
         mc:Ignorable="d"
-        Title="Accueil">
+        Title="Accueil"
+        Width="1600"
+        Height="900">
     <Window.Resources>
         <Style TargetType="{x:Type Button}" x:Key="masterButton">
             <Setter Property="Template">
@@ -28,8 +30,8 @@
             <Setter Property="Background" Value="Transparent"/>
         </Style>
         <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
-            <Setter Property="Width" Value="450"/>
-            <Setter Property="Height" Value="150"/>
+            <Setter Property="Width" Value="350"/>
+            <Setter Property="Height" Value="100"/>
             <Setter Property="RadiusX" Value="15"/>
             <Setter Property="RadiusY" Value="15"/>
         </Style>
@@ -40,27 +42,27 @@
         </Style>
     </Window.Resources>
 
-    <Viewbox Stretch="Uniform">
-        <Grid Background="{DynamicResource BackgroundColor}">
+    <Grid>
+        
+        <Grid Background="{DynamicResource BackgroundColor}" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
 
-                <ColumnDefinition Width="*"/>
-                <!-- logo, bouton Home, boutons master gauche-->
                 <ColumnDefinition Width="6*"/>
+                <!-- logo, bouton Home, boutons master gauche-->
+                <ColumnDefinition Width="12*"/>
                 <!-- fill detail, boutons master haut -->
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
                 <!-- bouton déconnexion -->
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition />
+                <RowDefinition Height="2.5*"/>
                 <!-- Boutons home et déconnexion -->
-                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="7*"/>
                 <!-- Logo et boutons master du haut -->
-                <RowDefinition/>
+                <RowDefinition Height="1.5*"/>
                 <!-- Boutons master de gauche et fill detail -->
-                <RowDefinition Height="15*"/>
-                <!-- User control thème affichage -->
+
             </Grid.RowDefinitions>
 
             <!-- PREMIERE COLONNE -->
@@ -69,6 +71,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+                
                 <Button Grid.Column="0" Click="Home" HorizontalAlignment="Left" VerticalAlignment="Center"  Background="{DynamicResource BackgroundColor}" BorderBrush="Transparent" Margin="50,0,0,0" Style="{StaticResource masterButton}">
                     <!-- Bouton Home -->
                     <Grid>
@@ -85,17 +88,20 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" Click="Consulter" Style="{StaticResource masterButton}">
-                    <!-- Bouton Notes -->
-                    <Grid>
-                        <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
-                        <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" ></TextBlock>
-                    </Grid>
-                </Button>
+                <Viewbox Grid.Row="0" Grid.Column="0">
+                    <Button Grid.Column="0" Click="Consulter" Style="{StaticResource masterButton}">
+                        <!-- Bouton Notes -->
+                        <Grid>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}" />
+                            <TextBlock Text="Consulter les notes" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" ></TextBlock>
+                        </Grid>
+                    </Button>
+                </Viewbox>
 
-
-                <User_Control:AideEnLigne HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" />
-                <!-- Bouton aide en ligne -->
+                <Viewbox Grid.Row="0" Grid.Column="1">
+                    <User_Control:AideEnLigne HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="30"/>
+                    <!-- Bouton aide en ligne -->
+                </Viewbox>
             </Grid>
 
 
@@ -110,43 +116,56 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Button Click="Declarer_Loaded" Grid.Row="0" Style="{StaticResource masterButton}">
-                    <!-- Bouton déclaration prés. individuelle -->
-                    <Grid>
-                        <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
-                        <TextBlock Text="Déclarer votre présence" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
+                <Viewbox Grid.Row="0">
+                    <Button Click="Declarer_Loaded" Style="{StaticResource masterButton}">
+                        <!-- Bouton déclaration prés. individuelle -->
+                        <Grid>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
+                            <TextBlock Text="Déclarer votre présence" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
+                        </Grid>
+                    </Button>
+                </Viewbox>
 
-                <Button Grid.Row="1" Click="Der_Infos" Style="{StaticResource masterButton}">
-                    <!-- Bouton Dernières infos -->
-                    <Grid>
-                        <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
+                <Viewbox Grid.Row="1">
+                    <Button Click="Der_Infos" Style="{StaticResource masterButton}">
+                        <!-- Bouton Dernières infos -->
+                        <Grid>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
                         Dernières informations importantes
-                        </TextBlock>
-                    </Grid>
-                </Button>
+                            </TextBlock>
+                        </Grid>
+                    </Button>
+                </Viewbox>
 
-                <Button Grid.Row="2" Click="Button_edt" Style="{StaticResource masterButton}">
-                    <!-- Bouton EDT -->
-                    <Grid>
-                        <Rectangle RadiusX="15" RadiusY="15" Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
-                        <TextBlock Text="Emploi du temps" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
-                    </Grid>
-                </Button>
+                <Viewbox Grid.Row="2">
+                    <Button Click="Button_edt" Style="{StaticResource masterButton}">
+                        <!-- Bouton EDT -->
+                        <Grid>
+                            <Rectangle RadiusX="15" RadiusY="15" Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
+                            <TextBlock Text="Emploi du temps" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
+                        </Grid>
+                    </Button>
+                </Viewbox>
 
             </Grid>
 
+            <Viewbox Grid.Column="1" Grid.Row="1">
+                <ContentControl x:Name="contentControl">
+                    <!-- User control Fill Detail -->
+                    <UserControl:Accueil_fill_detail/>
+                </ContentControl>
+            </Viewbox>
 
-            <ContentControl x:Name="contentControl" Grid.Column="1" Grid.Row="1">
-                <!-- User control Fill Detail -->
-                <UserControl:Accueil_fill_detail/>
-            </ContentControl>
+            <Viewbox HorizontalAlignment="Left" Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" Margin="30">
+                <User_Control:Deconnexion ClickMenu="Deco" Loaded="Deconnexion_Loaded"/>
+                <!-- Bouton Déconnexion -->
+            </Viewbox>
 
-            <User_Control:Deconnexion HorizontalAlignment="Left" Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" Margin="0, 0, 30, 0" ClickMenu="Deco"/> <!-- Bouton Déconnexion -->
-
-            <User_Control:Thème_Affichage Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center"/> <!-- Boutons thème affichage -->
+            <Viewbox Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <User_Control:Thème_Affichage Margin="7"/>
+                <!-- Boutons thème affichage -->
+            </Viewbox>
         </Grid>
-    </Viewbox>
+    </Grid>
 </Window>

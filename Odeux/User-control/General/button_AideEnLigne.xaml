@@ -5,19 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control.General"
              mc:Ignorable="d" 
-             d:DesignHeight="110" d:DesignWidth="500">
+             Height="110" Width="360">
     <Grid>
-
+        <Rectangle  RadiusX="15" RadiusY="15" Fill="#EA5211"/>
         <Button HorizontalAlignment="Center" Background="Transparent" 
-                 VerticalAlignment="Center" Width="487" Height="68" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Aide">
+                 VerticalAlignment="Center" Width="487" Height="80" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Aide">
             <Grid>
-                <Rectangle  RadiusX="15" RadiusY="15" Width="483" Height="62" Fill="#EA5211">
-                </Rectangle>
-                <TextBlock Text="Ouvrir l'aide en ligne" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFFFF"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="..\..\images\Bouee.png"  Width="0" Grid.Column="0"/>
+                <TextBlock Text="Aide en ligne" Foreground="#FFFFFF" Grid.Column="1"/>
+                
             </Grid>
         </Button>
-
-        <Image Source="..\..\images\Bouee.png"  Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20"/>
-
     </Grid>
 </UserControl>

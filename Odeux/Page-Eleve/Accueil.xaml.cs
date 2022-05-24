@@ -52,5 +52,9 @@ namespace Odeux.Page_Eleve
             Close();
         }
 
+        private void Deconnexion_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
