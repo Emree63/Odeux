@@ -73,8 +73,8 @@
                             <TextBlock Margin="150,0, 0, 0" Text="Mot de Passe :" FontSize="34" Foreground="gray"/>
                         </Viewbox>
 
-                        <TextBox BorderThickness="0 0 0 1" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="30, 0" TextWrapping="Wrap" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
-                        <PasswordBox Background="Transparent" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="30, 0" VerticalAlignment="Center"/>
+                        <TextBox BorderThickness="0 0 0 1" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="100, 0" TextWrapping="Wrap" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                        <PasswordBox Background="Transparent" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="100, 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </Grid>
 
 
@@ -108,34 +108,13 @@
                                 </ContextMenu>
                             </Button.ContextMenu>
                         </Button>
-                    </Viewbox> <!-- Bouton se connecter -->
+                    </Viewbox>
+                    <!-- Bouton se connecter -->
                     <Viewbox HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="2">
                         <User_Control:Thème_Affichage Margin="0, 30, 30, 10"/>
                     </Viewbox>
                 </Grid>
 
-
-
-                <!--<Button Content="Animation :)" Cursor="Hand" Click="Button_Click_1" Height="50" Width="90" Margin="1200,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Foreground="gray"/>-->
-
-                    <!--<Viewport3D>
-                            <Viewport3D.Camera>
-                                <PerspectiveCamera Position="-21, 0, 60" LookDirection="0,0,-1" FieldOfView="60"/>
-                                            <GeometryModel3D.Geometry>
-                                                <MeshGeometry3D
-                                            Positions="-1,1,-1 1,1,-1 1,-1,-1 -1,-1,-1 -1,1,1 1,1,1 1,-1,1 -1,-1,1"
-                                            TriangleIndices="0 1 2 0 2 3
-                                                                0 4 1 1 4 5
-                                                                0 7 4 0 3 7
-                                                                1 5 6 1 6 2
-                                                                2 6 7 2 7 3
-                                                                4 6 5 4 7 6"/>
-                                            </GeometryModel3D.Geometry>
-                                        </GeometryModel3D>
-                                    </ModelUIElement3D.Model>
-                                </ModelUIElement3D>
-                            </Viewport3D.Children>
-                        </Viewport3D>-->
             </Grid>
         </Grid>
     </Grid>

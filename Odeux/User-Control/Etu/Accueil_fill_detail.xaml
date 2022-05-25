@@ -5,10 +5,53 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control.Etu"
              mc:Ignorable="d" 
-             d:DesignHeight="750" d:DesignWidth="1500">
+             d:DesignWidth="1500" d:DesignHeight="750">
+    <Control.Resources>
+        <Style TargetType="TextBox" x:Key="boxTitle">
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="FontFamily" Value="Courier New"/>
+        </Style>
+    </Control.Resources>
+    
     <Viewbox>
-        
-    <Grid Width="1500" Height="750">
+
+        <Grid>
+            <Grid Width="1500" Height="750">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <!-- Signatures manquantes et notes -->
+                    <ColumnDefinition/>
+                    <!-- EDT -->
+                </Grid.ColumnDefinitions>
+
+
+                <Grid> <!-- Signatures manquantes et notes -->
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Viewbox Grid.Column="0" Grid.Row="0">
+                        <Button Click="MaMessageBox" Foreground="Black" FontSize="43" Background="Transparent" VerticalAlignment="Stretch" Height="300">
+                            <Grid>
+                                <Rectangle Fill="#424549"/>
+                                <TextBlock FontFamily="Batang">
+                                    <Bold>Faire toutes les signatures manquantes</Bold>
+                                </TextBlock>
+                            </Grid>
+                        </Button>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="0">
+
+
+
+
+
+
+                <Grid Width="1500" Height="750">
         <Grid.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="FontSize" Value="30" />
@@ -23,11 +66,10 @@
 
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="375"/>
         </Grid.RowDefinitions>
         
-        <Button Click="MaMessageBox" Foreground="Black" Background="#424549" Content="Faire toutes les signatures manquantes"
-                FontSize="20" Width="450" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+        
 
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
             <Grid >
@@ -95,6 +137,12 @@
         </Border>
 
     </Grid>
+            </Grid>
+        </Grid>
+
+
+
+
     </Viewbox>
 </UserControl>
 
