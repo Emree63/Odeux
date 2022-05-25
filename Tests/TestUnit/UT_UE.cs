@@ -40,9 +40,10 @@ namespace TestUnit
         }
 
         [Theory]
-        [InlineData(16, 6, 9, 15, 15, 40 ,"13,47")]
-        [InlineData(16, 6, 9, 15, 15, 1, "11,81")]
-        public void TestOperationUE(double premièreNote, double deuxièmeNote, double troisièmeNote, double quatrièmeNote, double noteSAE, int coefSAE ,string expectedNote)
+        [InlineData(16, 6, 9, 15, 15, 40 ,"13,47",true)]
+        [InlineData(16, 6, 9, 15, 15, 1, "11,81",true)]
+        [InlineData(16, 6, 1, 1, 15, 1, "11,36", false)]//Ressource sans notes
+        public void TestOperationUE(double premièreNote, double deuxièmeNote, double troisièmeNote, double quatrièmeNote, double noteSAE, int coefSAE ,string expectedNote, bool expectedNonRes)
         {
             //Création de note
             Note n = new Note(null, premièreNote);
@@ -55,10 +56,14 @@ namespace TestUnit
             List<Note> notes = new List<Note>();
             notes.Add(n);
             notes.Add(n2);
+            
 
             List<Note> notes2 = new List<Note>();
-            notes2.Add(n3);
-            notes2.Add(n4);
+            if (expectedNonRes)
+            {
+                notes2.Add(n3);
+                notes2.Add(n4);
+            }
 
             //Première Matière
             Matiere mat = new Matiere(notes);

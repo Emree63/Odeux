@@ -56,7 +56,7 @@ namespace Modele
         {
             if (notes.Count==0)
             {
-                throw new ArgumentException("Il n'y a pas de note dans la matière");
+                return -1;
             }
             double total = 0;
             foreach (Note note in notes)

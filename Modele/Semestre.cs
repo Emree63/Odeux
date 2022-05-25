@@ -26,6 +26,7 @@ namespace Modele
         /// <param name="ue">Listes des UE lors de sa construction</param>
         public Semestre(int num, List<UE> ue)
         {
+            if (num < 0) throw new ArgumentException("Veuillez entrer un numéro positif !");
             NumSemestre = num;
             LesUE = ue;
         }
