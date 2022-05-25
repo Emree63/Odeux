@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj": {}
+    "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj": {}
   },
   "projects": {
-    "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\Modele.csproj": {
+    "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\Modele.csproj",
+        "projectUniqueName": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj",
         "projectName": "Modele",
-        "projectPath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\Modele.csproj",
-        "packagesPath": "C:\\Users\\inkug\\.nuget\\packages\\",
-        "outputPath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\obj\\",
+        "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj",
+        "packagesPath": "C:\\Users\\emkartal1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\inkug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emkartal1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -53,45 +55,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj": {
+    "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj",
+        "projectUniqueName": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj",
         "projectName": "Test_Ressource",
-        "projectPath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj",
-        "packagesPath": "C:\\Users\\inkug\\.nuget\\packages\\",
-        "outputPath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\obj\\",
+        "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\Test_Ressource.csproj",
+        "packagesPath": "C:\\Users\\emkartal1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Semestre\\Test_Ressource\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\inkug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emkartal1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -104,8 +94,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\Modele.csproj": {
-                "projectPath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\Modele.csproj"
+              "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj": {
+                "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj"
               }
             }
           }
@@ -129,26 +119,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

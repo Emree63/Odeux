@@ -21,17 +21,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test_Manager", "Test_Manage
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Manager", "..\Tests\Test_Manager\Test_Manager\Test_Manager.csproj", "{2F3B6298-488E-4F1D-B82D-A20FA9C16F31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Matière", "..\Tests\Test_Semestre\Test_Matière\Test_Matière.csproj", "{03532484-DA99-4FC1-B49C-CD1D9DD5179E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Matière", "..\Tests\Test_Semestre\Test_Matière\Test_Matière.csproj", "{03532484-DA99-4FC1-B49C-CD1D9DD5179E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Ressource", "..\Tests\Test_Semestre\Test_Ressource\Test_Ressource.csproj", "{2F03D0EC-67EE-4C6C-B483-26E570CF5F72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Ressource", "..\Tests\Test_Semestre\Test_Ressource\Test_Ressource.csproj", "{2F03D0EC-67EE-4C6C-B483-26E570CF5F72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_UE", "..\Tests\Test_Semestre\Test_UE\Test_UE.csproj", "{92696A03-404A-4E05-B88A-1B288AD837C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_UE", "..\Tests\Test_Semestre\Test_UE\Test_UE.csproj", "{92696A03-404A-4E05-B88A-1B288AD837C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Etudiant", "..\Tests\Test_Humain\Test_Etudiant\Test_Etudiant.csproj", "{B1BEB797-5407-49D4-9F99-0711D8089BD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Etudiant", "..\Tests\Test_Humain\Test_Etudiant\Test_Etudiant.csproj", "{B1BEB797-5407-49D4-9F99-0711D8089BD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Professeur", "..\Tests\Test_Humain\Test_Professeur\Test_Professeur.csproj", "{14557B4C-95A2-4166-A26A-23470715189A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Professeur", "..\Tests\Test_Humain\Test_Professeur\Test_Professeur.csproj", "{14557B4C-95A2-4166-A26A-23470715189A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Classe", "..\Tests\Test_Classe-Cour\Test_Classe\Test_Classe.csproj", "{3B1B18FC-7C91-41F6-8310-0C0949B056AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Classe", "..\Tests\Test_Classe-Cour\Test_Classe\Test_Classe.csproj", "{3B1B18FC-7C91-41F6-8310-0C0949B056AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeuxXaml", "..\OdeuxXaml\OdeuxXaml.csproj", "{7DB7438F-E835-4760-A133-D18B9AF9FD60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{3B1B18FC-7C91-41F6-8310-0C0949B056AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B1B18FC-7C91-41F6-8310-0C0949B056AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B1B18FC-7C91-41F6-8310-0C0949B056AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB7438F-E835-4760-A133-D18B9AF9FD60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB7438F-E835-4760-A133-D18B9AF9FD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB7438F-E835-4760-A133-D18B9AF9FD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB7438F-E835-4760-A133-D18B9AF9FD60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

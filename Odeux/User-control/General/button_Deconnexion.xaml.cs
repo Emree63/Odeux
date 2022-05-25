@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Odeux;
-using Odeux.Page_Eleve;
+
 
 namespace Odeux.User_Control.General
 {
