@@ -73,23 +73,27 @@ namespace Modele
         /// <returns>double : Moyenne Total de l'UE</returns>
         public double MoyUE()
         {
-            if (ressources.Count == 0)
-            {
-                throw new ArgumentException("L'UE ne contient aucune Ressource");
-            }
+            if (ressources.Count == 0) return -1;
+            
             double total = 0;
             int Coef = 0;
             foreach (Ressource res in ressources)
             {
-                total += res.MoyRessource()*res.Coef;
-                Coef += res.Coef;
+                if (res.MoyRessource() != -1)
+                {
+                    total += res.MoyRessource() * res.Coef;
+                    Coef += res.Coef;
+                }
             }
             if(sae != null)
             {
                 total += sae.getNote() * sae.Coef;
                 Coef += sae.Coef;
             }
-            return total / Coef;
+            if (Coef != 0) 
+                return total / Coef;
+            else
+                return -1;
         }
 
         /// <summary>

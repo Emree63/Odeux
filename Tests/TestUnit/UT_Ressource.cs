@@ -49,9 +49,10 @@ namespace TestUnit
 
 
         [Theory]
-        [InlineData(10, 10, 11, 10, "10,25")]
-        [InlineData(16, 6, 9, 15, "11,5")]
-        public void TestMoyenneRes(double premièreNote, double deuxièmeNote, double troisièmeNote, double quatrièmeNote, string expectedNote)
+        [InlineData(10, 10, 11, 10, "10,25",false)]
+        [InlineData(16, 6, 9, 15, "11,5",false)]
+        [InlineData(16, 6, 1, 1, "11", true)]
+        public void TestMoyenneRes(double premièreNote, double deuxièmeNote, double troisièmeNote, double quatrièmeNote, string expectedNote, bool expectedMat)
         {
             //Création de note
             Note n = new Note(null, premièreNote);
@@ -64,8 +65,11 @@ namespace TestUnit
             notes.Add(n2);
 
             List<Note> notes2 = new List<Note>();
-            notes2.Add(n3);
-            notes2.Add(n4);
+            if (!expectedMat)//On teste le cas d'une matière sans note
+            {
+                notes2.Add(n3);
+                notes2.Add(n4);
+            }
 
             //Première Matière
             Matiere mat = new Matiere(notes);

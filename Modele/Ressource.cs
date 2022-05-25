@@ -68,16 +68,23 @@ namespace Modele
         /// <returns>float : moyenne</returns>
         public double MoyRessource()
         {
-            if (matieres.Count == 0)
-            {
-                throw new ArgumentException("La ressource ne contient aucune matière");
-            }
+            if (matieres.Count == 0) return -1; //Si il n'y a pas de matières dans la ressource on retourne -1
+            
             double total = 0;
+            int c = 0;
             foreach (Matiere mat in matieres)
             {
-                total += mat.MoyMatière();
+                if (mat.MoyMatière() != -1)
+                {
+                    total += mat.MoyMatière();
+                    c++;
+                }
             }
-            return total / matieres.Count();
+            if(c!=0) //Si on a pas obtenu de moyenne dans la matière on return -1 
+                return total / c;
+            else
+                return -1;
+           
         }
 
         /// <summary>
