@@ -45,17 +45,24 @@ namespace Modele
         public double MoyGeneral()
         {
             double total = 0;
+            int Coef = 0;
 
-            try
+            if (Semestre1.MoySemestre() != -1)
             {
-                total = Semestre1.MoySemestre() + Semestre2.MoySemestre();
+                total += Semestre1.MoySemestre();
+                Coef++;
             }
-            catch (Exception msg)
+            if (Semestre2.MoySemestre() != -1)
             {
-                Console.WriteLine(msg);
-                return 0;
+                total += Semestre2.MoySemestre();
+                Coef++;
             }
-            return total / 2;
+
+            if (Coef != 0)
+                return total / 2;
+            else
+                return -1;
+
         }
 
         /// <summary>

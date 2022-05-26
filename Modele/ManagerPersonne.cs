@@ -50,6 +50,15 @@ namespace Modele
         }
 
         /// <summary>
+        /// Ajouter des personnes à la liste
+        /// </summary>
+        /// <param name="pers">Liste de Personne à ajouter</param>
+        public void AjouterPersonne(List<Personne> pers)
+        {
+            Personnes.AddRange(pers);
+        }
+
+        /// <summary>
         /// Recherche la liste des cours du professeur de la date concerner.
         /// </summary>
         /// <param name="date">date concerner</param>
@@ -81,6 +90,23 @@ namespace Modele
                     return 2;
             }
             return 0;
+        }
+
+        /// <summary>
+        /// Modifier une personne de la Liste
+        /// </summary>
+        /// <param name="OldPer">Ancienne Personne</param>
+        /// <param name="NewPer">Nouvel Personne</param>
+        /// <returns>Booléen</returns>
+        public bool ModifierPersonne(Personne OldPer,Personne NewPer)
+        {
+            if(!OldPer.Equals(NewPer))
+            {
+                return false;
+            }
+            Personnes.Remove(OldPer);
+            Personnes.Add(NewPer);
+            return true;
         }
 
     }

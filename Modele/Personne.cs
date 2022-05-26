@@ -7,7 +7,7 @@ namespace Modele
         /// <summary>
         /// Représente les spécificités des Personnes qui vont utiliser l'application
         /// </summary>
-    public abstract class Personne
+    public abstract class Personne : IEquatable<Personne>
     {
         /// <summary>
         /// Nom de la Personne
@@ -58,6 +58,10 @@ namespace Modele
 
         public bool Equals(Personne other) => nom == other.nom;
 
+        public override int GetHashCode()
+        {
+            return nom.GetHashCode();
+        }
         public override string ToString() => Nom;
 
        }

@@ -34,11 +34,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
+      "projectUniqueName": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
       "projectName": "Test_Professeur",
-      "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
+      "projectPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
       "packagesPath": "C:\\Users\\emkartal1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\obj\\",
+      "outputPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -61,8 +61,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj": {
-              "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Modele\\Modele.csproj"
+            "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Modele\\Modele.csproj": {
+              "projectPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Modele\\Modele.csproj"
             }
           }
         }

@@ -32,11 +32,17 @@ namespace Modele
             {
                  foreach(Etudiant etu in grp.etudiants)
                 {
-                    total += etu.MoyGeneral();
-                    nb++;
+                    if (etu.MoyGeneral() != -1)
+                    {
+                        total += etu.MoyGeneral();
+                        nb++;
+                    }
                 }
             }
-            return total / nb;
+            if (nb != 0)
+                return total / nb;
+            else
+                return -1;
         }
 
         /// <summary>

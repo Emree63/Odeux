@@ -23,7 +23,10 @@ namespace Test_Manager
             pers.Add(prof);
             pers.Add(prof2);
 
-            Manager Man = new Manager(cours, Iut, pers);
+            Manager Man = new Manager();
+            Man.AjouterPersonne(pers);
+            Man.NouvelPromo(Iut);
+            Man.AjouterDesCours(cours);
 
 
             foreach (Personne e in pers)
@@ -75,12 +78,12 @@ namespace Test_Manager
 
         static Professeur PremierProfTest()
         {
-            Professeur prof = new Professeur("El Safadi", "El Abed", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
+            Professeur prof = new Professeur("Professeur", "1", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
             return prof;
         }
         static Professeur DeuxièmeProf()
         {
-            Professeur prof2 = new Professeur("Chevaldonne", "Marc", new DateTime(1959, 8, 10), "0000");
+            Professeur prof2 = new Professeur("Professeur", "2", new DateTime(1959, 8, 10), "0000");
             return prof2;
         }
         static List<Cour> ChargeCour()

@@ -79,8 +79,7 @@ namespace Test_Professeur
             //Creation d'un Etudiant
 
             DateTime nais = new DateTime(2002, 10, 22);
-            Etudiant etu1 = new Etudiant("Khedair ", "Rami", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
-
+            Etudiant etu1 = new Etudiant("Etudiant ", "1", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
 
             Console.WriteLine("Test de la Classe Professeur");
@@ -92,7 +91,7 @@ namespace Test_Professeur
             WriteLine(etu1.semestre1);
             WriteLine(etu1.MoyGeneral());
             DateTime nais2 = new DateTime(1989, 10, 2);
-            Professeur prof = new Professeur("Chevaldonne", "Marc", nais2, "`@&;UCCy8ab{*d9V");
+            Professeur prof = new Professeur("Professeur ", "Marc", nais2, "`@&;UCCy8ab{*d9V");
             Write(prof);
             prof.Noter(1, "UE 1", "R1.01", mat1, etu1);
             WriteLine("---------------Apres l'ajout de la note !-------------------");

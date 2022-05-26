@@ -117,7 +117,7 @@ namespace Test_Classe
 
             //Creation d'un Etudiant
 
-            Etudiant etu1 = new Etudiant("Khedair ", "Rami", new DateTime(2002, 10, 22), "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
+            Etudiant etu1 = new Etudiant("Kartal ", "Emre", new DateTime(2002, 10, 22), "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
             Etudiant etu2 = new Etudiant("Jean", "Pierre", new DateTime(1978, 10, 12), "0000", s3, s4);
 
@@ -135,7 +135,7 @@ namespace Test_Classe
 
             //Creation d'un prof et un cour
 
-            Professeur prof = new Professeur("Chevaldonne", "Marc", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
+            Professeur prof = new Professeur("Professeur", "1", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
 
             Cour c = new Cour(new DateTime(2022, 06, 12, 14, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps);
             WriteLine(c);

@@ -50,3 +50,6 @@ C:\Users\emkartal1\source\repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\ref\O
 C:\Users\emkartal1\source\repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\OdeuxXaml.pdb
 C:\Users\emkartal1\source\repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\Page-Eleve\Accueil.baml
 C:\Users\emkartal1\source\repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\OdeuxXaml.genruntimeconfig.cache
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Modele.dll
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Modele.pdb
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\OdeuxXaml.csproj.CopyComplete

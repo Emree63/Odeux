@@ -83,6 +83,9 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
+                    <Viewbox HorizontalAlignment="Right" VerticalAlignment="Top">
+                        <TextBlock Margin="160,-5, 0, 0" Text="Identifiant ou mot de passe Incorrect !" Foreground="red" />
+                    </Viewbox>
                     <Viewbox HorizontalAlignment="Right">
                         <Button Margin="35" HorizontalAlignment="Center" Background="Transparent" Cursor="Hand"
                  VerticalAlignment="Bottom" FontSize="30" BorderBrush="Transparent" Foreground="#FF39B872" Click="Button_Connection" ToolTip="Cliquez pour vous connecter!" >

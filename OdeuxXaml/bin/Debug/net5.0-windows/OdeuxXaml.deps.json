@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "OdeuxXaml/1.0.0": {
+        "dependencies": {
+          "Modele": "1.0.0"
+        },
         "runtime": {
           "OdeuxXaml.dll": {}
+        }
+      },
+      "Modele/1.0.0": {
+        "runtime": {
+          "Modele.dll": {}
         }
       }
     }
   },
   "libraries": {
     "OdeuxXaml/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modele/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
