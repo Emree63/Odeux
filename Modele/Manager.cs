@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace Modele
 {
-    public partial class Manager
+    public partial class Manager : INotifyPropertyChanged
     {
 
         /// <summary>
@@ -28,6 +29,10 @@ namespace Modele
             LaPromo = new Promo(new List<Groupe>());
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
         public void NouvelPromo(Promo promo)
         {
             LaPromo = promo;
@@ -46,7 +51,7 @@ namespace Modele
             List<Etudiant> etu2 = new List<Etudiant>()
             {
                  new Etudiant("Etudiant", "1", new DateTime(2003, 1, 1), "0000", new Semestre(1, new List<UE>()), new Semestre(2, new List<UE>())),
-                    new Etudiant("Etudiant", "2", new DateTime(2003, 1, 1), "0000", new Semestre(1, new List<UE>()), new Semestre(2, new List<UE>())),
+                 new Etudiant("Etudiant", "2", new DateTime(2003, 1, 1), "0000", new Semestre(1, new List<UE>()), new Semestre(2, new List<UE>())),
             };
             List<Groupe> grps = new List<Groupe>();
             Groupe grp1 = new Groupe(3, etu);

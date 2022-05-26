@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Modele;
 
 namespace OdeuxXaml.User_Control.Etu
 {
@@ -26,8 +27,8 @@ namespace OdeuxXaml.User_Control.Etu
             InitializeComponent();
 
             mCalendar.DisplayDateStart = DateTime.Now;
-
-            /*int D = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear;*/
+            DataContext = Manager;
+            
         }
     }
 }

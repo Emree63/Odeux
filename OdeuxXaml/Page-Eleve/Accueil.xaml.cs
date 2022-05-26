@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Navigation;
 using OdeuxXaml.User_Control.General;
 using OdeuxXaml.User_Control.Etu;
 
@@ -21,6 +22,7 @@ namespace OdeuxXaml.Page_Eleve
     /// </summary>
     public partial class Accueil : Window
     {
+
         public Accueil()
         {
             InitializeComponent();

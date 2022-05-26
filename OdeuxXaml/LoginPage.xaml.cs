@@ -16,6 +16,8 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Media3D;
 using OdeuxXaml.Page_Eleve;
 using OdeuxXaml.Page_Prof;
+using Modele;
+using System.Media;
 
 namespace OdeuxXaml
 {
@@ -24,6 +26,7 @@ namespace OdeuxXaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Manager mng => (App.Current as App).LeManager;
         public MainWindow()
         {
             InitializeComponent();
@@ -33,24 +36,31 @@ namespace OdeuxXaml
         private static Random MyRandomGenerator = new Random();
         private void Button_Connection(object sender, RoutedEventArgs e)
         {
-            int entierUnChiffre = MyRandomGenerator.Next(3);
-            Accueil_Prof win = new Accueil_Prof();
-            win.Show();
-            this.Close();
-            if (entierUnChiffre == 1)
-                MessageBox.Show("C'est important et ça fait gagner du temps et de l'énergie à tout le monde !", "Lisez vos mails tous les jours !", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK);
+            if (mng.Connection(Id.Text,mdp.Password) == 2)
+            {
+                int entierUnChiffre = MyRandomGenerator.Next(3);
+                Accueil win = new Accueil();
+                win.Show();
+                this.Close();
+                if (entierUnChiffre == 1)
+                    MessageBox.Show("C'est important et ça fait gagner du temps et de l'énergie à tout le monde !", "Lisez vos mails tous les jours !", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK);
+            }
+            else if (mng.Connection(Id.Text, mdp.Password) == 1)
+            {
+                int entierUnChiffre = MyRandomGenerator.Next(3);
+                Accueil_Prof win = new Accueil_Prof();
+                win.Show();
+                this.Close();
+                if (entierUnChiffre == 1)
+                    MessageBox.Show("C'est important et ça fait gagner du temps et de l'énergie à tout le monde !", "Lisez vos mails tous les jours !", MessageBoxButton.OK, MessageBoxImage.Information, MessageBoxResult.OK);
+            }
+            else
+            {
+                SystemSounds.Beep.Play();
+                Erreur.Text = "Identifiant ou mot de passe Incorrect !";
+            }
+
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
 
         private void Aide(object sender, EventArgs e)
         {
