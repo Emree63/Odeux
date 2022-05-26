@@ -11,14 +11,14 @@ namespace Modele
         /// <summary>
         /// Tout les groupes d'éléves constituant la promo
         /// </summary>
-        private IEnumerable<Groupe> groupes => groupes2;
-        public List<Groupe> groupes2 = new List<Groupe>();
+        public IEnumerable<Groupe> groupes => Groupes;
+        List<Groupe> Groupes = new List<Groupe>();
 
         /// <summary>
         /// Constructeur
         /// </summary>
         /// <param name="grp">Groupes concernant la promo</param>
-        public Promo(List<Groupe> grp) => groupes2.AddRange(grp);
+        public Promo(List<Groupe> grp) => Groupes.AddRange(grp);
         
 
         /// <summary>

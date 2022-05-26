@@ -36,17 +36,21 @@ namespace Test_Manager
 
             Test_MethodeProf(Man);
             Test_MethodeEtu(Man);
+            
 
             WriteLine("Moyenne de la Promo :"+Man.LaPromo.MoyGeneral());
         }
 
         static void Test_MethodeProf(Manager man)
         {
-            int y = man.Connection("El Safadi", "`@&;UCCy8ab{*d9V");
+            int y = man.Connection("Professeur", "`@&;UCCy8ab{*d9V");
             if (y == 1)
                 WriteLine("La connexion est réussi !");
             else
+            {
                 WriteLine("La connexion à échouer !");
+                return;
+            }
             var cours = man.RechCourProf(new DateTime(2022, 06, 15));
             WriteLine("Cour du Prof :");
             foreach (Cour c in cours)
@@ -59,7 +63,10 @@ namespace Test_Manager
             if (y == 2)
                 WriteLine("La connexion est réussi !");
             else
+            {
                 WriteLine("La connexion à échouer !");
+                return;
+            }
             var cours = man.RechCourEtu(new DateTime(2022, 06, 15));
             WriteLine("Cour de l'Eleve :");
             foreach (Cour c in cours)

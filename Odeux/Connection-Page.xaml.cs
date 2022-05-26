@@ -35,7 +35,7 @@ namespace Odeux
         private void Button_Connection(object sender, RoutedEventArgs e)
         {
             int entierUnChiffre = MyRandomGenerator.Next(3);
-            Accueil_Prof win = new Accueil_Prof();
+            Accueil win = new Accueil();
             win.Show();
             this.Close();
             if(entierUnChiffre==1)

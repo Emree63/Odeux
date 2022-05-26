@@ -30,7 +30,7 @@
                                     <Run Text="{Binding Groupe[0]}"/> <Run Text="{Binding Groupe[1]}"/>
                                     <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Salle : "/>
                                     <Run Text="{Binding Salle}"/>
-                                    <Run Text="&#xA;&#x9;&#x9;&#x9;         Intervenant : "/>
+                                    <Run Text="&#xA;&#x9;&#x9;&#x9; Intervenant : "/>
                                     <Run Text="{Binding Intervenant}"/>
                                     </TextBlock>
                                 </StackPanel>
