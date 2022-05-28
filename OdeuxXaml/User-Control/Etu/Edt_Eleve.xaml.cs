@@ -27,7 +27,6 @@ namespace OdeuxXaml.User_Control.Etu
             InitializeComponent();
 
             mCalendar.DisplayDateStart = DateTime.Now;
-            DataContext = Manager;
             
         }
     }

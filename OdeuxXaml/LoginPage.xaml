@@ -29,7 +29,7 @@
         </Grid.RowDefinitions>
 
 
-        <Image Source="images\Logo-Odeux.png" VerticalAlignment="Center" HorizontalAlignment="Center" MaxHeight="600" Height="Auto" Width="Auto" Grid.Row="0"/>
+        <Image Source="Images/Logo-Odeux.png" VerticalAlignment="Center" HorizontalAlignment="Center" MaxHeight="600" Height="Auto" Width="Auto" Grid.Row="0"/>
 
         <Image Source="images\Fond.png" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Panel.ZIndex="1" Margin="0,50,0,0" d:LayoutOverrides="TopMargin, BottomMargin" Opacity="0.6" Visibility="Visible"/>
 
@@ -73,8 +73,8 @@
                         <TextBlock Margin="150,0, 0, 0" Text="Mot de Passe :" FontSize="34" Foreground="gray"/>
                     </Viewbox>
 
-                    <TextBox BorderThickness="0 0 0 1" x:Name="Id" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="100, 0" TextWrapping="Wrap" FontSize="20" Text="{Binding Person.Identifiant,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
-                    <PasswordBox Background="Transparent" x:Name="mdp" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="100, 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBox BorderThickness="0 0 0 1" x:Name="Id" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="100, 0" TextWrapping="Wrap" FontSize="20" Text="Kartal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                    <PasswordBox Background="Transparent" x:Name="mdp" Password="0000" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="100, 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
                 </Grid>
 
 

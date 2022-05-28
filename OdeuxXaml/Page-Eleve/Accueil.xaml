@@ -1,4 +1,4 @@
-﻿<Window
+﻿<Window x:Class="OdeuxXaml.Page_Eleve.Accueil"
         WindowState="Maximized"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OdeuxXaml.Page_Eleve"
         xmlns:UserControl="clr-namespace:OdeuxXaml.User_Control.Etu"
-        xmlns:User_Control="clr-namespace:OdeuxXaml.User_Control.General" x:Class="OdeuxXaml.Page_Eleve.Accueil"
+        xmlns:User_Control="clr-namespace:OdeuxXaml.User_Control.General"
         mc:Ignorable="d"
         Title="Accueil"
         MinWidth="480" MinHeight="360" MaxHeight="1080" MaxWidth="1920">
@@ -77,11 +77,11 @@
                     <Button Grid.Column="0" Click="Home" Background="{DynamicResource BackgroundColor}" BorderBrush="Transparent" Style="{StaticResource masterButton}">
                         <!-- Bouton Home -->
                         <Grid>
-                            <Image Source="..\images\Home.png" />
+                            <Image Source="../Images/Home.png" />
                         </Grid>
                     </Button>
 
-                    <Image Source="..\images\Logo-Odeux.png"  VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1"/>
+                    <Image Source="../Images/Logo-Odeux.png"  VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1"/>
                 </Grid>
             </Viewbox>
 
