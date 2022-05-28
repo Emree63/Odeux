@@ -9,22 +9,22 @@ namespace Modele
     public class Groupe
     {
         /// <summary>
-        /// Numéro du groupe
+        /// Numéro du groupe d'étudiants.
         /// </summary>
         int Num;
         public int num { get => Num; set => Num = value; }
 
         /// <summary>
-        /// Liste des étudiant concernant le groupe
+        /// Liste des étudiant concernant le groupe.
         /// </summary>
         List<Etudiant> étudiants;
         public List<Etudiant> etudiants { get => étudiants; set => étudiants = value; }
         
         /// <summary>
-        /// Constructeur de la classe Groupe
+        /// Constructeur de la classe Groupe.
         /// </summary>
-        /// <param name="num">Numéro du groupe</param>
-        /// <param name="etu">Liste des étudiants constituant le groupe</param>
+        /// <param name="num">Numéro du groupe.</param>
+        /// <param name="etu">Liste des étudiants constituant le groupe.</param>
         public Groupe(int num, List<Etudiant> etu)
         {
             Num = num;
@@ -32,14 +32,14 @@ namespace Modele
         }
 
         /// <summary>
-        /// Renvoie la pire note du groupe
+        /// Renvoie la pire note du groupe.
         /// </summary>
-        /// <param name="sem">Semestre concernant la note</param>
-        /// <param name="UE">UE concernant la note</param>
-        /// <param name="Ressource">Ressource concernant la note</param>
-        /// <param name="mat">matière</param>
-        /// <param name="note">nom de la note qu'on veut obtenir</param>
-        /// <returns>double : note la plus basse du groupe</returns>
+        /// <param name="sem">Semestre concernant la note.</param>
+        /// <param name="UE">UE concernant la note.</param>
+        /// <param name="Ressource">Ressource concernant la note.</param>
+        /// <param name="mat">Matière concerner.</param>
+        /// <param name="note">Nom de la note qu'on veut obtenir.</param>
+        /// <returns>Double : note la plus basse du groupe.</returns>
         public double MinNote(int sem, string UE, string Ressource, string mat, string note)
         {
             double pireNote = 20, y;
@@ -61,14 +61,14 @@ namespace Modele
         }
 
         /// <summary>
-        /// Renvoie la meilleur note du groupe
+        /// Renvoie la meilleur note du groupe.
         /// </summary>
-        /// <param name="sem">Semestre concernant la note</param>
-        /// <param name="UE">UE concernant la note</param>
-        /// <param name="Res">Ressource concernant la note</param>
-        /// <param name="mat">matière</param>
-        /// <param name="note">nom de la note qu'on veut obtenir</param>
-        /// <returns>double : note le plus haut du groupe</returns>
+        /// <param name="sem">Semestre concernant la note.</param>
+        /// <param name="UE">UE concernant la note.</param>
+        /// <param name="Res">Ressource concernant la note.</param>
+        /// <param name="mat">Matière.</param>
+        /// <param name="note">Nom de la note qu'on veut obtenir.</param>
+        /// <returns>Double : note le plus haut du groupe.</returns>
         public double MaxNote(int sem, string UE, string Res, string mat, string note)
         {
             double BestNote = 0, y;
@@ -89,14 +89,14 @@ namespace Modele
         }
 
         /// <summary>
-        /// Moyenne concernant une note
+        /// Moyenne concernant une note.
         /// </summary>
-        /// <param name="sem">Semestre concernant la note</param>
-        /// <param name="UE">UE concernant la note</param>
-        /// <param name="Ressource">Ressource concernant la note</param>
-        /// <param name="mat">matière</param>
-        /// <param name="note">nom de la note qu'on veut obtenir</param>
-        /// <returns>double : moyenne de tout les élèves sur la note</returns>
+        /// <param name="sem">Semestre concernant la note.</param>
+        /// <param name="UE">UE concernant la note.</param>
+        /// <param name="Ressource">Ressource concernant la note.</param>
+        /// <param name="mat">Matière.</param>
+        /// <param name="note">Nom de la note qu'on veut obtenir.</param>
+        /// <returns>Double : moyenne de tout les élèves sur la note.</returns>
         public double MoyNote(int sem, string UE, string Ressource, string mat, string note)
         {
             double total = 0, y;

@@ -15,7 +15,7 @@ namespace Modele
         List<Groupe> Groupes = new List<Groupe>();
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur de la classe
         /// </summary>
         /// <param name="grp">Groupes concernant la promo</param>
         public Promo(List<Groupe> grp) => Groupes.AddRange(grp);

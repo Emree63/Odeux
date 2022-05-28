@@ -9,7 +9,7 @@ namespace Modele
     public class Professeur : Personne
     {
         /// <summary>
-        /// Constructeur
+        /// Constructeur de la classe Professeur
         /// </summary>
         /// <param name="nom">Nom du Professeur</param>
         /// <param name="prénom">Prenom du Professeur</param>
@@ -21,7 +21,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Donner une note à l'élève que l'on donne en paramètre
+        /// Donner une note à l'élève que l'on donne en paramètre.
         /// </summary>
         /// <param name="Semestre">Semestre de l'étudiant</param>
         /// <param name="UE">UE de l'étudiant</param>

@@ -14,7 +14,7 @@ namespace Modele
         public string Nom { get; set; }
         
         /// <summary>
-        /// note de la SAE
+        /// Note de la SAE
         /// </summary>
         private Note note;
         public Note note1 { get => note; set => note = value; }
@@ -25,7 +25,7 @@ namespace Modele
         public int Coef { get; set; }
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur de la classe
         /// </summary>
         /// <param name="nom">Nom de la SAE</param>
         /// <param name="n">note de la SAE</param>
@@ -45,7 +45,7 @@ namespace Modele
         /// <summary>
         /// Renvoie la note de la SAE
         /// </summary>
-        /// <returns>double : note</returns>
+        /// <returns>Double : note</returns>
         public double getNote() => note.note;
 
         public override string ToString() => $"{Nom} - {Coef}\n\t {note.Nom}: {note.note}";

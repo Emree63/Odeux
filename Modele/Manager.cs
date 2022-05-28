@@ -12,12 +12,12 @@ namespace Modele
     {
 
         /// <summary>
-        /// La classe concernant l'application
+        /// La classe concernant l'application.
         /// </summary>
         public Promo LaPromo { get; private set; }
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur de la classe Manager.
         /// </summary>
         /// <param name="desPersonnes">Liste des personnes</param>
         /// <param name="cours">Listes des cours</param>
