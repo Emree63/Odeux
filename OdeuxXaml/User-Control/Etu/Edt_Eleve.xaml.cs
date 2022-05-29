@@ -22,12 +22,14 @@ namespace OdeuxXaml.User_Control.Etu
     /// </summary>
     public partial class Edt_Eleve : UserControl
     {
+        public Modele.Manager mng => (App.Current as App).LeManager;
         public Edt_Eleve()
         {
             InitializeComponent();
 
             mCalendar.DisplayDateStart = DateTime.Now;
-            
+
+            DataContext = mng.RechCourEtu(mCalendar.DisplayDate);
         }
     }
 }

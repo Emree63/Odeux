@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Windows.Navigation;
 using OdeuxXaml.User_Control.General;
 using OdeuxXaml.User_Control.Etu;
+using Modele;
 
 namespace OdeuxXaml.Page_Eleve
 {
@@ -22,7 +23,7 @@ namespace OdeuxXaml.Page_Eleve
     /// </summary>
     public partial class Accueil : Window
     {
-
+        public Modele.Manager mng => (App.Current as App).LeManager;
         public Accueil()
         {
             InitializeComponent();

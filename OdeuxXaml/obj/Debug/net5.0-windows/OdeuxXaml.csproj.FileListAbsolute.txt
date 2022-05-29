@@ -53,3 +53,10 @@ C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\Odeux
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\ref\OdeuxXaml.dll
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\OdeuxXaml.pdb
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\OdeuxXaml.genruntimeconfig.cache
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Logo-Odeux.png
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\OdeuxXaml_Content.g.cs
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Bouee.png
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Fond.png
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Home.png
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Icon1.png
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Icon2.png

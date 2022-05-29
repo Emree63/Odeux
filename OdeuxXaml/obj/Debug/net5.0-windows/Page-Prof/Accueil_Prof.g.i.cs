@@ -63,7 +63,7 @@ namespace OdeuxXaml.Page_Prof {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;V1.0.0.0;component/page-prof/accueil_prof.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;component/page-prof/accueil_prof.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Page-Prof\Accueil_Prof.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

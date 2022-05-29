@@ -23,7 +23,7 @@
                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
                                     <StackPanel>
                                         <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
-                                    <Run Text="{Binding DateCour.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h-"/><Run Text="{Binding DateCourFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/>
+                                    <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h-"/><Run Text="{Binding Date.Hour+Durée.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/>
                                         </TextBlock>
                                     </StackPanel>
                                 </Border>
@@ -38,14 +38,14 @@
                                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,14,0,2" Width="800">
                                         <WrapPanel>
                                             <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                    <Run Text="{Binding Matiere}"/>
+                                    <Run Text="{Binding Matière}"/>
                                             </TextBlock>
                                         </WrapPanel>
                                     </Border>
                                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,2,0,10" Width="800">
                                         <WrapPanel>
                                             <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                    <Run Text="{Binding Intervenant}"/>
+                                    <Run Text="{Binding Enseignant.Nom}"/>
                                     <Run Text="-"/>
                                     G<Run Text="{Binding Groupe[0]}"/> 
                                     <Run Text="{Binding Groupe[1]}"/>
