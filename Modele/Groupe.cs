@@ -111,7 +111,7 @@ namespace Modele
             return total / etudiants.Count();
         }
 
-        public override string ToString() => $"Groupe {Num}: ";
+        public override string ToString() => $"{Num}: ";
         
     }
 }

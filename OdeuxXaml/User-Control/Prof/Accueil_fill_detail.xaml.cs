@@ -20,9 +20,14 @@ namespace OdeuxXaml.User_Control.Prof
     /// </summary>
     public partial class Accueil_fill_detail : UserControl
     {
+        public Modele.Manager mng => (App.Current as App).LeManager;
         public Accueil_fill_detail()
         {
             InitializeComponent();
+
+
+            mng.LesCoursDuJour = mng.RechCourProf(DateTime.Now);
+            DataContext = mng;
 
         }
         private void MaMessageBox(object sender, RoutedEventArgs e)

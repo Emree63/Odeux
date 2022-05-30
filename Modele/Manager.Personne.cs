@@ -33,7 +33,7 @@ namespace Modele
             List<Cour> cour = new List<Cour>();
             foreach (Cour c in e)
             {
-                foreach (Groupe g in c.groupes2)
+                foreach (Groupe g in c.Groupes)
                 {
                     foreach (Etudiant etu in g.etudiants)
                     {

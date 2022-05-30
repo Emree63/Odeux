@@ -42,8 +42,8 @@ namespace Modele
         /// <summary>
         /// Groupes à qui sont dédiers le cour.
         /// </summary>
-        private IEnumerable<Groupe> groupes => groupes2;
-        public List<Groupe> groupes2 = new List<Groupe>();
+        private List<Groupe> groupes;
+        public List<Groupe> Groupes { get=> groupes; set => groupes = value; }
 
         /// <summary>
         /// Constructeur de la Classe Cour .
@@ -61,7 +61,8 @@ namespace Modele
             Salle = salle;
             matière = mat;
             Enseignant = ens;
-            groupes2.AddRange(grps);
+            Groupes = new List<Groupe>();
+            Groupes.AddRange(grps);
             DateFin = Date + Durée;
         }
 

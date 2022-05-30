@@ -12,11 +12,6 @@ namespace Modele
     {
 
         /// <summary>
-        /// La classe concernant l'application.
-        /// </summary>
-        public Promo LaPromo { get; private set; }
-
-        /// <summary>
         /// Constructeur de la classe Manager.
         /// </summary>
         /// <param name="desPersonnes">Liste des personnes</param>
@@ -67,21 +62,27 @@ namespace Modele
 
             List<Cour> cour = new List<Cour>()
             {
-                new Cour(new DateTime(2022, 06, 12, 14, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps),
                 new Cour(new DateTime(2022, 06, 8, 9, 30, 0), new TimeSpan(1, 30, 0), "A18", "Structure de données", prof, grps),
-                new Cour(new DateTime(2022, 06, 15, 8, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, new List<Groupe>(){ grp1}),
+                new Cour(new DateTime(2022, 06, 12, 14, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps),
                 new Cour(new DateTime(2022, 06, 13, 13, 30, 0), new TimeSpan(1, 0, 0), "A18", "Structure de données", prof, new List<Groupe>(){ grp2}),
                 new Cour(new DateTime(2022, 06, 13, 16, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps),
+                new Cour(new DateTime(2022, 06, 15, 8, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, new List<Groupe>(){ grp1}),
                 new Cour(new DateTime(2022, 05, 16, 10, 0, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps),
 
                 new Cour(new DateTime(2022, 05, 12, 16, 30, 0), new TimeSpan(1, 0, 0), "B20", "Bases de données", prof2, grps),
-                new Cour(new DateTime(2022, 06, 10, 8, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
-                new Cour(new DateTime(2022, 06, 11, 10, 30, 0), new TimeSpan(1, 30, 0), "B20", "Bases de données", prof2, grps),
                 new Cour(new DateTime(2022, 05, 29, 16, 30, 0), new TimeSpan(1, 0, 0), "B20", "Bases de données", prof2, grps),
                 new Cour(new DateTime(2022, 05, 30, 8, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
+                new Cour(new DateTime(2022, 05, 30, 10, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
+                new Cour(new DateTime(2022, 05, 30, 13, 15, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps),
                 new Cour(new DateTime(2022, 05, 31, 10, 30, 0), new TimeSpan(1, 30, 0), "B20", "Bases de données", prof2, grps),
+                new Cour(new DateTime(2022, 05, 31, 13, 30, 0), new TimeSpan(1, 0, 0), "B20", "Bases de données", prof2, grps),
+                new Cour(new DateTime(2022, 05, 31, 15, 30, 0), new TimeSpan(1, 30, 0), "B20", "Bases de données", prof2, grps),
+                new Cour(new DateTime(2022, 06, 10, 8, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
+                new Cour(new DateTime(2022, 06, 11, 10, 30, 0), new TimeSpan(1, 30, 0), "B20", "Bases de données", prof2, grps),
 
                 new Cour(new DateTime(2022, 05, 13, 14, 30, 0), new TimeSpan(2, 0, 0), "C21", "Architecture : IHM", prof3, grps),
+                new Cour(new DateTime(2022, 05, 30, 16, 30, 0), new TimeSpan(1, 0, 0), "Distanciel : sans outil prévu", "Architecture : IHM", prof3, grps),
+                new Cour(new DateTime(2022, 05, 31, 18, 30, 0), new TimeSpan(1, 0, 0), "B10", "Architecture : IHM", prof3, new List<Groupe>(){grp1}),
                 new Cour(new DateTime(2022, 06, 12, 8, 30, 0), new TimeSpan(1, 0, 0), "C21", "Architecture : IHM", prof3, grps),
                 new Cour(new DateTime(2022, 06, 16, 14, 30, 0), new TimeSpan(2, 0, 0), "C21", "Architecture : IHM", prof3, grps),
             };
@@ -91,6 +92,8 @@ namespace Modele
             Personnes.AddRange(etu);
             Personnes.AddRange(etu2);
             Personnes.AddRange(profs);
+
+            GroupeSélectionné = LaPromo.groupes[0];
         }
 
 

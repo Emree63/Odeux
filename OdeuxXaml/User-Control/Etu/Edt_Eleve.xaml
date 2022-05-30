@@ -84,8 +84,14 @@
                                             <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
                                     <Run Text="{Binding Enseignant.nom}"/>
                                     <Run Text="-"/>
-                                    G<Run Text="{Binding groupes2[0].num,Mode=OneWay}"/> 
-                                    <Run Text="{Binding groupes2[1].Num}"/>
+                                    G<Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
+                                    <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
+                                    <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
+                                    <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
+                                    <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
+                                    <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
+                                    <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
+                                    <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
                                             </TextBlock>
                                         </WrapPanel>
                                     </Border>

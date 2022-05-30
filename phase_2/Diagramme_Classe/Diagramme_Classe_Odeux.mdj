@@ -4852,7 +4852,7 @@
 									"hostEdge": {
 										"$ref": "AAAAAAGAj1BSKgmgygI="
 									},
-									"text": "-groupes"
+									"text": "+groupes"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -7607,9 +7607,9 @@
 										"$ref": "AAAAAAGA5XAyYBGq0Kc="
 									},
 									"font": "Arial;13;0",
-									"left": 448,
+									"left": 447,
 									"top": 781,
-									"width": 5.05908203125,
+									"width": 7,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -8490,7 +8490,6 @@
 								"reference": {
 									"$ref": "AAAAAAGAhM4aMI9+xLc="
 								},
-								"visibility": "private",
 								"multiplicity": "*"
 							}
 						}

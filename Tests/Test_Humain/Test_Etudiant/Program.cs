@@ -81,7 +81,7 @@ namespace Test_Etudiant
             //Creation d'un Etudiant
 
             DateTime nais = new DateTime(2002, 10, 22);
-            Etudiant etu1 = new Etudiant("Etudiant ", "1", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
+            Etudiant etu1 = new Etudiant("Emre ", "KARTAL", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
             WriteLine(etu1);
             WriteLine(etu1.semestre1.MoySemestre());

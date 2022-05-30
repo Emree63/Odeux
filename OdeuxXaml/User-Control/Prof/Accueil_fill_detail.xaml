@@ -36,29 +36,36 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
-                    <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+<ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="620" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Grid.Row="1">
+                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Grid.Row="1" ItemsSource="{Binding LesCoursDuJour}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel>
                                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="10,10,0,10" Width="550">
                                         <StackPanel >
                                             <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
-                                    <Run Text="Le "/><Run Text="{Binding DateCour.Day,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Month,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Year,Mode=OneWay}"/>
-							        de
-                                    <Run Text="{Binding DateCour.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding DateCour.Minute,Mode=OneWay,StringFormat=00}"/>
-									à
-                                    <Run Text="{Binding DateCourFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateCourFin.Minute,Mode=OneWay,StringFormat=00}"/>
+							                            <Run Text="Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
+                                                        de
+                                                        <Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>                    
+									                    à
+                                                        <Run Text="{Binding DateFin, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>
                                             </TextBlock>
                                             <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
-                                    <Run Text="{Binding Matiere}"/>
-                                    <Run Text="&#xA;Groupe : "/>
-                                    <Run Text="{Binding Groupe[0]}"/> <Run Text="{Binding Groupe[1]}"/>
-                                    <Run Text="&#xA;Salle : "/>
-                                    <Run Text="{Binding Salle}"/>
-                                    <Run Text="&#xA;Intervenant : "/>
-                                    <Run Text="{Binding Intervenant}"/>
+                                                        <Run Text="{Binding matière}"/>
+                                                        <Run Text="&#xA;Groupe : "/>
+                                                        <Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
+                                                        <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
+                                                        <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="&#xA;Salle : "/>
+                                                        <Run Text="{Binding Salle}"/>
+                                                        <Run Text="&#xA;Intervenant : "/>
+                                                        <Run Text="{Binding Enseignant.nom}"/>
                                             </TextBlock>
                                         </StackPanel>
                                     </Border>
