@@ -6,24 +6,61 @@
              xmlns:local="clr-namespace:OdeuxXaml.User_Control.Etu"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1500">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="masterButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="RadiusX" Value="15"/>
+            <Setter Property="RadiusY" Value="15"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
     <Viewbox>
 
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
             <Grid>
                 <DockPanel>
-                    <Calendar DockPanel.Dock="Top" SelectionMode="None" Name="mCalendar" DisplayMode="Month"/>
-
+                    <TextBlock Text="tfgazefg" Foreground="Green" FontSize="40" Visibility="Collapsed" x:Name="trs"/>
+                    <DatePicker Width="400" VerticalAlignment="Top" Margin="300,30,-300,0" x:Name="DateSaisie"/>
+                    <Button VerticalAlignment="Top" Click="NouvelDate" Margin="20" Style="{StaticResource masterButton}">
+                        <!-- Bouton Notes -->
+                        <Grid>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}" />
+                            <TextBlock Text="Entrer" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" ></TextBlock>
+                        </Grid>
+                    </Button>
                 </DockPanel>
                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="627" ItemsSource="{Binding LesCours}" Margin="0,160,0,0">
+                      Background="Transparent" Height="647" ItemsSource="{Binding LesCoursDuJour}" Margin="0,100,0,0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
                                     <StackPanel>
                                         <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
-                                    <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h-"/><Run Text="{Binding Date.Hour+Durée.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/>
+                                    <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding Date.Minute ,Mode=OneWay,StringFormat=00}"></Run><Run Text="-"></Run><Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}" /><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}" />
                                         </TextBlock>
                                     </StackPanel>
                                 </Border>
@@ -38,17 +75,17 @@
                                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,14,0,2" Width="800">
                                         <WrapPanel>
                                             <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                    <Run Text="{Binding Matière}"/>
+                                    <Run Text="{Binding matière}"/>
                                             </TextBlock>
                                         </WrapPanel>
                                     </Border>
                                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,2,0,10" Width="800">
                                         <WrapPanel>
                                             <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                    <Run Text="{Binding Enseignant.Nom}"/>
+                                    <Run Text="{Binding Enseignant.nom}"/>
                                     <Run Text="-"/>
-                                    G<Run Text="{Binding Groupe[0]}"/> 
-                                    <Run Text="{Binding Groupe[1]}"/>
+                                    G<Run Text="{Binding groupes2[0].num,Mode=OneWay}"/> 
+                                    <Run Text="{Binding groupes2[1].Num}"/>
                                             </TextBlock>
                                         </WrapPanel>
                                     </Border>

@@ -14,6 +14,11 @@ namespace Modele
         public DateTime Date { get; set; }
 
         /// <summary>
+        /// Date où à fini cour.
+        /// </summary>
+        public DateTime DateFin { get; set; }
+
+        /// <summary>
         /// Durée du Cour.
         /// </summary>
         public TimeSpan Durée { get; set; }
@@ -57,6 +62,7 @@ namespace Modele
             matière = mat;
             Enseignant = ens;
             groupes2.AddRange(grps);
+            DateFin = Date + Durée;
         }
 
         public override string ToString() => $"Cour du {Date.Day}/{Date.Month}/{Date.Year} à {Date.Hour}h{Date.Minute} jusqu'a {Date.Hour+Durée.Hours}h{Date.Minute+Durée.Minutes}  avec : {Enseignant.nom}";

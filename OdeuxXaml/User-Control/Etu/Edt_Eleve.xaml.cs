@@ -27,9 +27,15 @@ namespace OdeuxXaml.User_Control.Etu
         {
             InitializeComponent();
 
-            mCalendar.DisplayDateStart = DateTime.Now;
+            DateSaisie.SelectedDate = DateTime.Now;
+            mng.LesCoursDuJour = mng.RechCourEtu(DateSaisie.DisplayDate);
+            DataContext = mng;
+        }
 
-            DataContext = mng.RechCourEtu(mCalendar.DisplayDate);
+        private void NouvelDate(object sender, RoutedEventArgs e)
+        {
+            mng.LesCoursDuJour = mng.RechCourEtu(DateSaisie.DisplayDate);
+        
         }
     }
 }

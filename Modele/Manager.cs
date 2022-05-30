@@ -29,10 +29,6 @@ namespace Modele
             LaPromo = new Promo(new List<Groupe>());
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
         public void NouvelPromo(Promo promo)
         {
             LaPromo = promo;
