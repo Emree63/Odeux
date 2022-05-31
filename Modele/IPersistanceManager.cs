@@ -8,8 +8,8 @@ namespace Modele
 {
     public interface IPersistanceManager
     {
-        (IEnumerable<Cour> cours, IEnumerable<Personne> personnes) ChargeDonnées();
+        (IEnumerable<Cour> cours, IEnumerable<Personne> personnes, Promo Iut) ChargeDonnées();
 
-        void SauvegardedeDonnées(IEnumerable<Cour> cours, IEnumerable<Personne> personnes);
+        void SauvegardeDonnées(IEnumerable<Cour> cours, IEnumerable<Personne> personnes, Promo Iut);
     }
 }

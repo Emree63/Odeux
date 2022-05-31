@@ -48,6 +48,35 @@ namespace Modele
         }
         private UE etuUESélectionné;
 
+        /// <summary>
+        /// Contenir la moyenne du semestre de l'étudiant
+        /// </summary>
+        public double EtuMoySemestre
+        {
+            get => EtumoySemestre;
+            set
+            {
+                if (EtumoySemestre != value)
+                {
+                    EtumoySemestre = value;
+                    OnPropertyChanged("MoySemestre");
+                }
+            }
+        }
+        private double EtumoySemestre;
 
+        public double EtuMoyUE
+        {
+            get => EtumoyUE;
+            set
+            {
+                if (EtumoyUE != value)
+                {
+                    EtumoyUE = value;
+                    OnPropertyChanged("MoySemestre");
+                }
+            }
+        }
+        private double EtumoyUE;
     }
 }

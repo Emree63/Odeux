@@ -60,3 +60,5 @@ C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Image
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Home.png
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Icon1.png
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Icon2.png
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Stub.dll
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Stub.pdb

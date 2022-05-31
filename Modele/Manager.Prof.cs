@@ -21,8 +21,5 @@ namespace Modele
 
         public Groupe GroupeSélectionné { get; set; }
 
-        public Etudiant EtudiantSélectionné { get; set; }
-
-        public Semestre SemestreSélectionné { get; set; }
     }
 }

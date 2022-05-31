@@ -28,6 +28,8 @@ namespace OdeuxXaml.User_Control.Etu
 
             mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             DataContext = mng;
         }
 
@@ -38,12 +40,16 @@ namespace OdeuxXaml.User_Control.Etu
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
                 i = 0;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             }
             else
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
                 i = 0;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             }
         }
 
@@ -54,12 +60,14 @@ namespace OdeuxXaml.User_Control.Etu
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
                 i = 0;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
             else
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
                 i = 0;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
         }
 
@@ -69,11 +77,13 @@ namespace OdeuxXaml.User_Control.Etu
             {
                 i++;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
             else
             {
                 i=0;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
             
         }
@@ -84,11 +94,13 @@ namespace OdeuxXaml.User_Control.Etu
             {
                 i--;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
             else
             {
                 i = 5;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
         }
     }
