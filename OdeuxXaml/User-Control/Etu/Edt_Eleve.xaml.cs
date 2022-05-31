@@ -28,7 +28,7 @@ namespace OdeuxXaml.User_Control.Etu
             InitializeComponent();
 
             DateSaisie.SelectedDate = DateTime.Now;
-            mng.LesCoursDuJour = mng.RechCourEtu(new DateTime(2022,05,31));
+            mng.LesCoursDuJour = mng.RechCourEtu(DateSaisie.DisplayDate);
             DataContext = mng;
         }
 

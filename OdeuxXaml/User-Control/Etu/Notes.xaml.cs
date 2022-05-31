@@ -20,9 +20,37 @@ namespace OdeuxXaml.User_Control.Etu
     /// </summary>
     public partial class Notes : UserControl
     {
+        public Modele.Manager mng => (App.Current as App).LeManager;
         public Notes()
         {
             InitializeComponent();
+
+            mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+            DataContext = mng;
+        }
+
+        private void SemestrePrecedent(object sender, RoutedEventArgs e)
+        {
+            if(mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+            }
+            else
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+            }
+        }
+
+        private void SemestreSuivant(object sender, RoutedEventArgs e)
+        {
+            if (mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+            }
+            else
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+            }
         }
     }
 }

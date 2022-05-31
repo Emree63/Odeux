@@ -10,13 +10,17 @@
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750" >
             <Grid>
                 <WrapPanel>
-                    <Button Background="Transparent" Margin="80,0,0,0" >
+                    <Button Background="Transparent" Margin="80,0,0,0" Click="SemestrePrecedent">
                         <Grid>
-                            <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}"/>
+                            <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}" />
                         </Grid>
                     </Button>
-                    <Label x:Name="Semestre"  HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30">Semestre 1</Label>
-                    <Button Background="Transparent">
+                    <Label   HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30"/>
+                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30" >
+                        <Run Text="Semestre "/>
+                        <Run Text="{Binding EtuSemestreSélectionné.NumSemestre,Mode=OneWay}"/>
+                    </TextBlock>
+                    <Button Background="Transparent" Click="SemestreSuivant">
                         <Grid>
                             <TextBlock Text=">" FontSize="25" Foreground="{DynamicResource TextColor}"/>
                         </Grid>
@@ -31,9 +35,7 @@
                         </Button>
                         <Grid>
                             <Rectangle RadiusX="15" RadiusY="15" Width="883" Height="62"  Fill="{DynamicResource BackgroundColor2}"/>
-                            <Label FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
-                                UE 1 - Développer des applications informatiques simples
-                            </Label>
+                            <Label FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"  Content="{Binding UESélectionné.num,Mode=OneWay}" />
                         </Grid>
                         <Button Background="Transparent" Margin="20,0,0,0">
                             <Grid>
@@ -45,18 +47,27 @@
                         <Label VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center"  Width="350" Height="50" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="150,0,0,0" FontSize="25">
                             Moyenne Générale : 14,5
                         </Label>
-                        <Label VerticalAlignment="Top" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Foreground="{DynamicResource TextColor}" Width="350" Height="50" Background="{DynamicResource BackgroundColor2}" Margin="110,0,0,0" FontSize="25">
-                            Moyenne Classe : 15
-                        </Label>
+                        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="{DynamicResource TextColor}" Width="350" Height="50" Background="{DynamicResource BackgroundColor2}" Margin="110,0,0,0" FontSize="25">
+                            <Run Text="Moyenne Classe :" />
+                            <Run Text="{Binding MoyGeneral,Mode=OneWay}"/>
+                        </TextBlock>
                     </WrapPanel>
                 </StackPanel>
                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="1500" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0">
+                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding ressources}" SelectedItem="{Binding UESélectionné}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
-
+                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
+                                    <StackPanel>
+                                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                                            <Run Text="{Binding num,Mode=OneWay}"/><Run Text="&#xA;"/>
+                                            <Run Text="{Binding Description,Mode=OneWay}"/>
+                                            <Run Text="{Binding Coef,Mode=OneWay}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Border>
                             </WrapPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

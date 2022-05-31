@@ -96,6 +96,7 @@ namespace Modele
             Personnes.AddRange(profs);
 
             GroupeSélectionné = LaPromo.groupes[0];
+            MoyGeneral = LaPromo.MoyGeneral();
         }
 
 

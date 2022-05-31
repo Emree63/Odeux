@@ -87,7 +87,10 @@ namespace Modele
                 if (personneActuel is Professeur)
                     return 1;
                 if (personneActuel is Etudiant)
+                {
+                    EtuActuel = (Etudiant)Per;
                     return 2;
+                }
             }
             return 0;
         }
