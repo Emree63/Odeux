@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Professeur", "..\Tests
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Classe", "..\Tests\Test_Classe-Cour\Test_Classe\Test_Classe.csproj", "{3B1B18FC-7C91-41F6-8310-0C0949B056AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeuxXaml", "..\OdeuxXaml\OdeuxXaml.csproj", "{7DB7438F-E835-4760-A133-D18B9AF9FD60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeuxXaml", "..\OdeuxXaml\OdeuxXaml.csproj", "{7DB7438F-E835-4760-A133-D18B9AF9FD60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stub", "..\Stub\Stub.csproj", "{5302D79C-B544-4094-BC5F-D1394FF4CDFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{7DB7438F-E835-4760-A133-D18B9AF9FD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB7438F-E835-4760-A133-D18B9AF9FD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB7438F-E835-4760-A133-D18B9AF9FD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5302D79C-B544-4094-BC5F-D1394FF4CDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5302D79C-B544-4094-BC5F-D1394FF4CDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5302D79C-B544-4094-BC5F-D1394FF4CDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5302D79C-B544-4094-BC5F-D1394FF4CDFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -69,7 +69,7 @@ namespace OdeuxXaml.User_Control.Etu {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;component/user-control/etu/edt_eleve.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;V1.0.0.0;component/user-control/etu/edt_eleve.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\User-Control\Etu\Edt_Eleve.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -10,15 +10,17 @@ namespace Modele
 {
     public partial class Manager : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Dépendance vers le gestionnaire de la persistance
+        /// </summary>
+        public IPersistanceManager Persistance { get; private set; }
 
         /// <summary>
         /// Constructeur de la classe Manager.
         /// </summary>
-        /// <param name="desPersonnes">Liste des personnes</param>
-        /// <param name="cours">Listes des cours</param>
-        /// <param name="promo">Promo concerner</param>
-        public Manager()
+        public Manager()///IPersistanceManager persistance
         {
+            ///Persistance = persistance;
             Personnes = new List<Personne>();
             LesCours = new List<Cour>();
             LaPromo = new Promo(new List<Groupe>());
