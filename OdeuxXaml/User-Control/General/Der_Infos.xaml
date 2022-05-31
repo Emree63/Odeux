@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="OdeuxXaml.User_Control.General.Der_Infos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OdeuxXaml.User_Control.General"
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1500">
+    <Viewbox>
+
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
+            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                      Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" Height="750" x:Name="ListBox">
+
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,20" >
+                    <StackPanel>
+                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Nouveau logiciel disponible<LineBreak/>
+                        </TextBlock>
+
+                        <TextBlock  FontSize="26" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="100,0,0,30">
+                    Un nouvel outil est disponible pour les étudiants et les professeurs<LineBreak/>
+                    du département informatique ! Directement inspiré de son "grand frère" <LineBreak/>
+                    Odin et conçu par deux étudiants de première année,<LineBreak/>
+                    Odeux va permettre un plus grand confort d'utilisation et <LineBreak/>
+                    bénéficie d'une ergonomie renforcée afin de rendre son usage quotidien plus efficace et plus fluide.
+                        </TextBlock>
+                    </StackPanel>
+
+                </Border>
+
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,0,0,0" >
+                    <StackPanel>
+                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    Nouveau logiciel disponible<LineBreak/>
+                        </TextBlock>
+                        <TextBlock FontSize="26" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,20,30">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <LineBreak/>
+                    labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<LineBreak/>
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor<LineBreak/>
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<LineBreak/>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <LineBreak/>
+                    officia deserunt mollit anim id est laborum.
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,20,0,0">
+                    <StackPanel>
+                        <TextBlock FontSize="35" 
+                                       Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center" Margin="505,10,480,0">
+                    LISEZ VOS MAILS<LineBreak/>
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+            </ListBox>
+        </Border>
+    </Viewbox>
+</UserControl>

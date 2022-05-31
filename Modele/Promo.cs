@@ -11,14 +11,13 @@ namespace Modele
         /// <summary>
         /// Tout les groupes d'éléves constituant la promo
         /// </summary>
-        private IEnumerable<Groupe> groupes => groupes2;
-        public List<Groupe> groupes2 = new List<Groupe>();
+        public List<Groupe> groupes { get; set; }
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur de la classe
         /// </summary>
         /// <param name="grp">Groupes concernant la promo</param>
-        public Promo(List<Groupe> grp) => groupes2.AddRange(grp);
+        public Promo(List<Groupe> grp) => groupes = grp;
         
 
         /// <summary>
@@ -32,11 +31,17 @@ namespace Modele
             {
                  foreach(Etudiant etu in grp.etudiants)
                 {
-                    total += etu.MoyGeneral();
-                    nb++;
+                    if (etu.MoyGeneral() != -1)
+                    {
+                        total += etu.MoyGeneral();
+                        nb++;
+                    }
                 }
             }
-            return total / nb;
+            if (nb != 0)
+                return total / nb;
+            else
+                return -1;
         }
 
         /// <summary>

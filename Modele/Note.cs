@@ -31,6 +31,10 @@ namespace Modele
             else note = Note;
         }
 
+        /// <summary>
+        /// Modifier une note
+        /// </summary>
+        /// <param name="NouvelNote"></param>
         public void Modifier(double NouvelNote)
         {
             if(NouvelNote<0 || NouvelNote>20)

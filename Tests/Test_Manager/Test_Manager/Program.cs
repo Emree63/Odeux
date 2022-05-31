@@ -23,7 +23,10 @@ namespace Test_Manager
             pers.Add(prof);
             pers.Add(prof2);
 
-            Manager Man = new Manager(cours, Iut, pers);
+            Manager Man = new Manager();
+            Man.AjouterPersonne(pers);
+            Man.NouvelPromo(Iut);
+            Man.AjouterDesCours(cours);
 
 
             foreach (Personne e in pers)
@@ -33,17 +36,21 @@ namespace Test_Manager
 
             Test_MethodeProf(Man);
             Test_MethodeEtu(Man);
+            
 
             WriteLine("Moyenne de la Promo :"+Man.LaPromo.MoyGeneral());
         }
 
         static void Test_MethodeProf(Manager man)
         {
-            int y = man.Connection("El Safadi", "`@&;UCCy8ab{*d9V");
+            int y = man.Connection("Professeur", "`@&;UCCy8ab{*d9V");
             if (y == 1)
                 WriteLine("La connexion est réussi !");
             else
+            {
                 WriteLine("La connexion à échouer !");
+                return;
+            }
             var cours = man.RechCourProf(new DateTime(2022, 06, 15));
             WriteLine("Cour du Prof :");
             foreach (Cour c in cours)
@@ -56,7 +63,10 @@ namespace Test_Manager
             if (y == 2)
                 WriteLine("La connexion est réussi !");
             else
+            {
                 WriteLine("La connexion à échouer !");
+                return;
+            }
             var cours = man.RechCourEtu(new DateTime(2022, 06, 15));
             WriteLine("Cour de l'Eleve :");
             foreach (Cour c in cours)
@@ -75,12 +85,12 @@ namespace Test_Manager
 
         static Professeur PremierProfTest()
         {
-            Professeur prof = new Professeur("El Safadi", "El Abed", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
+            Professeur prof = new Professeur("Professeur", "1", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
             return prof;
         }
         static Professeur DeuxièmeProf()
         {
-            Professeur prof2 = new Professeur("Chevaldonne", "Marc", new DateTime(1959, 8, 10), "0000");
+            Professeur prof2 = new Professeur("Professeur", "2", new DateTime(1959, 8, 10), "0000");
             return prof2;
         }
         static List<Cour> ChargeCour()

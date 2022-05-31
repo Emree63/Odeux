@@ -31,7 +31,7 @@ namespace Modele
         public SAE sae;
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur de la classe
         /// </summary>
         /// <param name="num">Code de l'UE</param>
         /// <param name="Des">Description de l'UE</param>
@@ -45,7 +45,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur sans Description renseigner
         /// </summary>
         /// <param name="num">Code de l'UE</param>
         public UE(string num): this(num,null)

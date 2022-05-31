@@ -81,14 +81,13 @@ namespace Test_Etudiant
             //Creation d'un Etudiant
 
             DateTime nais = new DateTime(2002, 10, 22);
-            Etudiant etu1 = new Etudiant("Khedair ", "Rami", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
+            Etudiant etu1 = new Etudiant("Emre ", "KARTAL", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
             WriteLine(etu1);
             WriteLine(etu1.semestre1.MoySemestre());
             WriteLine(etu1.semestre2.MoySemestre());
             WriteLine("Ma moyenne est de :" + etu1.MoyGeneral());
             WriteLine(etu1.getNote(1, "UE 1", "R1.01", "Algorithme", "DS"));
-
 
         }
     }

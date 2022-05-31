@@ -62,14 +62,22 @@ namespace Modele
         {
             if (LesUE.Count == 0)
             {
-                throw new ArgumentException("Le semestre : "+NumSemestre+" ne contient aucune UE");
+                return -1;
             }
             double total = 0;
+            int Coef = 0;
             foreach (UE ue in LesUE)
             {
-                total += ue.MoyUE();
+                if (ue.MoyUE() != -1)
+                {
+                    total += ue.MoyUE();
+                    Coef++;
+                }
             }
-            return total / LesUE.Count();
+            if (Coef != 0)
+                return total / Coef;
+            else
+                return -1;
         }
     }
 }

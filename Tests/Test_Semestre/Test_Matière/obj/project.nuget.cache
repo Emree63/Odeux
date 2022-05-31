@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y3d4mp0GBsBBRzjLpzlqLSr7J86ceudpVyYpRZM1bRyFNdoOqN8XfshwDTiRiajoVZy3bOiyk8BLvC49WbskxQ==",
+  "dgSpecHash": "ndIKqst0V8QXkcehlPM2cIJpy7DYVuE1KHJTFmHCPXFRDBdkuH+YYegn5jwO2ZpNi4er2d8pWIuKgel6xDBmag==",
   "success": true,
-  "projectFilePath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Tests\\Test_Semestre\\Test_Matière\\Test_Matière.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Tests\\Test_Semestre\\Test_Matière\\Test_Matière.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

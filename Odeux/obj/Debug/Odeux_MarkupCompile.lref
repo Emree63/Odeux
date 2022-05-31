@@ -1,22 +1,4 @@
 ﻿
-<<<<<<< HEAD
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\App.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\Connection-Page.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\Page-Eleve\Accueil.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\Page-Prof\Accueil_Prof.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Etu\Notes.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Etu\Accueil_fill_detail.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\General\button_AideEnLigne.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\General\button_Deconnexion.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\General\button_Thème-Affichage.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\General\Der_Infos.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Etu\DéclarerVotrePrésence.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Etu\Edt_Eleve.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Prof\Accueil_fill_detail.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Prof\ConsulterNotes.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Prof\Edt_Prof.xaml;;
-FD:\le_folder\Etudes\Cours\SAE\201\sae2.01\Odeux\User-Control\Prof\EntrerDesNotes.xaml;;
-=======
 FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\App.xaml;;
 FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\Connection-Page.xaml;;
 FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\Page-Eleve\Accueil.xaml;;
@@ -33,5 +15,4 @@ FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\User-Control\Prof\Accueil_fill_de
 FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\User-Control\Prof\ConsulterNotes.xaml;;
 FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\User-Control\Prof\Edt_Prof.xaml;;
 FC:\Users\emkartal1\Source\Repos\sae2.01\Odeux\User-Control\Prof\EntrerDesNotes.xaml;;
->>>>>>> 1de70ddd94ab1f37bf04883ce6e21f05403b6761
 

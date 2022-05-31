@@ -9,21 +9,21 @@ namespace Modele
     public class Matiere
     {
         /// <summary>
-        /// Nom de la matiere
+        /// Nom de la matiere.
         /// </summary>
         public string Nom { get; set; }
 
         /// <summary>
-        /// Listes des notes d'una matière
+        /// Listes des notes d'une matière.
         /// </summary>
         public List<Note> notes { get; set; }
 
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur de la classe de Matière.
         /// </summary>
-        /// <param name="nom">Nom de la matiere</param>
-        /// <param name="Notes">Listes des notes concernants la matière</param>
+        /// <param name="nom">Nom de la matiere.</param>
+        /// <param name="Notes">Listes des notes concernants la matière.</param>
         public Matiere(string nom, List<Note> Notes)
         {
             if (string.IsNullOrWhiteSpace(nom)) throw new ArgumentException("Le nom doit être renseigner");
@@ -32,26 +32,26 @@ namespace Modele
         }
 
         /// <summary>
-        /// Constructeur sans Liste
+        /// Constructeur sans liste de note.
         /// </summary>
-        /// <param name="nom">Nom de la matiere</param>
+        /// <param name="nom">Nom de la matiere.</param>
         public Matiere(string nom) : this(nom, new List<Note>())
         {
         }
 
         /// <summary>
-        /// Constructeur
+        /// Constructeur d'une matière sans Nom
         /// </summary>
-        /// <param name="Notes">Listes des notes concernants la matière</param>
+        /// <param name="Notes">Listes des notes concernants la matière.</param>
         public Matiere(List<Note> Notes): this("Aucun Nom",Notes)
         {
 
         }
 
         /// <summary>
-        /// Calcul de la moyenne d'une matière
+        /// Calcul de la moyenne d'une Matière.
         /// </summary>
-        /// <returns>float : Moyenne</returns>
+        /// <returns>Float : Moyenne</returns>
         public double MoyMatière()
         {
             if (notes.Count==0)
@@ -67,15 +67,15 @@ namespace Modele
         }
 
         /// <summary>
-        /// Ajouter une nouvelle note à la matière
+        /// Ajouter une nouvelle note à la matière.
         /// </summary>
-        /// <param name="NouvelNote">La nouvelle note à inserer</param>
+        /// <param name="NouvelNote">La nouvelle note à inserer.</param>
         public void AddNote(Note NouvelNote) => notes.Add(NouvelNote);
 
         /// <summary>
-        /// Supprimer une note de la matière
+        /// Supprimer une note de la matière.
         /// </summary>
-        /// <param name="note">La note à supprimer</param>
+        /// <param name="note">La note à supprimer.</param>
         public void SuppNote(Note note) => notes.Remove(note);
         
         public override string ToString()

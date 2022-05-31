@@ -40,14 +40,10 @@ namespace Test_Matière
 
             // Test de calcul de la moyenne d'une matière, contenant aucune notes
             Matiere mat1 = new Matiere("Bases de données", notes2);
-            try
-            {
+            if (mat1.MoyMatière() != 1)
                 WriteLine("Moyenne :" + mat1.MoyMatière());
-            }
-            catch (Exception msg)
-            {
-                WriteLine(msg);
-            }
+            else
+                WriteLine("Erreur Aucune note");
 
             // Aprés avoir rajouter une nouvel note
             WriteLine("Apres un ajout d'une nouvel note :");
