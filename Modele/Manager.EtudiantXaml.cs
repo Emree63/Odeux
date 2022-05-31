@@ -9,8 +9,14 @@ namespace Modele
 {
     public partial class Manager 
     {
+        /// <summary>
+        /// Etudiant actuelle sur lequelle on va récuperer ses informations
+        /// </summary>
         public Etudiant EtuActuel { get; set; }
 
+        /// <summary>
+        /// Semestre selectionner de l'etudiant actuel
+        /// </summary>
         public Semestre EtuSemestreSélectionné
         {
             get => etuSemestreSélectionné;
@@ -24,6 +30,24 @@ namespace Modele
             }
         }
         private Semestre etuSemestreSélectionné;
+
+        /// <summary>
+        /// UE selectionner du semestre
+        /// </summary>
+        public UE EtuUESélectionné
+        {
+            get => etuUESélectionné;
+            set
+            {
+                if (etuUESélectionné != value)
+                {
+                    etuUESélectionné = value;
+                    OnPropertyChanged("EtuUESélectionné");
+                }
+            }
+        }
+        private UE etuUESélectionné;
+
 
     }
 }

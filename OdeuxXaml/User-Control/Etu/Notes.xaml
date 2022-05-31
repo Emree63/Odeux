@@ -28,16 +28,19 @@
                 </WrapPanel>
                 <StackPanel Margin="100,50,100,0">
                     <WrapPanel>
-                        <Button Background="Transparent" Margin="80,0,20,0" >
+                        <Button Background="Transparent" Margin="80,0,20,0" Click="UePrecedent" >
                             <Grid>
                                 <TextBlock Text="&lt;" FontSize="35" Foreground="{DynamicResource TextColor}"/>
                             </Grid>
                         </Button>
                         <Grid>
                             <Rectangle RadiusX="15" RadiusY="15" Width="883" Height="62"  Fill="{DynamicResource BackgroundColor2}"/>
-                            <Label FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"  Content="{Binding UESélectionné.num,Mode=OneWay}" />
+                            <TextBlock FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"  >
+                                <Run Text="{Binding EtuUESélectionné.num,Mode=OneWay}"/>
+                                -<Run Text="{Binding EtuUESélectionné.Description,Mode=OneWay}"/>
+                            </TextBlock>
                         </Grid>
-                        <Button Background="Transparent" Margin="20,0,0,0">
+                        <Button Background="Transparent" Margin="20,0,0,0" Click="UeSuivant">
                             <Grid>
                                 <TextBlock Text=">" FontSize="35" Foreground="{DynamicResource TextColor}"/>
                             </Grid>
@@ -54,18 +57,24 @@
                     </WrapPanel>
                 </StackPanel>
                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1500" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding ressources}" SelectedItem="{Binding UESélectionné}">
+                      Width="1370" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding EtuUESélectionné.ressources}" SelectedItem="{Binding EtuUESélectionné}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
-                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
+                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" MaxWidth="400" Width="400" Height="150" >
                                     <StackPanel>
-                                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="20" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
                                             <Run Text="{Binding num,Mode=OneWay}"/><Run Text="&#xA;"/>
-                                            <Run Text="{Binding Description,Mode=OneWay}"/>
-                                            <Run Text="{Binding Coef,Mode=OneWay}"/>
+                                            <Run Text="{Binding Description,Mode=OneWay}"/><Run Text="&#xA;&#xA;"/>
+                                            Coeff <Run Text="{Binding Coef,Mode=OneWay}"/>
                                         </TextBlock>
+                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" MaxWidth="400" Width="400" Height="150" >
+                                            <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="20" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+                                            <Run Text="{Binding EtuMoyRes,Mode=OneWay}"/><Run Text="&#xA;"/>
+                                            <Run Text="{Binding MoyRes,Mode=OneWay}"/>
+                                            </TextBlock>
+                                        </Border>
                                     </StackPanel>
                                 </Border>
                             </WrapPanel>

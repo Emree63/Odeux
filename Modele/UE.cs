@@ -59,6 +59,11 @@ namespace Modele
         /// <param name="res">Ressource à ajouter</param>
         public void AddRessource(Ressource res) => ressources.Add(res);
 
+        /// <summary>
+        /// Ajouter une liste de ressource à l'UE
+        /// </summary>
+        /// <param name="res">Liste des ressources</param>
+        public void AddListesRessources(List<Ressource> res) => ressources.AddRange(res);
 
         /// <summary>
         /// Suppresion d'une ressource

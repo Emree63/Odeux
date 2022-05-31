@@ -26,6 +26,10 @@ namespace Modele
             LaPromo = new Promo(new List<Groupe>());
         }
 
+        /// <summary>
+        /// Récuperer une nouvelPromo
+        /// </summary>
+        /// <param name="promo"></param>
         public void NouvelPromo(Promo promo)
         {
             LaPromo = promo;
@@ -35,16 +39,76 @@ namespace Modele
 
         public void ChargeDonnées()
         {
+            List<Ressource> ressources1 = new List<Ressource>()
+            {
+                new Ressource("R1.01", "Initiation au développement", 42, new List<Matiere>()),
+                new Ressource("R1.02", "Développement d’interfaces web", 42, new List<Matiere>()),
+                new Ressource("R1.10", "Anglais S1", 42, new List<Matiere>()),
+            };
+            List<Ressource> ressources2 = new List<Ressource>()
+            {
+                new Ressource("R1.01", "Initiation au développement", 24, new List<Matiere>()),
+                new Ressource("R1.03", "Introduction à l'architecture des ordinateurs", 3, new List<Matiere>()),
+                new Ressource("R1.04", "Introduction aux systèmes d'exploitation et à leur fonctionnement", 10, new List<Matiere>()),
+                new Ressource("R1.06", "Mathématiques discrètes", 15, new List<Matiere>()),
+                new Ressource("R1.07", "Outils mathématiques fondamentaux", 15, new List<Matiere>()),
+            };
+            List<Ressource> ressources3 = new List<Ressource>()
+            {
+                new Ressource("R1.03", "Introduction à l'architecture des ordinateurs", 21, new List<Matiere>()),
+                new Ressource("R1.10", "Anglais S1", 12, new List<Matiere>()),
+                new Ressource("R1.11", "Expression-Communication", 6, new List<Matiere>()),
+            };
+            List<Ressource> ressources4 = new List<Ressource>()
+            {
+                new Ressource("R1.05", " Introduction aux bases de données et SQL", 36, new List<Matiere>()),
+                new Ressource("R1.06", "Mathématiques discrètes", 12, new List<Matiere>()),
+                new Ressource("R1.09", "Économie durable et numérique", 6, new List<Matiere>()),
+            };
+            List<Ressource> ressources5 = new List<Ressource>()
+            {
+                new Ressource("R1.02", "Développement d’interfaces web", 18, new List<Matiere>()),
+                new Ressource("R1.08", "Gestion de projet et des organisations", 27, new List<Matiere>()),
+                new Ressource("R1.11", "Expression-Communication", 15, new List<Matiere>()),
+            };
+            List<Ressource> ressources6 = new List<Ressource>()
+            {
+
+                new Ressource("R1.02", "Développement d’interfaces web", 5, new List<Matiere>()),
+                new Ressource("R1.08", "Gestion de projet et des organisations", 11, new List<Matiere>()),
+                new Ressource("R1.09", "Économie durable et numérique", 11, new List<Matiere>()),
+                new Ressource("R1.10", "Anglais S1", 11, new List<Matiere>()),
+                new Ressource("R1.11", "Expression-Communication", 11, new List<Matiere>()),
+                new Ressource("R1.12", "Projet professionnel et personne", 11, new List<Matiere>()),
+            };
+
+            List<UE> LesUE = new List<UE>()
+            {
+                    new UE("UE 1","Développer des applications informatiques simples"),
+                    new UE("UE 2","Appréhender et construire des algorithmes"),
+                    new UE("UE 3","Installer et configurer un poste de travail"),
+                    new UE("UE 4","Concevoir et mettre en place une base de données "),
+                    new UE("UE 5","Identifier les besoins métiers des clients et des utilisateurs"),
+                    new UE("UE 6","Identifier ses aptitudes pour travailler dans une équipe"),
+            };
+            LesUE[0].AddListesRessources(ressources1);
+            LesUE[1].AddListesRessources(ressources2);
+            LesUE[2].AddListesRessources(ressources3);
+            LesUE[3].AddListesRessources(ressources4);
+            LesUE[4].AddListesRessources(ressources5);
+            LesUE[5].AddListesRessources(ressources6);
+
+
             List<Etudiant> etu = new List<Etudiant>()
             {
-                new Etudiant("Kartal", "Emre", new DateTime(2003, 1, 1), "0000", new Semestre(1, new List<UE>()), new Semestre(2, new List<UE>())),
-                new Etudiant("Thibon", "Hugo", new DateTime(2003, 1, 1), "0000", new Semestre(1, new List<UE>()), new Semestre(2, new List<UE>())),
+                new Etudiant("Kartal", "Emre", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE)),
+                new Etudiant("Thibon", "Hugo", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE)),
             };
 
             List<Etudiant> etu2 = new List<Etudiant>()
             {
-                 new Etudiant("Etudiant", "1", new DateTime(2003, 1, 1), "0000", new Semestre(1, new List<UE>()), new Semestre(2, new List<UE>())),
-                 new Etudiant("Etudiant", "2", new DateTime(2003, 1, 1), "0000", new Semestre(1, new List<UE>()), new Semestre(2, new List<UE>())),
+                 new Etudiant("Etudiant", "1", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE)),
+                 new Etudiant("Etudiant", "2", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE)),
             };
             List<Groupe> grps = new List<Groupe>();
             Groupe grp1 = new Groupe(3, etu);
@@ -73,9 +137,9 @@ namespace Modele
 
                 new Cour(new DateTime(2022, 05, 12, 16, 30, 0), new TimeSpan(1, 0, 0), "B20", "Bases de données", prof2, grps),
                 new Cour(new DateTime(2022, 05, 29, 16, 30, 0), new TimeSpan(1, 0, 0), "B20", "Bases de données", prof2, grps),
-                new Cour(new DateTime(2022, 05, 30, 8, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
-                new Cour(new DateTime(2022, 05, 30, 10, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
-                new Cour(new DateTime(2022, 05, 30, 13, 15, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps),
+                new Cour(new DateTime(2022, 06, 01, 8, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
+                new Cour(new DateTime(2022, 06, 01, 10, 0, 0), new TimeSpan(2, 0, 0), "B20", "Bases de données", prof2, new List<Groupe>(){grp1}),
+                new Cour(new DateTime(2022, 06, 01, 13, 15, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps),
                 new Cour(new DateTime(2022, 05, 31, 10, 30, 0), new TimeSpan(1, 30, 0), "B20", "Bases de données", prof2, grps),
                 new Cour(new DateTime(2022, 05, 31, 13, 30, 0), new TimeSpan(1, 0, 0), "B20", "Bases de données", prof2, grps),
                 new Cour(new DateTime(2022, 05, 31, 15, 30, 0), new TimeSpan(1, 30, 0), "B20", "Bases de données", prof2, grps),
@@ -83,7 +147,7 @@ namespace Modele
                 new Cour(new DateTime(2022, 06, 11, 10, 30, 0), new TimeSpan(1, 30, 0), "B20", "Bases de données", prof2, grps),
 
                 new Cour(new DateTime(2022, 05, 13, 14, 30, 0), new TimeSpan(2, 0, 0), "C21", "Architecture : IHM", prof3, grps),
-                new Cour(new DateTime(2022, 05, 30, 16, 30, 0), new TimeSpan(1, 0, 0), "Distanciel : sans outil prévu", "Architecture : IHM", prof3, grps),
+                new Cour(new DateTime(2022, 06, 01, 16, 30, 0), new TimeSpan(1, 0, 0), "Dis", "Architecture : IHM", prof3, grps),
                 new Cour(new DateTime(2022, 05, 31, 18, 30, 0), new TimeSpan(1, 0, 0), "B10", "Architecture : IHM", prof3, new List<Groupe>(){grp1}),
                 new Cour(new DateTime(2022, 06, 12, 8, 30, 0), new TimeSpan(1, 0, 0), "C21", "Architecture : IHM", prof3, grps),
                 new Cour(new DateTime(2022, 06, 16, 14, 30, 0), new TimeSpan(2, 0, 0), "C21", "Architecture : IHM", prof3, grps),

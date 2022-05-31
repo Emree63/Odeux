@@ -54,7 +54,6 @@ namespace Test_Matière
             WriteLine("Apres une Suppresion d'une note :");
             mat.SuppNote(n4);
             WriteLine(mat);
-
         }
     }
 }

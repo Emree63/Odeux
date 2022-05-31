@@ -20,12 +20,14 @@ namespace OdeuxXaml.User_Control.Etu
     /// </summary>
     public partial class Notes : UserControl
     {
+        int i = 0;
         public Modele.Manager mng => (App.Current as App).LeManager;
         public Notes()
         {
             InitializeComponent();
 
             mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             DataContext = mng;
         }
 
@@ -34,10 +36,14 @@ namespace OdeuxXaml.User_Control.Etu
             if(mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             }
             else
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             }
         }
 
@@ -46,10 +52,43 @@ namespace OdeuxXaml.User_Control.Etu
             if (mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             }
             else
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            }
+        }
+
+        private void UeSuivant(object sender, RoutedEventArgs e)
+        {
+            if(i<mng.EtuSemestreSélectionné.LesUE.Count-1)
+            {
+                i++;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            }
+            else
+            {
+                i=0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            }
+            
+        }
+
+        private void UePrecedent(object sender, RoutedEventArgs e)
+        {
+            if (i !=0)
+            {
+                i--;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            }
+            else
+            {
+                i = 5;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             }
         }
     }
