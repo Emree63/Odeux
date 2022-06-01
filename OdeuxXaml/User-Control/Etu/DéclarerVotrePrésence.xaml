@@ -10,7 +10,8 @@
 
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
             <ListBox  Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="750" x:Name="ListBox" ItemsSource="{Binding LesAnciensCour}">
+                      Background="Transparent" Height="750" x:Name="ListBox" ItemsSource="{Binding LesAnciensCour}"
+                      SelectionChanged="ListBox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel>
@@ -42,7 +43,7 @@
                                     </TextBlock>
                                 </StackPanel>
                             </Border>
-                            <Button Content="Déclarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Cursor="Hand" Margin="70,0"/>
+                            <Button Content="Déclarer" Click="Declarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Cursor="Hand" Margin="70,0"/>
                         </WrapPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

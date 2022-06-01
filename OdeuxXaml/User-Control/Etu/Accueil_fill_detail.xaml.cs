@@ -27,11 +27,15 @@ namespace OdeuxXaml.User_Control.Etu
 
             mng.LesCoursDuJour = mng.RechCourEtu(DateTime.Now);
             DataContext = mng;
+            mng.LesAnciensCour = mng.CoursDejaPasser();
         }
         private void MaMessageBox(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Voulez-vous déclarer votre présence à tous les cours pour lesquels vous ne l'avez pas encore fait ?", " ", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
+            if(result == MessageBoxResult.Yes)
+            {
+                mng.SupprimerListeEtuCour(mng.LesAnciensCour);
+            }
         }
     }
 }

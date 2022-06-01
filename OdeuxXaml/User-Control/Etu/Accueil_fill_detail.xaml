@@ -100,16 +100,16 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel>
-                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Width="550">
+                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Width="650">
                                         <StackPanel>
-                                            <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
+                                            <TextBlock Foreground="Red" FontSize="22" HorizontalAlignment="Center">
 							                            <Run Text="Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
                                                         de
                                                         <Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>                    
 									                    à
                                                         <Run Text="{Binding DateFin, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>
                                             </TextBlock>
-                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
+                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="17" HorizontalAlignment="Center">
                                                         <Run Text="{Binding matière}"/>
                                                         <Run Text="&#xA;Groupe : "/>
                                                         <Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 

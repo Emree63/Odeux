@@ -69,7 +69,7 @@ namespace Modele
         public IEnumerable<Cour> CoursDejaPasser()
         {
             var e = LesCours.Where(d => d.Date < DateTime.Now)
-                            .OrderBy(d => d.Date); ;
+                            .OrderBy(d => d.Date);
             List<Cour> cour = new List<Cour>();
             foreach (Cour c in e)
             {
@@ -90,9 +90,21 @@ namespace Modele
         /// <summary>
         /// Supprimer l'étudiant d'un cour, elle va permetre d'enlever les cours où l'élève va déclarer sa présence.
         /// </summary>
-        public void SupprimerEtuCour()
+        public void SupprimerEtuCour(Cour cour)
         {
+            LesCours.Remove(cour);
+        }
 
+        /// <summary>
+        /// Supprimer une liste de cour
+        /// </summary>
+        /// <param name="cour"></param>
+        public void SupprimerListeEtuCour(IEnumerable<Cour> cours)
+        {
+            foreach(Cour c in cours)
+            {
+                LesCours.Remove(c);
+            }
         }
 
     }

@@ -38,7 +38,7 @@ namespace Modele
                 if (lesAnciensCour != value)
                 {
                     lesAnciensCour = value;
-                    OnPropertyChanged("LesCoursduJour");
+                    OnPropertyChanged("LesAnciensCour");
                 }
             }
         }
@@ -48,7 +48,7 @@ namespace Modele
         /// </summary>
         public Dictionary<Matiere,Note> NouvelNote { get; set; }
 
-
+        public Cour CourSélectionné { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
