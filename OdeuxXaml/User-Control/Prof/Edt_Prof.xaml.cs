@@ -20,9 +20,21 @@ namespace OdeuxXaml.User_Control.Prof
     /// </summary>
     public partial class Edt_Prof : UserControl
     {
+        public Modele.Manager mng => (App.Current as App).LeManager;
         public Edt_Prof()
         {
             InitializeComponent();
+
+            DateSaisie.SelectedDate = DateTime.Now;
+            mng.LesCoursDuJour = mng.RechCourProf(DateSaisie.DisplayDate);
+            DataContext = mng;
+        }
+
+        private void NouvelDate(object sender, RoutedEventArgs e)
+        {
+            DateTime d = (DateTime)this.DateSaisie.SelectedDate;
+            mng.LesCoursDuJour = mng.RechCourProf(d);
+
         }
     }
 }

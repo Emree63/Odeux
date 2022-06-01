@@ -27,6 +27,23 @@ namespace Modele
         }
 
         /// <summary>
+        /// Liste des anciens non déclare de l'élève
+        /// </summary>
+        private IEnumerable<Cour> lesAnciensCour;
+        public IEnumerable<Cour> LesAnciensCour
+        {
+            get => lesAnciensCour;
+            set
+            {
+                if (lesAnciensCour != value)
+                {
+                    lesAnciensCour = value;
+                    OnPropertyChanged("LesCoursduJour");
+                }
+            }
+        }
+
+        /// <summary>
         /// Listes des nouvelles note de l'élève
         /// </summary>
         public Dictionary<Matiere,Note> NouvelNote { get; set; }

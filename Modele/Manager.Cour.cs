@@ -62,5 +62,38 @@ namespace Modele
             return cour;
         }
 
+        /// <summary>
+        /// Liste des cours d'un étudiant qui sont déjà passer, elle va permetre à l'étudiant de savoir les cours où il n'a pas déclarer sa présence
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<Cour> CoursDejaPasser()
+        {
+            var e = LesCours.Where(d => d.Date < DateTime.Now)
+                            .OrderBy(d => d.Date); ;
+            List<Cour> cour = new List<Cour>();
+            foreach (Cour c in e)
+            {
+                foreach (Groupe g in c.Groupes)
+                {
+                    foreach (Etudiant etu in g.etudiants)
+                    {
+                        if (etu.nom == personneActuel.nom && etu.prénom == personneActuel.prénom)
+                        {
+                            cour.Add(c);
+                        }
+                    }
+                }
+            }
+            return cour;
+        }
+
+        /// <summary>
+        /// Supprimer l'étudiant d'un cour, elle va permetre d'enlever les cours où l'élève va déclarer sa présence.
+        /// </summary>
+        public void SupprimerEtuCour()
+        {
+
+        }
+
     }
 }

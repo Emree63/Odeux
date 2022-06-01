@@ -20,9 +20,12 @@ namespace OdeuxXaml.User_Control.Etu
     /// </summary>
     public partial class DéclarerVotrePrésence : UserControl
     {
+        public Modele.Manager mng => (App.Current as App).LeManager;
         public DéclarerVotrePrésence()
         {
             InitializeComponent();
+            mng.LesAnciensCour = mng.CoursDejaPasser();
+            DataContext = mng;
         }
     }
 }

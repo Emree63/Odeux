@@ -41,7 +41,6 @@
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
             <Grid>
                 <DockPanel>
-                    <TextBlock Text="tfgazefg" Foreground="Green" FontSize="40" Visibility="Collapsed" x:Name="trs"/>
                     <DatePicker Width="400" VerticalAlignment="Top" Margin="300,30,-300,0" x:Name="DateSaisie"/>
                     <Button VerticalAlignment="Top" Click="NouvelDate" Margin="20" Style="{StaticResource masterButton}">
                         <!-- Bouton Notes -->

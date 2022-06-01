@@ -34,8 +34,9 @@ namespace OdeuxXaml.User_Control.Etu
 
         private void NouvelDate(object sender, RoutedEventArgs e)
         {
-            mng.LesCoursDuJour = mng.RechCourEtu(DateSaisie.DisplayDate);
-        
+            DateTime d = (DateTime)this.DateSaisie.SelectedDate;
+            mng.LesCoursDuJour = mng.RechCourEtu(d);
+
         }
     }
 }
