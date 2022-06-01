@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HP3M2EL+gWQKluE/pVwnsqrkuoRnw/gEsXLg8rxJxM8OyVTTbe6baEFeLXkICcgynhxZtYyM2qKWiqRmN/bJfQ==",
+  "dgSpecHash": "7jty3Se+ODLJjHEI8+hmpPAlBuFNNGFXqOsg+qACwW2jLMtY1/fuxzQ/DcDIXCPlP1mmkSgV8vleYbcADCELqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
+  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\emkartal1\\source\\repos\\sae2.01\\Tests\\Test_Humain\\Test_Professeur\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
