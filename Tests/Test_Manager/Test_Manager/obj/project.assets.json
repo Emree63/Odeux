@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/Modele.dll": {}
         }
+      },
+      "Stub/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Modele": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Stub.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Stub.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../../../Modele/Modele.csproj",
       "msbuildProject": "../../../Modele/Modele.csproj"
+    },
+    "Stub/1.0.0": {
+      "type": "project",
+      "path": "../../../Stub/Stub.csproj",
+      "msbuildProject": "../../../Stub/Stub.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Modele >= 1.0.0"
+      "Modele >= 1.0.0",
+      "Stub >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -60,6 +79,9 @@
           "projectReferences": {
             "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\Modele.csproj": {
               "projectPath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Modele\\Modele.csproj"
+            },
+            "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Stub\\Stub.csproj": {
+              "projectPath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Stub\\Stub.csproj"
             }
           }
         }
@@ -105,5 +127,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\Tests\\Test_Manager\\Test_Manager\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -20,9 +20,88 @@ namespace OdeuxXaml.User_Control.Etu
     /// </summary>
     public partial class Notes : UserControl
     {
+        int i = 0;
+        public Modele.Manager mng => (App.Current as App).LeManager;
         public Notes()
         {
             InitializeComponent();
+
+            mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            DataContext = mng;
+        }
+
+        private void SemestrePrecedent(object sender, RoutedEventArgs e)
+        {
+            if(mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            }
+            else
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            }
+        }
+
+        private void SemestreSuivant(object sender, RoutedEventArgs e)
+        {
+            if (mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            }
+            else
+            {
+                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+                i = 0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            }
+        }
+
+        private void UeSuivant(object sender, RoutedEventArgs e)
+        {
+            if(i<mng.EtuSemestreSélectionné.LesUE.Count-1)
+            {
+                i++;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            }
+            else
+            {
+                i=0;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            }
+            
+        }
+
+        private void UePrecedent(object sender, RoutedEventArgs e)
+        {
+            if (i !=0)
+            {
+                i--;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            }
+            else
+            {
+                i = 5;
+                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            }
         }
     }
 }

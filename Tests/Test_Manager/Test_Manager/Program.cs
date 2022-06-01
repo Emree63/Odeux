@@ -23,7 +23,7 @@ namespace Test_Manager
             pers.Add(prof);
             pers.Add(prof2);
 
-            Manager Man = new Manager();
+            Manager Man = new Manager(new Stub.Stub());
             Man.AjouterPersonne(pers);
             Man.NouvelPromo(Iut);
             Man.AjouterDesCours(cours);
@@ -54,7 +54,7 @@ namespace Test_Manager
             var cours = man.RechCourProf(new DateTime(2022, 06, 15));
             WriteLine("Cour du Prof :");
             foreach (Cour c in cours)
-                Write(c);
+                WriteLine(c);
         }
 
         static void Test_MethodeEtu(Manager man)

@@ -17,3 +17,5 @@ C:\Users\emkartal1\Source\Repos\sae2.01\Tests\Test_Manager\Test_Manager\obj\Debu
 C:\Users\emkartal1\Source\Repos\sae2.01\Tests\Test_Manager\Test_Manager\obj\Debug\net5.0\ref\Test_Manager.dll
 C:\Users\emkartal1\Source\Repos\sae2.01\Tests\Test_Manager\Test_Manager\obj\Debug\net5.0\Test_Manager.pdb
 C:\Users\emkartal1\Source\Repos\sae2.01\Tests\Test_Manager\Test_Manager\obj\Debug\net5.0\Test_Manager.genruntimeconfig.cache
+C:\Users\emkartal1\Source\Repos\sae2.01\Tests\Test_Manager\Test_Manager\bin\Debug\net5.0\Stub.dll
+C:\Users\emkartal1\Source\Repos\sae2.01\Tests\Test_Manager\Test_Manager\bin\Debug\net5.0\Stub.pdb

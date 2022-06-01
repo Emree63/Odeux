@@ -60,6 +60,7 @@ C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Image
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Home.png
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Icon1.png
 C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Icon2.png
+<<<<<<< HEAD
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Bouee.png
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Fond.png
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Images\Home.png
@@ -122,3 +123,7 @@ D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\ref
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\OdeuxXaml.pdb
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\OdeuxXaml.genruntimeconfig.cache
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\ref\OdeuxXaml.dll
+=======
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Stub.dll
+C:\Users\emkartal1\Source\Repos\sae2.01\OdeuxXaml\bin\Debug\net5.0-windows\Stub.pdb
+>>>>>>> 753b92966a167ccc2dd7425e25f94e6212c6b879

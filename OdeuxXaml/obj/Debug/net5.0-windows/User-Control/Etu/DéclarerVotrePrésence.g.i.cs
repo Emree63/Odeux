@@ -61,7 +61,8 @@ namespace OdeuxXaml.User_Control.Etu {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;component/user-control/etu/d%c3%a9clarervotrepr%c3%a9sence.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;V1.0.0.0;component/user-control/etu/d%c3%a9clarervotrepr%c3%a9sence.xa" +
+                    "ml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\User-Control\Etu\DéclarerVotrePrésence.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
