@@ -7,132 +7,66 @@
              mc:Ignorable="d" 
              d:DesignWidth="1500" d:DesignHeight="750">
     <Control.Resources>
-        <Style TargetType="TextBox" x:Key="boxTitle">
+        <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="35"/>
-            <Setter Property="FontFamily" Value="Courier New"/>
+        </Style>
+        
+        <Style TargetType="TextBox" x:Key="boxTitle">
+            <Setter Property="FontFamily" Value="Batang"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="checkButtonTextBlock">
+            <Setter Property="FontFamily" Value="Batang"/>
         </Style>
     </Control.Resources>
 
-    <Viewbox>
+    <Grid>
+        <Grid Width="1500" Height="750">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <!-- Signatures manquantes et notes -->
+                <ColumnDefinition Width="*"/>
+                <!-- Espace -->
+                <ColumnDefinition Width="8*"/>
+                <!-- EDT -->
+            </Grid.ColumnDefinitions>
 
-        <Grid>
-            <Grid Width="1500" Height="750">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <!-- Signatures manquantes et notes -->
-                    <ColumnDefinition/>
-                    <!-- EDT -->
-                </Grid.ColumnDefinitions>
+            <!-- Signatures manquantes et notes -->
+            <Grid Grid.Column="0">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
 
+                <!-- Signatures manquantes -->
+                <Viewbox Grid.Column="0" Grid.Row="0">
+                    <Button Click="MaMessageBox" Foreground="Black" FontSize="43" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="388" Background="#747795">
 
-                <Grid>
-                    <!-- Signatures manquantes et notes -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-
-                    <Viewbox Grid.Column="0" Grid.Row="0">
-                        <Button Click="MaMessageBox" Foreground="Black" FontSize="43" Background="Transparent" VerticalAlignment="Stretch" Height="300">
-                            <Grid>
-                                <Rectangle Fill="#424549"/>
-                                <TextBlock FontFamily="Batang">
-                                    <Bold>Faire toutes les signatures manquantes</Bold>
-                                </TextBlock>
-                            </Grid>
-                        </Button>
-                    </Viewbox>
-                </Grid>
-            </Grid>
-
-            <Grid Grid.Row="0">
-
-
-
-
-
-
-                <Grid Width="1500" Height="750">
-                    <Grid.Resources>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="FontSize" Value="30" />
-                            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
-                            <Setter Property="TextWrapping" Value="Wrap"/>
-                        </Style>
-                    </Grid.Resources>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition Height="375"/>
-                    </Grid.RowDefinitions>
-
-
-
-                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
-                        <Grid >
+                        <TextBlock Style="{StaticResource ResourceKey=checkButtonTextBlock}"  Margin="20">
+                            <Bold>Faire toutes les signatures manquantes</Bold>
+                        </TextBlock>
+                    </Button>
+                </Viewbox>
+                
+                <!-- Notes -->
+                
+                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="2">
+                        <Grid VerticalAlignment="Stretch">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="0.2*"/>
-                                <RowDefinition/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="5*"/>
                             </Grid.RowDefinitions>
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
-                            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="620" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Grid.Row="1" ItemsSource="{Binding LesCoursDuJour}">
+
+
+                            <TextBlock Text="Dernières notes" Foreground="{DynamicResource TextColor}" Grid.Row="0" Margin="10" />
+
+                            <ListBox ScrollViewer.VerticalScrollBarVisibility="Visible" Background="Transparent" x:Name="ListBox_Note" Grid.Row="1"  ItemsSource="{Binding NouvelNote}">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <WrapPanel>
-                                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="10,10,0,10" Width="550">
-                                                <StackPanel >
-                                                    <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
-							                            <Run Text="Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
-                                                        de
-                                                        <Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>                    
-									                    à
-                                                        <Run Text="{Binding DateFin, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>
-                                                    </TextBlock>
-                                                    <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
-                                                        <Run Text="{Binding matière}"/>
-                                                        <Run Text="&#xA;Groupe : "/>
-                                                        <Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
-                                                        <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
-                                                        <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="&#xA;Salle : "/>
-                                                        <Run Text="{Binding Salle}"/>
-                                                        <Run Text="&#xA;Intervenant : "/>
-                                                        <Run Text="{Binding Enseignant.nom}"/>
-                                                    </TextBlock>
-                                                </StackPanel>
-                                            </Border>
-                                        </WrapPanel>
-                                    </DataTemplate>
-                                </ListBox.ItemTemplate>
-                            </ListBox>
-                        </Grid>
-                    </Border>
-
-                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.2*"/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="Dernières notes" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
-                            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="450" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="422" x:Name="ListBox_Note" Grid.Row="1"  ItemsSource="{Binding NouvelNote}" >
-                                <ListBox.ItemTemplate>
-                                    <DataTemplate>
-                                        <WrapPanel>
-                                            <StackPanel >
+                                            <StackPanel>
                                                 <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20" HorizontalAlignment="Center">
 							                            <Run Text="{Binding Matiere.Nom}"/>
                                                         :
@@ -147,10 +81,62 @@
                             </ListBox>
                         </Grid>
                     </Border>
-
-                </Grid>
+                
             </Grid>
+
+            <!-- EDT D'aujourdhui -->
+            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" Grid.Column="2" Grid.RowSpan="2" >
+                <!-- EDT D'aujourd'hui -->
+                <Grid Margin="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0" FontSize="35"/>
+
+                    <ListBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="Transparent" x:Name="ListBox_Edt" Grid.Row="1" ItemsSource="{Binding LesCoursDuJour}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Width="550">
+                                        <StackPanel>
+                                            <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
+							                            <Run Text="Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
+                                                        de
+                                                        <Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>                    
+									                    à
+                                                        <Run Text="{Binding DateFin, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>
+                                            </TextBlock>
+                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
+                                                        <Run Text="{Binding matière}"/>
+                                                        <Run Text="&#xA;Groupe : "/>
+                                                        <Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
+                                                        <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
+                                                        <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="&#xA;Salle : "/>
+                                                        <Run Text="{Binding Salle}"/>
+                                                        <Run Text="&#xA;Intervenant : "/>
+                                                        <Run Text="{Binding Enseignant.nom}"/>
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </Border>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+
+
         </Grid>
-    </Viewbox>
+    </Grid>
+    
 </UserControl>
 

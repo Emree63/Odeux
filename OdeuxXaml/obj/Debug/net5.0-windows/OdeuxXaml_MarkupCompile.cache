@@ -4,16 +4,32 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\emkartal1\source\repos\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\
+=======
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\obj\Debug\net5.0-windows\
+>>>>>>> b5b8124ff545a3d90188fd94e99b5b80fae329d6
 OdeuxXaml
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+<<<<<<< HEAD
 C:\Users\emkartal1\source\repos\sae2.01\OdeuxXaml\App.xaml
 15-1217403116
 6-49872815
 17396431544
 195410522600
+=======
+D:\le_folder\Etudes\Cours\SAE\201\sae2.01\OdeuxXaml\App.xaml
+15-1217403116
+6-49872815
+17396431544
+<<<<<<< HEAD
+194-1295603992
+=======
+195-525887760
+>>>>>>> 753b92966a167ccc2dd7425e25f94e6212c6b879
+>>>>>>> b5b8124ff545a3d90188fd94e99b5b80fae329d6
 LoginPage.xaml;Page-Eleve\Accueil.xaml;Page-Prof\Accueil_Prof.xaml;User-Control\Etu\Accueil_fill_detail.xaml;User-Control\Etu\DéclarerVotrePrésence.xaml;User-Control\Etu\Edt_Eleve.xaml;User-Control\Etu\Notes.xaml;User-Control\General\button_AideEnLigne.xaml;User-Control\General\button_Deconnexion.xaml;User-Control\General\button_Thème-Affichage.xaml;User-Control\General\Der_Infos.xaml;User-Control\Prof\Accueil_fill_detail.xaml;User-Control\Prof\ConsulterNotes.xaml;User-Control\Prof\Edt_Prof.xaml;User-Control\Prof\EntrerDesNotes.xaml;
 
 False
