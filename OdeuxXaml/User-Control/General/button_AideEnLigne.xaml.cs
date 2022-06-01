@@ -26,7 +26,12 @@ namespace OdeuxXaml.User_Control.General
         }
         private void Aide(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29");
+            //System.Diagnostics.Process.Start("https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29");
+            var uri = "https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29";
+            var psi = new System.Diagnostics.ProcessStartInfo();
+            psi.UseShellExecute = true;
+            psi.FileName = uri;
+            System.Diagnostics.Process.Start(psi);
         }
     }
 }

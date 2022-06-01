@@ -93,7 +93,7 @@
                                     </StackPanel>
                                 </Border>
                                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="800" Background="Transparent" Height="200" x:Name="ListBox" ItemsSource="{Binding EtuUESélectionné.ressources.matieres}" Margin="40,10,0,10">
+                      Width="800" Background="Transparent" Height="200" x:Name="ListBox" ItemsSource="{Binding matierest}" Margin="40,10,0,10">
                                     <DataTemplate>
                                         <WrapPanel>
                                             <TextBlock Text="{Binding Nom}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
