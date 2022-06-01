@@ -59,7 +59,7 @@
                 <!-- Boutons home et déconnexion -->
                 <RowDefinition Height="7*"/>
                 <!-- Logo et boutons master du haut -->
-                <RowDefinition Height="1.5*"/>
+                <RowDefinition/>
                 <!-- Boutons master de gauche et fill detail -->
 
             </Grid.RowDefinitions>
@@ -153,12 +153,12 @@
 
             </Grid>
 
-            <Viewbox Grid.Column="1" Grid.Row="1">
-                <ContentControl x:Name="contentControl">
-                    <!-- User control Fill Detail -->
+            <ContentControl x:Name="contentControl" Grid.Column="1" Grid.Row="1">
+                <!-- User control Fill Detail -->
+                <Viewbox>
                     <UserControl:Accueil_fill_detail HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                </ContentControl>
-            </Viewbox>
+                </Viewbox>
+            </ContentControl>
 
             <Viewbox HorizontalAlignment="Left" Grid.Row="0" Grid.Column="3" VerticalAlignment="Top" Margin="0">
                 <User_Control:Deconnexion ClickMenu="Deco" Loaded="Deconnexion_Loaded" Margin="30"/>

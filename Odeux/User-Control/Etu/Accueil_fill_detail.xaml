@@ -4,15 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control.Etu"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignWidth="1500" d:DesignHeight="750">
-    <Control.Resources>
-        <Style TargetType="TextBox" x:Key="boxTitle">
-            <Setter Property="FontSize" Value="35"/>
-            <Setter Property="FontFamily" Value="Courier New"/>
-        </Style>
-    </Control.Resources>
-    
     <Viewbox>
 
         <Grid>
@@ -25,22 +18,14 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Grid> <!-- Signatures manquantes et notes -->
+                <Grid>
+                    <!-- Signatures manquantes et notes -->
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <Viewbox Grid.Column="0" Grid.Row="0">
-                        <Button Click="MaMessageBox" Foreground="Black" FontSize="43" Background="Transparent" VerticalAlignment="Stretch" Height="300">
-                            <Grid>
-                                <Rectangle Fill="#424549"/>
-                                <TextBlock FontFamily="Batang">
-                                    <Bold>Faire toutes les signatures manquantes</Bold>
-                                </TextBlock>
-                            </Grid>
-                        </Button>
-                    </Viewbox>
+
                 </Grid>
             </Grid>
 
@@ -52,48 +37,48 @@
 
 
                 <Grid Width="1500" Height="750">
-        <Grid.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="FontSize" Value="30" />
-                <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
-                <Setter Property="TextWrapping" Value="Wrap"/>
-            </Style>
-        </Grid.Resources>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock" >
+                            <Setter Property="FontSize" Value="30" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+                            <Setter Property="TextWrapping" Value="Wrap"/>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="375"/>
-        </Grid.RowDefinitions>
-        
-        
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.2*"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
-                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+
+
+                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.2*"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
+                            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="620" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                       Background="Transparent" Height="622" x:Name="ListBox_Edt" Grid.Row="1">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <WrapPanel>
-                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="10,10,0,10" Width="550">
-                                <StackPanel >
-                                    <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <WrapPanel>
+                                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="10,10,0,10" Width="550">
+                                                <StackPanel >
+                                                    <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
                                     <Run Text="Le "/><Run Text="{Binding DateCour.Day,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Month,Mode=OneWay,StringFormat=00}"/><Run Text="/"/><Run Text="{Binding DateCour.Year,Mode=OneWay}"/>
 							        de
                                     <Run Text="{Binding DateCour.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding DateCour.Minute,Mode=OneWay,StringFormat=00}"/>
 									à
                                     <Run Text="{Binding DateCourFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateCourFin.Minute,Mode=OneWay,StringFormat=00}"/>
-                                    </TextBlock>
-                                    <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
+                                                    </TextBlock>
+                                                    <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
                                     <Run Text="{Binding Matiere}"/>
                                     <Run Text="&#xA;Groupe : "/>
                                     <Run Text="{Binding Groupe[0]}"/> <Run Text="{Binding Groupe[1]}"/>
@@ -101,42 +86,45 @@
                                     <Run Text="{Binding Salle}"/>
                                     <Run Text="&#xA;Intervenant : "/>
                                     <Run Text="{Binding Intervenant}"/>
-                                    </TextBlock>
-                                </StackPanel>
-                            </Border>
-                        </WrapPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
+                                                    </TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </WrapPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
 
 
-            </ListBox>
-            </Grid>
-        </Border>
+                            </ListBox>
+                        </Grid>
+                    </Border>
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.2*"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="Dernières notes" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
-                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                    <DockPanel Grid.Column="0" Grid.Row="1">
+                        <!--BorderBrush="{DynamicResource TextColor}" BorderThickness="1"-->
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.2*"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Dernières notes" FontFamily="Batang" FontSize="30"  Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
+                            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="450" ScrollViewer.VerticalScrollBarVisibility="Visible" 
                       Background="Transparent" Height="422" x:Name="ListBox_Note" Grid.Row="1">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <WrapPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <WrapPanel>
 
-                            </WrapPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
+                                        </WrapPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
 
 
-                </ListBox>
-            </Grid>
-        </Border>
+                            </ListBox>
+                        </Grid>
+                    </DockPanel>
 
-    </Grid>
+                </Grid>
             </Grid>
         </Grid>
 
