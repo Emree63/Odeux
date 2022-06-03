@@ -27,13 +27,24 @@ namespace OdeuxXaml.User_Control.Etu
             InitializeComponent();
             mng.LesAnciensCour = mng.CoursDejaPasser();
             DataContext = mng;
-            if (mng.LesAnciensCour.Count() != 0)
-                mng.CourSélectionné = mng.LesAnciensCour.First();
-            else
-                mng.CourSélectionné = null;
+            mng.CourSélectionné = null;
         }
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)=> mng.CourSélectionné = e.AddedItems[0] as Cour;
-        
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = (ListBox)sender;
+            var Cour = (Cour)item.SelectedItem;
+            if(Cour != null)
+            {
+                ShowDetail(Cour);
+                item.SelectedItem = null;
+            }
+        }
+
+        private void ShowDetail(Cour cour)
+        {
+            mng.CourSélectionné = cour;
+
+        }
 
         private void Declarer(object sender, RoutedEventArgs e)
         {
@@ -41,14 +52,8 @@ namespace OdeuxXaml.User_Control.Etu
             {
                 mng.SupprimerEtuCour(mng.CourSélectionné);
                 mng.LesAnciensCour = mng.CoursDejaPasser();
-                if (mng.LesAnciensCour.Count() != 0)
-                {
-                    mng.CourSélectionné = mng.LesAnciensCour.First();
-                }
-                else
-                {
-                    mng.CourSélectionné = null;
-                }
+                mng.CourSélectionné = null;
+                
             }
 
         }

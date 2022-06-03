@@ -69,15 +69,15 @@
                     </WrapPanel>
                 </StackPanel>
                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1370" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding EtuUESélectionné.ressources}" >
+                      Width="1370" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemContainerStyle="{StaticResource ListBoxanimation}"
+                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding EtuUESélectionné.ressources}" BorderBrush="{DynamicResource TextColor}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="400" Height="200" >
                                     <StackPanel>
-                                        <TextBlock TextAlignment="Center" Text="{Binding num,Mode=OneWay}" TextWrapping="Wrap" FontSize="25" Foreground="Green"  HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="19" Foreground="Green"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                        <TextBlock TextAlignment="Center" Text="{Binding num,Mode=OneWay}" TextWrapping="Wrap" FontSize="25" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="19" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
                                             <Run Text="{Binding Description,Mode=OneWay}"/>
                                             <Run Text="&#xA;"/>
                                         </TextBlock>
@@ -92,13 +92,17 @@
                                         </Border>
                                     </StackPanel>
                                 </Border>
-                                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="800" Background="Transparent" Height="200" x:Name="ListBox" ItemsSource="{Binding matierest}" Margin="40,10,0,10">
-                                    <DataTemplate>
-                                        <WrapPanel>
-                                            <TextBlock Text="{Binding Nom}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                                        </WrapPanel>
-                                    </DataTemplate>
+                                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" ItemContainerStyle="{StaticResource ListBoxanimation}"
+                      Width="800" Background="Transparent" Height="200" x:Name="ListBox2" Margin="40,10,0,10"  ItemsSource="{Binding matieres}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate  >
+                                            <WrapPanel>
+                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="400" Height="200" >
+                                                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                                </Border>
+                                            </WrapPanel>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
                                 </ListBox>
                             </WrapPanel>
                         </DataTemplate>

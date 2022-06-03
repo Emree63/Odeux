@@ -6,51 +6,84 @@
              xmlns:local="clr-namespace:OdeuxXaml.User_Control.Etu"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1500">
-    <Viewbox>
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="masterButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="RadiusX" Value="15"/>
+            <Setter Property="RadiusY" Value="15"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+        <Grid>
+            <Viewbox>
+                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1175" Height="750" HorizontalAlignment="Left">
+                        <ListBox  Width="1175" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left"
+                              Background="Transparent" Height="750" x:Name="ListBox" ItemsSource="{Binding LesAnciensCour}"
+                              SelectionChanged="ListBox_SelectionChanged" ItemContainerStyle="{StaticResource ListBoxanimation}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <WrapPanel>
+                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,10,0,10" Width="1000">
+                                            <StackPanel>
+                                                <TextBlock Foreground="Red" FontSize="25">
+                                            <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
+							                de
+                                            <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding Date.Minute,Mode=OneWay,StringFormat=00}"/>
+									        à
+                                            <Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}"/>
+                                                </TextBlock>
+                                                <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20">
+                                            <Run Text="&#x9;&#x9;&#x9;&#x9;"/>
+                                            <Run Text="{Binding Matiere}"/>
+                                            <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Groupe : "/>
+                                            G<Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
+                                            <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
+                                            <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Salle : "/>
+                                            <Run Text="{Binding Salle}"/>
+                                            <Run Text="&#xA;&#x9;&#x9;&#x9; Intervenant : "/>
+                                            <Run Text="{Binding Enseignant.nom}"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </Border>
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Border>
+            </Viewbox>
+        <Button Click="Declarer" Style="{StaticResource masterButton}" HorizontalAlignment="Right" Margin="-320,0">
+            <!-- Bouton Dernières infos -->
+            <Grid>
+                <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
+                        Déclarer
+                </TextBlock>
+            </Grid>
+        </Button>
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
-            <ListBox  Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="750" x:Name="ListBox" ItemsSource="{Binding LesAnciensCour}"
-                      SelectionChanged="ListBox_SelectionChanged">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <WrapPanel>
-                            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,10,0,10" Width="900">
-                                <StackPanel>
-                                    <TextBlock Foreground="Red" FontSize="25">
-                                    <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
-							        de
-                                    <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding Date.Minute,Mode=OneWay,StringFormat=00}"/>
-									à
-                                    <Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}"/>
-                                    </TextBlock>
-                                    <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20">
-                                    <Run Text="&#x9;&#x9;&#x9;&#x9;"/>
-                                    <Run Text="{Binding Matiere}"/>
-                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Groupe : "/>
-                                    G<Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
-                                    <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
-                                    <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
-                                    <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
-                                    <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
-                                    <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
-                                    <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
-                                    <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
-                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Salle : "/>
-                                    <Run Text="{Binding Salle}"/>
-                                    <Run Text="&#xA;&#x9;&#x9;&#x9; Intervenant : "/>
-                                    <Run Text="{Binding Enseignant.nom}"/>
-                                    </TextBlock>
-                                </StackPanel>
-                            </Border>
-                            <Button Content="Déclarer" Click="Declarer" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="70" Cursor="Hand" Margin="70,0"/>
-                        </WrapPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-
-
-            </ListBox>
-        </Border>
-    </Viewbox>
+        </Grid>
+        
 
 </UserControl>

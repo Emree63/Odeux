@@ -48,7 +48,19 @@ namespace Modele
         /// </summary>
         public Dictionary<Matiere,Note> NouvelNote { get; set; }
 
-        public Cour CourSélectionné { get; set; }
+        private Cour courSélectionné;
+        public Cour CourSélectionné
+        {
+            get => courSélectionné;
+            set
+            {
+                if (courSélectionné != value)
+                {
+                    courSélectionné = value;
+                    OnPropertyChanged("courSélectionné");
+                }
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -38,19 +38,15 @@ namespace OdeuxXaml.User_Control.Etu
             if(mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
-                i = 0;
-                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
-                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
-                mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             }
             else
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
-                i = 0;
-                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
-                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
-                mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             }
+            mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            i = 0;
+            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
         }
 
         private void SemestreSuivant(object sender, RoutedEventArgs e)
@@ -58,17 +54,16 @@ namespace OdeuxXaml.User_Control.Etu
             if (mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
-                i = 0;
-                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
-                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
             else
             {
                 mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
-                i = 0;
-                mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
-                mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             }
+            mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            i = 0;
+            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+
         }
 
         private void UeSuivant(object sender, RoutedEventArgs e)

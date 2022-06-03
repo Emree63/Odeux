@@ -6,12 +6,24 @@
              xmlns:local="clr-namespace:OdeuxXaml.User_Control.General"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <Button HorizontalAlignment="Center" Background="Transparent" 
+        <Button HorizontalAlignment="Center" Background="Transparent"
                  VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" Click="Deco">
             <Grid>
-                <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="Black">
-                </Rectangle>
+                <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="Black"/>
                 <TextBlock Text="Se Déconnecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
             </Grid>
         </Button>

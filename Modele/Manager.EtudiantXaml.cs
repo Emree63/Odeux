@@ -59,11 +59,12 @@ namespace Modele
                 if (EtumoySemestre != value)
                 {
                     EtumoySemestre = value;
-                    OnPropertyChanged("MoySemestre");
+                    OnPropertyChanged("EtumoySemestre");
                 }
             }
         }
         private double EtumoySemestre;
+
 
         public double EtuMoyUE
         {
@@ -73,7 +74,7 @@ namespace Modele
                 if (EtumoyUE != value)
                 {
                     EtumoyUE = value;
-                    OnPropertyChanged("MoySemestre");
+                    OnPropertyChanged("EtuMoyUE");
                 }
             }
         }

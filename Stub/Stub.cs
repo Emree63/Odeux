@@ -65,6 +65,8 @@ namespace Stub
                 new Ressource("R1.12", "Projet professionnel et personne", 11, mat),
             };
 
+
+            ///Premier semestre
             List<UE> LesUE = new List<UE>()
             {
                     new UE("UE 1","Développer des applications informatiques simples"),
@@ -74,6 +76,7 @@ namespace Stub
                     new UE("UE 5","Identifier les besoins métiers des clients et des utilisateurs"),
                     new UE("UE 6","Identifier ses aptitudes pour travailler dans une équipe"),
             };
+
             LesUE[0].AddListesRessources(ressources1);
             LesUE[1].AddListesRessources(ressources2);
             LesUE[2].AddListesRessources(ressources3);
@@ -81,16 +84,78 @@ namespace Stub
             LesUE[4].AddListesRessources(ressources5);
             LesUE[5].AddListesRessources(ressources6);
 
+
+            List<Ressource> ressources2_1 = new List<Ressource>()
+            {
+                new Ressource("R1.01", "Initiation au développement", 42, mat),
+                new Ressource("R1.02", "Développement d’interfaces web", 12, mat),
+                new Ressource("R1.10", "Anglais S1", 6, mat),
+            };
+            List<Ressource> ressources2_2 = new List<Ressource>()
+            {
+                new Ressource("R1.01", "Initiation au développement", 24, mat),
+                new Ressource("R1.03", "Introduction à l'architecture des ordinateurs", 3, mat),
+                new Ressource("R1.04", "Introduction aux systèmes d'exploitation et à leur fonctionnement", 10, mat),
+                new Ressource("R1.06", "Mathématiques discrètes", 15, mat),
+                new Ressource("R1.07", "Outils mathématiques fondamentaux", 15, mat),
+            };
+            List<Ressource> ressources2_3 = new List<Ressource>()
+            {
+                new Ressource("R1.03", "Introduction à l'architecture des ordinateurs", 21, mat),
+                new Ressource("R1.10", "Anglais S1", 12, mat),
+                new Ressource("R1.11", "Expression-Communication", 6, mat),
+            };
+            List<Ressource> ressources2_4 = new List<Ressource>()
+            {
+                new Ressource("R1.05", " Introduction aux bases de données et SQL", 36, mat),
+                new Ressource("R1.06", "Mathématiques discrètes", 12, mat),
+                new Ressource("R1.09", "Économie durable et numérique", 6, mat),
+            };
+            List<Ressource> ressources2_5 = new List<Ressource>()
+            {
+                new Ressource("R1.02", "Développement d’interfaces web", 18, mat),
+                new Ressource("R1.08", "Gestion de projet et des organisations", 27, mat),
+                new Ressource("R1.11", "Expression-Communication", 15, mat),
+            };
+            List<Ressource> ressources2_6 = new List<Ressource>()
+            {
+
+                new Ressource("R1.02", "Développement d’interfaces web", 5, mat),
+                new Ressource("R1.08", "Gestion de projet et des organisations", 11, mat),
+                new Ressource("R1.09", "Économie durable et numérique", 11, mat),
+                new Ressource("R1.10", "Anglais S1", 11, mat),
+                new Ressource("R1.11", "Expression-Communication", 11, mat),
+                new Ressource("R1.12", "Projet professionnel et personne", 11, mat),
+            };
+
+            ///Deuxième Semestre
+            List<UE> LesUE2 = new List<UE>()
+            {
+                    new UE("UE 1","Développer des applications informatiques simples"),
+                    new UE("UE 2","Appréhender et construire des algorithmes"),
+                    new UE("UE 3","Installer et configurer un poste de travail"),
+                    new UE("UE 4","Concevoir et mettre en place une base de données "),
+                    new UE("UE 5","Identifier les besoins métiers des clients et des utilisateurs"),
+                    new UE("UE 6","Identifier ses aptitudes pour travailler dans une équipe"),
+            };
+
+            LesUE2[0].AddListesRessources(ressources2_1);
+            LesUE2[1].AddListesRessources(ressources2_2);
+            LesUE2[2].AddListesRessources(ressources2_3);
+            LesUE2[3].AddListesRessources(ressources2_4);
+            LesUE2[4].AddListesRessources(ressources2_5);
+            LesUE2[5].AddListesRessources(ressources2_6);
+
             List<Etudiant> etu = new List<Etudiant>()
             {
-                new Etudiant("Kartal", "Emre", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, new List<UE>())),
-                new Etudiant("Thibon", "Hugo", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, new List<UE>())),
+                new Etudiant("Kartal", "Emre", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE2)),
+                new Etudiant("Thibon", "Hugo", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE2)),
             };
 
             List<Etudiant> etu2 = new List<Etudiant>()
             {
-                 new Etudiant("Etudiant", "1", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, new List<UE>())),
-                 new Etudiant("Etudiant", "2", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, new List<UE>())),
+                 new Etudiant("Etudiant", "1", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE2)),
+                 new Etudiant("Etudiant", "2", new DateTime(2003, 1, 1), "0000", new Semestre(1, LesUE), new Semestre(2, LesUE2)),
             };
             List<Groupe> grps = new List<Groupe>();
             Groupe grp1 = new Groupe(3, etu);
