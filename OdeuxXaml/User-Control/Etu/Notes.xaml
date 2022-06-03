@@ -74,7 +74,7 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
-                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="400" Height="200" >
+                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="500"  >
                                     <StackPanel>
                                         <TextBlock TextAlignment="Center" Text="{Binding num,Mode=OneWay}" TextWrapping="Wrap" FontSize="25" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" />
                                         <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="19" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
@@ -92,18 +92,20 @@
                                         </Border>
                                     </StackPanel>
                                 </Border>
-                                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" ItemContainerStyle="{StaticResource ListBoxanimation}"
-                      Width="800" Background="Transparent" Height="200" x:Name="ListBox2" Margin="40,10,0,10"  ItemsSource="{Binding matieres}">
+                                
+                                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" ItemContainerStyle="{StaticResource ListBoxanimation}" BorderBrush="Transparent"
+                      Width="800" Background="Transparent"  x:Name="ListBox2" Margin="40,10,0,10"  ItemsSource="{Binding matieres}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                     <ListBox.ItemTemplate>
                                         <DataTemplate  >
                                             <WrapPanel>
-                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="400" Height="200" >
-                                                    <TextBlock Text="{Binding Nom}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="700" Height="100" >
+                                                    <TextBlock Text="{Binding Nom}" Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                                                 </Border>
                                             </WrapPanel>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
                                 </ListBox>
+                                
                             </WrapPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

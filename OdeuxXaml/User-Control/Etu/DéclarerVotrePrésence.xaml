@@ -48,22 +48,22 @@
                                         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,10,0,10" Width="1000">
                                             <StackPanel>
                                                 <TextBlock Foreground="Red" FontSize="25">
-                                            <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
-							                de
-                                            <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding Date.Minute,Mode=OneWay,StringFormat=00}"/>
-									        à
-                                            <Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}"/>
+                                                    <Run Text="&#x9;&#x9;Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
+							                        de
+                                                    <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text=":"/><Run Text="{Binding Date.Minute,Mode=OneWay,StringFormat=00}"/>
+									                à
+                                                    <Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}"/>
                                                 </TextBlock>
                                                 <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20">
-                                            <Run Text="&#x9;&#x9;&#x9;&#x9;"/>
-                                            <Run Text="{Binding Matiere}"/>
-                                            <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Groupe : "/>
-                                            G<Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
-                                            <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
-                                            <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Salle : "/>
-                                            <Run Text="{Binding Salle}"/>
-                                            <Run Text="&#xA;&#x9;&#x9;&#x9; Intervenant : "/>
-                                            <Run Text="{Binding Enseignant.nom}"/>
+                                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9;"/>
+                                                    <Run Text="{Binding matière, Mode=OneWay}"/>
+                                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Groupe : "/>
+                                                    <Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
+                                                    <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
+                                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Salle : "/>
+                                                    <Run Text="{Binding Salle}"/>
+                                                    <Run Text="&#xA;&#x9;&#x9;&#x9;&#x9; Intervenant : "/>
+                                                    <Run Text="{Binding Enseignant.nom}"/>
                                                 </TextBlock>
                                             </StackPanel>
                                         </Border>
