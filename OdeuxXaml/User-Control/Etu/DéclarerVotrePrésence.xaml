@@ -39,10 +39,10 @@
         <Grid>
             <Viewbox>
                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1175" Height="750" HorizontalAlignment="Left">
-                        <ListBox  Width="1175" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left"
+                <ListBox  Width="1175" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left"
                               Background="Transparent" Height="750" x:Name="ListBox" ItemsSource="{Binding LesAnciensCour}"
                               SelectionChanged="ListBox_SelectionChanged" ItemContainerStyle="{StaticResource ListBoxanimation}">
-                            <ListBox.ItemTemplate>
+                    <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <WrapPanel>
                                         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,10,0,10" Width="1000">

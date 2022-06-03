@@ -13,6 +13,7 @@
 
         </Style>
         <Style x:Key="ListBoxanimation" TargetType="ListBoxItem">
+            
             <Setter Property="OverridesDefaultStyle" Value="True" />
             <Setter Property="Cursor" Value="Hand" />
             <Setter Property="Template">
@@ -30,7 +31,12 @@
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
-
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="#718699"/>
+                    <Setter Property="BorderThickness" Value="4"/>
+                    <Setter Property="BorderBrush" Value="#294A69"/>
+                    <Setter Property="Margin" Value="0,10,0,0"></Setter>
+                </Trigger>
                 <!-- Animates the button's opacity on mouse over. -->
                 <EventTrigger RoutedEvent="ListBoxItem.MouseEnter">
                     <EventTrigger.Actions>
@@ -58,6 +64,7 @@
                     </EventTrigger.Actions>
                 </EventTrigger>
             </Style.Triggers>
+            
         </Style>
         
         <Style x:Key="MyButton" TargetType="Button">
