@@ -22,7 +22,7 @@ namespace TestUnit
                 return;
             }
             Ressource res = new Ressource(num,Description,coef,mat);
-            Assert.Equal(res.num, expectedNum);
+            Assert.Equal(res.Num, expectedNum);
             Assert.Equal(res.Description, expectedDescription);
             Assert.Equal(res.Coef, expectedCoef);
         }
@@ -42,7 +42,7 @@ namespace TestUnit
                 return;
             }
             Ressource res = new Ressource(num, coef, mat);
-            Assert.Equal(res.num, expectedNum);
+            Assert.Equal(res.Num, expectedNum);
             Assert.Equal(res.Description, expectedDes);
             Assert.Equal(res.Coef, expectedCoef);
         }

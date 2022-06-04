@@ -85,47 +85,62 @@ namespace Stub
             LesUE[5].AddListesRessources(ressources6);
 
 
+            List<Matiere> matiere2 = new List<Matiere>()
+            {
+                new Matiere("Gestion de projet informatique",new List<Note>()),
+                new Matiere("Système d'information financier",new List<Note>()),
+            };
             List<Ressource> ressources2_1 = new List<Ressource>()
             {
-                new Ressource("R1.01", "Initiation au développement", 42, mat),
-                new Ressource("R1.02", "Développement d’interfaces web", 12, mat),
-                new Ressource("R1.10", "Anglais S1", 6, mat),
+                new Ressource("P2.01", "Portfolio", 2, mat),
+                new Ressource("R2.01", "Développement orienté objets", 21, mat),
+                new Ressource("R2.02", "Développement d'applications avec IHM", 21, mat),
+                new Ressource("R2.03", "Qualité de développement", 12, mat),
+                new Ressource("R2.13", "Expression-Communication", 6, mat),
             };
             List<Ressource> ressources2_2 = new List<Ressource>()
             {
-                new Ressource("R1.01", "Initiation au développement", 24, mat),
-                new Ressource("R1.03", "Introduction à l'architecture des ordinateurs", 3, mat),
-                new Ressource("R1.04", "Introduction aux systèmes d'exploitation et à leur fonctionnement", 10, mat),
-                new Ressource("R1.06", "Mathématiques discrètes", 15, mat),
-                new Ressource("R1.07", "Outils mathématiques fondamentaux", 15, mat),
+                new Ressource("P2.01", "Portfolio", 2, mat),
+                new Ressource("R2.01", "Développement orienté objets", 15, mat),
+                new Ressource("R2.04", "Communication et fonctionnement bas niveau", 12, mat),
+                new Ressource("R2.07", "Graphes", 21, mat),
+                new Ressource("R2.09", "Méthodes numériques", 12, mat),
             };
             List<Ressource> ressources2_3 = new List<Ressource>()
             {
-                new Ressource("R1.03", "Introduction à l'architecture des ordinateurs", 21, mat),
-                new Ressource("R1.10", "Anglais S1", 12, mat),
-                new Ressource("R1.11", "Expression-Communication", 6, mat),
+                new Ressource("P2.01", " Portfolio", 2, mat),
+                new Ressource("R2.04", "Communication et fonctionnement bas niveau", 36, mat),
+                new Ressource("R2.05", "Introduction aux services réseaux", 15, mat),
+                new Ressource("R2.12", "Anglais S2", 6, mat),
+                new Ressource("R2.13", "Expression-Communication", 9, mat),
             };
+
             List<Ressource> ressources2_4 = new List<Ressource>()
-            {
-                new Ressource("R1.05", " Introduction aux bases de données et SQL", 36, mat),
-                new Ressource("R1.06", "Mathématiques discrètes", 12, mat),
-                new Ressource("R1.09", "Économie durable et numérique", 6, mat),
+            {                
+                new Ressource("P2.01", "Portfolio", 2, mat),
+                new Ressource("R2.06", "Exploitation d'une base de données", 30, mat),
+                new Ressource("R2.08", "Outils numériques pour les statistiques descriptives", 12, mat),
+                new Ressource("R2.10", "Gestion de projet et des organisations", 12, matiere2),
+                new Ressource("R2.12", "Anglais S2", 6, mat),
             };
             List<Ressource> ressources2_5 = new List<Ressource>()
-            {
-                new Ressource("R1.02", "Développement d’interfaces web", 18, mat),
-                new Ressource("R1.08", "Gestion de projet et des organisations", 27, mat),
-                new Ressource("R1.11", "Expression-Communication", 15, mat),
+            {                
+                new Ressource("P2.01", "Portfolio", 2, mat),
+                new Ressource("R2.02", "Développement d'applications avec IHM", 3, mat),
+                new Ressource("R2.03", "Qualité de développement", 6, mat),
+                new Ressource("R2.07", "Graphes", 6, mat),
+                new Ressource("R2.10", "Gestion de projet et des organisations", 30, matiere2),
+                new Ressource("R2.12", "Anglais S2", 9, mat),
+                new Ressource("R2.13", "Expression-Communication", 9, mat),
             };
             List<Ressource> ressources2_6 = new List<Ressource>()
             {
-
-                new Ressource("R1.02", "Développement d’interfaces web", 5, mat),
-                new Ressource("R1.08", "Gestion de projet et des organisations", 11, mat),
-                new Ressource("R1.09", "Économie durable et numérique", 11, mat),
-                new Ressource("R1.10", "Anglais S1", 11, mat),
-                new Ressource("R1.11", "Expression-Communication", 11, mat),
-                new Ressource("R1.12", "Projet professionnel et personne", 11, mat),
+                new Ressource("P2.01", " Portfolio", 2, mat),
+                new Ressource("R2.02", "Développement d'applications avec IHM", 4, mat),
+                new Ressource("R2.11", "Droit des contrats et du numérique", 17, mat),
+                new Ressource("R2.12", "Anglais S2", 17, mat),
+                new Ressource("R2.13", "Expression-Communication", 11, mat),
+                new Ressource("R2.14", "Projet professionnel et personnel", 11, mat),
             };
 
             ///Deuxième Semestre

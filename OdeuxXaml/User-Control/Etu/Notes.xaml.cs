@@ -26,7 +26,7 @@ namespace OdeuxXaml.User_Control.Etu
         {
             InitializeComponent();
 
-            mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+            mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
@@ -35,13 +35,13 @@ namespace OdeuxXaml.User_Control.Etu
 
         private void SemestrePrecedent(object sender, RoutedEventArgs e)
         {
-            if(mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
+            if(mng.EtuSemestreSélectionné == mng.EtuActuel.Semestre1)
             {
-                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+                mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre2;
             }
             else
             {
-                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+                mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
             }
             mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             i = 0;
@@ -51,13 +51,13 @@ namespace OdeuxXaml.User_Control.Etu
 
         private void SemestreSuivant(object sender, RoutedEventArgs e)
         {
-            if (mng.EtuSemestreSélectionné == mng.EtuActuel.semestre1)
+            if (mng.EtuSemestreSélectionné == mng.EtuActuel.Semestre1)
             {
-                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre2;
+                mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre2;
             }
             else
             {
-                mng.EtuSemestreSélectionné = mng.EtuActuel.semestre1;
+                mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
             }
             mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             i = 0;

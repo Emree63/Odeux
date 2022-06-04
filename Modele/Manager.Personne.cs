@@ -43,7 +43,7 @@ namespace Modele
         ///  0- Rien trouver</returns>
         public int Connection(string Nom, string PassWord)
         {
-            var Per = personnes.FirstOrDefault(d => d.nom == Nom && d.password == PassWord);
+            var Per = personnes.FirstOrDefault(d => d.Nom == Nom && d.Password == PassWord);
             if (Per != null)
             {
                 personneActuel = Per;

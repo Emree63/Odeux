@@ -11,8 +11,8 @@ namespace Modele
         /// <summary>
         /// Numéro de la Ressource
         /// </summary>
-        private string Num;
-        public string num { get => Num; set => Num = value; }
+        private string num;
+        public string Num { get => num; set => num = value; }
 
         /// <summary>
         /// Description détailler de la Ressource
@@ -27,7 +27,7 @@ namespace Modele
         /// <summary>
         /// Liste des Matières dans une Ressource
         /// </summary>
-        public List<Matiere> matieres { get; set; }
+        public List<Matiere> Matieres { get; set; }
 
 
         /// <summary>
@@ -47,10 +47,10 @@ namespace Modele
             {
                 throw new ArgumentException("Le coefficient ne peut pas être égale ou inférieur à zéro");
             }
-            Num = num;
+            this.num = num;
             Description = description;
             Coef = coef;
-            matieres = mat;
+            Matieres = mat;
         }
 
         /// <summary>
@@ -68,11 +68,11 @@ namespace Modele
         /// <returns>float : moyenne</returns>
         public double MoyRessource()
         {
-            if (matieres.Count == 0) return -1; //Si il n'y a pas de matières dans la ressource on retourne -1
+            if (Matieres.Count == 0) return -1; //Si il n'y a pas de matières dans la ressource on retourne -1
             
             double total = 0;
             int c = 0;
-            foreach (Matiere mat in matieres)
+            foreach (Matiere mat in Matieres)
             {
                 if (mat.MoyMatière() != -1)
                 {
@@ -91,23 +91,23 @@ namespace Modele
         /// Ajouter une nouvel matiere à la Ressource.
         /// </summary>
         /// <param name="Mat">Nouvelle Matière</param>
-        public void AddMatiere(Matiere Mat) => matieres.Add(Mat);
+        public void AddMatiere(Matiere Mat) => Matieres.Add(Mat);
         
 
         /// <summary>
         ///  Matiere qu'on veut supprimer.
         /// </summary>
         /// <param name="Mat">Matiere à supprimer</param>
-        public void SuppMatiere(Matiere Mat) => matieres.Remove(Mat);
+        public void SuppMatiere(Matiere Mat) => Matieres.Remove(Mat);
 
         public override string ToString()
         {
-            Console.WriteLine(Num + " ( Coef "+Coef+") :");
-            if (matieres.Count == 0)
+            Console.WriteLine(num + " ( Coef "+Coef+") :");
+            if (Matieres.Count == 0)
             {
                 Console.WriteLine("Aucune Matière n'est encore dans la Ressource !");
             }
-            foreach (Matiere mat in matieres)
+            foreach (Matiere mat in Matieres)
             {
                 Console.WriteLine(mat);
             }

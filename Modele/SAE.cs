@@ -17,7 +17,7 @@ namespace Modele
         /// Note de la SAE
         /// </summary>
         private Note note;
-        public Note note1 { get => note; set => note = value; }
+        public Note Note { get => note; set => note = value; }
 
         /// <summary>
         /// Coefficient de la SAE

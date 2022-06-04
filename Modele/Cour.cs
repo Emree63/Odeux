@@ -31,8 +31,8 @@ namespace Modele
         /// <summary>
         /// Matière concernat le cour.
         /// </summary>
-        private string Matière { get; set; }
-        public string matière { get; set; }
+        private string matière { get; set; }
+        public string Matière { get => matière; set => matière=value; }
 
         /// <summary>
         /// Enseignant charger de s'occuper du cour.
@@ -59,14 +59,14 @@ namespace Modele
             Date = date;
             Durée = duree;
             Salle = salle;
-            matière = mat;
+            Matière = mat;
             Enseignant = ens;
             Groupes = new List<Groupe>();
             Groupes.AddRange(grps);
             DateFin = Date + Durée;
         }
 
-        public override string ToString() => $"Cour du {Date.Day}/{Date.Month}/{Date.Year} à {Date.Hour}h{Date.Minute} jusqu'a {Date.Hour+Durée.Hours}h{Date.Minute+Durée.Minutes}  avec : {Enseignant.nom}";
+        public override string ToString() => $"Cour du {Date.Day}/{Date.Month}/{Date.Year} à {Date.Hour}h{Date.Minute} jusqu'a {Date.Hour+Durée.Hours}h{Date.Minute+Durée.Minutes}  avec : {Enseignant.Nom}";
         
     }
 }

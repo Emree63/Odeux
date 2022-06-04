@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Professeur : Personne
     {
         /// <summary>
@@ -37,17 +39,17 @@ namespace Modele
             Console.Write("Note obtenu :");
             string ligne = Console.In.ReadLine();
             note = double.Parse(ligne);
-            if(etu.semestre1.NumSemestre == Semestre)
+            if(etu.Semestre1.NumSemestre == Semestre)
             {
-                foreach(UE ue in etu.semestre1.LesUE)
+                foreach(UE ue in etu.Semestre1.LesUE)
                 {
-                    if(ue.num == UE)
+                    if(ue.Num == UE)
                     {
                         foreach(Ressource res in ue.ressources)
                         {
-                            if(res.num == ressource)
+                            if(res.Num == ressource)
                             {
-                                foreach(Matiere mat2 in res.matieres)
+                                foreach(Matiere mat2 in res.Matieres)
                                 {
                                     if(mat2 == mat)
                                     {
@@ -60,17 +62,17 @@ namespace Modele
                     }
                 }
             }
-            if(etu.semestre2.NumSemestre == Semestre)
+            if(etu.Semestre2.NumSemestre == Semestre)
             {
-                foreach (UE ue in etu.semestre2.LesUE)
+                foreach (UE ue in etu.Semestre2.LesUE)
                 {
-                    if (ue.num == UE)
+                    if (ue.Num == UE)
                     {
                         foreach (Ressource res in ue.ressources)
                         {
-                            if (res.num == ressource)
+                            if (res.Num == ressource)
                             {
-                                foreach (Matiere mat2 in res.matieres)
+                                foreach (Matiere mat2 in res.Matieres)
                                 {
                                     if (mat2 == mat)
                                     {
@@ -86,7 +88,7 @@ namespace Modele
 
         }
 
-        public override string ToString() => $"Je suis professeur et je m 'appelle {nom} {prénom} \n";
+        public override string ToString() => $"Je suis professeur et je m 'appelle {Nom} {Prénom} \n";
         
     }
 }

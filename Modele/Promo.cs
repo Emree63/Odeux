@@ -11,13 +11,13 @@ namespace Modele
         /// <summary>
         /// Tout les groupes d'éléves constituant la promo
         /// </summary>
-        public List<Groupe> groupes { get; set; }
+        public List<Groupe> Groupes { get; set; }
 
         /// <summary>
         /// Constructeur de la classe
         /// </summary>
         /// <param name="grp">Groupes concernant la promo</param>
-        public Promo(List<Groupe> grp) => groupes = grp;
+        public Promo(List<Groupe> grp) => Groupes = grp;
         
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Modele
         public double MoyGeneral()
         {
             double total = 0, nb=0;
-            foreach (Groupe grp in groupes)
+            foreach (Groupe grp in Groupes)
             {
                  foreach(Etudiant etu in grp.etudiants)
                 {
@@ -53,26 +53,26 @@ namespace Modele
         public double MoyUE(int sem, string UE)
         {
             double total = 0, nb = 0;
-            foreach (Groupe grp in groupes)
+            foreach (Groupe grp in Groupes)
             {
                 foreach (Etudiant etu in grp.etudiants)
                 {
-                    if(etu.semestre1.NumSemestre == sem)
+                    if(etu.Semestre1.NumSemestre == sem)
                     {
-                        foreach (UE ue in etu.semestre1.LesUE)
+                        foreach (UE ue in etu.Semestre1.LesUE)
                         {
-                            if (ue.num == UE)
+                            if (ue.Num == UE)
                             {
                                 total += ue.MoyUE();
                                 nb++;
                             }
                         }
                     }
-                    if (etu.semestre2.NumSemestre == sem)
+                    if (etu.Semestre2.NumSemestre == sem)
                     {
-                        foreach (UE ue in etu.semestre2.LesUE)
+                        foreach (UE ue in etu.Semestre2.LesUE)
                         {
-                            if (ue.num == UE)
+                            if (ue.Num == UE)
                             {
                                 total += ue.MoyUE();
                                 nb++;
@@ -95,21 +95,21 @@ namespace Modele
         public double MoyMatière(int sem, string UE, string res ,string mat)
         {
             double total = 0, nb = 0;
-            foreach (Groupe grp in groupes)
+            foreach (Groupe grp in Groupes)
             {
                 foreach (Etudiant etu in grp.etudiants)
                 {
-                    if (etu.semestre1.NumSemestre == sem)
+                    if (etu.Semestre1.NumSemestre == sem)
                     {
-                        foreach (UE ue in etu.semestre1.LesUE)
+                        foreach (UE ue in etu.Semestre1.LesUE)
                         {
-                            if (ue.num == UE)
+                            if (ue.Num == UE)
                             {
                                 foreach(Ressource Res in ue.ressources)
                                 {
-                                    if(Res.num == res)
+                                    if(Res.Num == res)
                                     {
-                                        foreach(Matiere Mat in Res.matieres)
+                                        foreach(Matiere Mat in Res.Matieres)
                                         {
                                             if(Mat.Nom == mat)
                                             {
@@ -122,17 +122,17 @@ namespace Modele
                             }
                         }
                     }
-                    if (etu.semestre2.NumSemestre == sem)
+                    if (etu.Semestre2.NumSemestre == sem)
                     {
-                        foreach (UE ue in etu.semestre2.LesUE)
+                        foreach (UE ue in etu.Semestre2.LesUE)
                         {
-                            if (ue.num == UE)
+                            if (ue.Num == UE)
                             {
                                 foreach (Ressource Res in ue.ressources)
                                 {
-                                    if (Res.num == res)
+                                    if (Res.Num == res)
                                     {
-                                        foreach (Matiere Mat in Res.matieres)
+                                        foreach (Matiere Mat in Res.Matieres)
                                         {
                                             if (Mat.Nom == mat)
                                             {
@@ -160,19 +160,19 @@ namespace Modele
         public double MoyRessource(int sem, string UE, string res)
         {
             double total = 0, nb = 0;
-            foreach (Groupe grp in groupes)
+            foreach (Groupe grp in Groupes)
             {
                 foreach (Etudiant etu in grp.etudiants)
                 {
-                    if (etu.semestre1.NumSemestre == sem)
+                    if (etu.Semestre1.NumSemestre == sem)
                     {
-                        foreach (UE ue in etu.semestre1.LesUE)
+                        foreach (UE ue in etu.Semestre1.LesUE)
                         {
-                            if (ue.num == UE)
+                            if (ue.Num == UE)
                             {
                                 foreach (Ressource Res in ue.ressources)
                                 {
-                                    if (Res.num == res)
+                                    if (Res.Num == res)
                                     {
                                         total += Res.MoyRessource();
                                         nb++;
@@ -181,15 +181,15 @@ namespace Modele
                             }
                         }
                     }
-                    if (etu.semestre2.NumSemestre == sem)
+                    if (etu.Semestre2.NumSemestre == sem)
                     {
-                        foreach (UE ue in etu.semestre2.LesUE)
+                        foreach (UE ue in etu.Semestre2.LesUE)
                         {
-                            if (ue.num == UE)
+                            if (ue.Num == UE)
                             {
                                 foreach (Ressource Res in ue.ressources)
                                 {
-                                    if (Res.num == res)
+                                    if (Res.Num == res)
                                     {
                                         total += Res.MoyRessource();
                                         nb++;

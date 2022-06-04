@@ -30,7 +30,7 @@ namespace Modele
         /// <param name="date">date concerner</param>
         /// <returns>IEnumerable : Liste des cours</returns>
         public IEnumerable<Cour> RechCourProf(DateTime date) => from d in LesCours
-                                                                where d.Enseignant.nom == personneActuel.nom && d.Enseignant.prénom == personneActuel.prénom
+                                                                where d.Enseignant.Nom == personneActuel.Nom && d.Enseignant.Prénom == personneActuel.Prénom
                                                                 && d.Date.Day == date.Day && d.Date.Month == date.Month && d.Date.Year == date.Year
                                                                 orderby d.Date
                                                                 select d;
@@ -52,7 +52,7 @@ namespace Modele
                 {
                     foreach (Etudiant etu in g.etudiants)
                     {
-                        if (etu.nom == personneActuel.nom && etu.prénom == personneActuel.prénom)
+                        if (etu.Nom == personneActuel.Nom && etu.Prénom == personneActuel.Prénom)
                         {
                             cour.Add(c);
                         }
@@ -77,7 +77,7 @@ namespace Modele
                 {
                     foreach (Etudiant etu in g.etudiants)
                     {
-                        if (etu.nom == personneActuel.nom && etu.prénom == personneActuel.prénom)
+                        if (etu.Nom == personneActuel.Nom && etu.Prénom == personneActuel.Prénom)
                         {
                             cour.Add(c);
                         }

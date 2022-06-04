@@ -1,37 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Modele
 {
-        /// <summary>
-        /// Représente les spécificités des Personnes qui vont utiliser l'application
-        /// </summary>
+    /// <summary>
+    /// Représente les spécificités des Personnes qui vont utiliser l'application
+    /// </summary>
+    [DataContract, KnownType(typeof(Etudiant)), KnownType(typeof(Professeur))]
     public abstract class Personne : IEquatable<Personne>
     {
         /// <summary>
         /// Nom de la Personne
         /// </summary>
-        private string Nom;
-        public string nom { get => Nom; set => Nom = value; }
+        [DataMember]
+        public string Nom { get => nom; set => nom = value; }
+        private string nom;
 
         /// <summary>
         /// Prénom de la Personne
         /// </summary>
-        private string Prénom;
-        public string prénom { get => Prénom; set => Prénom = value; }
+        [DataMember]
+        public string Prénom { get => prénom; set => prénom = value; }
+        private string prénom;
 
         /// <summary>
         /// Date de Naissance de la Personne
         /// </summary>
-        private DateTime Naissance;
-        public DateTime naissance { get => Naissance; set => Naissance = value; }
+        [DataMember]
+        public DateTime Naissance { get => naissance; set => naissance = value; }
+        private DateTime naissance;
 
         /// <summary>
         /// Mot de Passe de la Personne pour se connecter
         /// </summary>
-        private string PassWord;
-        public string password { get => PassWord; set => PassWord = value; }
+        [DataMember]
+        public string Password { get => password; set => password = value; }
+        private string password;
 
         /// <summary>
         ///  Constructeur de la classe Personne
@@ -42,10 +49,10 @@ namespace Modele
         /// <param name="password">Mot de Passe</param>
         public Personne(string nomP, string prénomP, DateTime naissanceP, string passwordP)
         {
-            Nom = nomP;
-            Prénom = prénomP;
-            Naissance = naissanceP;
-            PassWord = passwordP;
+            nom = nomP;
+            prénom = prénomP;
+            naissance = naissanceP;
+            password = passwordP;
         }
 
         public override bool Equals(object obj)
@@ -56,13 +63,13 @@ namespace Modele
             return base.Equals(obj as Personne);
         }
 
-        public bool Equals(Personne other) => nom == other.nom;
+        public bool Equals(Personne other) => Nom == other.Nom;
 
         public override int GetHashCode()
         {
-            return nom.GetHashCode();
+            return Nom.GetHashCode();
         }
-        public override string ToString() => Nom;
+        public override string ToString() => nom;
 
        }
 }

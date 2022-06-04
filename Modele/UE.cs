@@ -12,8 +12,8 @@ namespace Modele
         /// <summary>
         /// Code de l'UE
         /// </summary>
-        private string Num;
-        public string num { get => Num; set => Num = value; }
+        private string num;
+        public string Num { get => num; set => num = value; }
 
         /// <summary>
         /// Description des éléments l'UE 
@@ -38,7 +38,7 @@ namespace Modele
         public UE(string num, string Des)
         {
             if (string.IsNullOrWhiteSpace(num)) throw new ArgumentException("Le nom doit être renseigner");
-            Num = num;
+            this.num = num;
             Description = Des;
             sae = null;
             ressources = new List<Ressource>();
@@ -110,8 +110,8 @@ namespace Modele
         public override string ToString()
         {
 
-            if (!string.IsNullOrWhiteSpace(Description)) Console.WriteLine(Num +" - "+ Description +":");
-            else Console.WriteLine(Num + ":");
+            if (!string.IsNullOrWhiteSpace(Description)) Console.WriteLine(num +" - "+ Description +":");
+            else Console.WriteLine(num + ":");
             if (ressources.Count == 0)
             {
                 Console.WriteLine("Il n'y a aucune Ressource !");

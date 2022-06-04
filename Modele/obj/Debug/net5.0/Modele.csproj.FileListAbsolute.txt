@@ -41,4 +41,3 @@ C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\Modele.csproj.Co
 C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\Modele.dll
 C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\ref\Modele.dll
 C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\Modele.pdb
-C:\Users\emkartal1\Source\Repos\sae2.01\Modele\obj\Debug\net5.0\Modele.csproj.AssemblyReference.cache

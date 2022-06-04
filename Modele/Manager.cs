@@ -13,7 +13,7 @@ namespace Modele
         /// <summary>
         /// Dépendance vers le gestionnaire de la persistance
         /// </summary>
-        public IPersistanceManager Persistance { get; private set; }
+        public IPersistanceManager Persistance { get; /*private*/ set; }
 
         /// <summary>
         /// Constructeur de la classe Manager.
@@ -51,7 +51,7 @@ namespace Modele
             }
             AjouterPersonne(per);
             LaPromo = données.Iut;
-            GroupeSélectionné = LaPromo.groupes[0];
+            GroupeSélectionné = LaPromo.Groupes[0];
             MoyGeneral = LaPromo.MoyGeneral();
         }
 

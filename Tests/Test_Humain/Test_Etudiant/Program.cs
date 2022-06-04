@@ -84,8 +84,8 @@ namespace Test_Etudiant
             Etudiant etu1 = new Etudiant("Emre ", "KARTAL", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
             WriteLine(etu1);
-            WriteLine(etu1.semestre1.MoySemestre());
-            WriteLine(etu1.semestre2.MoySemestre());
+            WriteLine(etu1.Semestre1.MoySemestre());
+            WriteLine(etu1.Semestre2.MoySemestre());
             WriteLine("Ma moyenne est de :" + etu1.MoyGeneral());
             WriteLine(etu1.getNote(1, "UE 1", "R1.01", "Algorithme", "DS"));
 

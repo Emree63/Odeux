@@ -1,24 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Etudiant : Personne
     {
         /// <summary>
         /// Premier semestre de l'étudiant.
         /// </summary>
-        private Semestre Semestre1;
-        public Semestre semestre1 { get => Semestre1; set => Semestre1 = value; }
+        [DataMember]
+        public Semestre Semestre1 { get => semestre1; set => semestre1 = value; }
+        private Semestre semestre1;
 
         /// <summary>
         /// Deuxième semestre de l'étudiant.
         /// </summary>
-        private Semestre Semestre2;
-        public Semestre semestre2 { get => Semestre2; set => Semestre2 = value; }
+        [DataMember]
+        public Semestre Semestre2 { get => semestre2; set => semestre2 = value; }
+        private Semestre semestre2;
 
         /// <summary>
         /// Constructeur de la classe Etudiant.
@@ -31,11 +36,11 @@ namespace Modele
         /// <param name="s2">Deuxième Semestre de l'etudiant.</param>
         public Etudiant(string nom, string prénom, DateTime naissance, string password, Semestre s1, Semestre s2) : base(nom,prénom,naissance,password)
         {
-            Semestre1 = s1;
-            Semestre2 = s2;
+            semestre1 = s1;
+            semestre2 = s2;
         }
 
-        public override string ToString() => $"Je suis un étudiant et je m'appelle : {nom} {prénom}";
+        public override string ToString() => $"Je suis un étudiant et je m'appelle : {Nom} {Prénom}";
 
 
         /// <summary>
@@ -47,14 +52,14 @@ namespace Modele
             double total = 0;
             int Coef = 0;
 
-            if (Semestre1.MoySemestre() != -1)
+            if (semestre1.MoySemestre() != -1)
             {
-                total += Semestre1.MoySemestre();
+                total += semestre1.MoySemestre();
                 Coef++;
             }
-            if (Semestre2.MoySemestre() != -1)
+            if (semestre2.MoySemestre() != -1)
             {
-                total += Semestre2.MoySemestre();
+                total += semestre2.MoySemestre();
                 Coef++;
             }
 
@@ -77,17 +82,17 @@ namespace Modele
         public double getNote(int sem, string UE, string Ressource, string mat,string note)
         {
 
-            if(semestre1.NumSemestre== sem)
+            if(Semestre1.NumSemestre== sem)
             {
-                foreach(UE ue in semestre1.LesUE)
+                foreach(UE ue in Semestre1.LesUE)
                 {
-                    if(ue.num == UE)
+                    if(ue.Num == UE)
                     {
                         foreach (Ressource res in ue.ressources)
                         {
-                            if(res.num == Ressource)
+                            if(res.Num == Ressource)
                             {
-                                foreach(Matiere mat1 in res.matieres)
+                                foreach(Matiere mat1 in res.Matieres)
                                 {
                                    if(mat1.Nom == mat)
                                     {
@@ -99,17 +104,17 @@ namespace Modele
                     }
                 }
             }
-            if (semestre2.NumSemestre == sem)
+            if (Semestre2.NumSemestre == sem)
             {
-                foreach (UE ue in semestre2.LesUE)
+                foreach (UE ue in Semestre2.LesUE)
                 {
-                    if (ue.num == UE)
+                    if (ue.Num == UE)
                     {
                         foreach (Ressource res in ue.ressources)
                         {
-                            if (res.num == Ressource)
+                            if (res.Num == Ressource)
                             {
-                                foreach (Matiere mat1 in res.matieres)
+                                foreach (Matiere mat1 in res.Matieres)
                                 {
                                     if (mat1.Nom == mat)
                                     {

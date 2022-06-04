@@ -19,7 +19,7 @@ namespace TestUnit
                 return;
             }
             UE ue = new UE(num, Description);
-            Assert.Equal(ue.num, expectedNum);
+            Assert.Equal(ue.Num, expectedNum);
             Assert.Equal(ue.Description, expectedDescription);
         }
 
@@ -35,7 +35,7 @@ namespace TestUnit
                 return;
             }
             UE ue = new UE(num);
-            Assert.Equal(ue.num, expectedNum);
+            Assert.Equal(ue.Num, expectedNum);
             Assert.Equal(ue.Description, expectedDescription);
         }
 
