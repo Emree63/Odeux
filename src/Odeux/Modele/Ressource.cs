@@ -1,32 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Ressource
     {
         /// <summary>
         /// Numéro de la Ressource
         /// </summary>
         private string num;
+        [DataMember]
         public string Num { get => num; set => num = value; }
 
         /// <summary>
         /// Description détailler de la Ressource
         /// </summary>
+        [DataMember]
         public string Description { get; set; }
 
         /// <summary>
         /// Coefficient de la Ressource
         /// </summary>
+        [DataMember]
         public int Coef { get; set; }
 
         /// <summary>
         /// Liste des Matières dans une Ressource
         /// </summary>
+        [DataMember]
         public List<Matiere> Matieres { get; set; }
 
 

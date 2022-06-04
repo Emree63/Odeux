@@ -14,24 +14,24 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Media3D;
-using OdeuxXaml.Page_Eleve;
-using OdeuxXaml.Page_Prof;
+using Odeux.Page_Eleve;
+using Odeux.Page_Prof;
 using Modele;
 using System.Media;
+using Odeux;
 
-namespace OdeuxXaml
+namespace Odeux
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Window
     {
         public Manager mng => (App.Current as App).LeManager;
-        public MainWindow()
+        public LoginPage()
         {
             InitializeComponent();
         }
-
 
         private static Random MyRandomGenerator = new Random();
         private void Button_Connection(object sender, RoutedEventArgs e)

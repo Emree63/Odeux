@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Semestre
     {
         /// <summary>
         /// Numéro du Semestre
         /// </summary>
+        [DataMember]
         public int NumSemestre { get; set; }
 
         /// <summary>
         /// Liste des UE du Semestre
         /// </summary>
+        [DataMember]
         public List<UE> LesUE { get; set; }
 
 

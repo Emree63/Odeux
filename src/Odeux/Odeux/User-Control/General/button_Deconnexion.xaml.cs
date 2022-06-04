@@ -31,7 +31,7 @@ namespace Odeux.User_Control.General
             MessageBoxResult result = MessageBox.Show("Deconnexion", "Voulez-vous vraiment vous déconnecter", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
-                OdeuxXaml.MainWindow win = new OdeuxXaml.MainWindow();
+                Odeux.LoginPage win = new Odeux.LoginPage();
                 win.Show();
                 if (ClickMenu != null)
                 {

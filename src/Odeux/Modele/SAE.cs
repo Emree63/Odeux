@@ -1,27 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class SAE
     {
         /// <summary>
         /// Nom de la SAE
         /// </summary>
+        [DataMember]
         public string Nom { get; set; }
 
         /// <summary>
         /// Note de la SAE
         /// </summary>
         private Note note;
+        [DataMember]
         public Note Note { get => note; set => note = value; }
 
         /// <summary>
         /// Coefficient de la SAE
         /// </summary>
+        [DataMember]
         public int Coef { get; set; }
 
         /// <summary>

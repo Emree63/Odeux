@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Odeux"
-        xmlns:User_Control="clr-namespace:OdeuxXaml.User_Control.General"        
+        xmlns:User_Control="clr-namespace:Odeux.User_Control.General"        
         mc:Ignorable="d"
         Title="LoginPage" MinWidth="480" MinHeight="360" MaxHeight="1080" MaxWidth="1920">
     <Window.Resources>
@@ -83,7 +83,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Viewbox HorizontalAlignment="Right" VerticalAlignment="Top">
-                        <TextBlock x:Name="Erreur"  Margin="200,-5, 0, 0" Text="" Foreground="red" />
+                        <TextBlock x:Name="Erreur" Margin="200,-5, 0, 0" Text="" Foreground="red" />
                     </Viewbox>
                     <Viewbox HorizontalAlignment="Right">
                         <Button Margin="35" HorizontalAlignment="Center" Background="Transparent" Cursor="Hand"
@@ -113,7 +113,7 @@
                     </Viewbox>
                     <!-- Bouton se connecter -->
                     <Viewbox HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="2">
-                        <User_Control:Thème_Affichage Margin="0, 30, 30, 10"/>
+                        <User_Control:button_Thème_Affichage Margin="0, 30, 30, 10"/>
                     </Viewbox>
                 </Grid>
 

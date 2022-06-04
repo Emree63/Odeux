@@ -1,32 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class UE
     {
         /// <summary>
         /// Code de l'UE
         /// </summary>
-        private string num;
+        [DataMember]
         public string Num { get => num; set => num = value; }
+        private string num;
 
         /// <summary>
         /// Description des éléments l'UE 
         /// </summary>
+        [DataMember]
         public string Description { get; set; }
 
         /// <summary>
         /// Liste des Ressouces dans l'UE
         /// </summary>
+        [DataMember]
         public List<Ressource> Ressources { get; set; }
 
         /// <summary>
         /// SAE concernant l'UE
         /// </summary>
+        [DataMember]
         public SAE sae;
 
         /// <summary>

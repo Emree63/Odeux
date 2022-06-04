@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace Modele
 {
-
     /// <summary>
     /// Représente les spécificités des Personnes qui vont utiliser l'application
     /// </summary>

@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Matiere
     {
         /// <summary>
         /// Nom de la matiere.
         /// </summary>
+        [DataMember]
         public string Nom { get; set; }
 
         /// <summary>
         /// Listes des notes d'une matière.
         /// </summary>
+        [DataMember]
         public List<Note> notes { get; set; }
 
 
