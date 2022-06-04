@@ -1,23 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Groupe
     {
         /// <summary>
         /// Numéro du groupe d'étudiants.
         /// </summary>
         int num;
+        [DataMember]
         public int Num { get => num; set => num = value; }
 
         /// <summary>
         /// Liste des étudiant concernant le groupe.
         /// </summary>
         List<Etudiant> étudiants;
+        [DataMember]
         public List<Etudiant> etudiants { get => étudiants; set => étudiants = value; }
 
         /// <summary>

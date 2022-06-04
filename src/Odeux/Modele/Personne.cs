@@ -16,28 +16,28 @@ namespace Modele
         /// <summary>
         /// Nom de la Personne
         /// </summary>
-        [DataMember]
+        [DataMember(EmitDefaultValue = false, Order = 0)]
         public string Nom { get => nom; set => nom = value; }
         private string nom;
 
         /// <summary>
         /// Prénom de la Personne
         /// </summary>
-        [DataMember]
+        [DataMember(EmitDefaultValue = false, Order = 1)]
         public string Prénom { get => prénom; set => prénom = value; }
         private string prénom;
 
         /// <summary>
         /// Date de Naissance de la Personne
         /// </summary>
-        [DataMember]
+        [DataMember(EmitDefaultValue = false, Order = 3)]
         public DateTime Naissance { get => naissance; set => naissance = value; }
         private DateTime naissance;
 
         /// <summary>
         /// Mot de Passe de la Personne pour se connecter
         /// </summary>
-        [DataMember]
+        [DataMember(EmitDefaultValue = false, Order = 2)]
         public string Password { get => password; set => password = value; }
         private string password;
 

@@ -33,9 +33,7 @@ C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\ref\Odeux.dll
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\Odeux.pdb
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\Modele.dll
-C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\Stub.dll
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\Modele.pdb
-C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\Stub.pdb
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\App.baml
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\LoginPage.baml
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\Page-Eleve\Accueil.baml
@@ -62,3 +60,5 @@ C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\ref\Odeux.dll
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\Odeux.pdb
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\Odeux.genruntimeconfig.cache
+C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\DataContractPersistance.dll
+C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Odeux\bin\Debug\net5.0-windows\DataContractPersistance.pdb

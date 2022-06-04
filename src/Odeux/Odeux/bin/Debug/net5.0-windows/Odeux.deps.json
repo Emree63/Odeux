@@ -8,24 +8,24 @@
     ".NETCoreApp,Version=v5.0": {
       "Odeux/1.0.0": {
         "dependencies": {
-          "Modele": "1.0.0",
-          "Stub": "1.0.0"
+          "DataContractPersistance": "1.0.0",
+          "Modele": "1.0.0"
         },
         "runtime": {
           "Odeux.dll": {}
         }
       },
-      "Modele/1.0.0": {
-        "runtime": {
-          "Modele.dll": {}
-        }
-      },
-      "Stub/1.0.0": {
+      "DataContractPersistance/1.0.0": {
         "dependencies": {
           "Modele": "1.0.0"
         },
         "runtime": {
-          "Stub.dll": {}
+          "DataContractPersistance.dll": {}
+        }
+      },
+      "Modele/1.0.0": {
+        "runtime": {
+          "Modele.dll": {}
         }
       }
     }
@@ -36,12 +36,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Modele/1.0.0": {
+    "DataContractPersistance/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Stub/1.0.0": {
+    "Modele/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

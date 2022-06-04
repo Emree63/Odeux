@@ -1,4 +1,5 @@
-﻿using Modele;
+﻿using DataContractPersistance;
+using Modele;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,7 +15,7 @@ namespace Odeux
     /// </summary>
     public partial class App : Application
     {
-        public Manager LeManager { get; private set; } = new Manager(new Stub.Stub());
+        public Manager LeManager { get; private set; } = new Manager(new DataContractPers());
 
         public App()
         {

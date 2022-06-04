@@ -1,48 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Cour
     {
         /// <summary>
         /// Date où à lieu du cour.
         /// </summary>
+        [DataMember]
         public DateTime Date { get; set; }
 
         /// <summary>
         /// Date où à fini cour.
         /// </summary>
+        [DataMember]
         public DateTime DateFin { get; set; }
 
         /// <summary>
         /// Durée du Cour.
         /// </summary>
+        [DataMember]
         public TimeSpan Durée { get; set; }
 
         /// <summary>
         /// Code de la salle du cour.
         /// </summary>
+        [DataMember]
         public string Salle { get; set; }
 
         /// <summary>
         /// Matière concernat le cour.
         /// </summary>
         private string matière { get; set; }
+        [DataMember]
         public string Matière { get => matière; set => matière = value; }
 
         /// <summary>
         /// Enseignant charger de s'occuper du cour.
         /// </summary>
+        [DataMember]
         public Professeur Enseignant { get; set; }
 
         /// <summary>
         /// Groupes à qui sont dédiers le cour.
         /// </summary>
         private List<Groupe> groupes;
+        [DataMember]
         public List<Groupe> Groupes { get => groupes; set => groupes = value; }
 
         /// <summary>

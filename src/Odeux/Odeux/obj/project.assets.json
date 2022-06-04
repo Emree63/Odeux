@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "DataContractPersistance/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Modele": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataContractPersistance.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataContractPersistance.dll": {}
+        }
+      },
       "Modele/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -11,38 +24,25 @@
         "runtime": {
           "bin/placeholder/Modele.dll": {}
         }
-      },
-      "Stub/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Modele": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Stub.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Stub.dll": {}
-        }
       }
     }
   },
   "libraries": {
+    "DataContractPersistance/1.0.0": {
+      "type": "project",
+      "path": "../DataContractPersistance/DataContractPersistance.csproj",
+      "msbuildProject": "../DataContractPersistance/DataContractPersistance.csproj"
+    },
     "Modele/1.0.0": {
       "type": "project",
       "path": "../Modele/Modele.csproj",
       "msbuildProject": "../Modele/Modele.csproj"
-    },
-    "Stub/1.0.0": {
-      "type": "project",
-      "path": "../Stub/Stub.csproj",
-      "msbuildProject": "../Stub/Stub.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "Modele >= 1.0.0",
-      "Stub >= 1.0.0"
+      "DataContractPersistance >= 1.0.0",
+      "Modele >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -80,11 +80,11 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+            "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj": {
+              "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj"
+            },
             "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
               "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
-            },
-            "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj": {
-              "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj"
             }
           }
         }

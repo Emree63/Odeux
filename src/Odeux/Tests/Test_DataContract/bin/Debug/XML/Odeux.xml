@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataToPersist xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/DataContractPersistance">
+  <Cours xmlns:d2p1="http://schemas.datacontract.org/2004/07/Modele" z:Id="2" z:Size="26">
+    <d2p1:Cour z:Id="3">
+      <d2p1:Date>2022-06-08T09:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-08T11:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H30M</d2p1:Durée>
+      <d2p1:Enseignant z:Id="4">
+        <d2p1:Nom z:Id="5">Delo</d2p1:Nom>
+        <d2p1:Prénom z:Id="6">Professeur</d2p1:Prénom>
+        <d2p1:Password z:Id="7">0000</d2p1:Password>
+        <d2p1:Naissance>1989-10-02T00:00:00</d2p1:Naissance>
+      </d2p1:Enseignant>
+      <d2p1:Groupes z:Id="8" z:Size="2">
+        <d2p1:Groupe z:Id="9">
+          <d2p1:Num>3</d2p1:Num>
+          <d2p1:etudiants z:Id="10" z:Size="2">
+            <d2p1:Etudiant z:Id="11">
+              <d2p1:Nom z:Id="12">Kartal</d2p1:Nom>
+              <d2p1:Prénom z:Id="13">Emre</d2p1:Prénom>
+              <d2p1:Password z:Ref="7" i:nil="true" />
+              <d2p1:Naissance>2003-01-01T00:00:00</d2p1:Naissance>
+              <d2p1:Semestre1 z:Id="14">
+                <d2p1:LesUE z:Id="15" z:Size="6">
+                  <d2p1:UE z:Id="16">
+                    <d2p1:Description z:Id="17">Développer des applications informatiques simples</d2p1:Description>
+                    <d2p1:Num z:Id="18">UE 1</d2p1:Num>
+                    <d2p1:Ressources z:Id="19" z:Size="3">
+                      <d2p1:Ressource z:Id="20">
+                        <d2p1:Coef>42</d2p1:Coef>
+                        <d2p1:Description z:Id="21">Initiation au développement</d2p1:Description>
+                        <d2p1:Matieres z:Id="22" z:Size="2">
+                          <d2p1:Matiere z:Id="23">
+                            <d2p1:Nom z:Id="24">Algorithmique </d2p1:Nom>
+                            <d2p1:notes z:Id="25" z:Size="2">
+                              <d2p1:Note z:Id="26">
+                                <d2p1:Nom z:Id="27">ds 1 (sur 20.0)</d2p1:Nom>
+                                <d2p1:note>11</d2p1:note>
+                              </d2p1:Note>
+                              <d2p1:Note z:Id="28">
+                                <d2p1:Nom z:Id="29">ds 2 (sur 20.0)</d2p1:Nom>
+                                <d2p1:note>5</d2p1:note>
+                              </d2p1:Note>
+                            </d2p1:notes>
+                          </d2p1:Matiere>
+                          <d2p1:Matiere z:Id="30">
+                            <d2p1:Nom z:Id="31">Structure de données </d2p1:Nom>
+                            <d2p1:notes z:Id="32" z:Size="0" />
+                          </d2p1:Matiere>
+                        </d2p1:Matieres>
+                        <d2p1:Num z:Id="33">R1.01</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="34">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Id="35">Développement d’interfaces web</d2p1:Description>
+                        <d2p1:Matieres z:Id="36" z:Size="1">
+                          <d2p1:Matiere z:Id="37">
+                            <d2p1:Nom z:Id="38">Aucun Nom</d2p1:Nom>
+                            <d2p1:notes z:Id="39" z:Size="0" />
+                          </d2p1:Matiere>
+                        </d2p1:Matieres>
+                        <d2p1:Num z:Id="40">R1.02</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="41">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Id="42">Anglais S1</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="43">R1.10</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="44">
+                    <d2p1:Description z:Id="45">Appréhender et construire des algorithmes</d2p1:Description>
+                    <d2p1:Num z:Id="46">UE 2</d2p1:Num>
+                    <d2p1:Ressources z:Id="47" z:Size="5">
+                      <d2p1:Ressource z:Id="48">
+                        <d2p1:Coef>24</d2p1:Coef>
+                        <d2p1:Description z:Ref="21" i:nil="true" />
+                        <d2p1:Matieres z:Ref="22" i:nil="true" />
+                        <d2p1:Num z:Ref="33" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="49">
+                        <d2p1:Coef>3</d2p1:Coef>
+                        <d2p1:Description z:Id="50">Introduction à l'architecture des ordinateurs</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="51">R1.03</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="52">
+                        <d2p1:Coef>10</d2p1:Coef>
+                        <d2p1:Description z:Id="53">Introduction aux systèmes d'exploitation et à leur fonctionnement</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="54">R1.04</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="55">
+                        <d2p1:Coef>15</d2p1:Coef>
+                        <d2p1:Description z:Id="56">Mathématiques discrètes</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="57">R1.06</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="58">
+                        <d2p1:Coef>15</d2p1:Coef>
+                        <d2p1:Description z:Id="59">Outils mathématiques fondamentaux</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="60">R1.07</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="61">
+                    <d2p1:Description z:Id="62">Installer et configurer un poste de travail</d2p1:Description>
+                    <d2p1:Num z:Id="63">UE 3</d2p1:Num>
+                    <d2p1:Ressources z:Id="64" z:Size="3">
+                      <d2p1:Ressource z:Id="65">
+                        <d2p1:Coef>21</d2p1:Coef>
+                        <d2p1:Description z:Ref="50" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="51" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="66">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Ref="42" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="43" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="67">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Id="68">Expression-Communication</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="69">R1.11</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="70">
+                    <d2p1:Description z:Id="71">Concevoir et mettre en place une base de données </d2p1:Description>
+                    <d2p1:Num z:Id="72">UE 4</d2p1:Num>
+                    <d2p1:Ressources z:Id="73" z:Size="3">
+                      <d2p1:Ressource z:Id="74">
+                        <d2p1:Coef>36</d2p1:Coef>
+                        <d2p1:Description z:Id="75"> Introduction aux bases de données et SQL</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="76">R1.05</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="77">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Ref="56" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="57" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="78">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Id="79">Économie durable et numérique</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="80">R1.09</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="81">
+                    <d2p1:Description z:Id="82">Identifier les besoins métiers des clients et des utilisateurs</d2p1:Description>
+                    <d2p1:Num z:Id="83">UE 5</d2p1:Num>
+                    <d2p1:Ressources z:Id="84" z:Size="3">
+                      <d2p1:Ressource z:Id="85">
+                        <d2p1:Coef>18</d2p1:Coef>
+                        <d2p1:Description z:Ref="35" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="40" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="86">
+                        <d2p1:Coef>27</d2p1:Coef>
+                        <d2p1:Description z:Id="87">Gestion de projet et des organisations</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="88">R1.08</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="89">
+                        <d2p1:Coef>15</d2p1:Coef>
+                        <d2p1:Description z:Ref="68" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="69" i:nil="true" />
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="90">
+                    <d2p1:Description z:Id="91">Identifier ses aptitudes pour travailler dans une équipe</d2p1:Description>
+                    <d2p1:Num z:Id="92">UE 6</d2p1:Num>
+                    <d2p1:Ressources z:Id="93" z:Size="6">
+                      <d2p1:Ressource z:Id="94">
+                        <d2p1:Coef>5</d2p1:Coef>
+                        <d2p1:Description z:Ref="35" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="40" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="95">
+                        <d2p1:Coef>11</d2p1:Coef>
+                        <d2p1:Description z:Ref="87" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="88" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="96">
+                        <d2p1:Coef>11</d2p1:Coef>
+                        <d2p1:Description z:Ref="79" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="80" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="97">
+                        <d2p1:Coef>11</d2p1:Coef>
+                        <d2p1:Description z:Ref="42" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="43" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="98">
+                        <d2p1:Coef>11</d2p1:Coef>
+                        <d2p1:Description z:Ref="68" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="69" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="99">
+                        <d2p1:Coef>11</d2p1:Coef>
+                        <d2p1:Description z:Id="100">Projet professionnel et personne</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="101">R1.12</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                </d2p1:LesUE>
+                <d2p1:NumSemestre>1</d2p1:NumSemestre>
+              </d2p1:Semestre1>
+              <d2p1:Semestre2 z:Id="102">
+                <d2p1:LesUE z:Id="103" z:Size="6">
+                  <d2p1:UE z:Id="104">
+                    <d2p1:Description z:Ref="17" i:nil="true" />
+                    <d2p1:Num z:Ref="18" i:nil="true" />
+                    <d2p1:Ressources z:Id="105" z:Size="5">
+                      <d2p1:Ressource z:Id="106">
+                        <d2p1:Coef>2</d2p1:Coef>
+                        <d2p1:Description z:Id="107">Portfolio</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="108">P2.01</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="109">
+                        <d2p1:Coef>21</d2p1:Coef>
+                        <d2p1:Description z:Id="110">Développement orienté objets</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="111">R2.01</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="112">
+                        <d2p1:Coef>21</d2p1:Coef>
+                        <d2p1:Description z:Id="113">Développement d'applications avec IHM</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="114">R2.02</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="115">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Id="116">Qualité de développement</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="117">R2.03</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="118">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Ref="68" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="119">R2.13</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="120">
+                    <d2p1:Description z:Ref="45" i:nil="true" />
+                    <d2p1:Num z:Ref="46" i:nil="true" />
+                    <d2p1:Ressources z:Id="121" z:Size="5">
+                      <d2p1:Ressource z:Id="122">
+                        <d2p1:Coef>2</d2p1:Coef>
+                        <d2p1:Description z:Ref="107" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="108" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="123">
+                        <d2p1:Coef>15</d2p1:Coef>
+                        <d2p1:Description z:Ref="110" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="111" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="124">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Id="125">Communication et fonctionnement bas niveau</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="126">R2.04</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="127">
+                        <d2p1:Coef>21</d2p1:Coef>
+                        <d2p1:Description z:Id="128">Graphes</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="129">R2.07</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="130">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Id="131">Méthodes numériques</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="132">R2.09</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="133">
+                    <d2p1:Description z:Ref="62" i:nil="true" />
+                    <d2p1:Num z:Ref="63" i:nil="true" />
+                    <d2p1:Ressources z:Id="134" z:Size="5">
+                      <d2p1:Ressource z:Id="135">
+                        <d2p1:Coef>2</d2p1:Coef>
+                        <d2p1:Description z:Id="136"> Portfolio</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="108" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="137">
+                        <d2p1:Coef>36</d2p1:Coef>
+                        <d2p1:Description z:Ref="125" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="126" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="138">
+                        <d2p1:Coef>15</d2p1:Coef>
+                        <d2p1:Description z:Id="139">Introduction aux services réseaux</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="140">R2.05</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="141">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Id="142">Anglais S2</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="143">R2.12</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="144">
+                        <d2p1:Coef>9</d2p1:Coef>
+                        <d2p1:Description z:Ref="68" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="119" i:nil="true" />
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="145">
+                    <d2p1:Description z:Ref="71" i:nil="true" />
+                    <d2p1:Num z:Ref="72" i:nil="true" />
+                    <d2p1:Ressources z:Id="146" z:Size="5">
+                      <d2p1:Ressource z:Id="147">
+                        <d2p1:Coef>2</d2p1:Coef>
+                        <d2p1:Description z:Ref="107" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="108" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="148">
+                        <d2p1:Coef>30</d2p1:Coef>
+                        <d2p1:Description z:Id="149">Exploitation d'une base de données</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="150">R2.06</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="151">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Id="152">Outils numériques pour les statistiques descriptives</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="153">R2.08</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="154">
+                        <d2p1:Coef>12</d2p1:Coef>
+                        <d2p1:Description z:Ref="87" i:nil="true" />
+                        <d2p1:Matieres z:Id="155" z:Size="2">
+                          <d2p1:Matiere z:Id="156">
+                            <d2p1:Nom z:Id="157">Gestion de projet informatique</d2p1:Nom>
+                            <d2p1:notes z:Id="158" z:Size="0" />
+                          </d2p1:Matiere>
+                          <d2p1:Matiere z:Id="159">
+                            <d2p1:Nom z:Id="160">Système d'information financier</d2p1:Nom>
+                            <d2p1:notes z:Id="161" z:Size="0" />
+                          </d2p1:Matiere>
+                        </d2p1:Matieres>
+                        <d2p1:Num z:Id="162">R2.10</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="163">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Ref="142" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="143" i:nil="true" />
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="164">
+                    <d2p1:Description z:Ref="82" i:nil="true" />
+                    <d2p1:Num z:Ref="83" i:nil="true" />
+                    <d2p1:Ressources z:Id="165" z:Size="7">
+                      <d2p1:Ressource z:Id="166">
+                        <d2p1:Coef>2</d2p1:Coef>
+                        <d2p1:Description z:Ref="107" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="108" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="167">
+                        <d2p1:Coef>3</d2p1:Coef>
+                        <d2p1:Description z:Ref="113" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="114" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="168">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Ref="116" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="117" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="169">
+                        <d2p1:Coef>6</d2p1:Coef>
+                        <d2p1:Description z:Ref="128" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="129" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="170">
+                        <d2p1:Coef>30</d2p1:Coef>
+                        <d2p1:Description z:Ref="87" i:nil="true" />
+                        <d2p1:Matieres z:Ref="155" i:nil="true" />
+                        <d2p1:Num z:Ref="162" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="171">
+                        <d2p1:Coef>9</d2p1:Coef>
+                        <d2p1:Description z:Ref="142" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="143" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="172">
+                        <d2p1:Coef>9</d2p1:Coef>
+                        <d2p1:Description z:Ref="68" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="119" i:nil="true" />
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                  <d2p1:UE z:Id="173">
+                    <d2p1:Description z:Ref="91" i:nil="true" />
+                    <d2p1:Num z:Ref="92" i:nil="true" />
+                    <d2p1:Ressources z:Id="174" z:Size="6">
+                      <d2p1:Ressource z:Id="175">
+                        <d2p1:Coef>2</d2p1:Coef>
+                        <d2p1:Description z:Ref="136" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="108" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="176">
+                        <d2p1:Coef>4</d2p1:Coef>
+                        <d2p1:Description z:Ref="113" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="114" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="177">
+                        <d2p1:Coef>17</d2p1:Coef>
+                        <d2p1:Description z:Id="178">Droit des contrats et du numérique</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="179">R2.11</d2p1:Num>
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="180">
+                        <d2p1:Coef>17</d2p1:Coef>
+                        <d2p1:Description z:Ref="142" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="143" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="181">
+                        <d2p1:Coef>11</d2p1:Coef>
+                        <d2p1:Description z:Ref="68" i:nil="true" />
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Ref="119" i:nil="true" />
+                      </d2p1:Ressource>
+                      <d2p1:Ressource z:Id="182">
+                        <d2p1:Coef>11</d2p1:Coef>
+                        <d2p1:Description z:Id="183">Projet professionnel et personnel</d2p1:Description>
+                        <d2p1:Matieres z:Ref="36" i:nil="true" />
+                        <d2p1:Num z:Id="184">R2.14</d2p1:Num>
+                      </d2p1:Ressource>
+                    </d2p1:Ressources>
+                    <d2p1:sae i:nil="true" />
+                  </d2p1:UE>
+                </d2p1:LesUE>
+                <d2p1:NumSemestre>2</d2p1:NumSemestre>
+              </d2p1:Semestre2>
+            </d2p1:Etudiant>
+            <d2p1:Etudiant z:Id="185">
+              <d2p1:Nom z:Id="186">Thibon</d2p1:Nom>
+              <d2p1:Prénom z:Id="187">Hugo</d2p1:Prénom>
+              <d2p1:Password z:Ref="7" i:nil="true" />
+              <d2p1:Naissance>2003-01-01T00:00:00</d2p1:Naissance>
+              <d2p1:Semestre1 z:Id="188">
+                <d2p1:LesUE z:Ref="15" i:nil="true" />
+                <d2p1:NumSemestre>1</d2p1:NumSemestre>
+              </d2p1:Semestre1>
+              <d2p1:Semestre2 z:Id="189">
+                <d2p1:LesUE z:Ref="103" i:nil="true" />
+                <d2p1:NumSemestre>2</d2p1:NumSemestre>
+              </d2p1:Semestre2>
+            </d2p1:Etudiant>
+          </d2p1:etudiants>
+        </d2p1:Groupe>
+        <d2p1:Groupe z:Id="190">
+          <d2p1:Num>4</d2p1:Num>
+          <d2p1:etudiants z:Id="191" z:Size="2">
+            <d2p1:Etudiant z:Id="192">
+              <d2p1:Nom z:Id="193">Etudiant</d2p1:Nom>
+              <d2p1:Prénom z:Id="194">1</d2p1:Prénom>
+              <d2p1:Password z:Ref="7" i:nil="true" />
+              <d2p1:Naissance>2003-01-01T00:00:00</d2p1:Naissance>
+              <d2p1:Semestre1 z:Id="195">
+                <d2p1:LesUE z:Ref="15" i:nil="true" />
+                <d2p1:NumSemestre>1</d2p1:NumSemestre>
+              </d2p1:Semestre1>
+              <d2p1:Semestre2 z:Id="196">
+                <d2p1:LesUE z:Ref="103" i:nil="true" />
+                <d2p1:NumSemestre>2</d2p1:NumSemestre>
+              </d2p1:Semestre2>
+            </d2p1:Etudiant>
+            <d2p1:Etudiant z:Id="197">
+              <d2p1:Nom z:Ref="193" i:nil="true" />
+              <d2p1:Prénom z:Id="198">2</d2p1:Prénom>
+              <d2p1:Password z:Ref="7" i:nil="true" />
+              <d2p1:Naissance>2003-01-01T00:00:00</d2p1:Naissance>
+              <d2p1:Semestre1 z:Id="199">
+                <d2p1:LesUE z:Ref="15" i:nil="true" />
+                <d2p1:NumSemestre>1</d2p1:NumSemestre>
+              </d2p1:Semestre1>
+              <d2p1:Semestre2 z:Id="200">
+                <d2p1:LesUE z:Ref="103" i:nil="true" />
+                <d2p1:NumSemestre>2</d2p1:NumSemestre>
+              </d2p1:Semestre2>
+            </d2p1:Etudiant>
+          </d2p1:etudiants>
+        </d2p1:Groupe>
+      </d2p1:Groupes>
+      <d2p1:Matière z:Id="201">Structure de données</d2p1:Matière>
+      <d2p1:Salle z:Id="202">A18</d2p1:Salle>
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="203">
+      <d2p1:Date>2022-06-12T14:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-12T16:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="4" i:nil="true" />
+      <d2p1:Groupes z:Id="204" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="201" i:nil="true" />
+      <d2p1:Salle z:Ref="202" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="205">
+      <d2p1:Date>2022-06-13T13:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-13T14:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="4" i:nil="true" />
+      <d2p1:Groupes z:Id="206" z:Size="1">
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="201" i:nil="true" />
+      <d2p1:Salle z:Ref="202" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="207">
+      <d2p1:Date>2022-06-13T16:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-13T18:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="4" i:nil="true" />
+      <d2p1:Groupes z:Id="208" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="201" i:nil="true" />
+      <d2p1:Salle z:Ref="202" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="209">
+      <d2p1:Date>2022-06-15T08:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-15T10:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="4" i:nil="true" />
+      <d2p1:Groupes z:Id="210" z:Size="1">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="201" i:nil="true" />
+      <d2p1:Salle z:Ref="202" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="211">
+      <d2p1:Date>2022-05-16T10:00:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-16T12:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="4" i:nil="true" />
+      <d2p1:Groupes z:Id="212" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="201" i:nil="true" />
+      <d2p1:Salle z:Ref="202" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="213">
+      <d2p1:Date>2022-05-12T16:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-12T17:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Id="214">
+        <d2p1:Nom z:Id="215">Mali</d2p1:Nom>
+        <d2p1:Prénom z:Id="216">Professeuse</d2p1:Prénom>
+        <d2p1:Password z:Ref="7" i:nil="true" />
+        <d2p1:Naissance>1980-08-02T00:00:00</d2p1:Naissance>
+      </d2p1:Enseignant>
+      <d2p1:Groupes z:Id="217" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Id="218">Bases de données</d2p1:Matière>
+      <d2p1:Salle z:Id="219">B20</d2p1:Salle>
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="220">
+      <d2p1:Date>2022-05-29T16:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-29T17:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="221" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="222">
+      <d2p1:Date>2022-06-01T08:00:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-01T10:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="223" z:Size="1">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="224">
+      <d2p1:Date>2022-06-01T10:00:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-01T12:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="225" z:Size="1">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="226">
+      <d2p1:Date>2022-06-01T13:15:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-01T15:15:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="4" i:nil="true" />
+      <d2p1:Groupes z:Id="227" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="201" i:nil="true" />
+      <d2p1:Salle z:Ref="202" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="228">
+      <d2p1:Date>2022-05-31T10:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-31T12:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H30M</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="229" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="230">
+      <d2p1:Date>2022-05-31T13:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-31T14:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="231" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="232">
+      <d2p1:Date>2022-05-31T15:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-31T17:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H30M</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="233" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="234">
+      <d2p1:Date>2022-06-10T08:00:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-10T10:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="235" z:Size="1">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="236">
+      <d2p1:Date>2022-06-11T10:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-11T12:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H30M</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="237" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="238">
+      <d2p1:Date>2022-06-12T08:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-12T09:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="239" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="240">
+      <d2p1:Date>2022-06-14T08:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-14T10:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H30M</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="241" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="242">
+      <d2p1:Date>2022-06-14T10:00:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-14T12:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="243" z:Size="1">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="244">
+      <d2p1:Date>2022-06-15T10:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-15T12:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H30M</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="214" i:nil="true" />
+      <d2p1:Groupes z:Id="245" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="218" i:nil="true" />
+      <d2p1:Salle z:Ref="219" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="246">
+      <d2p1:Date>2022-05-13T14:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-13T16:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Id="247">
+        <d2p1:Nom z:Id="248">Joha</d2p1:Nom>
+        <d2p1:Prénom z:Ref="216" i:nil="true" />
+        <d2p1:Password z:Ref="7" i:nil="true" />
+        <d2p1:Naissance>1992-11-12T00:00:00</d2p1:Naissance>
+      </d2p1:Enseignant>
+      <d2p1:Groupes z:Id="249" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Id="250">Architecture : IHM</d2p1:Matière>
+      <d2p1:Salle z:Id="251">C21</d2p1:Salle>
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="252">
+      <d2p1:Date>2022-06-01T16:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-01T17:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="247" i:nil="true" />
+      <d2p1:Groupes z:Id="253" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="250" i:nil="true" />
+      <d2p1:Salle z:Id="254">Dis</d2p1:Salle>
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="255">
+      <d2p1:Date>2022-05-31T18:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-05-31T19:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="247" i:nil="true" />
+      <d2p1:Groupes z:Id="256" z:Size="1">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="250" i:nil="true" />
+      <d2p1:Salle z:Id="257">B10</d2p1:Salle>
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="258">
+      <d2p1:Date>2022-06-12T10:00:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-12T12:00:00</d2p1:DateFin>
+      <d2p1:Durée>PT2H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="247" i:nil="true" />
+      <d2p1:Groupes z:Id="259" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="250" i:nil="true" />
+      <d2p1:Salle z:Ref="251" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="260">
+      <d2p1:Date>2022-06-13T08:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-13T09:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="247" i:nil="true" />
+      <d2p1:Groupes z:Id="261" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="250" i:nil="true" />
+      <d2p1:Salle z:Ref="251" i:nil="true" />
+    </d2p1:Cour>
+    <d2p1:Cour z:Id="262">
+      <d2p1:Date>2022-06-15T13:30:00</d2p1:Date>
+      <d2p1:DateFin>2022-06-15T14:30:00</d2p1:DateFin>
+      <d2p1:Durée>PT1H</d2p1:Durée>
+      <d2p1:Enseignant z:Ref="247" i:nil="true" />
+      <d2p1:Groupes z:Id="263" z:Size="2">
+        <d2p1:Groupe z:Ref="9" i:nil="true" />
+        <d2p1:Groupe z:Ref="190" i:nil="true" />
+      </d2p1:Groupes>
+      <d2p1:Matière z:Ref="250" i:nil="true" />
+      <d2p1:Salle z:Ref="251" i:nil="true" />
+    </d2p1:Cour>
+  </Cours>
+  <Personnes xmlns:d2p1="http://schemas.datacontract.org/2004/07/Modele" z:Id="264" z:Size="7">
+    <d2p1:Personne z:Ref="11" i:nil="true" />
+    <d2p1:Personne z:Ref="185" i:nil="true" />
+    <d2p1:Personne z:Ref="192" i:nil="true" />
+    <d2p1:Personne z:Ref="197" i:nil="true" />
+    <d2p1:Personne z:Ref="4" i:nil="true" />
+    <d2p1:Personne z:Ref="214" i:nil="true" />
+    <d2p1:Personne z:Ref="247" i:nil="true" />
+  </Personnes>
+</DataToPersist>

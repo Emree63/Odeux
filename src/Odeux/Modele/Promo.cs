@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Modele
 {
+    [DataContract]
     public class Promo
     {
         /// <summary>
         /// Tout les groupes d'éléves constituant la promo
         /// </summary>
+        [DataMember]
         public List<Groupe> Groupes { get; set; }
 
         /// <summary>
