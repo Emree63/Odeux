@@ -53,7 +53,7 @@ namespace OdeuxXaml.User_Control.General {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;component/user-control/general/button_aideenligne.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;V1.0.0.0;component/user-control/general/button_aideenligne.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\User-Control\General\button_AideEnLigne.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
