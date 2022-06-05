@@ -77,7 +77,7 @@ namespace Odeux.User_Control.Prof {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Odeux;V1.0.0.0;component/user-control/prof/consulternotes.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Odeux;component/user-control/prof/consulternotes.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\User-Control\Prof\ConsulterNotes.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
