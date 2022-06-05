@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\IUT\sae2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\
+D:\IUT\SAE2.01\src\Odeux\Odeux\obj\Debug\net5.0-windows\
 Odeux
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-D:\IUT\sae2.01\src\Odeux\Odeux\App.xaml
+D:\IUT\SAE2.01\src\Odeux\Odeux\App.xaml
 15-1217403116
 6-49872815
 17396431544
-1951879136181
+195-1370191210
 LoginPage.xaml;Page-Eleve\Accueil.xaml;Page-Prof\Accueil_Prof.xaml;User-Control\Etu\Accueil_fill_detail.xaml;User-Control\Etu\DéclarerVotrePrésence.xaml;User-Control\Etu\Edt_Eleve.xaml;User-Control\Etu\Notes.xaml;User-Control\General\button_AideEnLigne.xaml;User-Control\General\button_Deconnexion.xaml;User-Control\General\button_Thème-Affichage.xaml;User-Control\General\Der_Infos.xaml;User-Control\Prof\Accueil_fill_detail.xaml;User-Control\Prof\ConsulterNotes.xaml;User-Control\Prof\Edt_Prof.xaml;User-Control\Prof\EntrerDesNotes.xaml;
 
-False
+True
 

@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Test_Etudiant
-build_property.ProjectDir = D:\IUT\sae2.01\src\Odeux\Tests\Test_Humain\Test_Etudiant\
+build_property.ProjectDir = D:\IUT\SAE2.01\src\Odeux\Tests\Test_Humain\Test_Etudiant\
