@@ -35,7 +35,7 @@ Où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x
 
 </br>
 
-:warning: [**Partie 1**](src/doc/phase_1(Semaine 13)) : **Définition de l'application et Vues**
+:warning: [**Partie 1**](src/doc/phase_1) : **Définition de l'application et Vues**
 </br>
 
 :information_source: _Quelque point Xaml non fini(détourage,Responsive...)_
@@ -50,6 +50,8 @@ Où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x
 </br>
 
 :warning: [**Partie 3**](src/Odeux) : **Lien entre les vues et le modèle de votre application**
+</br>
+
 :information_source: _Binding sur les notes(Profs et élèves) non fini_
 
 </br>
