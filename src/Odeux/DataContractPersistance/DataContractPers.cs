@@ -10,17 +10,35 @@ namespace DataContractPersistance
 {
     public class DataContractPers : IPersistanceManager
     {
-        public string FilePath { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "..//XML");
+        /// <summary>
+        /// Chemin vers le fichier
+        /// </summary>
+        public string FilePath => Path.Combine(Directory.GetCurrentDirectory(), RelativePath);
 
+        /// <summary>
+        /// Chemin relatif du fichier
+        /// </summary>
+        public string RelativePath { get; set; } = "..//XML";
+
+        /// <summary>
+        /// Nom du fichier
+        /// </summary>
         public string FileName { get; set; } = "Odeux.xml";
 
-        string PersFile => Path.Combine(FilePath, FileName);
+        /// <summary>
+        /// Propriété calculé au chemin d'accées
+        /// </summary>
+        protected string PersFile => Path.Combine(FilePath, FileName);
 
-        private DataContractSerializer Serializer { get; set; } = new DataContractSerializer(typeof(DataToPersist),
+        protected XmlObjectSerializer Serializer { get; set; } = new DataContractSerializer(typeof(DataToPersist),
                                                 new DataContractSerializerSettings()
                                                 {
                                                     PreserveObjectReferences = true
                                                 });
+        /// <summary>
+        /// Récupération de la fontion ChargeDonnées() de IPersistanceManager
+        /// </summary>
+        /// <returns></returns>
         public (IEnumerable<Cour> cours, IEnumerable<Personne> personnes, Promo Iut) ChargeDonnées()
         {
             if (!File.Exists(PersFile))
@@ -29,16 +47,19 @@ namespace DataContractPersistance
             }
 
 
-            DataToPersist data = new DataToPersist();
+            DataToPersist? data;
 
             using (Stream s = File.OpenRead(PersFile))
             {
                 data = Serializer.ReadObject(s) as DataToPersist;
             }
-            return (data.Cours, data.Personnes, new Promo(new List<Groupe>()));
+            return (data.Cours, data.Personnes, data.Iut);
         }
 
-        public void SauvegardeDonnées(IEnumerable<Cour> cours, IEnumerable<Personne> personnes, Promo Iut)
+        /// <summary>
+        /// Implementation de la fontion SauvegardeDonnées() de IPersistanceManager
+        /// </summary>
+        public virtual void SauvegardeDonnées(IEnumerable<Cour> cours, IEnumerable<Personne> personnes, Promo Iut)
         {
             if (!Directory.Exists(FilePath))
             {
@@ -48,7 +69,7 @@ namespace DataContractPersistance
             DataToPersist data = new DataToPersist();
             data.Personnes.AddRange(personnes);
             data.Cours.AddRange(cours);
-
+            data.Iut = Iut;
 
             var settings = new XmlWriterSettings() { Indent = true };
             using (TextWriter tw = File.CreateText(PersFile))

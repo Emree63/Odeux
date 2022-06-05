@@ -15,11 +15,17 @@ namespace Odeux
     /// </summary>
     public partial class App : Application
     {
-        public Manager LeManager { get; private set; } = new Manager(new DataContractPers());
+        public Manager LeManager { get; private set; } = new Manager(new DataContractPersJSON());
 
         public App()
         {
             LeManager.ChargeDonnées();
+            //Exit += ApplicationExit;
+        }
+
+        private void ApplicationExit(object sender, ExitEventArgs e)
+        {
+            LeManager.SauvegardeDonnées();
         }
     }
 }

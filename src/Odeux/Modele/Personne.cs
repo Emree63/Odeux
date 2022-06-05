@@ -48,12 +48,12 @@ namespace Modele
         /// <param name="prénom">Prénom de la Personne</param>
         /// <param name="naissance">Date de Naissance de la Personne</param>
         /// <param name="password">Mot de Passe</param>
-        public Personne(string nomP, string prénomP, DateTime naissanceP, string passwordP)
+        public Personne(string nom, string prénom, DateTime naissance, string password)
         {
-            nom = nomP;
-            prénom = prénomP;
-            naissance = naissanceP;
-            password = passwordP;
+            this.nom = nom;
+            this.prénom = prénom;
+            this.naissance = naissance;
+            this.password = password;
         }
 
         public override bool Equals(object obj)

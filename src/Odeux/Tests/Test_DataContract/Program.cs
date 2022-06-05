@@ -9,7 +9,7 @@ namespace Test_DataContract
         {
             Manager manager = new Manager(new Stub.Stub());
             manager.ChargeDonnées();
-            manager.Persistance = new DataContractPersistance.DataContractPers();
+            manager.Persistance = new DataContractPersistance.DataContractPersJSON();
             manager.SauvegardeDonnées();
         }
     }

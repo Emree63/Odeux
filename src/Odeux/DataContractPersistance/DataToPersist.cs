@@ -18,6 +18,7 @@ namespace DataContractPersistance
         [DataMember]
         public List<Cour> Cours { get; set; } = new List<Cour>();
 
+        [DataMember]
         public Promo Iut { get; set; } = new Promo(new List<Groupe>());
     }
 }
