@@ -10,3 +10,15 @@ C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.dll
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\ref\Modele.dll
 C:\Users\emkartal1\source\repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.pdb
+D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.deps.json
+D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.dll
+D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\ref\Modele.dll
+D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.pdb
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.csproj.AssemblyReference.cache
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.GeneratedMSBuildEditorConfig.editorconfig
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.AssemblyInfoInputs.cache
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.AssemblyInfo.cs
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.csproj.CoreCompileInputs.cache
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.dll
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\ref\Modele.dll
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.pdb
