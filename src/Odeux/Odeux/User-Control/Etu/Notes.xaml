@@ -47,7 +47,7 @@
                         <Grid>
                             <Rectangle RadiusX="15" RadiusY="15" Width="883" Height="62"  Fill="{DynamicResource BackgroundColor2}"/>
                             <TextBlock FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"  >
-                                <Run Text="{Binding EtuUESélectionné.num,Mode=OneWay}"/>
+                                <Run Text="{Binding EtuUESélectionné.Num,Mode=OneWay}"/>
                                 -<Run Text="{Binding EtuUESélectionné.Description,Mode=OneWay}"/>
                             </TextBlock>
                         </Grid>
