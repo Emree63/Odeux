@@ -13,10 +13,10 @@ build:
     - dotnet publish Odeux_CI.sln -c Release --no-restore -o $CI_PROJECT_DIR/build/release
   artifacts:
     paths:
-        - $CI_PROJECT_DIR/build/release
+      - $CI_PROJECT_DIR/build/release
 
 test:
-  stage:  test
+  stage: test
   tags:
     - docker
   script:
