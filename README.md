@@ -31,15 +31,20 @@ La racine de notre gitlab est composé de deux dossier essentielles au projet:
 
 # Avancement du projet
 
-où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x: non commencer )
+Où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x: non commencer )
 
 </br>
 
-:warning: [**Partie 1**](src/doc/phase_1(Semaine 13)/) : **Définition de l'application et Vues**
+:warning: [**Partie 1**](src/doc/phase_1(Semaine 13)) : **Définition de l'application et Vues**
+</br>
+
 :information_source: _Quelque point Xaml non fini(détourage,Responsive...)_
 </br>
 
 :warning: [**Partie 2**](src/Odeux/Modele) : **Conception et Programmation du modèle de votre application prenant en compte les critères métier**
+
+</br>
+
 :information_source: _Diagramme de Séquence et de classes presque fini_
 
 </br>
