@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\Test_Classe.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\Test_Classe.csproj",
       "projectName": "Test_Classe",
-      "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\Test_Classe.csproj",
+      "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\Test_Classe.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\obj\\",
+      "outputPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
-              "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
+            "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
+              "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
             }
           }
         }

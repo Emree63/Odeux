@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj": {}
+    "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj": {}
   },
   "projects": {
-    "D:\\IUT\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IUT\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
         "projectName": "DataContractPersistance",
-        "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\IUT\\sae2.01\\src\\Odeux\\DataContractPersistance\\obj\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
-                "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
+              "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
+                "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
         "projectName": "Modele",
-        "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\obj\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,14 +116,14 @@
         }
       }
     },
-    "D:\\IUT\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IUT\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj",
         "projectName": "Stub",
-        "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Stub\\obj\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Stub\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,8 +140,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
-                "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
+              "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
+                "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
               }
             }
           }
@@ -174,14 +174,14 @@
         }
       }
     },
-    "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
         "projectName": "Test_DataContract",
-        "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\obj\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -198,14 +198,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\IUT\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj": {
-                "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj"
+              "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj": {
+                "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj"
               },
-              "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
-                "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
+              "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
+                "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
               },
-              "D:\\IUT\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj": {
-                "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj"
+              "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj": {
+                "projectPath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Stub\\Stub.csproj"
               }
             }
           }

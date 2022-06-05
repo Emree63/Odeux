@@ -50,6 +50,10 @@ namespace Modele
         /// <param name="password">Mot de Passe</param>
         public Personne(string nom, string prénom, DateTime naissance, string password)
         {
+            if (string.IsNullOrWhiteSpace(nom)) throw new ArgumentException("Nom manquant");
+            if (string.IsNullOrWhiteSpace(prénom)) throw new ArgumentException("Prénom manquant");
+            if (naissance>DateTime.Now) throw new ArgumentException("La date de naissance ne correspond pas");
+            if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Le mot de passe doit être renseigner !");
             this.nom = nom;
             this.prénom = prénom;
             this.naissance = naissance;

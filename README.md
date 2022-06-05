@@ -28,3 +28,37 @@ La racine de notre gitlab est composé de deux dossier essentielles au projet:
 [**src**](src/Odeux) : **Toute la partie codage de l'application C# et WPF**
 
 [**doc**](doc) : **Documentation de l'application, englobant la première phase avant le commencement de l'application (Personna, Use case, sketch, Contexte...), suivi de la seconde phase qui est la présentation de la structure de l'application choisi (diagramme de paquetage, diagramme(s) de classes accompagné(s) de descriptions...)**
+
+# Avancement du projet
+
+où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x: non commencer )
+
+</br>
+
+:warning: [**Partie 1**](src/doc/phase_1(Semaine 13)/) : **Définition de l'application et Vues**
+:information_source: _Quelque point Xaml non fini(détourage,Responsive...)_
+</br>
+
+:warning: [**Partie 2**](src/Odeux/Modele) : **Conception et Programmation du modèle de votre application prenant en compte les critères métier**
+:information_source: _Diagramme de Séquence et de classes presque fini_
+
+</br>
+
+:warning: [**Partie 3**](src/Odeux) : **Lien entre les vues et le modèle de votre application**
+:information_source: _Binding sur les notes(Profs et élèves) non fini_
+
+</br>
+
+:white_check_mark: [**Partie 4**](src/Odeux/DataContractPersistance) : **Persistance des données**
+
+</br>
+
+:white_check_mark: [**Partie 5**](src/Odeux/Tests) : **Tests, Documentation et Intégration Continue**
+
+</br>
+
+:x: Partie 6 : **Déploiement**
+
+</br>
+
+:x: Partie 7 : **Réalisation de votre vidéo promotionnelle**
