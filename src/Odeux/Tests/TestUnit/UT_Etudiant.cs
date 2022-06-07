@@ -32,7 +32,7 @@ namespace TestUnit
         [Theory]
         [InlineData(1,"UE 1","R1.01","Algorithme","DS",11)]//Note existante
         [InlineData(1, "UE 1", "R1.01", "Algorithme", "Tp noté", 13)]//Note existante deuxième test
-        [InlineData(1, "UE 2", "R1.01", "Structure de données", "DS", 15)]//Note existante troisième test
+        [InlineData(2, "UE 2", "R1.01", "Structure de données", "DS", 15)]//Note existante troisième test
         [InlineData(1,"UE 1", "R1.01", "Bases de données", "DS", -1)]//Ressource non existante
         [InlineData(1,"", "R1.01", "Algorithme", "DS", -1)]//UE non Existante
         [InlineData(5,"UE 1", "R1.01", "Algorithme", "DS", -1)]//Semestre non Existante

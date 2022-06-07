@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GaMzBIQQU1iz/Y1wfZba7TZwn0RmvxREBzQNTlmRXO1EWvbKV3/SLYIYfeSVI1K7GNttl0GgJmqfsnMgr6pgZQ==",
+  "dgSpecHash": "ukTvWcIZwzE5X3cUNpw4JxW+ZCA4e4e3OHhrZHgNqVIPERZokOirhM+o0zYpZZSUDPWUaeEaqN0u+Dxi3oXjpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
+  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
