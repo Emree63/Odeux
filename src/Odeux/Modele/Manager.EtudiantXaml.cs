@@ -64,7 +64,9 @@ namespace Modele
         }
         private double EtumoySemestre;
 
-
+        /// <summary>
+        /// Conternier la moyenne de l'UE de l'étudiant
+        /// </summary>
         public double EtuMoyUE
         {
             get => EtumoyUE;

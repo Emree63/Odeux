@@ -16,10 +16,16 @@ namespace Stub
                 new Note("ds 2 (sur 20.0)",5),
             };
 
+            List<Note> notes2 = new List<Note>()
+            {
+                new Note("TP",18),
+                new Note("TD",2),
+            };
+
             List<Matiere> matieres = new List<Matiere>()
             {
                 new Matiere("Algorithmique ",notes),
-                new Matiere("Structure de données ", new List<Note>()),
+                new Matiere("Structure de données ", notes2),
             };
             List<Matiere> mat = new List<Matiere>() { new Matiere(new List<Note>()), };
             List<Ressource> ressources1 = new List<Ressource>()
@@ -187,6 +193,10 @@ namespace Stub
             profs.Add(prof);
             profs.Add(prof2);
             profs.Add(prof3);
+
+            //Ajout des notes à l'Etudiant Emre
+
+            
 
             List<Cour> cour = new List<Cour>()
             {

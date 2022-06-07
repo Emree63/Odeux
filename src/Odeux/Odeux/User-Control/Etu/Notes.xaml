@@ -76,7 +76,10 @@
                             <WrapPanel>
                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="500"  >
                                     <StackPanel>
-                                        <TextBlock TextAlignment="Center" Text="{Binding Num,Mode=OneWay}" TextWrapping="Wrap" FontSize="25" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock TextAlignment="Center"  TextWrapping="Wrap" FontSize="25" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                            <Run Text="&#xA;"/>
+                                            <Run Text="{Binding Num,Mode=OneWay}"/>
+                                        </TextBlock>
                                         <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="19" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
                                             <Run Text="{Binding Description,Mode=OneWay}"/>
                                             <Run Text="&#xA;"/>
@@ -84,24 +87,56 @@
                                         <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="19" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
                                             Coeff <Run Text="{Binding Coef,Mode=OneWay}"/>
                                         </TextBlock>
-                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="-40,10,0,20" MaxWidth="440" Width="440" Height="100" >
-                                            <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="20" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">
-                                            Moyenne :<Run Text="{Binding EtuMoyRes,Mode=OneWay}"/><Run Text="&#xA;"/>
-                                            Moyenne Classe : <Run Text="{Binding MoyRes,Mode=OneWay}"/>
-                                            </TextBlock>
-                                        </Border>
+                                       
+                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="20" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        Moyenne :<Run Text="{Binding EtuMoyRes,Mode=OneWay}"/><Run Text="&#xA;"/>
+                                        Moyenne Classe : <Run Text="{Binding MoyRes,Mode=OneWay}"/>
+                                            <Run Text="&#xA;"/>
+                                        </TextBlock>
+
                                     </StackPanel>
                                 </Border>
 
                                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" ItemContainerStyle="{StaticResource ListBoxanimation}" BorderBrush="Transparent"
                       Width="800" Background="Transparent"  x:Name="ListBox2" Margin="10,10,10,10"  ItemsSource="{Binding Matieres}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                     <ListBox.ItemTemplate>
-                                        <DataTemplate  >
+                                        <DataTemplate >
                                             <WrapPanel>
-                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="700" Height="100" >
-                                                    <TextBlock Text="{Binding Nom}" Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="700"  >
+                                                    <Grid>
+                                                        <TextBlock Text="{Binding Nom}" Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                                        <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="250" Height="30" Background="{DynamicResource BackgroundColor2}" Margin="10,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
+                                                            <Run Text="Moyenne:" FontWeight="Bold" />
+                                                            <Run  Text="{Binding MoyMat, Mode=OneWay}" FontWeight="Bold" Foreground="Red"/>
+                                                        </TextBlock>
+                                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="5,70,5,5">
+                                                            <Grid>
+                                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Width="700" Height="30" VerticalAlignment="Top">
+                                                                    <TextBlock Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
+                                                                    <Run Text="&#x9; Nom"/>
+                                                                    <Run Text="&#x9; Note"/>
+                                                                    </TextBlock>
+                                                                </Border>
+                                                                <ListBox BorderBrush="Transparent"
+                                                        Background="Transparent"  ItemsSource="{Binding notes}" x:Name="ListBox3" Margin="0,30,0,0">
+                                                                <ListBox.ItemTemplate>
+                                                                    <DataTemplate >
+                                                                        <WrapPanel>
+                                                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="2" Width="650" Height="30">
+                                                                                    <TextBlock Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
+                                                                                        <Run Text="{Binding Nom, Mode=OneWay}"/>
+                                                                                        <Run Text="{Binding note, Mode=OneWay}" Foreground="Red"/>
+                                                                                    </TextBlock>
+                                                                                </Border>
+                                                                            </WrapPanel>
+                                                                    </DataTemplate>
+                                                                </ListBox.ItemTemplate>
+                                                            </ListBox>
+                                                            </Grid>
+                                                        </Border>
+                                                    </Grid>
                                                 </Border>
-                                            </WrapPanel>
+                                                </WrapPanel>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
                                 </ListBox>
