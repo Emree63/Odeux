@@ -12,7 +12,7 @@
 :information_source: Nous cherchons à réaliser une application qui reprend “Odin”, avec de nouvelles options et une page d'accueil bien plus complète et intuitive, où l’on retrouve les salles et horaires du prochain cours, des notes directement affichées, les dernières absences ... Nous cherchons à ce que les utilisateurs (étudiants, professeurs) se sentent bien organisés, en prenant en compte les retours d’expérience de différents élèves sur la conception, pour créer de nouvelles fonctionnalités comme des pop-ups de rappels pour déclarer sa présence, par exemple. 
 
 
-# Repartion du Gitlab
+# Repartition du Gitlab
 
 La racine de notre gitlab est composé de deux dossier essentielles au projet:
 
