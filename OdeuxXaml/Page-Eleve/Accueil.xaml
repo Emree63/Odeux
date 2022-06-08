@@ -57,7 +57,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="2.5*"/>
                 <!-- Boutons home et déconnexion -->
-                <RowDefinition Height="7*"/>
+                <RowDefinition Height="9*"/>
                 <!-- Logo et boutons master du haut -->
                 <RowDefinition/>
                 <!-- Boutons master de gauche et fill detail -->
@@ -153,9 +153,12 @@
 
             </Grid>
 
+            
+
+
             <ContentControl x:Name="contentControl" Grid.Column="1" Grid.Row="1">
                 <!-- User control Fill Detail -->
-                <Viewbox>
+                <Viewbox Grid.Column="1" Grid.Row="1">
                     <UserControl:Accueil_fill_detail HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                 </Viewbox>
             </ContentControl>

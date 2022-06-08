@@ -18,6 +18,10 @@
         <Style TargetType="TextBlock" x:Key="checkButtonTextBlock">
             <Setter Property="FontFamily" Value="Batang"/>
         </Style>
+
+        <Style TargetType="Border" x:Key="borderEDT">
+            
+        </Style>
     </Control.Resources>
 
     <Grid>

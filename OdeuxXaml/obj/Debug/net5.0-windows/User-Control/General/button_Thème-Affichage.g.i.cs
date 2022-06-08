@@ -77,8 +77,7 @@ namespace OdeuxXaml.User_Control.General {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;V1.0.0.0;component/user-control/general/button_th%c3%a8me-affichage.xa" +
-                    "ml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/OdeuxXaml;component/user-control/general/button_th%c3%a8me-affichage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\User-Control\General\button_Thème-Affichage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
