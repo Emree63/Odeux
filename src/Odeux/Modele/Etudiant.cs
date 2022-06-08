@@ -63,7 +63,7 @@ namespace Modele
             }
 
             if (Coef != 0)
-                return total / 2;
+                return Math.Round(total / Coef, 2);
             else
                 return -1;
 

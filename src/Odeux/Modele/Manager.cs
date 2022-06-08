@@ -60,7 +60,7 @@ namespace Modele
             AjouterPersonne(per);
             LaPromo = données.Iut;
             GroupeSélectionné = LaPromo.Groupes[0];
-            MoyGeneral = LaPromo.MoyGeneral()*2;
+            MoyGeneral = LaPromo.MoyGeneral();
         }
 
         public void SauvegardeDonnées()

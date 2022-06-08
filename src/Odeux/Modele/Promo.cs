@@ -48,7 +48,7 @@ namespace Modele
                 }
             }
             if (nb != 0)
-                return total / nb;
+                return Math.Round(total / nb, 2); //Return two decimal
             else
                 return -1;
         }
@@ -97,7 +97,7 @@ namespace Modele
                 }
             }
             if (nb != 0)
-                return total / nb;
+                return Math.Round(total / nb, 2);
             else
                 return -1;
         }

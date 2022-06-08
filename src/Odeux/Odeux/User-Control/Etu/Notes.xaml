@@ -15,9 +15,9 @@
                             <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}" />
                         </Grid>
                     </Button>
-                    <Label   HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30"/>
+
                     <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30" >
-                        <Run Text="Semestre "/>
+                        <Run Text=" Semestre "/>
                         <Run Text="{Binding EtuSemestreSélectionné.NumSemestre,Mode=OneWay}"/>
                     </TextBlock>
                     <Button Background="Transparent" Click="SemestreSuivant">

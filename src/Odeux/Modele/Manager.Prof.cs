@@ -13,7 +13,20 @@ namespace Modele
         /// </summary>
         public Promo LaPromo { get; private set; }
 
-        public Groupe GroupeSélectionné { get; set; }
+
+        private Groupe Groupesélectionné;
+        public Groupe GroupeSélectionné
+        {
+            get => Groupesélectionné;
+            set
+            {
+                if (Groupesélectionné != value)
+                {
+                    Groupesélectionné = value;
+                    OnPropertyChanged("Groupesélectionné");
+                }
+            }
+        }
 
     }
 }

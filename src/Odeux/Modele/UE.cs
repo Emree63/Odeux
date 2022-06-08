@@ -101,7 +101,7 @@ namespace Modele
                 Coef += sae.Coef;
             }
             if (Coef != 0)
-                return total / Coef;
+                return Math.Round(total / Coef,2);
             else
                 return -1;
         }
