@@ -43,11 +43,6 @@ namespace Modele
             }
         }
 
-        /// <summary>
-        /// Listes des nouvelles note de l'élève
-        /// </summary>
-        public Dictionary<Matiere, Note> NouvelNote { get; set; }
-
         private Cour courSélectionné;
         public Cour CourSélectionné
         {

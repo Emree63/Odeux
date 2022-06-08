@@ -17,6 +17,12 @@ namespace Modele
         public List<Groupe> Groupes { get; set; }
 
         /// <summary>
+        /// Listes des nouvelles note de l'élève, le string va contenir le nom de l'élève
+        /// </summary>
+        [DataMember]
+        public Dictionary<Note, string> NouvelNote { get; set; } = new Dictionary<Note, string>();
+
+        /// <summary>
         /// Constructeur de la classe
         /// </summary>
         /// <param name="grp">Groupes concernant la promo</param>
@@ -66,8 +72,11 @@ namespace Modele
                         {
                             if (ue.Num == UE)
                             {
-                                total += ue.MoyUE();
-                                nb++;
+                                if (ue.MoyUE() != -1)
+                                {
+                                    total += ue.MoyUE();
+                                    nb++;
+                                }
                             }
                         }
                     }
@@ -77,14 +86,20 @@ namespace Modele
                         {
                             if (ue.Num == UE)
                             {
-                                total += ue.MoyUE();
-                                nb++;
+                                if (ue.MoyUE() != -1)
+                                {
+                                    total += ue.MoyUE();
+                                    nb++;
+                                }
                             }
                         }
                     }
                 }
             }
-            return total / nb;
+            if (nb != 0)
+                return total / nb;
+            else
+                return -1;
         }
 
         /// <summary>
@@ -150,7 +165,10 @@ namespace Modele
                     }
                 }
             }
-            return total / nb;
+            if (nb != 0)
+                return total / nb;
+            else
+                return -1;
         }
 
         /// <summary>

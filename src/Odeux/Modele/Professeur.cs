@@ -23,7 +23,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Donner une note à l'élève que l'on donne en paramètre.
+        /// Donner une note à l'élève.
         /// </summary>
         /// <param name="Semestre">Semestre de l'étudiant</param>
         /// <param name="UE">UE de l'étudiant</param>
@@ -51,7 +51,7 @@ namespace Modele
                             {
                                 foreach (Matiere mat2 in res.Matieres)
                                 {
-                                    if (mat2 == mat)
+                                    if (mat2.Nom == mat.Nom)
                                     {
                                         Note n = new Note(nom, note);
                                         mat2.AddNote(n);
@@ -74,10 +74,68 @@ namespace Modele
                             {
                                 foreach (Matiere mat2 in res.Matieres)
                                 {
-                                    if (mat2 == mat)
+                                    if (mat2.Nom == mat.Nom)
                                     {
                                         Note n = new Note(nom, note);
                                         mat2.AddNote(n);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// Donner une note à l'élève, la note sera pris en paramètre.
+        /// </summary>
+        /// <param name="Semestre">Semestre de l'étudiant</param>
+        /// <param name="UE">UE de l'étudiant</param>
+        /// <param name="ressource">Ressource concernant l'étudiant</param>
+        /// <param name="mat">Matière concernant l'étudiant</param>
+        /// <param name="etu">etudiant concerner</param>
+        /// <param name="note">note qui va être attribuer</param>
+        public void EntrerNote(int Semestre, string UE, string ressource, Matiere mat, Etudiant etu, Note note)
+        {
+            if (etu.Semestre1.NumSemestre == Semestre)
+            {
+                foreach (UE ue in etu.Semestre1.LesUE)
+                {
+                    if (ue.Num == UE)
+                    {
+                        foreach (Ressource res in ue.Ressources)
+                        {
+                            if (res.Num == ressource)
+                            {
+                                foreach (Matiere mat2 in res.Matieres)
+                                {
+                                    if (mat2.Nom == mat.Nom)
+                                    {
+                                        mat2.AddNote(note);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if (etu.Semestre2.NumSemestre == Semestre)
+            {
+                foreach (UE ue in etu.Semestre2.LesUE)
+                {
+                    if (ue.Num == UE)
+                    {
+                        foreach (Ressource res in ue.Ressources)
+                        {
+                            if (res.Num == ressource)
+                            {
+                                foreach (Matiere mat2 in res.Matieres)
+                                {
+                                    if (mat2.Nom == mat.Nom)
+                                    {
+                                        mat2.AddNote(note);
                                     }
                                 }
                             }

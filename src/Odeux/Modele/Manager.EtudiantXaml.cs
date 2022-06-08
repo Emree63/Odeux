@@ -80,5 +80,29 @@ namespace Modele
             }
         }
         private double EtumoyUE;
+
+        /// <summary>
+        /// Variable qui va contenir la moyenne General de la promo pour le XAML
+        /// </summary>
+        public double MoyGeneral { get; private set; }
+
+        /// <summary>
+        /// Conternier la moyenne de l'UE de l'étudiant
+        /// </summary>
+        public double MoyUE
+        {
+            get => moyUE;
+            set
+            {
+                if (moyUE != value)
+                {
+                    moyUE = value;
+                    OnPropertyChanged("MoyUE");
+                }
+            }
+        }
+        private double moyUE;
+
+
     }
 }

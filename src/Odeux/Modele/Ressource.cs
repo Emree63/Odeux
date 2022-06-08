@@ -35,6 +35,11 @@ namespace Modele
         [DataMember]
         public List<Matiere> Matieres { get; set; }
 
+        /// <summary>
+        /// Cette variable n'est là que pour stocker le résultat de l'opération MoyRessource
+        /// </summary>
+        [DataMember]
+        public double MoyRes { get; set; }
 
         /// <summary>
         /// Constructeur
@@ -57,6 +62,7 @@ namespace Modele
             Description = description;
             Coef = coef;
             Matieres = mat;
+            MoyRes = MoyRessource();
         }
 
         /// <summary>
@@ -74,7 +80,8 @@ namespace Modele
         /// <returns>float : moyenne</returns>
         public double MoyRessource()
         {
-            if (Matieres.Count == 0) return -1; //Si il n'y a pas de matières dans la ressource on retourne -1
+            MoyRes = -1;
+            if (Matieres.Count() == 0) return MoyRes; //Si il n'y a pas de matières dans la ressource on retourne -1
 
             double total = 0;
             int c = 0;
@@ -87,7 +94,10 @@ namespace Modele
                 }
             }
             if (c != 0) //Si on a pas obtenu de moyenne dans la matière on return -1 
-                return total / c;
+            {
+                MoyRes = total / c;
+                return MoyRes;
+            }
             else
                 return -1;
 

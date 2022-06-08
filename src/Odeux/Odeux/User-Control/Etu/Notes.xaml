@@ -48,7 +48,7 @@
                             <Rectangle RadiusX="15" RadiusY="15" Width="883" Height="62"  Fill="{DynamicResource BackgroundColor2}"/>
                             <TextBlock FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"  >
                                 <Run Text="{Binding EtuUESélectionné.Num,Mode=OneWay}"/>
-                                -<Run Text="{Binding EtuUESélectionné.Description,Mode=OneWay}"/>
+                                - <Run Text="{Binding EtuUESélectionné.Description,Mode=OneWay}"/>
                             </TextBlock>
                         </Grid>
                         <Button Background="Transparent" Margin="20,0,0,0" Click="UeSuivant">
@@ -76,21 +76,21 @@
                             <WrapPanel>
                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="500"  >
                                     <StackPanel>
-                                        <TextBlock TextAlignment="Center"  TextWrapping="Wrap" FontSize="25" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                        <TextBlock TextAlignment="Center"  TextWrapping="Wrap" FontSize="30" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
                                             <Run Text="&#xA;"/>
                                             <Run Text="{Binding Num,Mode=OneWay}"/>
                                         </TextBlock>
-                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="19" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="22" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
                                             <Run Text="{Binding Description,Mode=OneWay}"/>
                                             <Run Text="&#xA;"/>
                                         </TextBlock>
-                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="19" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="22" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
                                             Coeff <Run Text="{Binding Coef,Mode=OneWay}"/>
                                         </TextBlock>
                                        
-                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="20" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center">
-                                        Moyenne :<Run Text="{Binding EtuMoyRes,Mode=OneWay}"/><Run Text="&#xA;"/>
-                                        Moyenne Classe : <Run Text="{Binding MoyRes,Mode=OneWay}"/>
+                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="27" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <Run Text="&#xA;"/>
+                                            Moyenne :<Run Text="{Binding MoyRes,Mode=OneWay}" Foreground="Red"/>
                                             <Run Text="&#xA;"/>
                                         </TextBlock>
 

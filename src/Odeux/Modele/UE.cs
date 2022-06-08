@@ -83,7 +83,7 @@ namespace Modele
         /// <returns>double : Moyenne Total de l'UE</returns>
         public double MoyUE()
         {
-            if (Ressources.Count == 0) return -1;
+            if (Ressources.Count() == 0) return -1;
 
             double total = 0;
             int Coef = 0;

@@ -22,6 +22,11 @@ namespace Modele
         [DataMember]
         public List<Note> notes { get; set; }
 
+        /// <summary>
+        /// Cette variable n'est la que pour reprendre le résultat de la fonction MoyMatière() pour le binding
+        /// </summary>
+        [DataMember]
+        public double MoyMat { get; set; }
 
         /// <summary>
         /// Constructeur de la classe de Matière.
@@ -33,6 +38,7 @@ namespace Modele
             if (string.IsNullOrWhiteSpace(nom)) throw new ArgumentException("Le nom doit être renseigner");
             else Nom = nom;
             notes = Notes;
+            MoyMat = MoyMatière();
         }
 
         /// <summary>
@@ -58,8 +64,9 @@ namespace Modele
         /// <returns>Float : Moyenne</returns>
         public double MoyMatière()
         {
-            if (notes.Count == 0)
+            if (notes.Count() == 0)
             {
+                MoyMat = -1;
                 return -1;
             }
             double total = 0;
@@ -67,7 +74,8 @@ namespace Modele
             {
                 total += note.note;
             }
-            return total / notes.Count();
+            MoyMat = total / notes.Count();
+            return MoyMat;
         }
 
         /// <summary>
