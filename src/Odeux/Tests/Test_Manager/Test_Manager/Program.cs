@@ -17,13 +17,13 @@ namespace Test_Manager
             Professeur prof = PremierProfTest();
             Professeur prof2 = DeuxièmeProf();
 
-            List<Personne> pers = new List<Personne>();
+            List<Personne> pers = new ();
 
             pers.AddRange(etu);
             pers.Add(prof);
             pers.Add(prof2);
 
-            Manager Man = new Manager(new Stub.Stub());
+            Manager Man = new (new Stub.Stub());
             Man.AjouterPersonne(pers);
             Man.NouvelPromo(Iut);
             Man.AjouterDesCours(cours);

@@ -11,7 +11,19 @@ namespace Modele
         /// <summary>
         /// Etudiant actuelle sur lequelle on va récuperer ses informations
         /// </summary>
-        public Etudiant EtuActuel { get; set; }
+        public Etudiant EtuActuel
+        {
+            get => Etuactuel;
+            set
+            {
+                if (Etuactuel != value)
+                {
+                    Etuactuel = value;
+                    OnPropertyChanged("Etuactuel");
+                }
+            }
+        }
+        private Etudiant Etuactuel;
 
         /// <summary>
         /// Semestre selectionner de l'etudiant actuel

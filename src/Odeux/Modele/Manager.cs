@@ -20,9 +20,9 @@ namespace Modele
         public Manager(IPersistanceManager persistance)
         {
             Persistance = persistance;
-            Personnes = new List<Personne>();
-            LesCours = new List<Cour>();
-            LaPromo = new Promo(new List<Groupe>());
+            Personnes = new ();
+            LesCours = new ();
+            LaPromo = new (new List<Groupe>());
         }
 
         /// <summary>

@@ -13,7 +13,7 @@ namespace Test_UE
             Console.WriteLine("Test de la classe UE :");
 
             // Creation des Liste de note
-            List<Note> notes = new List<Note>();
+            List<Note> notes = new ();
             Note n1 = new Note("Tp noté", 10);
             notes.Add(n1);
 
@@ -21,7 +21,7 @@ namespace Test_UE
             notes.Add(n2);
 
 
-            List<Note> notes2 = new List<Note>();
+            List<Note> notes2 = new ();
             Note n3 = new Note("Tp noté", 13);
             notes2.Add(n3);
 
@@ -32,8 +32,8 @@ namespace Test_UE
 
             //Creation des Matières
 
-            List<Matiere> matieres = new List<Matiere>();
-            List<Matiere> matieres2 = new List<Matiere>();
+            List<Matiere> matieres = new ();
+            List<Matiere> matieres2 = new ();
 
             Matiere mat1 = new Matiere("Structure de données", notes);
             Matiere mat2 = new Matiere("Algorithme", notes2);
@@ -44,20 +44,20 @@ namespace Test_UE
 
             //Creation des Ressource
 
-            Ressource res = new Ressource("R1.01", "Initiation au développement", 42, matieres);
-            Ressource res2 = new Ressource("R1.02", 12, matieres2);
+            Ressource res = new ("R1.01", "Initiation au développement", 42, matieres);
+            Ressource res2 = new ("R1.02", 12, matieres2);
 
             //Creation d'une UE
 
-            UE ue = new UE("UE 1", "Développer des applications informatiques simples");
-            UE ue2 = new UE("UE 1", "Développer des applications informatiques simples");
+            UE ue = new ("UE 1", "Développer des applications informatiques simples");
+            UE ue2 = new ("UE 1", "Développer des applications informatiques simples");
 
             ue.AddRessource(res);
             ue.AddRessource(res2);
 
             //Creation SAE
 
-            SAE sae = new SAE("S1.01 : Implémentation d’un besoin client", n5, 42);
+            SAE sae = new ("S1.01 : Implémentation d’un besoin client", n5, 42);
 
             ue.AddSAE(sae);
             Write(ue);

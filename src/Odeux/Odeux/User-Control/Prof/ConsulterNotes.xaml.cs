@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modele;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -127,6 +128,22 @@ namespace Odeux.User_Control.Prof
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = (ComboBox)sender;
+            var etu = (Etudiant)item.SelectedItem;
+            if (etu != null)
+            {
+                ShowDetail(etu);
+                item.SelectedItem = null;
+            }
+        }
+
+        private void ShowDetail(Etudiant etu)
+        {
+            mng.EtuActuel = etu;
         }
 
         private void GroupeSuivant(object sender, RoutedEventArgs e)

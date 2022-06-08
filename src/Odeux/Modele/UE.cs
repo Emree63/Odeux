@@ -46,7 +46,7 @@ namespace Modele
             this.num = num;
             Description = Des;
             sae = null;
-            Ressources = new List<Ressource>();
+            Ressources = new();
         }
 
         /// <summary>

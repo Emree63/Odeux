@@ -4,8 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control.Etu"
+             xmlns:conv="clr-namespace:Odeux.converter"
              mc:Ignorable="d" 
  d:DesignHeight="750" d:DesignWidth="1500">
+    <UserControl.Resources>
+        <conv:DoubleToString x:Key="DoubleToString"/>
+        <conv:ColorNote x:Key="ColorNote"/>
+    </UserControl.Resources>
     <Viewbox>
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750" >
             <Grid>
@@ -29,11 +34,11 @@
 
                         <TextBlock Width="300" Height="30" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="150,0,0,0" FontSize="20">
                             <Run Text="Moyenne Générale :" />
-                            <Run Text="{Binding EtuMoySemestre,Mode=OneWay}" Foreground="red"/>
+                            <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="red"/>
                         </TextBlock>
                         <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="280" Height="30" Background="{DynamicResource BackgroundColor2}" Margin="110,0,0,0" FontSize="20">
                             <Run Text="Moyenne Classe :" />
-                            <Run Text="{Binding MoyGeneral,Mode=OneWay}" Foreground="red"/>
+                            <Run Text="{Binding MoyGeneral,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="red"/>
                         </TextBlock>
                     </WrapPanel>
                 </WrapPanel>
@@ -60,11 +65,11 @@
                     <WrapPanel Margin="0,10,0,0">
                         <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="350" Height="40" Background="{DynamicResource BackgroundColor2}" Margin="150,0,0,0" FontSize="25">
                             <Run Text="Moyenne UE:" FontWeight="Bold" />
-                            <Run  Text="{Binding EtuMoyUE, Mode=OneWay}" FontWeight="Bold" Foreground="Red"/>
+                            <Run  Text="{Binding EtuMoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="{Binding Path=EtuMoyUE, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
                         </TextBlock>
                         <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="350" Height="40" Background="{DynamicResource BackgroundColor2}" Margin="110,0,0,0" FontSize="25">
                             <Run Text="Moyenne Classe UE:" FontWeight="Bold" />
-                            <Run  Text="{Binding MoyUE, Mode=OneWay}" FontWeight="Bold" Foreground="Red"/>
+                            <Run  Text="{Binding MoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="Red"/>
                         </TextBlock>
                     </WrapPanel>
                 </StackPanel>
@@ -90,7 +95,7 @@
                                        
                                         <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="27" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <Run Text="&#xA;"/>
-                                            Moyenne :<Run Text="{Binding MoyRes,Mode=OneWay}" Foreground="Red"/>
+                                            Moyenne :<Run Text="{Binding MoyRes,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="{Binding Path=MoyRes, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
                                             <Run Text="&#xA;"/>
                                         </TextBlock>
 
@@ -107,7 +112,7 @@
                                                         <TextBlock Text="{Binding Nom}" Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                                                         <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="250" Height="30" Background="{DynamicResource BackgroundColor2}" Margin="10,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
                                                             <Run Text="Moyenne:" FontWeight="Bold" />
-                                                            <Run  Text="{Binding MoyMat, Mode=OneWay}" FontWeight="Bold" Foreground="Red"/>
+                                                            <Run  Text="{Binding MoyMat, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="Red"/>
                                                         </TextBlock>
                                                         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="5,70,5,5">
                                                             <Grid>
@@ -125,7 +130,7 @@
                                                                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="2" Width="650" Height="30">
                                                                                     <TextBlock Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
                                                                                         <Run Text="{Binding Nom, Mode=OneWay}"/>
-                                                                                        <Run Text="{Binding note, Mode=OneWay}" Foreground="Red"/>
+                                                                                        <Run Text="{Binding note, Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="{Binding Path=note, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
                                                                                     </TextBlock>
                                                                                 </Border>
                                                                             </WrapPanel>

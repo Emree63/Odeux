@@ -138,8 +138,8 @@ namespace Stub
                 new Matiere("Structure de données ", notes2),
             };
 
-            Matiere mat1 = new Matiere(new List<Note>());
-            List<Matiere> matieres1 = new List<Matiere>()
+            Matiere mat1 = new (new List<Note>());
+            List<Matiere> matieres1 = new ()
             {
                 mat1,
             };
