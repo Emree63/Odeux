@@ -45,8 +45,8 @@
                             <TextBlock Text=">" FontSize="25" Foreground="{DynamicResource TextColor}"/>
                         </Grid>
                     </Button>
-      
-                    <ComboBox Margin="300,10,0,0" Height="35" Width="300" ItemsSource="{Binding GroupeSélectionné.etudiants}" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
+
+                    <ComboBox Margin="300,10,0,0" Height="35" Width="300" ItemsSource="{Binding GroupeSélectionné.etudiants}" SelectionChanged="ComboBox_SelectionChanged" SelectedItem="{Binding EtuActuel}" SelectedIndex="0">
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel>

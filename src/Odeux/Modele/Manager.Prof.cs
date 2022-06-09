@@ -31,5 +31,10 @@ namespace Modele
             }
         }
 
+        /// <summary>
+        /// Prof actuellement sur l'application
+        /// </summary>
+        public Professeur profActuel { get; set; }
+
     }
 }

@@ -115,6 +115,38 @@ namespace Modele
         }
         private double moyUE;
 
+        /// <summary>
+        /// Va prendre la matière choisi par le professeur
+        /// </summary>
+        public Matiere EtuMat
+        {
+            get => Etumat;
+            set
+            {
+                if (Etumat != value)
+                {
+                    Etumat = value;
+                    OnPropertyChanged("EtuMat");
+                }
+            }
+        }
+        private Matiere Etumat;
 
+        /// <summary>
+        /// Va prendre la matière choisi par le professeur
+        /// </summary>
+        public Ressource EtuRes
+        {
+            get => Etures;
+            set
+            {
+                if (Etures != value)
+                {
+                    Etures = value;
+                    OnPropertyChanged("EtuRes");
+                }
+            }
+        }
+        private Ressource Etures;
     }
 }

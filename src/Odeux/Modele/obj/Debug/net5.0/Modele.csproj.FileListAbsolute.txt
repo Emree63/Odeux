@@ -33,3 +33,4 @@ C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.cspr
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.dll
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\ref\Modele.dll
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.pdb
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.csproj.AssemblyReference.cache

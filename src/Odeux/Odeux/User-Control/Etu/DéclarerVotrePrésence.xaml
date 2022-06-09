@@ -74,7 +74,6 @@
             </Border>
         </Viewbox>
         <Button Click="Declarer" Style="{StaticResource masterButton}" HorizontalAlignment="Right" Margin="-320,0">
-            <!-- Bouton Dernières infos -->
             <Grid>
                 <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">

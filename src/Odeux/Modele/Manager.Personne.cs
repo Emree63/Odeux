@@ -13,7 +13,7 @@ namespace Modele
         /// <summary>
         /// Personne (Prof ou étudiant) actuellement sur l'application.
         /// </summary>
-        Personne personneActuel { get; set; }
+        public Personne personneActuel { get; set; }
 
         /// <summary>
         /// Collection de personne
@@ -48,7 +48,10 @@ namespace Modele
             {
                 personneActuel = Per;
                 if (personneActuel is Professeur)
+                {
+                    profActuel = (Professeur)Per;
                     return 1;
+                }
                 if (personneActuel is Etudiant)
                 {
                     EtuActuel = (Etudiant)Per;
