@@ -123,18 +123,18 @@
                                             <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
                                                         <Run Text="{Binding matière}"/>
                                                         <Run Text="&#xA;Groupe : "/>
-                                                        <Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
-                                                        <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
-                                                        <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
-                                                        <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[0].Num,Mode=OneWay, StringFormat=00}"/> 
+                                                        <Run Text="{Binding Groupes[1].Num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[2].Num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[3].Num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[4].Num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[5].Num, Mode=OneWay, StringFormat=00}"/>
+                                                        <Run Text="{Binding Groupes[6].Num, Mode=OneWay, StringFormat=00}"/> 
+                                                        <Run Text="{Binding Groupes[7].Num, Mode=OneWay, StringFormat=00}"/>
                                                         <Run Text="&#xA;Salle : "/>
                                                         <Run Text="{Binding Salle}"/>
                                                         <Run Text="&#xA;Intervenant : "/>
-                                                        <Run Text="{Binding Enseignant.nom}"/>
+                                                        <Run Text="{Binding Enseignant.Nom}"/>
                                             </TextBlock>
                                         </StackPanel>
                                     </Border>

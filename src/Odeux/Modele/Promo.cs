@@ -30,6 +30,24 @@ namespace Modele
 
 
         /// <summary>
+        /// Va retourner dans le dictionnaire les notes que l'élève à eu
+        /// </summary>
+        /// <param name="etu">Etudiant concerné</param>
+        /// <returns>Liste des notes</returns>
+        public List<Note> NewNoteEtu(Etudiant etu)
+        {
+            List<Note> note = new();
+            foreach (KeyValuePair<Note, string> kvp in NouvelNote)
+            {
+                if(kvp.Value==etu.Nom)
+                {
+                    note.Add(kvp.Key);
+                }
+            }
+            return note;
+        }
+
+        /// <summary>
         /// Moyenne General de tous les élèves
         /// </summary>
         /// <returns>double : Moyenne Géneral de tous les élèves de la Promo</returns>

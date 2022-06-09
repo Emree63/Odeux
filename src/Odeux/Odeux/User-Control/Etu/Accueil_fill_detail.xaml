@@ -123,12 +123,10 @@
                                 <DataTemplate>
                                     <WrapPanel>
                                         <StackPanel>
-                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="20" HorizontalAlignment="Center">
-							                            <Run Text="{Binding Matiere.Nom}"/>
-                                                        :
-                                                        <Run Text="{Binding Note.Nom}"/>                    
-									                    - 
-                                                        <Run Text="{Binding Note.note}"/>
+                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="50" HorizontalAlignment="Left">
+							                    <Run Text="{Binding Nom}"/>
+                                                :               
+                                                <Run Text="{Binding note}" Foreground="Red"/>
                                             </TextBlock>
                                         </StackPanel>
                                     </WrapPanel>

@@ -185,8 +185,10 @@ namespace Odeux.User_Control.Prof
                 {
                     if (note >= 0 && note <= 20)
                     {
+                        Note n= new (nom, note);
                         mProgressBar.Foreground = new SolidColorBrush(Color.FromArgb(255, 0, 255, 0));
-                        mng.profActuel.EntrerNote(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num, mng.EtuRes.Num, mng.EtuMat, mng.EtuActuel, new Note(nom, note));
+                        mng.profActuel.EntrerNote(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num, mng.EtuRes.Num, mng.EtuMat, mng.EtuActuel, n);
+                        mng.LaPromo.NouvelNote.Add(n, mng.EtuActuel.Nom);
                     }
                     else
                         mProgressBar.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));

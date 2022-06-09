@@ -9,6 +9,11 @@ namespace Modele
     public partial class Manager
     {
         /// <summary>
+        /// Les nouvelles notes de l'élève
+        /// </summary>
+        public List<Note> NouvelNote { get; set; }
+
+        /// <summary>
         /// Etudiant actuelle sur laquelle on va récupérer ses informations
         /// </summary>
         public Etudiant EtuActuel

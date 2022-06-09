@@ -25,6 +25,7 @@ namespace Odeux.User_Control.Etu
         {
             InitializeComponent();
 
+            mng.NouvelNote = mng.LaPromo.NewNoteEtu(mng.EtuActuel);
             mng.LesCoursDuJour = mng.RechCourEtu(DateTime.Now);
             DataContext = mng;
             mng.LesAnciensCour = mng.CoursDejaPasser();
