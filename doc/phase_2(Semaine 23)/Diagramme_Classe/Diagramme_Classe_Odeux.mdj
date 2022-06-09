@@ -2780,13 +2780,30 @@
 											"height": 13,
 											"text": "+MoyRessource(sem: int, UE: string, Ressource: string): double",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAGBSWi4hZ0C4Tk=",
+											"_parent": {
+												"$ref": "AAAAAAGAidOzsL0/R/Q="
+											},
+											"model": {
+												"$ref": "AAAAAAGBSWi4eJzzCSo="
+											},
+											"font": "Arial;13;0",
+											"left": 789,
+											"top": 1041,
+											"width": 423.744140625,
+											"height": 13,
+											"text": "+NewNoteEtu(etu: Etudiant): Note[*]",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 784,
 									"top": 976,
 									"width": 433.744140625,
-									"height": 68
+									"height": 83
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -2826,7 +2843,7 @@
 							"left": 784,
 							"top": 928,
 							"width": 433.744140625,
-							"height": 116,
+							"height": 131,
 							"nameCompartment": {
 								"$ref": "AAAAAAGAidOzr705uGg="
 							},
@@ -7164,7 +7181,7 @@
 								"$ref": "AAAAAAGA5XmUCEapXd4="
 							},
 							"lineStyle": 1,
-							"points": "997:1151;999:1044"
+							"points": "997:1151;999:1059"
 						},
 						{
 							"_type": "UMLNoteView",
@@ -7486,8 +7503,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 582,
-									"top": 995,
+									"left": 583,
+									"top": 999,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -7507,8 +7524,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 581,
-									"top": 980,
+									"left": 582,
+									"top": 984,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -7528,8 +7545,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 585,
-									"top": 1024,
+									"left": 584,
+									"top": 1028,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -7550,7 +7567,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 409,
-									"top": 1008,
+									"top": 1010,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -7571,7 +7588,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 411,
-									"top": 994,
+									"top": 996,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -7592,7 +7609,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 407,
-									"top": 1035,
+									"top": 1038,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -7612,8 +7629,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 755,
-									"top": 981,
+									"left": 756,
+									"top": 987,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -7633,7 +7650,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 752,
-									"top": 968,
+									"top": 974,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -7653,7 +7670,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 762,
-									"top": 1009,
+									"top": 1014,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7698,7 +7715,7 @@
 								"$ref": "AAAAAAGA5Wufju2KaOw="
 							},
 							"lineStyle": 1,
-							"points": "385:1031;783:1001",
+							"points": "385:1033;783:1007",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGBSF1TKweL9Zk="
@@ -9645,6 +9662,40 @@
 									},
 									"name": "Ressource",
 									"type": "string"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAGBSWi4eJzzCSo=",
+							"_parent": {
+								"$ref": "AAAAAAGAidOzr702Fcw="
+							},
+							"name": "NewNoteEtu",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBSWj1MKAqtQw=",
+									"_parent": {
+										"$ref": "AAAAAAGBSWi4eJzzCSo="
+									},
+									"name": "etu",
+									"type": {
+										"$ref": "AAAAAAGAhMm5LY6A6zQ="
+									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGBSWkucKQscUs=",
+									"_parent": {
+										"$ref": "AAAAAAGBSWi4eJzzCSo="
+									},
+									"name": "Parameter1",
+									"type": {
+										"$ref": "AAAAAAGAhO8SD7AH+GE="
+									},
+									"multiplicity": "*",
+									"direction": "return"
 								}
 							]
 						}
