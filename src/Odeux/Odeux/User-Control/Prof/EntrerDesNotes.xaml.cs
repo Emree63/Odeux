@@ -59,6 +59,8 @@ namespace Odeux.User_Control.Prof
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
+            mng.EtuRes = mng.EtuUESélectionné.Ressources[0];
+            mng.EtuMat = mng.EtuRes.Matieres[0];
         }
 
         private void SemestreSuivant(object sender, RoutedEventArgs e)
@@ -76,6 +78,8 @@ namespace Odeux.User_Control.Prof
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
+            mng.EtuRes = mng.EtuUESélectionné.Ressources[0];
+            mng.EtuMat = mng.EtuRes.Matieres[0];
         }
 
         private void UeSuivant(object sender, RoutedEventArgs e)
@@ -94,6 +98,8 @@ namespace Odeux.User_Control.Prof
                 mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
                 mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
             }
+            mng.EtuRes = mng.EtuUESélectionné.Ressources[0];
+            mng.EtuMat = mng.EtuRes.Matieres[0];
         }
 
         private void UePrecedent(object sender, RoutedEventArgs e)
@@ -112,6 +118,8 @@ namespace Odeux.User_Control.Prof
                 mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
                 mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
             }
+            mng.EtuRes = mng.EtuUESélectionné.Ressources[0];
+            mng.EtuMat = mng.EtuRes.Matieres[0];
         }
 
         private void GroupePrecedent(object sender, RoutedEventArgs e)
@@ -134,20 +142,19 @@ namespace Odeux.User_Control.Prof
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            mng.EtuRes = mng.EtuUESélectionné.Ressources[0];
+            mng.EtuMat = mng.EtuRes.Matieres[0];
         }
 
         private void Refresh(object sender, RoutedEventArgs e)
         {
             mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
-            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[0];
             mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
+            mng.EtuRes = mng.EtuUESélectionné.Ressources[0];
+            mng.EtuMat = mng.EtuRes.Matieres[0];
         }
 
         private void GroupeSuivant(object sender, RoutedEventArgs e)
@@ -170,6 +177,8 @@ namespace Odeux.User_Control.Prof
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
             mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
+            mng.EtuRes = mng.EtuUESélectionné.Ressources[0];
+            mng.EtuMat = mng.EtuRes.Matieres[0];
         }
 
         DispatcherTimer dt = new DispatcherTimer();
@@ -189,6 +198,7 @@ namespace Odeux.User_Control.Prof
                         mProgressBar.Foreground = new SolidColorBrush(Color.FromArgb(255, 0, 255, 0));
                         mng.profActuel.EntrerNote(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num, mng.EtuRes.Num, mng.EtuMat, mng.EtuActuel, n);
                         mng.LaPromo.NouvelNote.Add(n, mng.EtuActuel.Nom);
+                        mng.Sauvegarde();
                     }
                     else
                         mProgressBar.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
@@ -220,6 +230,11 @@ namespace Odeux.User_Control.Prof
         {
             NewNom.Text = "";
             NewNom.Foreground = new SolidColorBrush(Color.FromArgb(255,0,0,0));
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
         void dt_Tick(object sender, EventArgs e)

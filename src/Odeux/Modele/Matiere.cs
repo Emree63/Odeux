@@ -74,7 +74,7 @@ namespace Modele
             {
                 total += note.note;
             }
-            MoyMat = total / notes.Count();
+            MoyMat = Math.Round(total / notes.Count());
             return MoyMat;
         }
 

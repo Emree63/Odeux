@@ -95,7 +95,7 @@ namespace Modele
             }
             if (c != 0) //Si on n'a pas obtenu de moyenne dans la matière on return -1 
             {
-                MoyRes = total / c;
+                MoyRes = Math.Round(total / c,2);
                 return MoyRes;
             }
             else

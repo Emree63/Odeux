@@ -132,13 +132,9 @@ namespace Odeux.User_Control.Prof
             mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Refresh(object sender, RoutedEventArgs e)
         {
+            i = 0;
             mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();

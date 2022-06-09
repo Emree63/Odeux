@@ -92,7 +92,29 @@ namespace Modele
         /// </summary>
         public void SupprimerEtuCour(Cour cour)
         {
-            LesCours.Remove(cour);
+
+            foreach(Cour c in LesCours)
+            {
+                if(c==cour)
+                {
+                    foreach(Groupe g in c.Groupes)
+                    {
+                        List<Etudiant> etu = new List<Etudiant>();
+                        foreach (Etudiant e in g.etudiants)
+                        {
+                            if(e.Nom == EtuActuel.Nom)
+                            {
+
+                            }
+                            else
+                            {
+                                etu.Add(e);
+                            }
+                        }
+                        g.etudiants = etu;
+                    }
+                }
+            }
         }
 
         /// <summary>

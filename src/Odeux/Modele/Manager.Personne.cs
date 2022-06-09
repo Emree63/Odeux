@@ -31,7 +31,6 @@ namespace Modele
             Personnes.AddRange(pers);
         }
 
-
         /// <summary>
         /// Regarde si le mot de passe et le nom existe pour la connexion dans l'application
         /// </summary>
@@ -78,5 +77,24 @@ namespace Modele
             return true;
         }
 
+        public void Sauvegarde()
+        {
+            List<Personne> p = new List<Personne>();
+            foreach(Personne pers in Personnes)
+            {
+                if(pers is Professeur)
+                {
+                    p.Add(pers);
+                }
+            }
+            foreach(Groupe g in LaPromo.Groupes)
+            {
+                foreach(Etudiant e in g.etudiants)
+                {
+                    p.Add(e);
+                }
+            }
+            Personnes = p;
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace Odeux
         public App()
         {
             LeManager.ChargeDonnées();
-            Exit += ApplicationExit;
+            //Exit += ApplicationExit;
         }
 
         private void ApplicationExit(object sender, ExitEventArgs e)
