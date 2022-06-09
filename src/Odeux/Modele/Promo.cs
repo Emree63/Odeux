@@ -48,6 +48,21 @@ namespace Modele
         }
 
         /// <summary>
+        /// Supprime toutes les Notes concernant l'étudiant entréer en paramètres
+        /// </summary>
+        /// <param name="etu">Etudiant concerné</param>
+        public void SuppNoteEtu(Etudiant etu)
+        {
+            foreach (KeyValuePair<Note, string> kvp in NouvelNote)
+            {
+                if (kvp.Value == etu.Nom)
+                {
+                    NouvelNote.Remove(kvp.Key);
+                }
+            }
+        }
+
+        /// <summary>
         /// Moyenne General de tous les élèves
         /// </summary>
         /// <returns>double : Moyenne Géneral de tous les élèves de la Promo</returns>

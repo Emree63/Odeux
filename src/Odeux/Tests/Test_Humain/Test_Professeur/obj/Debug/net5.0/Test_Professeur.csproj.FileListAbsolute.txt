@@ -54,3 +54,4 @@ C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Humain\Test_Professeur\o
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Humain\Test_Professeur\obj\Debug\net5.0\ref\Test_Professeur.dll
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Humain\Test_Professeur\obj\Debug\net5.0\Test_Professeur.pdb
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Humain\Test_Professeur\obj\Debug\net5.0\Test_Professeur.genruntimeconfig.cache
+D:\IUT\sae2.01\src\Odeux\Tests\Test_Humain\Test_Professeur\obj\Debug\net5.0\Test_Professeur.csproj.AssemblyReference.cache
