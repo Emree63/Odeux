@@ -12,7 +12,7 @@ namespace Test_UE
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Test de la classe UE :");
 
-            // Creation des Liste de note
+            // Création des Liste de note
             List<Note> notes = new ();
             Note n1 = new Note("Tp noté", 10);
             notes.Add(n1);
@@ -30,7 +30,7 @@ namespace Test_UE
 
             Note n5 = new Note("Situation 1 (sur 20.0)", 16);
 
-            //Creation des Matières
+            //Création des Matières
 
             List<Matiere> matieres = new ();
             List<Matiere> matieres2 = new ();
@@ -42,12 +42,12 @@ namespace Test_UE
             matieres.Add(mat2);
             matieres2.Add(mat1);
 
-            //Creation des Ressource
+            //Création des Ressource
 
             Ressource res = new ("R1.01", "Initiation au développement", 42, matieres);
             Ressource res2 = new ("R1.02", 12, matieres2);
 
-            //Creation d'une UE
+            //Création d'une UE
 
             UE ue = new ("UE 1", "Développer des applications informatiques simples");
             UE ue2 = new ("UE 1", "Développer des applications informatiques simples");
@@ -55,7 +55,7 @@ namespace Test_UE
             ue.AddRessource(res);
             ue.AddRessource(res2);
 
-            //Creation SAE
+            //Création SAE
 
             SAE sae = new ("S1.01 : Implémentation d’un besoin client", n5, 42);
 

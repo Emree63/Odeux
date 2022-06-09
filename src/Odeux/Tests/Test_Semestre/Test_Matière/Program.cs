@@ -45,13 +45,13 @@ namespace Test_Matière
             else
                 WriteLine("Erreur Aucune note");
 
-            // Aprés avoir rajouter une nouvel note
+            // Après avoir rajouté une nouvel note
             WriteLine("Apres un ajout d'une nouvel note :");
             mat.AddNote(n4);
             WriteLine(mat);
 
             //On teste la fonction Supprimer
-            WriteLine("Apres une Suppresion d'une note :");
+            WriteLine("Apres une Suppression d'une note :");
             mat.SuppNote(n4);
             WriteLine(mat);
         }

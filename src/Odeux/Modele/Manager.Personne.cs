@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Modele
 {
-    //Il va permettre de gerer l'authentification dans l'application!
+    //Il va permettre de gérer l'authentification dans l'application et l'emploi du temps de chacun!
     public partial class Manager
     {
         /// <summary>

@@ -46,7 +46,18 @@
                         </Grid>
                     </Button>
       
-                    <ComboBox Margin="200,10,0,0" Height="35" Width="400" ItemsSource="{Binding GroupeSélectionné.etudiants}" Foreground="#FFA5A5A5" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+                    <ComboBox Margin="300,10,0,0" Height="35" Width="300" ItemsSource="{Binding GroupeSélectionné.etudiants}" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <TextBlock Foreground="Black" FontSize="20">
+                                        <Run Text="{Binding Nom}"/>
+                                        <Run Text="{Binding Prénom}"/>
+                                    </TextBlock>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                     <TextBlock Width="320" Height="30" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="300,10,0,0" FontSize="20">
                             <Run Text="Moyenne Générale :" />

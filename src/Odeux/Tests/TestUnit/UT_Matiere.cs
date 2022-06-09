@@ -61,7 +61,7 @@ namespace TestUnit
             mat.AddNote(new Note("Test3", troisièmeNote));
             Note n = new Note("Test4", quatrièmeNote);
             mat.AddNote(n);
-            mat.SuppNote(n);//On verifie qu'on peut bien supprimer une note
+            mat.SuppNote(n);//On vérifie qu'on peut bien supprimer une note
             string final = mat.MoyMatière().ToString(".##");
             Assert.Equal(final, expectedNote);
         }

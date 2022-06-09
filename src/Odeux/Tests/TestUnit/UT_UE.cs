@@ -71,21 +71,21 @@ namespace TestUnit
             //Deuxième Matière
             Matiere mat2 = new Matiere(notes2);
 
-            //Creation Ressource
+            //Création Ressource
 
             Ressource TestRes = new Ressource("Test", 10, new List<Matiere>());
             TestRes.AddMatiere(mat);
 
-            //Je prend différent coefficient pour les ressources pour verifier qu'elles sont bien prix en compte lors du calcul
+            //Je prends différent coefficient pour les ressources pour vérifier qu'elles sont bien prises en compte lors du calcul
 
             Ressource TestRes2 = new Ressource("Test2", 25, new List<Matiere>());
             TestRes2.AddMatiere(mat2);
 
-            //Creation UE
+            //Création d'une UE que je nomme test
 
             UE ue = new UE("Test");
 
-            //Test des méthodes ajouter ressources et sae
+            //Test des méthodes ajouter ressources et SAE
             ue.AddRessource(TestRes);
             ue.AddRessource(TestRes2);
             ue.AddSAE(sae);

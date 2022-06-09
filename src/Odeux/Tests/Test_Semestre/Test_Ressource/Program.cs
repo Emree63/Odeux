@@ -12,7 +12,7 @@ namespace Test_Ressource
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Test de la classe Ressource :");
 
-            // Creation des Liste de note
+            // Création des Liste de note
             List<Note> notes = new ();
             Note n1 = new ("Tp noté", 10);
             notes.Add(n1);
@@ -28,7 +28,7 @@ namespace Test_Ressource
             Note n4 = new ("DS", 11);
             notes2.Add(n4);
 
-            //Creation des Matières
+            //Création des Matières
 
             List<Matiere> matieres = new ();
             List<Matiere> matieres2 = new ();
@@ -39,7 +39,7 @@ namespace Test_Ressource
             matieres.Add(mat1);
             matieres.Add(mat2);
 
-            //Creation des Ressource
+            //Création des Ressource
 
             Ressource res = new ("R1.01", "Initiation au développement", 42, matieres);
             Ressource res2 = new ("R1.02", 12, matieres2);
@@ -53,7 +53,7 @@ namespace Test_Ressource
             WriteLine("Moyenne de la première Ressource :");
             WriteLine(res.MoyRessource());
 
-            //Test suppresion
+            //Test suppression
             WriteLine("Supprime la matière dans la deuxième Ressource :");
             res2.SuppMatiere(mat1);
             WriteLine(res2);

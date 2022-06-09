@@ -18,7 +18,7 @@ namespace Modele
         private string num;
 
         /// <summary>
-        /// Description des éléments l'UE 
+        /// Description des éléments de l'UE 
         /// </summary>
         [DataMember]
         public string Description { get; set; }
@@ -71,7 +71,7 @@ namespace Modele
         public void AddListesRessources(List<Ressource> res) => Ressources.AddRange(res);
 
         /// <summary>
-        /// Suppresion d'une ressource
+        /// Suppression d'une ressource
         /// </summary>
         /// <param name="res">Resource qu'on veut supprimer</param>
         public void SuppRessource(Ressource res) => Ressources.Remove(res);

@@ -11,7 +11,7 @@ namespace Modele
     public class Promo
     {
         /// <summary>
-        /// Tout les groupes d'éléves constituant la promo
+        /// Tout les groupes d'élèves constituant la promo
         /// </summary>
         [DataMember]
         public List<Groupe> Groupes { get; set; }
@@ -30,9 +30,9 @@ namespace Modele
 
 
         /// <summary>
-        /// Moyenne General de tout les élèves
+        /// Moyenne General de tous les élèves
         /// </summary>
-        /// <returns>double : Moyenne Géneral de tout les élèves de la Promo</returns>
+        /// <returns>double : Moyenne Géneral de tous les élèves de la Promo</returns>
         public double MoyGeneral()
         {
             double total = 0, nb = 0;
@@ -48,13 +48,13 @@ namespace Modele
                 }
             }
             if (nb != 0)
-                return Math.Round(total / nb, 2); //Return two decimal
+                return Math.Round(total / nb, 2); //Return decimal
             else
                 return -1;
         }
 
         /// <summary>
-        /// Moyenne général d'une UE pour tout les élèves de la promo
+        /// Moyenne général d'une UE pour tous les élèves de la promo
         /// </summary>
         /// <param name="sem">Semestre sur laquelle L'UE est concerner</param>
         /// <param name="UE">UE en question</param>
@@ -105,7 +105,7 @@ namespace Modele
         /// <summary>
         /// Renvoie la moyenne générale d'une matière sur l'ensemble des élèves
         /// </summary>
-        /// <param name="sem">semestre concernant l'UE</param>
+        /// <param name="sem">Semestre concernant l'UE</param>
         /// <param name="UE">UE concernant la ressource en question</param>
         /// <param name="res">Ressource où est contenu la matière</param>
         /// <param name="mat">Matière concerner</param>
@@ -174,7 +174,7 @@ namespace Modele
         /// <summary>
         /// Moyenne générale d'une ressource sur l'ensemble des élèves
         /// </summary>
-        /// <param name="sem">semestre concernant l'UE</param>
+        /// <param name="sem">Semestre concernant l'UE</param>
         /// <param name="UE">UE concernant la ressource en question</param>
         /// <param name="res">Ressource sur lequel on veut obtenir la moyenne</param>
         /// <returns>double : Moyenne d'une UE</returns>

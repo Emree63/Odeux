@@ -132,19 +132,15 @@ namespace Odeux.User_Control.Prof
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var item = (ComboBox)sender;
-            var etu = (Etudiant)item.SelectedItem;
-            if (etu != null)
-            {
-                ShowDetail(etu);
-                item.SelectedItem = null;
-            }
+            mng.EtuActuel = (e.AddedItems[0] as Etudiant);
+            mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
+            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
+            DataContext = mng;
         }
 
-        private void ShowDetail(Etudiant etu)
-        {
-            mng.EtuActuel = etu;
-        }
 
         private void GroupeSuivant(object sender, RoutedEventArgs e)
         {

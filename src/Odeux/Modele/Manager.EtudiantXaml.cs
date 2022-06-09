@@ -9,7 +9,7 @@ namespace Modele
     public partial class Manager
     {
         /// <summary>
-        /// Etudiant actuelle sur lequelle on va récuperer ses informations
+        /// Etudiant actuelle sur laquelle on va récupérer ses informations
         /// </summary>
         public Etudiant EtuActuel
         {
@@ -26,7 +26,7 @@ namespace Modele
         private Etudiant Etuactuel;
 
         /// <summary>
-        /// Semestre selectionner de l'etudiant actuel
+        /// Semestre sélectionner de l'étudiant actuel
         /// </summary>
         public Semestre EtuSemestreSélectionné
         {
@@ -43,7 +43,7 @@ namespace Modele
         private Semestre etuSemestreSélectionné;
 
         /// <summary>
-        /// UE selectionner du semestre
+        /// UE sélectionner du semestre
         /// </summary>
         public UE EtuUESélectionné
         {
@@ -77,7 +77,7 @@ namespace Modele
         private double EtumoySemestre;
 
         /// <summary>
-        /// Conternier la moyenne de l'UE de l'étudiant
+        /// Contenir la moyenne de l'UE sélectionner de l'étudiant
         /// </summary>
         public double EtuMoyUE
         {
@@ -99,7 +99,7 @@ namespace Modele
         public double MoyGeneral { get; private set; }
 
         /// <summary>
-        /// Conternier la moyenne de l'UE de l'étudiant
+        /// Va contenir la moyenne de l'UE de la classe (Ensemble des élèves)
         /// </summary>
         public double MoyUE
         {

@@ -14,7 +14,7 @@ namespace Modele
         /// Constructeur de la classe Professeur
         /// </summary>
         /// <param name="nom">Nom du Professeur</param>
-        /// <param name="prénom">Prenom du Professeur</param>
+        /// <param name="prénom">Prénom du Professeur</param>
         /// <param name="naissance">date de Naissance </param>
         /// <param name="password">Mot de passe pour la connection à l'application</param>
         public Professeur(string nom, string prénom, DateTime naissance, string password) : base(nom, prénom, naissance, password)
@@ -23,13 +23,13 @@ namespace Modele
         }
 
         /// <summary>
-        /// Donner une note à l'élève.
+        /// Donner une note à l'élève
         /// </summary>
         /// <param name="Semestre">Semestre de l'étudiant</param>
         /// <param name="UE">UE de l'étudiant</param>
         /// <param name="ressource">Ressource concernant l'étudiant</param>
         /// <param name="mat">Matière concernant l'étudiant</param>
-        /// <param name="etu">etudiant concerner</param>
+        /// <param name="etu">Etudiant concerner</param>
         public void Noter(int Semestre, string UE, string ressource, Matiere mat, Etudiant etu)
         {
             string nom;
@@ -95,7 +95,7 @@ namespace Modele
         /// <param name="UE">UE de l'étudiant</param>
         /// <param name="ressource">Ressource concernant l'étudiant</param>
         /// <param name="mat">Matière concernant l'étudiant</param>
-        /// <param name="etu">etudiant concerner</param>
+        /// <param name="etu">Etudiant concerner</param>
         /// <param name="note">note qui va être attribuer</param>
         public void EntrerNote(int Semestre, string UE, string ressource, Matiere mat, Etudiant etu, Note note)
         {
@@ -146,7 +146,7 @@ namespace Modele
 
         }
 
-        public override string ToString() => $"Je suis professeur et je m 'appelle {Nom} {Prénom} \n";
+        public override string ToString() => $"Je suis professeur et je m'appelle {Nom} {Prénom} \n";
 
     }
 }

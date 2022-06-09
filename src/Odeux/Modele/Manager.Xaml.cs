@@ -10,7 +10,7 @@ namespace Modele
     public partial class Manager : INotifyPropertyChanged
     {
         /// <summary>
-        /// Liste des cours du Jour d'une personne
+        /// Liste des cours du jour d'une personne
         /// </summary>
         private IEnumerable<Cour> LesCoursduJour;
         public IEnumerable<Cour> LesCoursDuJour
@@ -27,7 +27,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Liste des anciens non déclare de l'élève
+        /// Liste des anciens cours non déclare de l'élève
         /// </summary>
         private IEnumerable<Cour> lesAnciensCour;
         public IEnumerable<Cour> LesAnciensCour
@@ -43,6 +43,9 @@ namespace Modele
             }
         }
 
+        /// <summary>
+        /// Cour sélectionner dans une liste de cour
+        /// </summary>
         private Cour courSélectionné;
         public Cour CourSélectionné
         {

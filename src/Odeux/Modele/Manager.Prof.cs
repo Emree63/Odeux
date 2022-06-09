@@ -9,11 +9,14 @@ namespace Modele
     public partial class Manager
     {
         /// <summary>
-        /// La classe concernant l'application.
+        /// La promo concernant l'application
         /// </summary>
         public Promo LaPromo { get; private set; }
 
 
+        /// <summary>
+        /// Groupe d'étudiant dans la promo qui est sélectionner dans l'application
+        /// </summary>
         private Groupe Groupesélectionné;
         public Groupe GroupeSélectionné
         {

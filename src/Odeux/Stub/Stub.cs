@@ -37,7 +37,7 @@ namespace Stub
             profs.Add(prof2);
             profs.Add(prof3);
 
-            //Ajout des notes à l'Etudiant Emre
+            //Ajout des notes à l'étudiant Emre
             prof.EntrerNote(1,"UE 1", "R1.02",new Matiere(new List<Note>()),etu[0],new Note("Ds",15));
             prof.EntrerNote(1, "UE 1", "R1.10", new Matiere(new List<Note>()), etu[0], new Note("Ds", 6));
             prof.EntrerNote(1, "UE 3", "R1.03", new Matiere(new List<Note>()), etu[0], new Note("TP", 10));
@@ -57,7 +57,7 @@ namespace Stub
             prof.EntrerNote(1, "UE 6", "R1.10", new Matiere(new List<Note>()), etu[0], new Note("Controle (sur 20)", 5));
             prof.EntrerNote(1, "UE 6", "R1.12", new Matiere(new List<Note>()), etu[0], new Note("",14));
 
-            //Ajout des notes à l'Etudiant Hugo
+            //Ajout des notes à l'étudiant Hugo
             prof.EntrerNote(1, "UE 1", "R1.02", new Matiere(new List<Note>()), etu[1], new Note("Ds", 5));
             prof.EntrerNote(1, "UE 1", "R1.10", new Matiere(new List<Note>()), etu[1], new Note("Ds", 4));
             prof.EntrerNote(1, "UE 3", "R1.03", new Matiere(new List<Note>()), etu[1], new Note("TP", 18));
