@@ -137,6 +137,19 @@ namespace Odeux.User_Control.Prof
 
         }
 
+        private void Refresh(object sender, RoutedEventArgs e)
+        {
+            mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
+            mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
+            mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
+            mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
 
         private void GroupeSuivant(object sender, RoutedEventArgs e)
         {
@@ -144,6 +157,7 @@ namespace Odeux.User_Control.Prof
             {
                 y++;
                 mng.GroupeSélectionné = mng.LaPromo.Groupes[y];
+
             }
             else
             {

@@ -138,6 +138,11 @@ namespace Odeux.User_Control.Prof
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+        }
+
+        private void Refresh(object sender, RoutedEventArgs e)
+        {
             mng.EtuSemestreSélectionné = mng.EtuActuel.Semestre1;
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();

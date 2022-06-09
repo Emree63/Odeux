@@ -79,20 +79,27 @@
                         </Grid>
                     </Button>
 
-                    <ComboBox Margin="300,10,0,0" Height="35" Width="300" ItemsSource="{Binding GroupeSélectionné.etudiants}" SelectionChanged="ComboBox_SelectionChanged" SelectedItem="{Binding EtuActuel}" SelectedIndex="0">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel>
-                                    <TextBlock Foreground="Black" FontSize="20">
+                        <ComboBox Margin="300,10,0,0" Height="35" Width="300" ItemsSource="{Binding GroupeSélectionné.etudiants}" SelectionChanged="ComboBox_SelectionChanged" SelectedItem="{Binding EtuActuel}" SelectedIndex="0">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <WrapPanel>
+                                        <TextBlock Foreground="Black" FontSize="20">
                                         <Run Text="{Binding Nom}"/>
                                         <Run Text="{Binding Prénom}"/>
-                                    </TextBlock>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
-
-                    <TextBlock Width="320" Height="30" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="300,10,0,0" FontSize="20">
+                                        </TextBlock>
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <Button Click="Refresh" Height="35" Width="85" Margin="10,10,0,0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" Background="Transparent">
+                            <Grid>
+                                <Rectangle Fill="{DynamicResource BackgroundColor2}" Width="80" Height="30" RadiusX="15" RadiusY="15"/>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Foreground="{DynamicResource TextColor}">
+                                                                   Refresh
+                                </TextBlock>
+                            </Grid>
+                        </Button>
+                        <TextBlock Width="320" Height="30" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="300,10,0,0" FontSize="20">
                             <Run Text="Moyenne Générale :" />
                             <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="red"/>
                     </TextBlock>

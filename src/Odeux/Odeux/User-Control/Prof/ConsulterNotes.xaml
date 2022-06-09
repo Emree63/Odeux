@@ -10,6 +10,33 @@
     <UserControl.Resources>
         <conv:DoubleToString x:Key="DoubleToString"/>
         <conv:ColorNote x:Key="ColorNote"/>
+        <Style TargetType="{x:Type Button}" x:Key="masterButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+        <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="RadiusX" Value="15"/>
+            <Setter Property="RadiusY" Value="15"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
     </UserControl.Resources>
     <Viewbox>
         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10"  Height="750" Width="1375">
@@ -58,7 +85,14 @@
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-
+                    <Button Click="Refresh" Style="{StaticResource masterButton}"  Margin="10,10,0,0" Grid.RowSpan="2">
+                        <Grid>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Foreground="{DynamicResource TextColor}">
+                                                                   Refresh
+                            </TextBlock>
+                        </Grid>
+                    </Button>
                     <TextBlock Width="320" Height="30" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="300,10,0,0" FontSize="20">
                             <Run Text="Moyenne Générale :" />
                             <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="red"/>
@@ -101,7 +135,7 @@
                 </StackPanel>
                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="1370" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemContainerStyle="{StaticResource ListBoxanimation}"
-                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding EtuUESélectionné.Ressources}" BorderBrush="{DynamicResource TextColor}">
+                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding EtuUESélectionné.Ressources}" BorderBrush="{DynamicResource TextColor}" SelectionChanged="ListBox_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
