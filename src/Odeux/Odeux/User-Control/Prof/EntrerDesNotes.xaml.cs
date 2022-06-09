@@ -213,11 +213,13 @@ namespace Odeux.User_Control.Prof
         private void NewNote_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             NewNote.Text = "";
+            NewNote.Foreground = new SolidColorBrush(Color.FromArgb(255, 0, 0, 0));
         }
 
         private void NewNom_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             NewNom.Text = "";
+            NewNom.Foreground = new SolidColorBrush(Color.FromArgb(255,0,0,0));
         }
 
         void dt_Tick(object sender, EventArgs e)

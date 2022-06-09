@@ -193,8 +193,8 @@
 
             </Grid>
         </Border>
-            <TextBox x:Name="NewNom" Width="220" Height="30" Margin="0,0,20,0" Text="Nom de la nouvel Note" VerticalAlignment="Center" HorizontalAlignment="Right" GotKeyboardFocus="NewNom_GotKeyboardFocus"/>
-            <TextBox x:Name="NewNote" Width="220" Height="30" Margin="1400,100,20,0" Text="Entrer la note" VerticalAlignment="Center" HorizontalAlignment="Right" GotKeyboardFocus="NewNote_GotKeyboardFocus"/>
+            <TextBox x:Name="NewNom" Width="220" Foreground="#FFA5A5A5" Height="30" Margin="0,0,20,0" Text="Nom de la nouvel Note" VerticalAlignment="Center" HorizontalAlignment="Right" GotKeyboardFocus="NewNom_GotKeyboardFocus"/>
+            <TextBox x:Name="NewNote" Width="220" Foreground="#FFA5A5A5" Height="30" Margin="1400,100,20,0" Text="Entrer la note" VerticalAlignment="Center" HorizontalAlignment="Right" GotKeyboardFocus="NewNote_GotKeyboardFocus"/>
             <Button Click="Valider" Style="{StaticResource masterButton}"  Margin="0,200,30,0" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                 <Grid>
                     <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
