@@ -111,7 +111,7 @@
                 <!-- logo, bouton Home, boutons master gauche-->
                 <ColumnDefinition Width="12*"/>
                 <!-- fill detail, boutons master haut -->
-                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="4*"/>
                 <!-- bouton déconnexion -->
             </Grid.ColumnDefinitions>
 
@@ -217,7 +217,7 @@
 
 
 
-            <ContentControl x:Name="contentControl" Grid.Column="1" Grid.Row="1">
+            <ContentControl Grid.Column="1" x:Name="contentControl" Grid.Row="1">
                 <UserControl:Accueil_fill_detail HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             </ContentControl>
 
