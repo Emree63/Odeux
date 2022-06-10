@@ -26,7 +26,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Récupérer une nouvelle Promo
+        /// Récupère une nouvelle Promo
         /// </summary>
         /// <param name="promo"></param>
         public void NouvelPromo(Promo promo)
@@ -35,7 +35,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Créer un nouveau cour et l'ajoute à la liste des cours
+        /// Crée un nouveau cours et l'ajoute à la liste des cours
         /// </summary>
         /// <param name="date">Date du cour</param>
         /// <param name="Duree">Durée du cour</param>

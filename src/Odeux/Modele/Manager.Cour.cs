@@ -25,7 +25,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Recherche la liste des cours du professeur de la date concerné
+        /// Recherche la liste des cours du professeur de la date concernée
         /// </summary>
         /// <param name="date">date concerné</param>
         /// <returns>IEnumerable : Liste des cours</returns>
@@ -37,9 +37,9 @@ namespace Modele
 
 
         /// <summary>
-        /// Rechercher la liste des cours de l'étudiant sur la date concerné
+        /// Rechercher la liste des cours de l'étudiant sur la date concernée
         /// </summary>
-        /// <param name="date">date concerné</param>
+        /// <param name="date">date concernée</param>
         /// <returns>IEnumerable : Liste des cours</returns>
         public IEnumerable<Cour> RechCourEtu(DateTime date)
         {
@@ -63,7 +63,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Liste des cours d'un étudiant qui sont déjà passé, elle va permettre à l'étudiant de savoir les cours où il n'a pas déclarer sa présence
+        /// Liste des cours d'un étudiant qui sont déjà passés, elle va permettre à l'étudiant de savoir les cours pour lesquels il n'a pas déclaré sa présence
         /// </summary>
         /// <returns>IEnumerable: Liste des cours</returns>
         public IEnumerable<Cour> CoursDejaPasser()
@@ -88,7 +88,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Supprime l'étudiant d'un cour, elle va permettre d'enlever les cours où l'élève va déclarer sa présence.
+        /// Supprime l'étudiant d'un cours, elle va permettre d'enlever de la liste les cours où l'élève va déclarer sa présence.
         /// </summary>
         public void SupprimerEtuCour(Cour cour)
         {
@@ -118,7 +118,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Supprimer une liste de cour
+        /// Supprimer une liste de cours
         /// </summary>
         /// <param name="cour">Liste des cours à supprimer</param>
         public void SupprimerListeEtuCour(IEnumerable<Cour> cours)

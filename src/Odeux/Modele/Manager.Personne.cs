@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Modele
 {
-    //Il va permettre de gérer l'authentification dans l'application et l'emploi du temps de chacun!
+    //Il va permettre de gérer l'authentification dans l'application et l'emploi du temps de chacun
     public partial class Manager
     {
         /// <summary>
@@ -23,7 +23,7 @@ namespace Modele
 
 
         /// <summary>
-        /// Ajouter des personnes à la liste
+        /// Ajoute des personnes à la liste
         /// </summary>
         /// <param name="pers">Liste de Personne à ajouter</param>
         public void AjouterPersonne(List<Personne> pers)
@@ -32,14 +32,14 @@ namespace Modele
         }
 
         /// <summary>
-        /// Regarde si le mot de passe et le nom existe pour la connexion dans l'application
+        /// Regarde si le mot de passe et le nom existent pour la connexion dans l'application
         /// </summary>
         /// <param name="Nom">Nom qu'on va rechercher</param>
         /// <param name="PassWord">Mot de passe qui correspond à l'utilisateur</param>
         /// <returns>Renvoie le code correspondant au solution: 
         ///  1- On trouve un professeur
         ///  2- On trouve un Etudiant
-        ///  0- Rien trouver</returns>
+        ///  0- Rien trouvé</returns>
         public int Connection(string Nom, string PassWord)
         {
             var Per = personnes.FirstOrDefault(d => d.Nom == Nom && d.Password == PassWord);
@@ -61,10 +61,10 @@ namespace Modele
         }
 
         /// <summary>
-        /// Modifier une personne de la Liste
+        /// Modifie une personne de la Liste
         /// </summary>
         /// <param name="OldPer">Ancienne Personne</param>
-        /// <param name="NewPer">Nouvel Personne</param>
+        /// <param name="NewPer">Nouvelle Personne</param>
         /// <returns>Booléen</returns>
         public bool ModifierPersonne(Personne OldPer, Personne NewPer)
         {

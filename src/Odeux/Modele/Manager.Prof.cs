@@ -15,7 +15,7 @@ namespace Modele
 
 
         /// <summary>
-        /// Groupe d'étudiant dans la promo qui est sélectionner dans l'application
+        /// Groupe d'étudiant dans la promo qui est sélectionnée dans l'application
         /// </summary>
         private Groupe Groupesélectionné;
         public Groupe GroupeSélectionné
