@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataContractPersistance", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_DataContract", "Tests\Test_DataContract\Test_DataContract.csproj", "{7C184886-F26A-4DFF-900E-8C05BB93A496}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Odeux_Setup", "Odeux_Setup\Odeux_Setup.vdproj", "{DB3EEF8A-BFA6-4F2D-8896-81AD272C2982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,8 @@ Global
 		{7C184886-F26A-4DFF-900E-8C05BB93A496}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C184886-F26A-4DFF-900E-8C05BB93A496}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C184886-F26A-4DFF-900E-8C05BB93A496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3EEF8A-BFA6-4F2D-8896-81AD272C2982}.Debug|Any CPU.ActiveCfg = Debug
+		{DB3EEF8A-BFA6-4F2D-8896-81AD272C2982}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

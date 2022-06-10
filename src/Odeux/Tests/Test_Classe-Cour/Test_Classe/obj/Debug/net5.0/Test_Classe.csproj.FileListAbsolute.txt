@@ -54,4 +54,3 @@ C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\ref\Test_Classe.dll
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.pdb
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.genruntimeconfig.cache
-D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.csproj.AssemblyReference.cache
