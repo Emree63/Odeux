@@ -17,7 +17,7 @@ namespace Odeux.converter
             double d = (double)value;
             if(d<10)
             {
-                return new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
+                return new SolidColorBrush(Color.FromArgb(255, 223, 83, 100));
             }
             return new SolidColorBrush(Color.FromArgb(255, 0, 255, 0));
 

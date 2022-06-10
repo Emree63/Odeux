@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rvdB8cmuqpZInE0RO+qREOH0xIebn9bR7Rn/SaB8q9vhHr/gOvqPhKO7En+lmoYz0WEYmKWkp7NGzzkeXK/wWw==",
+  "dgSpecHash": "t+v0hQAlgSKB53XlHmZlBzikqHHGow4C7dxAsuNezEFJJjU8iXLbE9YBlIk/0HRfRDp8SlvoKUM6zpXYSeHgCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
+  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
