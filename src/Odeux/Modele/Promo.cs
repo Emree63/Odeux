@@ -11,10 +11,16 @@ namespace Modele
     public class Promo
     {
         /// <summary>
-        /// Tout les groupes d'éléves constituant la promo
+        /// Tout les groupes d'élèves constituant la promo
         /// </summary>
         [DataMember]
         public List<Groupe> Groupes { get; set; }
+
+        /// <summary>
+        /// Listes des nouvelles note de l'élève, le string va contenir le nom de l'élève
+        /// </summary>
+        [DataMember]
+        public Dictionary<Note, string> NouvelNote { get; set; } = new Dictionary<Note, string>();
 
         /// <summary>
         /// Constructeur de la classe
@@ -24,9 +30,42 @@ namespace Modele
 
 
         /// <summary>
-        /// Moyenne General de tout les élèves
+        /// Va retourner dans le dictionnaire les notes que l'élève à eu
         /// </summary>
-        /// <returns>double : Moyenne Géneral de tout les élèves de la Promo</returns>
+        /// <param name="etu">Etudiant concerné</param>
+        /// <returns>Liste des notes</returns>
+        public List<Note> NewNoteEtu(Etudiant etu)
+        {
+            List<Note> note = new();
+            foreach (KeyValuePair<Note, string> kvp in NouvelNote)
+            {
+                if(kvp.Value==etu.Nom)
+                {
+                    note.Add(kvp.Key);
+                }
+            }
+            return note;
+        }
+
+        /// <summary>
+        /// Supprime toutes les Notes concernant l'étudiant entréer en paramètres
+        /// </summary>
+        /// <param name="etu">Etudiant concerné</param>
+        public void SuppNoteEtu(Etudiant etu)
+        {
+            foreach (KeyValuePair<Note, string> kvp in NouvelNote)
+            {
+                if (kvp.Value == etu.Nom)
+                {
+                    NouvelNote.Remove(kvp.Key);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Moyenne General de tous les élèves
+        /// </summary>
+        /// <returns>double : Moyenne Géneral de tous les élèves de la Promo</returns>
         public double MoyGeneral()
         {
             double total = 0, nb = 0;
@@ -42,13 +81,13 @@ namespace Modele
                 }
             }
             if (nb != 0)
-                return total / nb;
+                return Math.Round(total / nb, 2); //Return decimal
             else
                 return -1;
         }
 
         /// <summary>
-        /// Moyenne général d'une UE pour tout les élèves de la promo
+        /// Moyenne général d'une UE pour tous les élèves de la promo
         /// </summary>
         /// <param name="sem">Semestre sur laquelle L'UE est concerner</param>
         /// <param name="UE">UE en question</param>
@@ -66,8 +105,11 @@ namespace Modele
                         {
                             if (ue.Num == UE)
                             {
-                                total += ue.MoyUE();
-                                nb++;
+                                if (ue.MoyUE() != -1)
+                                {
+                                    total += ue.MoyUE();
+                                    nb++;
+                                }
                             }
                         }
                     }
@@ -77,20 +119,26 @@ namespace Modele
                         {
                             if (ue.Num == UE)
                             {
-                                total += ue.MoyUE();
-                                nb++;
+                                if (ue.MoyUE() != -1)
+                                {
+                                    total += ue.MoyUE();
+                                    nb++;
+                                }
                             }
                         }
                     }
                 }
             }
-            return total / nb;
+            if (nb != 0)
+                return Math.Round(total / nb, 2);
+            else
+                return -1;
         }
 
         /// <summary>
         /// Renvoie la moyenne générale d'une matière sur l'ensemble des élèves
         /// </summary>
-        /// <param name="sem">semestre concernant l'UE</param>
+        /// <param name="sem">Semestre concernant l'UE</param>
         /// <param name="UE">UE concernant la ressource en question</param>
         /// <param name="res">Ressource où est contenu la matière</param>
         /// <param name="mat">Matière concerner</param>
@@ -150,13 +198,16 @@ namespace Modele
                     }
                 }
             }
-            return total / nb;
+            if (nb != 0)
+                return total / nb;
+            else
+                return -1;
         }
 
         /// <summary>
         /// Moyenne générale d'une ressource sur l'ensemble des élèves
         /// </summary>
-        /// <param name="sem">semestre concernant l'UE</param>
+        /// <param name="sem">Semestre concernant l'UE</param>
         /// <param name="UE">UE concernant la ressource en question</param>
         /// <param name="res">Ressource sur lequel on veut obtenir la moyenne</param>
         /// <returns>double : Moyenne d'une UE</returns>

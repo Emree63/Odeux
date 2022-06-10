@@ -7,7 +7,7 @@ namespace TestUnit
     public class UT_Sae
     {
         [Theory]
-        [InlineData("Recueil de besoin", 10, "Recueil de besoin", 10)]//Nom, Coef et note correct
+        [InlineData("Recueil de besoin", 10, "Recueil de besoin", 10)]//Nom, Coefficient et note correct
         [InlineData("", -2, "Aucun Nom", 1)]//Nom vide et coefficient inférieur à 0
         public void TestConstructor(string nom, int coef, string expectedNom, int expectedCoef)
         {

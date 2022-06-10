@@ -9,12 +9,29 @@ namespace Modele
     public partial class Manager
     {
         /// <summary>
-        /// Etudiant actuelle sur lequelle on va récuperer ses informations
+        /// Les nouvelles notes de l'élève
         /// </summary>
-        public Etudiant EtuActuel { get; set; }
+        public List<Note> NouvelNote { get; set; }
 
         /// <summary>
-        /// Semestre selectionner de l'etudiant actuel
+        /// Etudiant actuelle sur laquelle on va récupérer ses informations
+        /// </summary>
+        public Etudiant EtuActuel
+        {
+            get => Etuactuel;
+            set
+            {
+                if (Etuactuel != value)
+                {
+                    Etuactuel = value;
+                    OnPropertyChanged("Etuactuel");
+                }
+            }
+        }
+        private Etudiant Etuactuel;
+
+        /// <summary>
+        /// Semestre sélectionner de l'étudiant actuel
         /// </summary>
         public Semestre EtuSemestreSélectionné
         {
@@ -31,7 +48,7 @@ namespace Modele
         private Semestre etuSemestreSélectionné;
 
         /// <summary>
-        /// UE selectionner du semestre
+        /// UE sélectionner du semestre
         /// </summary>
         public UE EtuUESélectionné
         {
@@ -65,7 +82,7 @@ namespace Modele
         private double EtumoySemestre;
 
         /// <summary>
-        /// Conternier la moyenne de l'UE de l'étudiant
+        /// Contenir la moyenne de l'UE sélectionner de l'étudiant
         /// </summary>
         public double EtuMoyUE
         {
@@ -80,5 +97,61 @@ namespace Modele
             }
         }
         private double EtumoyUE;
+
+        /// <summary>
+        /// Variable qui va contenir la moyenne General de la promo pour le XAML
+        /// </summary>
+        public double MoyGeneral { get; private set; }
+
+        /// <summary>
+        /// Va contenir la moyenne de l'UE de la classe (Ensemble des élèves)
+        /// </summary>
+        public double MoyUE
+        {
+            get => moyUE;
+            set
+            {
+                if (moyUE != value)
+                {
+                    moyUE = value;
+                    OnPropertyChanged("MoyUE");
+                }
+            }
+        }
+        private double moyUE;
+
+        /// <summary>
+        /// Va prendre la matière choisi par le professeur
+        /// </summary>
+        public Matiere EtuMat
+        {
+            get => Etumat;
+            set
+            {
+                if (Etumat != value)
+                {
+                    Etumat = value;
+                    OnPropertyChanged("EtuMat");
+                }
+            }
+        }
+        private Matiere Etumat;
+
+        /// <summary>
+        /// Va prendre la matière choisi par le professeur
+        /// </summary>
+        public Ressource EtuRes
+        {
+            get => Etures;
+            set
+            {
+                if (Etures != value)
+                {
+                    Etures = value;
+                    OnPropertyChanged("EtuRes");
+                }
+            }
+        }
+        private Ressource Etures;
     }
 }

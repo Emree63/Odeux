@@ -75,9 +75,10 @@
             <Setter Property="FontFamily" Value="Batang"/>
         </Style>
 
-        <Style TargetType="Border" x:Key="borderEDT">
+        <Style TargetType="Border" x:Key="Border_EDT">
             
         </Style>
+
     </Control.Resources>
 
     <Viewbox>
@@ -112,7 +113,6 @@
                     </Viewbox>
 
                     <!-- Notes -->
-
                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="2">
                         <Grid VerticalAlignment="Stretch">
                             <Grid.RowDefinitions>
@@ -146,7 +146,7 @@
                 </Grid>
 
                 <!-- EDT D'aujourdhui -->
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" Grid.Column="2" Grid.RowSpan="2" >
+                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="7"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" Grid.Column="2" Grid.RowSpan="2" CornerRadius="15">
                     <!-- EDT D'aujourd'hui -->
                     <Grid Margin="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                         <Grid.RowDefinitions>
@@ -160,18 +160,18 @@
                         <ListBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="Transparent" x:Name="ListBox_Edt" Grid.Row="1" ItemsSource="{Binding LesCoursDuJour}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
-                                    <WrapPanel>
-                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Width="550">
-                                            <StackPanel>
-                                                <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
+                                    <StackPanel Width="660" HorizontalAlignment="Center">
+                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Width="610" Margin="5, 10" HorizontalAlignment="Center" CornerRadius="15">
+                                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                                                <TextBlock FontSize="30" Foreground="#DF5364" HorizontalAlignment="Center" Margin="0, 10" FontFamily="Courier new bold">
 							                            <Run Text="Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
                                                         de
                                                         <Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>                    
 									                    à
                                                         <Run Text="{Binding DateFin, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>
                                                 </TextBlock>
-                                                <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
-                                                        <Run Text="{Binding matière}"/>
+                                                <TextBlock Foreground="{DynamicResource TextColor}" FontSize="27" HorizontalAlignment="Center" Margin="5">
+                                                        <Run Text="{Binding matière}"/> <!-- Ne marche pas -->
                                                         <Run Text="&#xA;Groupe : "/>
                                                         <Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
                                                         <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
@@ -188,7 +188,7 @@
                                                 </TextBlock>
                                             </StackPanel>
                                         </Border>
-                                    </WrapPanel>
+                                    </StackPanel>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
                         </ListBox>

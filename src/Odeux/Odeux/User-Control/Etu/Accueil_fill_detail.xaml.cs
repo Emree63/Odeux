@@ -21,14 +21,18 @@ namespace Odeux.User_Control.Etu
     public partial class Accueil_fill_detail : UserControl
     {
         public Modele.Manager mng => (App.Current as App).LeManager;
+
         public Accueil_fill_detail()
         {
             InitializeComponent();
 
+            mng.NouvelNote = mng.LaPromo.NewNoteEtu(mng.EtuActuel);
             mng.LesCoursDuJour = mng.RechCourEtu(DateTime.Now);
             DataContext = mng;
             mng.LesAnciensCour = mng.CoursDejaPasser();
+            mng.LaPromo.SuppNoteEtu(mng.EtuActuel);
         }
+
         private void MaMessageBox(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Voulez-vous déclarer votre présence à tous les cours pour lesquels vous ne l'avez pas encore fait ?", " ", MessageBoxButton.YesNo, MessageBoxImage.Question);

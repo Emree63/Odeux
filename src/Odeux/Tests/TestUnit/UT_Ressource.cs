@@ -77,7 +77,7 @@ namespace TestUnit
             //Deuxième Matière
             Matiere mat2 = new Matiere(notes2);
 
-            //Creation Ressource
+            //Création d'une Ressource
 
             List<Matiere> matieres = new List<Matiere>();
             Ressource TestRes = new Ressource("Test", 10, matieres);

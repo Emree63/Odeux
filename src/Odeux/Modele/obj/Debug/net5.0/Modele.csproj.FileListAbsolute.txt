@@ -14,7 +14,6 @@ D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.deps.json
 D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.dll
 D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\ref\Modele.dll
 D:\IUT\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.pdb
-D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.csproj.AssemblyReference.cache
 D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.GeneratedMSBuildEditorConfig.editorconfig
 D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.AssemblyInfoInputs.cache
 D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.AssemblyInfo.cs
@@ -34,6 +33,7 @@ C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.cspr
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.dll
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\ref\Modele.dll
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.pdb
+<<<<<<< HEAD
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.deps.json
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.dll
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\src\Odeux\Modele\bin\Debug\net5.0\Modele.pdb
@@ -46,3 +46,6 @@ D:\le_folder\Etudes\Cours\SAE\201\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Mode
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\refint\Modele.dll
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.pdb
 D:\le_folder\Etudes\Cours\SAE\201\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\ref\Modele.dll
+=======
+D:\IUT\sae2.01\src\Odeux\Modele\obj\Debug\net5.0\Modele.csproj.AssemblyReference.cache
+>>>>>>> 99799ae2bac5f72ca08bb732f0a37a45a336ccfb

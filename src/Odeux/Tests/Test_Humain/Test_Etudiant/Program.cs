@@ -12,7 +12,7 @@ namespace Test_Etudiant
             WriteLine("Test de la classe Etudiant :");
             Console.ForegroundColor = ConsoleColor.Green;
 
-            // Creation des Liste de note
+            // Création des Liste de note
             List<Note> notes = new List<Note>();
             Note n1 = new Note("Tp noté", 10);
             notes.Add(n1);
@@ -32,7 +32,7 @@ namespace Test_Etudiant
 
             Note n6 = new Note("Situation 2 (sur 20.0)", 11);
 
-            //Creation des Matières
+            //Création des Matières
 
             List<Matiere> matieres = new List<Matiere>();
             List<Matiere> matieres2 = new List<Matiere>();
@@ -44,12 +44,12 @@ namespace Test_Etudiant
             matieres.Add(mat2);
             matieres2.Add(mat1);
 
-            //Creation des Ressource
+            //Création des Ressource
 
             Ressource res = new Ressource("R1.01", "Initiation au développement", 42, matieres);
             Ressource res2 = new Ressource("R1.02", 12, matieres2);
 
-            //Creation d'une UE
+            //Création d'une UE
 
             List<UE> lesUE = new List<UE>();
             List<UE> lesUE2 = new List<UE>();
@@ -64,7 +64,7 @@ namespace Test_Etudiant
             lesUE.Add(ue);
             lesUE2.Add(ue2);
 
-            //Creation SAE
+            //Creation d'une SAE
 
             SAE sae = new SAE("S1.01 : Implémentation d’un besoin client", n5, 40);
             ue.AddSAE(sae);
@@ -73,12 +73,12 @@ namespace Test_Etudiant
             ue2.AddSAE(sae2);
 
 
-            //Creation de deux Semestre
+            //Création de deux Semestre
 
             Semestre s1 = new Semestre(1, lesUE);
             Semestre s2 = new Semestre(2, lesUE2);
 
-            //Creation d'un Etudiant
+            //Création d'un Etudiant
 
             DateTime nais = new DateTime(2002, 10, 22);
             Etudiant etu1 = new Etudiant("Emre ", "KARTAL", nais, "Cinq combattants distinguent des esquives et les rêves.", s1, s2);

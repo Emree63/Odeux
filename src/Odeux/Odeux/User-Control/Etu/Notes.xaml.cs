@@ -30,6 +30,7 @@ namespace Odeux.User_Control.Etu
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoySemestre = mng.EtuSemestreSélectionné.MoySemestre();
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
             DataContext = mng;
         }
 
@@ -47,6 +48,7 @@ namespace Odeux.User_Control.Etu
             i = 0;
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+            mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
         }
 
         private void SemestreSuivant(object sender, RoutedEventArgs e)
@@ -63,7 +65,7 @@ namespace Odeux.User_Control.Etu
             i = 0;
             mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
             mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
-
+            mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
         }
 
         private void UeSuivant(object sender, RoutedEventArgs e)
@@ -73,12 +75,14 @@ namespace Odeux.User_Control.Etu
                 i++;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
                 mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
             }
             else
             {
                 i = 0;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
                 mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
             }
         }
 
@@ -89,12 +93,14 @@ namespace Odeux.User_Control.Etu
                 i--;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
                 mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
             }
             else
             {
                 i = 5;
                 mng.EtuUESélectionné = mng.EtuSemestreSélectionné.LesUE[i];
                 mng.EtuMoyUE = mng.EtuUESélectionné.MoyUE();
+                mng.MoyUE = mng.LaPromo.MoyUE(mng.EtuSemestreSélectionné.NumSemestre, mng.EtuUESélectionné.Num);
             }
         }
     }

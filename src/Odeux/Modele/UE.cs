@@ -18,7 +18,7 @@ namespace Modele
         private string num;
 
         /// <summary>
-        /// Description des éléments l'UE 
+        /// Description des éléments de l'UE 
         /// </summary>
         [DataMember]
         public string Description { get; set; }
@@ -46,7 +46,7 @@ namespace Modele
             this.num = num;
             Description = Des;
             sae = null;
-            Ressources = new List<Ressource>();
+            Ressources = new();
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Modele
         public void AddListesRessources(List<Ressource> res) => Ressources.AddRange(res);
 
         /// <summary>
-        /// Suppresion d'une ressource
+        /// Suppression d'une ressource
         /// </summary>
         /// <param name="res">Resource qu'on veut supprimer</param>
         public void SuppRessource(Ressource res) => Ressources.Remove(res);
@@ -83,7 +83,7 @@ namespace Modele
         /// <returns>double : Moyenne Total de l'UE</returns>
         public double MoyUE()
         {
-            if (Ressources.Count == 0) return -1;
+            if (Ressources.Count() == 0) return -1;
 
             double total = 0;
             int Coef = 0;
@@ -101,7 +101,7 @@ namespace Modele
                 Coef += sae.Coef;
             }
             if (Coef != 0)
-                return total / Coef;
+                return Math.Round(total / Coef,2);
             else
                 return -1;
         }

@@ -43,7 +43,6 @@ namespace Odeux.User_Control.Etu
         private void ShowDetail(Cour cour)
         {
             mng.CourSélectionné = cour;
-
         }
 
         private void Declarer(object sender, RoutedEventArgs e)

@@ -13,45 +13,45 @@ namespace Test_Matière
             WriteLine("Test de la classe Matiere :");
 
             // Création d'une liste de note
-            List<Note> notes = new List<Note>();
-            Note n1 = new Note("Tp noté", 10);
+            List<Note> notes = new ();
+            Note n1 = new ("Tp noté", 10);
             notes.Add(n1);
 
-            Note n2 = new Note("DS", 15);
+            Note n2 = new ("DS", 15);
             notes.Add(n2);
 
-            Note n4 = new Note("Td noté", 11.1);
+            Note n4 = new ("Td noté", 11.1);
 
             // Liste Vide
-            List<Note> notes2 = new List<Note>();
+            List<Note> notes2 = new ();
 
             try
             {
-                Note n3 = new Note("DS2", -1);
+                Note n3 = new ("DS2", -1);
             }
             catch (Exception msg)
             {
                 WriteLine(msg);
             }
 
-            Matiere mat = new Matiere("Structure de données", notes);
+            Matiere mat = new ("Structure de données", notes);
             WriteLine(mat);
             WriteLine("Moyenne :" + mat.MoyMatière());
 
             // Test de calcul de la moyenne d'une matière, contenant aucune notes
-            Matiere mat1 = new Matiere("Bases de données", notes2);
+            Matiere mat1 = new ("Bases de données", notes2);
             if (mat1.MoyMatière() != 1)
                 WriteLine("Moyenne :" + mat1.MoyMatière());
             else
                 WriteLine("Erreur Aucune note");
 
-            // Aprés avoir rajouter une nouvel note
+            // Après avoir rajouté une nouvel note
             WriteLine("Apres un ajout d'une nouvel note :");
             mat.AddNote(n4);
             WriteLine(mat);
 
             //On teste la fonction Supprimer
-            WriteLine("Apres une Suppresion d'une note :");
+            WriteLine("Apres une Suppression d'une note :");
             mat.SuppNote(n4);
             WriteLine(mat);
         }

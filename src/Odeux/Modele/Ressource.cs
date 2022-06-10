@@ -35,6 +35,11 @@ namespace Modele
         [DataMember]
         public List<Matiere> Matieres { get; set; }
 
+        /// <summary>
+        /// Cette variable n'est là que pour stocker le résultat de l'opération MoyRessource
+        /// </summary>
+        [DataMember]
+        public double MoyRes { get; set; }
 
         /// <summary>
         /// Constructeur
@@ -42,7 +47,7 @@ namespace Modele
         /// <param name="num">Numéro de la nouvelle Ressource</param>
         /// <param name="description">(Optionnel :) Description de la nouvelle Ressource</param>
         /// <param name="coef">Coefficient de la nouvelle Ressource</param>
-        /// <param name="mat">Listes des matieres</param>
+        /// <param name="mat">Liste des matières</param>
         public Ressource(string num, string description, int coef, List<Matiere> mat)
         {
             if (string.IsNullOrWhiteSpace(num))
@@ -57,6 +62,7 @@ namespace Modele
             Description = description;
             Coef = coef;
             Matieres = mat;
+            MoyRes = MoyRessource();
         }
 
         /// <summary>
@@ -64,17 +70,18 @@ namespace Modele
         /// </summary>
         /// <param name="num">Numéro de la nouvelle Ressource</param>
         /// <param name="coef">Coefficient de la nouvelle Ressource</param>
-        /// <param name="mat">Listes des matieres</param>
+        /// <param name="mat">Listes des matières</param>
         public Ressource(string num, int coef, List<Matiere> mat) : this(num, "Aucune Description", coef, mat)
         { }
 
         /// <summary>
         /// Calcul de la moyenne d'une UE d'un élève
         /// </summary>
-        /// <returns>float : moyenne</returns>
+        /// <returns>Float : moyenne</returns>
         public double MoyRessource()
         {
-            if (Matieres.Count == 0) return -1; //Si il n'y a pas de matières dans la ressource on retourne -1
+            MoyRes = -1;
+            if (Matieres.Count() == 0) return MoyRes; //Si il n'y a pas de matières dans la ressource on retourne -1
 
             double total = 0;
             int c = 0;
@@ -86,24 +93,27 @@ namespace Modele
                     c++;
                 }
             }
-            if (c != 0) //Si on a pas obtenu de moyenne dans la matière on return -1 
-                return total / c;
+            if (c != 0) //Si on n'a pas obtenu de moyenne dans la matière on return -1 
+            {
+                MoyRes = Math.Round(total / c,2);
+                return MoyRes;
+            }
             else
                 return -1;
 
         }
 
         /// <summary>
-        /// Ajouter une nouvel matiere à la Ressource.
+        /// Ajouter une nouvel matière à la Ressource.
         /// </summary>
         /// <param name="Mat">Nouvelle Matière</param>
         public void AddMatiere(Matiere Mat) => Matieres.Add(Mat);
 
 
         /// <summary>
-        ///  Matiere qu'on veut supprimer.
+        ///  Matière qu'on veut supprimer.
         /// </summary>
-        /// <param name="Mat">Matiere à supprimer</param>
+        /// <param name="Mat">Matière à supprimer</param>
         public void SuppMatiere(Matiere Mat) => Matieres.Remove(Mat);
 
         public override string ToString()

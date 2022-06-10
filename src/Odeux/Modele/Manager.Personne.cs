@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Modele
 {
-    //Il va permettre de gerer l'authentification dans l'application!
+    //Il va permettre de gérer l'authentification dans l'application et l'emploi du temps de chacun!
     public partial class Manager
     {
         /// <summary>
         /// Personne (Prof ou étudiant) actuellement sur l'application.
         /// </summary>
-        Personne personneActuel { get; set; }
+        public Personne personneActuel { get; set; }
 
         /// <summary>
         /// Collection de personne
@@ -31,7 +31,6 @@ namespace Modele
             Personnes.AddRange(pers);
         }
 
-
         /// <summary>
         /// Regarde si le mot de passe et le nom existe pour la connexion dans l'application
         /// </summary>
@@ -48,7 +47,10 @@ namespace Modele
             {
                 personneActuel = Per;
                 if (personneActuel is Professeur)
+                {
+                    profActuel = (Professeur)Per;
                     return 1;
+                }
                 if (personneActuel is Etudiant)
                 {
                     EtuActuel = (Etudiant)Per;
@@ -75,5 +77,24 @@ namespace Modele
             return true;
         }
 
+        public void Sauvegarde()
+        {
+            List<Personne> p = new List<Personne>();
+            foreach(Personne pers in Personnes)
+            {
+                if(pers is Professeur)
+                {
+                    p.Add(pers);
+                }
+            }
+            foreach(Groupe g in LaPromo.Groupes)
+            {
+                foreach(Etudiant e in g.etudiants)
+                {
+                    p.Add(e);
+                }
+            }
+            Personnes = p;
+        }
     }
 }

@@ -26,7 +26,6 @@ D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\bin\Debug\net5.0\ref
 D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\bin\Debug\net5.0\Test_Classe.pdb
 D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\bin\Debug\net5.0\Modele.dll
 D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\bin\Debug\net5.0\Modele.pdb
-D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.csproj.AssemblyReference.cache
 D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.GeneratedMSBuildEditorConfig.editorconfig
 D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.AssemblyInfoInputs.cache
 D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.AssemblyInfo.cs
@@ -55,3 +54,4 @@ C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\ref\Test_Classe.dll
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.pdb
 C:\Users\user\Source\Repos\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.genruntimeconfig.cache
+D:\IUT\sae2.01\src\Odeux\Tests\Test_Classe-Cour\Test_Classe\obj\Debug\net5.0\Test_Classe.csproj.AssemblyReference.cache

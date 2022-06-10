@@ -27,7 +27,7 @@ namespace Modele
         /// Constructeur d'un Semestre
         /// </summary>
         /// <param name="num">numéro du Semestre</param>
-        /// <param name="ue">Listes des UE lors de sa construction</param>
+        /// <param name="ue">Liste des UE lors de sa construction</param>
         public Semestre(int num, List<UE> ue)
         {
             if (num < 0) throw new ArgumentException("Veuillez entrer un numéro positif !");
@@ -43,7 +43,7 @@ namespace Modele
 
 
         /// <summary>
-        /// UE qu'on veut supprimer
+        /// Supprimer une UE de la liste 
         /// </summary>
         /// <param name="ue">UE concerner</param>
         public void SuppUE(UE ue) => LesUE.Remove(ue);
@@ -79,7 +79,7 @@ namespace Modele
                 }
             }
             if (Coef != 0)
-                return total / Coef;
+                return Math.Round(total / Coef, 2);
             else
                 return -1;
         }

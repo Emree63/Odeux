@@ -106,7 +106,8 @@ d:DesignHeight="750" d:DesignWidth="1500">
                 </DockPanel>
                 <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
                       Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="647" ItemsSource="{Binding LesCoursDuJour}" Margin="0,100,0,0" ItemContainerStyle="{StaticResource ListBoxanimation}">
+                      Background="Transparent" Height="647" ItemsSource="{Binding LesCoursDuJour}" Margin="0,100,0,0" BorderBrush="{DynamicResource TextColor}" 
+                          ItemContainerStyle="{StaticResource ListBoxanimation}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
@@ -128,24 +129,32 @@ d:DesignHeight="750" d:DesignWidth="1500">
                                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,14,0,2" Width="800">
                                         <WrapPanel>
                                             <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                                <Run Text="{Binding matière}"/>
+                                                <Run Text="{Binding Matière}"/>
                                             </TextBlock>
                                         </WrapPanel>
                                     </Border>
                                     <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,2,0,10" Width="800">
                                         <WrapPanel>
                                             <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                                <Run Text="{Binding Enseignant.nom}"/>
-                                                <Run Text="-"/>
-                                                 G<Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
-                                                <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
-                                                <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
-                                                <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
-                                                <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
-                                                <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
-                                                <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
-                                                <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
+                                                <Run Text="{Binding Enseignant.Nom}"/>
+                                                <Run Text="- "/>
                                             </TextBlock>
+                                            <ListBox ItemsSource="{Binding Groupes}" Background="Transparent" BorderBrush="Transparent" ItemContainerStyle="{StaticResource ListBoxanimation}" >
+                                                <ListBox.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <StackPanel Orientation="Horizontal" />
+                                                    </ItemsPanelTemplate>
+                                                </ListBox.ItemsPanel>
+                                                <ListBox.ItemTemplate>
+                                                    <DataTemplate  >
+                                                        <WrapPanel Orientation="Horizontal">
+                                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="25" >
+                                                                    G<Run  Text="{Binding Num}"/>
+                                                            </TextBlock>
+                                                        </WrapPanel>
+                                                    </DataTemplate>
+                                                </ListBox.ItemTemplate>
+                                            </ListBox>
                                         </WrapPanel>
                                     </Border>
                                 </StackPanel>

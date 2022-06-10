@@ -17,13 +17,13 @@ namespace Test_Manager
             Professeur prof = PremierProfTest();
             Professeur prof2 = DeuxièmeProf();
 
-            List<Personne> pers = new List<Personne>();
+            List<Personne> pers = new ();
 
             pers.AddRange(etu);
             pers.Add(prof);
             pers.Add(prof2);
 
-            Manager Man = new Manager(new Stub.Stub());
+            Manager Man = new (new Stub.Stub());
             Man.AjouterPersonne(pers);
             Man.NouvelPromo(Iut);
             Man.AjouterDesCours(cours);
@@ -45,7 +45,7 @@ namespace Test_Manager
         {
             int y = man.Connection("Professeur", "`@&;UCCy8ab{*d9V");
             if (y == 1)
-                WriteLine("La connexion est réussi !");
+                WriteLine("La connexion est réussie !");
             else
             {
                 WriteLine("La connexion à échouer !");
@@ -61,7 +61,7 @@ namespace Test_Manager
         {
             int y = man.Connection("Jean", "0000");
             if (y == 2)
-                WriteLine("La connexion est réussi !");
+                WriteLine("La connexion est réussie !");
             else
             {
                 WriteLine("La connexion à échouer !");
@@ -131,7 +131,7 @@ namespace Test_Manager
 
         static List<Etudiant> ChargeEtudiant()
         {
-            // Creation des Liste de note
+            // Création des Listes de note
             List<Note> notes = new List<Note>();
             Note n1 = new Note("Tp noté", 10);
             notes.Add(n1);
@@ -165,7 +165,7 @@ namespace Test_Manager
 
             Note n8 = new Note("Situation 1 (sur 20.0)", 7);
 
-            //Creation des Matières
+            //Création des Matières
 
             List<Matiere> matieres = new List<Matiere>();
             List<Matiere> matieres2 = new List<Matiere>();
@@ -182,7 +182,7 @@ namespace Test_Manager
             matieres3.Add(mat3);
             matieres4.Add(mat4);
 
-            //Creation des Ressource
+            //Création des Ressource
 
             Ressource res = new Ressource("R1.01", "Initiation au développement", 42, matieres);
             Ressource res2 = new Ressource("R1.02", 12, matieres2);
@@ -190,7 +190,7 @@ namespace Test_Manager
             Ressource res3 = new Ressource("R1.01", "Initiation au développement", 42, matieres3);
             Ressource res4 = new Ressource("R1.02", 12, matieres4);
 
-            //Creation d'une UE
+            //Création d'une UE
 
             List<UE> lesUE = new List<UE>();
             List<UE> lesUE2 = new List<UE>();
@@ -213,7 +213,7 @@ namespace Test_Manager
             lesUE3.Add(ue3);
             lesUE4.Add(ue4);
 
-            //Creation SAE
+            //Création SAE
 
             SAE sae = new SAE("S1.01 : Implémentation d’un besoin client", n5, 40);
             ue.AddSAE(sae);
@@ -227,7 +227,7 @@ namespace Test_Manager
             SAE sae4 = new SAE("S1.02 : Comparaison d’approches algorithmiques", n8, 40);
             ue4.AddSAE(sae4);
 
-            //Creation de deux Semestre
+            //Création de deux Semestre
 
             Semestre s1 = new Semestre(1, lesUE);
             Semestre s2 = new Semestre(2, lesUE2);
@@ -235,13 +235,13 @@ namespace Test_Manager
             Semestre s3 = new Semestre(1, lesUE3);
             Semestre s4 = new Semestre(2, lesUE4);
 
-            //Creation d'un Etudiant
+            //Création d'un Etudiant
 
             Etudiant etu1 = new Etudiant("Khedair", "Rami", new DateTime(2002, 10, 22), "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
             Etudiant etu2 = new Etudiant("Jean", "Pierre", new DateTime(1978, 10, 12), "0000", s3, s4);
 
-            //Creation d'un groupe de classe
+            //Création d'un groupe de classe
             List<Etudiant> etu = new List<Etudiant>();
             etu.Add(etu1);
             etu.Add(etu2);

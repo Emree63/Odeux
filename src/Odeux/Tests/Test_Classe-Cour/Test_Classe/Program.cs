@@ -11,7 +11,7 @@ namespace Test_Classe
         {
             Console.WriteLine("Test de la classe Promo :");
 
-            // Creation des Liste de note
+            // Création des Liste de note
             List<Note> notes = new List<Note>();
             Note n1 = new Note("Tp noté", 10);
             notes.Add(n1);
@@ -45,7 +45,7 @@ namespace Test_Classe
 
             Note n8 = new Note("Situation 1 (sur 20.0)", 7);
 
-            //Creation des Matières
+            //Création des Matières
 
             List<Matiere> matieres = new List<Matiere>();
             List<Matiere> matieres2 = new List<Matiere>();
@@ -62,7 +62,7 @@ namespace Test_Classe
             matieres3.Add(mat3);
             matieres4.Add(mat4);
 
-            //Creation des Ressource
+            //Création des Ressources
 
             Ressource res = new Ressource("R1.01", "Initiation au développement", 42, matieres);
             Ressource res2 = new Ressource("R1.02", 12, matieres2);
@@ -70,7 +70,7 @@ namespace Test_Classe
             Ressource res3 = new Ressource("R1.01", "Initiation au développement", 42, matieres3);
             Ressource res4 = new Ressource("R1.02", 12, matieres4);
 
-            //Creation d'une UE
+            //Création d'une UE
 
             List<UE> lesUE = new List<UE>();
             List<UE> lesUE2 = new List<UE>();
@@ -93,7 +93,7 @@ namespace Test_Classe
             lesUE3.Add(ue3);
             lesUE4.Add(ue4);
 
-            //Creation SAE
+            //Création des SAE
 
             SAE sae = new SAE("S1.01 : Implémentation d’un besoin client", n5, 40);
             ue.AddSAE(sae);
@@ -107,7 +107,7 @@ namespace Test_Classe
             SAE sae4 = new SAE("S1.02 : Comparaison d’approches algorithmiques", n8, 40);
             ue4.AddSAE(sae4);
 
-            //Creation de deux Semestre
+            //Création de deux Semestre
 
             Semestre s1 = new Semestre(1, lesUE);
             Semestre s2 = new Semestre(2, lesUE2);
@@ -115,13 +115,13 @@ namespace Test_Classe
             Semestre s3 = new Semestre(1, lesUE3);
             Semestre s4 = new Semestre(2, lesUE4);
 
-            //Creation d'un Etudiant
+            //Création d'un Etudiant
 
             Etudiant etu1 = new Etudiant("Kartal ", "Emre", new DateTime(2002, 10, 22), "Cinq combattants distinguent des esquives et les rêves.", s1, s2);
 
             Etudiant etu2 = new Etudiant("Jean", "Pierre", new DateTime(1978, 10, 12), "0000", s3, s4);
 
-            //Creation d'un groupe de classe
+            //Création d'un groupe de classe
             List<Etudiant> etu = new List<Etudiant>();
             etu.Add(etu1);
             etu.Add(etu2);
@@ -133,14 +133,14 @@ namespace Test_Classe
             WriteLine("Moyenne note " + grp + grp.MoyNote(1, "UE 1", "R1.01", "Structure de données", "Tp noté"));
             grps.Add(grp);
 
-            //Creation d'un prof et un cour
+            //Création d'un professeur et d'un cour
 
             Professeur prof = new Professeur("Professeur", "1", new DateTime(1989, 10, 2), "`@&;UCCy8ab{*d9V");
 
             Cour c = new Cour(new DateTime(2022, 06, 12, 14, 30, 0), new TimeSpan(2, 0, 0), "A18", "Structure de données", prof, grps);
             WriteLine(c);
 
-            //Creation Classe
+            //Création d'une Classe
 
             Promo IUT = new Promo(grps);
             WriteLine("Moyenne général de la promo :" + IUT.MoyGeneral());

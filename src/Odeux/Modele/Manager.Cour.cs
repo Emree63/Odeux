@@ -25,9 +25,9 @@ namespace Modele
         }
 
         /// <summary>
-        /// Recherche la liste des cours du professeur de la date concerner.
+        /// Recherche la liste des cours du professeur de la date concerné
         /// </summary>
-        /// <param name="date">date concerner</param>
+        /// <param name="date">date concerné</param>
         /// <returns>IEnumerable : Liste des cours</returns>
         public IEnumerable<Cour> RechCourProf(DateTime date) => from d in LesCours
                                                                 where d.Enseignant.Nom == personneActuel.Nom && d.Enseignant.Prénom == personneActuel.Prénom
@@ -37,9 +37,9 @@ namespace Modele
 
 
         /// <summary>
-        /// Rechercher la liste des cours de l'étudiant sur la date concerner.
+        /// Rechercher la liste des cours de l'étudiant sur la date concerné
         /// </summary>
-        /// <param name="date">date concerner</param>
+        /// <param name="date">date concerné</param>
         /// <returns>IEnumerable : Liste des cours</returns>
         public IEnumerable<Cour> RechCourEtu(DateTime date)
         {
@@ -63,9 +63,9 @@ namespace Modele
         }
 
         /// <summary>
-        /// Liste des cours d'un étudiant qui sont déjà passer, elle va permetre à l'étudiant de savoir les cours où il n'a pas déclarer sa présence
+        /// Liste des cours d'un étudiant qui sont déjà passé, elle va permettre à l'étudiant de savoir les cours où il n'a pas déclarer sa présence
         /// </summary>
-        /// <returns></returns>
+        /// <returns>IEnumerable: Liste des cours</returns>
         public IEnumerable<Cour> CoursDejaPasser()
         {
             var e = LesCours.Where(d => d.Date < DateTime.Now)
@@ -88,17 +88,39 @@ namespace Modele
         }
 
         /// <summary>
-        /// Supprimer l'étudiant d'un cour, elle va permetre d'enlever les cours où l'élève va déclarer sa présence.
+        /// Supprime l'étudiant d'un cour, elle va permettre d'enlever les cours où l'élève va déclarer sa présence.
         /// </summary>
         public void SupprimerEtuCour(Cour cour)
         {
-            LesCours.Remove(cour);
+
+            foreach(Cour c in LesCours)
+            {
+                if(c==cour)
+                {
+                    foreach(Groupe g in c.Groupes)
+                    {
+                        List<Etudiant> etu = new List<Etudiant>();
+                        foreach (Etudiant e in g.etudiants)
+                        {
+                            if(e.Nom == EtuActuel.Nom)
+                            {
+
+                            }
+                            else
+                            {
+                                etu.Add(e);
+                            }
+                        }
+                        g.etudiants = etu;
+                    }
+                }
+            }
         }
 
         /// <summary>
         /// Supprimer une liste de cour
         /// </summary>
-        /// <param name="cour"></param>
+        /// <param name="cour">Liste des cours à supprimer</param>
         public void SupprimerListeEtuCour(IEnumerable<Cour> cours)
         {
             foreach (Cour c in cours)
