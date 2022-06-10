@@ -63,7 +63,7 @@ namespace Odeux.Page_Eleve {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Odeux;component/page-eleve/accueil.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Odeux;V1.0.0.0;component/page-eleve/accueil.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Page-Eleve\Accueil.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

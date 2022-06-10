@@ -52,7 +52,7 @@ namespace TestUnit
 
         [Theory]
         [InlineData(10, 10, 10, 20, "10")]
-        [InlineData(16, 10, 9, 10, "11,67")]
+        [InlineData(16, 10, 9, 10, "12")]
         public void TestMoyenne(double premièreNote, double deuxièmeNote, double troisièmeNote, double quatrièmeNote, string expectedNote)
         {
             Matiere mat = new Matiere("Test");

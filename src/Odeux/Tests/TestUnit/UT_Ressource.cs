@@ -49,7 +49,7 @@ namespace TestUnit
 
 
         [Theory]
-        [InlineData(10, 10, 11, 10, "10,25", false)]
+        [InlineData(10, 10, 11, 10, "10", false)]
         [InlineData(16, 6, 9, 15, "11,5", false)]
         [InlineData(16, 6, 1, 1, "11", true)]
         public void TestMoyenneRes(double premièreNote, double deuxièmeNote, double troisièmeNote, double quatrièmeNote, string expectedNote, bool expectedMat)
