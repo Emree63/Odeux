@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="Images\Bouee.png" />
+    <None Remove="Images\fleche_droite.png" />
+    <None Remove="Images\fleche_gauche.png" />
     <None Remove="Images\Fond.png" />
     <None Remove="Images\Home.png" />
     <None Remove="Images\Icon1.png" />
@@ -39,6 +41,11 @@
   <ItemGroup>
     <ProjectReference Include="..\DataContractPersistance\DataContractPersistance.csproj" />
     <ProjectReference Include="..\Modele\Modele.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\fleche_droite.png" />
+    <Resource Include="Images\fleche_gauche.png" />
   </ItemGroup>
 
 </Project>
