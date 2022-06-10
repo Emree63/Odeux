@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Odeux"
         xmlns:User_Control="clr-namespace:Odeux.User_Control.General"        
         mc:Ignorable="d"
-        Title="LoginPage" MinWidth="480" MinHeight="360" MaxHeight="1080" MaxWidth="1920">
+        Title="LoginPage" MinWidth="480" MinHeight="360" MaxHeight="1080" MaxWidth="1920"
+        Icon="Images/Logo-Odeux.png">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -72,8 +73,8 @@
                         <TextBlock Margin="150,0, 0, 0" Text="Mot de Passe :" FontSize="34" Foreground="gray"/>
                     </Viewbox>
 
-                    <TextBox BorderThickness="0 0 0 1" Width="600" x:Name="Id" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="100, 0" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
-                    <PasswordBox Background="Transparent" Width="600" x:Name="mdp" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="100, 0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    <TextBox BorderThickness="0 0 0 1" Width="600" x:Name="Id" Foreground="{DynamicResource TextColor}" Background="Transparent" CaretBrush="DimGray" Margin="100, 0" TextWrapping="Wrap" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" KeyDown="OnKeyDownHandler"/>
+                    <PasswordBox Background="Transparent" Width="600" x:Name="mdp" BorderThickness="0 0 0 1" CaretBrush="DimGray" FontSize="20" Foreground="{DynamicResource TextColor}" Grid.Column="1" Grid.Row="1" Margin="100, 0" VerticalAlignment="Center" HorizontalAlignment="Left " KeyDown="OnKeyDownHandler"/>
                 </Grid>
 
 

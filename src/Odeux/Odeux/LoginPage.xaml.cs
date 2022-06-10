@@ -67,5 +67,15 @@ namespace Odeux
             System.Diagnostics.Process.Start("https://jira.dsi.uca.fr/plugins/servlet/desk/portal/29");
             this.Close();
         }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Return)
+            {
+                Button_Connection(sender,e);
+            }
+        }
+
+
     }
 }
