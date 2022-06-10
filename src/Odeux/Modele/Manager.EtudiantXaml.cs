@@ -9,12 +9,12 @@ namespace Modele
     public partial class Manager
     {
         /// <summary>
-        /// Les nouvelles notes de l'élève
+        /// Les nouvelles notes de l'élève.
         /// </summary>
         public List<Note> NouvelNote { get; set; }
 
         /// <summary>
-        /// Etudiant actuelle sur laquelle on va récupérer ses informations
+        /// Etudiant actuel sur lequel on va récupérer ses informations
         /// </summary>
         public Etudiant EtuActuel
         {
@@ -31,7 +31,7 @@ namespace Modele
         private Etudiant Etuactuel;
 
         /// <summary>
-        /// Semestre sélectionner de l'étudiant actuel
+        /// Semestre sélectionné de l'étudiant actuel
         /// </summary>
         public Semestre EtuSemestreSélectionné
         {
@@ -48,7 +48,7 @@ namespace Modele
         private Semestre etuSemestreSélectionné;
 
         /// <summary>
-        /// UE sélectionner du semestre
+        /// UE sélectionnée du semestre
         /// </summary>
         public UE EtuUESélectionné
         {
@@ -65,7 +65,7 @@ namespace Modele
         private UE etuUESélectionné;
 
         /// <summary>
-        /// Contenir la moyenne du semestre de l'étudiant
+        /// Contient la moyenne du semestre de l'étudiant
         /// </summary>
         public double EtuMoySemestre
         {
@@ -82,7 +82,7 @@ namespace Modele
         private double EtumoySemestre;
 
         /// <summary>
-        /// Contenir la moyenne de l'UE sélectionner de l'étudiant
+        /// Contenir la moyenne de l'UE sélectionnée de l'étudiant
         /// </summary>
         public double EtuMoyUE
         {
@@ -99,7 +99,7 @@ namespace Modele
         private double EtumoyUE;
 
         /// <summary>
-        /// Variable qui va contenir la moyenne General de la promo pour le XAML
+        /// Variable qui va contenir la moyenne générale de la promo pour le XAML
         /// </summary>
         public double MoyGeneral { get; private set; }
 
@@ -121,7 +121,7 @@ namespace Modele
         private double moyUE;
 
         /// <summary>
-        /// Va prendre la matière choisi par le professeur
+        /// Va prendre la matière choisie par le professeur
         /// </summary>
         public Matiere EtuMat
         {
@@ -138,7 +138,7 @@ namespace Modele
         private Matiere Etumat;
 
         /// <summary>
-        /// Va prendre la matière choisi par le professeur
+        /// Va prendre la matière choisie par le professeur
         /// </summary>
         public Ressource EtuRes
         {

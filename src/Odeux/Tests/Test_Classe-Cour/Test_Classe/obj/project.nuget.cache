@@ -1,8 +1,19 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "IsWsRQRCNmPPazP57gtqkdJP6tqATSvCOaKFJlccKwaaDjSQgDgVfmsAYFY8xd49sVMx52uOcScAlt3RkwLf8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\Test_Classe.csproj",
   "expectedPackageFiles": [],
+=======
+  "dgSpecHash": "sO2Tc3ZoIdCi+1duaRFMY4rVK1MOwIMByOJJHudDyYBMAh6Nrihq+kJMmD6pNXhdgXvbQXk2ps29uxrljMKb9A==",
+  "success": true,
+  "projectFilePath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\src\\Odeux\\Tests\\Test_Classe-Cour\\Test_Classe\\Test_Classe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+>>>>>>> e81dc273304065991fbd3b200cc047c3b628c530
   "logs": []
 }

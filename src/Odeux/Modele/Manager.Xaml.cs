@@ -27,7 +27,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Liste des anciens cours non déclare de l'élève
+        /// Liste des anciens cours non déclarés de l'élève
         /// </summary>
         private IEnumerable<Cour> lesAnciensCour;
         public IEnumerable<Cour> LesAnciensCour
@@ -44,7 +44,7 @@ namespace Modele
         }
 
         /// <summary>
-        /// Cour sélectionner dans une liste de cour
+        /// Cours sélectionnés dans une liste de cours
         /// </summary>
         private Cour courSélectionné;
         public Cour CourSélectionné
