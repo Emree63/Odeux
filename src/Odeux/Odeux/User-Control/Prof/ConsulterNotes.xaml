@@ -10,171 +10,329 @@
     <UserControl.Resources>
         <conv:DoubleToString x:Key="DoubleToString"/>
         <conv:ColorNote x:Key="ColorNote"/>
-        <Style TargetType="{x:Type Button}" x:Key="masterButton">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Width" Value="80"/>
+
+        <!--Boutons/Effets sur les boutons-->
+        <Style TargetType="Border" x:Key="SemesterButtonBorder">
+            <Setter Property="CornerRadius" Value="90"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Width" Value="27"/>
+            <Setter Property="Height" Value="27"/>
+            <Setter Property="Margin" Value="-2,0,0,-5"/>
+        </Style>
+        <Style TargetType="Button" x:Key="SemesterButton">
+            <Setter Property="Margin" Value="5"/>
             <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
         </Style>
-        <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
-            <Setter Property="Width" Value="80"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="RadiusX" Value="15"/>
-            <Setter Property="RadiusY" Value="15"/>
+
+
+        <!--TextBlocks-->
+        <Style TargetType="TextBlock" x:Key="SemesterArrow">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+            <Setter Property="Margin" Value="10"/>
         </Style>
-        <Style TargetType="TextBlock">
-            <Setter Property="TextWrapping" Value="Wrap"/>
+
+        <Style TargetType="TextBlock" x:Key="TopText">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+
+        <Style TargetType="TextBlock" x:Key="AverageGradesTextBlock">
+            <Setter Property="Width" Value="320"/>
+            <Setter Property="Height" Value="57"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0, 0, 0, 0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="MatterTextBlockTitle">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#EA5211"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="MatterTextBlockDetail">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+
+        <!-- Autres -->
+
+        <Style TargetType="Rectangle" x:Key="AverageGradesTextBlockBackgroundRectangle">
+            <Setter Property="Fill" Value="{DynamicResource BackgroundColor2}"/>
+            <Setter Property="RadiusX" Value="12"/>
+            <Setter Property="RadiusY" Value="12"/>
+            <Setter Property="Width" Value="350"/>
+            <Setter Property="Height" Value="55"/>
+        </Style>
+
     </UserControl.Resources>
+
     <Viewbox>
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10"  Height="750" Width="1375">
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1">
             <Grid>
-                <WrapPanel>
-                    <Button Background="Transparent" Margin="80,0,0,0" Click="SemestrePrecedent">
-                        <Grid>
-                            <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}" />
-                        </Grid>
-                    </Button>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2.5*"/>
+                </Grid.RowDefinitions>
 
-                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30" Margin="0,10,0,0" >
-                        <Run Text=" Semestre "/>
-                        <Run Text="{Binding EtuSemestreSélectionné.NumSemestre,Mode=OneWay}"/>
-                    </TextBlock>
-                    <Button Background="Transparent" Click="SemestreSuivant">
-                        <Grid>
-                            <TextBlock Text=">" FontSize="25" Foreground="{DynamicResource TextColor}"/>
-                        </Grid>
-                    </Button>
-                    <Button Background="Transparent" Margin="140,0,0,0" Click="GroupePrecedent">
-                        <Grid>
-                            <TextBlock Text="&lt;" FontSize="25" Foreground="{DynamicResource TextColor}" />
-                        </Grid>
-                    </Button>
+                <!--Sélection des UE et semestres + moyennes générales-->
 
-                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="30" Margin="0,10,0,0">
-                        <Run Text=" Groupe "/>
-                        <Run Text="{Binding GroupeSélectionné.Num,Mode=OneWay}"/>
-                    </TextBlock>
-                    <Button Background="Transparent" Click="GroupeSuivant">
-                        <Grid>
-                            <TextBlock Text=">" FontSize="25" Foreground="{DynamicResource TextColor}"/>
-                        </Grid>
-                    </Button>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
 
-                    <ComboBox Margin="300,10,0,0" Height="35" Width="300" ItemsSource="{Binding GroupeSélectionné.etudiants}" SelectedItem="{Binding EtuActuel}" SelectedIndex="0">
-                        <ComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel>
-                                    <TextBlock Foreground="Black" FontSize="20">
+                    <Grid Grid.Row="0" Margin="20, 0" >
+                        <!-- Sélection semestre -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="8*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button Click="SemestrePrecedent" Style="{StaticResource SemesterButton}" Grid.Row="0">
+                                <!-- Flèche gauche semestre -->
+                                <Grid>
+                                    <TextBlock Style="{StaticResource SemesterArrow}">
+                                &lt;
+                                    </TextBlock>
+                                    <Border Style="{StaticResource SemesterButtonBorder}"/>
+                                </Grid>
+                            </Button>
+
+                            <TextBlock Style="{StaticResource TopText}"> <!-- Semestre sélectionné -->
+                                <Run Text=" Semestre "/><Run Text="{Binding EtuSemestreSélectionné.NumSemestre,Mode=OneWay}"/>
+                            </TextBlock>
+
+                            <Button Background="Transparent" Click="SemestreSuivant">
+                                <!-- Flèche droite semestre -->
+                                <Grid>
+                                    <TextBlock Style="{StaticResource SemesterArrow}">
+                                    &gt;
+                                    </TextBlock>
+                                    <Border Style="{StaticResource SemesterButtonBorder}"/>
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+
+
+                        <Grid Grid.Column="1"> <!--Sélection élève-->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Column="2">
+
+                                <Button Click="Refresh" Grid.RowSpan="2" Background="Transparent" Grid.Column="4" HorizontalAlignment="Left">
+                                    <Grid>
+                                        <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource AverageGradesTextBlockBackgroundRectangle}" Width="140" />
+                                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Foreground="{DynamicResource TextColor}">
+                                                                   Refresh
+                                        </TextBlock>
+                                    </Grid>
+                                </Button>
+                            </Grid>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Column="0">
+                                <!-- Bouton choix de groupe -->
+                                <Button Background="Transparent" Click="GroupePrecedent">
+                                    <Grid>
+                                        <TextBlock Style="{StaticResource SemesterArrow}">
+                                &lt;
+                                        </TextBlock>
+                                        <Border Style="{StaticResource SemesterButtonBorder}"/>
+                                    </Grid>
+                                </Button>
+                                <TextBlock Style="{StaticResource TopText}">
+                                <Run Text="Groupe"/>
+                                <Run Text="{Binding GroupeSélectionné.Num, Mode=OneWay}"/>
+                                </TextBlock>
+                                <Button Background="Transparent" Click="GroupeSuivant">
+                                    <Grid>
+                                        <TextBlock Style="{StaticResource SemesterArrow}">
+                                    &gt;
+                                        </TextBlock>
+                                        <Border Style="{StaticResource SemesterButtonBorder}"/>
+                                    </Grid>
+                                </Button>
+                            </StackPanel>
+
+                            <Viewbox Grid.Column="1"> <!-- Menu déroulant choix élève -->
+                                <ComboBox Height="35" Width="370" ItemsSource="{Binding GroupeSélectionné.etudiants}" SelectedItem="{Binding EtuActuel}" SelectedIndex="0" Margin="5">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <WrapPanel>
+                                                <TextBlock Foreground="Black" FontSize="20">
                                         <Run Text="{Binding Nom}"/>
                                         <Run Text="{Binding Prénom}"/>
-                                    </TextBlock>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ComboBox.ItemTemplate>
-                    </ComboBox>
-                    <Button Click="Refresh" Style="{StaticResource masterButton}"  Margin="10,10,0,0" Grid.RowSpan="2">
-                        <Grid>
-                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Foreground="{DynamicResource TextColor}">
-                                                                   Refresh
-                            </TextBlock>
+                                                </TextBlock>
+                                            </WrapPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </Viewbox>
+
+
                         </Grid>
-                    </Button>
-                    <TextBlock Width="320" Height="30" Foreground="{DynamicResource TextColor}" Background="{DynamicResource BackgroundColor2}" Margin="300,10,0,0" FontSize="20">
-                            <Run Text="Moyenne Générale :" />
-                            <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="red"/>
-                    </TextBlock>
-                    <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="320" Height="30" Background="{DynamicResource BackgroundColor2}" Margin="110,0,0,0" FontSize="20">
-                            <Run Text="Moyenne Classe :" />
-                            <Run Text="{Binding MoyGeneral,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="red"/>
-                    </TextBlock>
-                </WrapPanel>
-                <StackPanel Margin="100,90,100,0">
-                    <WrapPanel>
-                        <Button Background="Transparent" Margin="80,0,20,0" Click="UePrecedent" >
-                            <Grid>
-                                <TextBlock Text="&lt;" FontSize="35" Foreground="{DynamicResource TextColor}"/>
-                            </Grid>
+                    </Grid>
+
+
+                    <WrapPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <!-- Sélection UE -->
+
+
+
+                        <Button Background="Transparent" Margin="80,0,20,0" Click="UePrecedent">
+                            <Image Source="/Images/fleche_gauche.png" Width="50"/>
                         </Button>
-                        <Grid >
-                            <Rectangle RadiusX="15" RadiusY="15" Width="883" Height="42"  Fill="{DynamicResource BackgroundColor2}"/>
-                            <TextBlock FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"  >
+
+                        <Grid>
+                            <Rectangle RadiusX="15" RadiusY="15" Width="1000" Height="56"  Fill="{DynamicResource BackgroundColor2}"/>
+                            <TextBlock FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"  >
                                 <Run Text="{Binding EtuUESélectionné.Num,Mode=OneWay}"/>
                                 - <Run Text="{Binding EtuUESélectionné.Description,Mode=OneWay}"/>
                             </TextBlock>
                         </Grid>
+
                         <Button Background="Transparent" Margin="20,0,0,0" Click="UeSuivant">
-                            <Grid>
-                                <TextBlock Text=">" FontSize="35" Foreground="{DynamicResource TextColor}"/>
-                            </Grid>
+                            <!-- Bouton UE flèche droite -->
+                            <Image Source="/Images/fleche_droite.png" Width="50"/>
                         </Button>
                     </WrapPanel>
-                    <WrapPanel Margin="0,10,0,0">
-                        <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="350" Height="40" Background="{DynamicResource BackgroundColor2}" Margin="150,0,0,0" FontSize="25">
-                            <Run Text="Moyenne UE:" FontWeight="Bold" />
-                            <Run  Text="{Binding EtuMoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold"  Foreground="{Binding Path=EtuMoyUE, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
-                        </TextBlock>
-                        <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="380" Height="40" Background="{DynamicResource BackgroundColor2}" Margin="110,0,0,0" FontSize="25">
-                            <Run Text="Moyenne Classe UE:" FontWeight="Bold" />
-                            <Run  Text="{Binding MoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="Red"/>
-                        </TextBlock>
-                    </WrapPanel>
-                </StackPanel>
-                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1370" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemContainerStyle="{StaticResource ListBoxanimation}"
-                      Background="Transparent" Height="580" x:Name="ListBox" Margin="0,200,0,0" ItemsSource="{Binding EtuUESélectionné.Ressources}" BorderBrush="{DynamicResource TextColor}" SelectionChanged="ListBox_SelectionChanged">
+
+
+                    <Grid Grid.Row="2">
+                        <!-- Moyenne UE et Moyenne classe UE -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Viewbox Grid.Column="0">
+                            <Grid Margin="20, 10" HorizontalAlignment="Right">
+                                <!-- Moyenne UE -->
+                                <Rectangle Style="{StaticResource AverageGradesTextBlockBackgroundRectangle}"/>
+                                <TextBlock Style="{StaticResource AverageGradesTextBlock}" Grid.Column="0">
+                                <Run Text="Moyenne UE:" FontWeight="Bold" />
+                                <Run  Text="{Binding EtuMoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="{Binding Path=EtuMoyUE, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
+                                </TextBlock>
+                            </Grid>
+                        </Viewbox>
+
+                        <Viewbox Grid.Column="1">
+                            <Grid Margin="20, 0">
+                                <!-- Moyenne classe UE -->
+                                <Rectangle Style="{StaticResource AverageGradesTextBlockBackgroundRectangle}"/>
+                                <TextBlock Style="{StaticResource AverageGradesTextBlock}" Grid.Column="1">
+                                <Run Text="Moy. Classe UE:" FontWeight="Bold" />
+                                <Run  Text="{Binding MoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="Red"/>
+                                </TextBlock>
+                            </Grid>
+                        </Viewbox>
+
+                        <Grid Grid.Column="2" Margin="10, 0" HorizontalAlignment="Left">
+                            <!-- Moyenne générale -->
+                            <Rectangle Style="{StaticResource AverageGradesTextBlockBackgroundRectangle}"/>
+
+                            <TextBlock Style="{StaticResource AverageGradesTextBlock}">
+                                    <Run Text="Moyenne Générale :"/>
+                                    <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="red"/>
+                            </TextBlock>
+                        </Grid>
+
+                        <Grid Grid.Column="3" Margin="10, 0" HorizontalAlignment="Left">
+                            <!-- Moyenne générale classe -->
+                            <Rectangle Style="{StaticResource AverageGradesTextBlockBackgroundRectangle}"/>
+
+                            <TextBlock TextAlignment="Center"  Style="{StaticResource AverageGradesTextBlock}">
+                                    <Run Text="Moyenne Classe :" />
+                                    <Run Text="{Binding MoyGeneral,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="red"/>
+                            </TextBlock>
+                        </Grid>
+
+
+
+
+                    </Grid>
+                </Grid>
+
+
+                <ListBox  ScrollViewer.VerticalScrollBarVisibility="Visible" ItemContainerStyle="{StaticResource ListBoxanimation}"
+                      Background="Transparent" Height="580" x:Name="ListBox" ItemsSource="{Binding EtuUESélectionné.Ressources}" BorderBrush="{DynamicResource TextColor}" Grid.Row="1">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
-                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="500"  >
+                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Width="500" CornerRadius="50" Margin="15, 30">
                                     <StackPanel>
-                                        <TextBlock TextAlignment="Center"  TextWrapping="Wrap" FontSize="30" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+                                        <!-- Titre de la ressource/matière, coeff et moyenne dans celle-ci -->
+
+                                        <TextBlock Style="{StaticResource MatterTextBlockTitle}" FontSize="45">
                                             <Run Text="&#xA;"/>
                                             <Run Text="{Binding Num,Mode=OneWay}"/>
                                         </TextBlock>
-                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="22" Foreground="#EA5211"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+                                        <TextBlock Style="{StaticResource MatterTextBlockTitle}" FontSize="30">
                                             <Run Text="{Binding Description,Mode=OneWay}"/>
                                             <Run Text="&#xA;"/>
                                         </TextBlock>
-                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="22" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+                                        <TextBlock Style="{StaticResource MatterTextBlockDetail}" Margin="0, 0, 0, 3">
                                             Coeff <Run Text="{Binding Coef,Mode=OneWay}"/>
                                         </TextBlock>
 
-                                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" FontSize="27" Foreground="{DynamicResource TextColor}"  HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                                        <Separator/>
+
+
+                                        <TextBlock Style="{StaticResource MatterTextBlockDetail}">
                                             <Run Text="&#xA;"/>
-                                            Moyenne :<Run Text="{Binding MoyRes,Mode=OneWay, Converter={StaticResource DoubleToString}}"  Foreground="{Binding Path=MoyRes, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
+                                            Moyenne :<Run Text="{Binding MoyRes,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="{Binding Path=MoyRes, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
                                             <Run Text="&#xA;"/>
                                         </TextBlock>
 
                                     </StackPanel>
                                 </Border>
 
-                                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" ItemContainerStyle="{StaticResource ListBoxanimation}" BorderBrush="Transparent"
-                      Width="800" Background="Transparent"  x:Name="ListBox2" Margin="10,10,10,10"  ItemsSource="{Binding Matieres}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <!--  -->
+                                <ListBox ItemContainerStyle="{StaticResource ListBoxanimation}" BorderBrush="Transparent" Background="Transparent"  x:Name="ListBox2" ItemsSource="{Binding Matieres}" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                     <ListBox.ItemTemplate>
-                                        <DataTemplate >
-                                            <WrapPanel>
-                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10" Width="700"  >
+                                        <DataTemplate>
+                                            <!-- Notes d'une matière (1 bloc) -->
+                                            <Grid>
+                                                <Grid Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="1" Margin="80,0" Width="400">
+                                                    <!-- Nom de la matière qui passe au premier plan par rapport à la bordure -->
+                                                    <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource TextColor}" FontSize="25" Panel.ZIndex="2" Margin="10, 0, 0, 0" >
+                                                        <Run Text="{Binding Nom}" />
+                                                    </TextBlock>
+                                                    <Rectangle Fill="{DynamicResource BackgroundColor}"/>
+                                                </Grid>
+
+                                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="2" Panel.ZIndex="0" Margin="5" CornerRadius="5">
                                                     <Grid>
-                                                        <TextBlock Text="{Binding Nom}" Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                                                         <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="250" Height="30" Background="{DynamicResource BackgroundColor2}" Margin="10,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
                                                             <Run Text="Moyenne:" FontWeight="Bold" />
                                                             <Run  Text="{Binding MoyMat, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="Red"/>
                                                         </TextBlock>
-                                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="5,70,5,5">
+                                                        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="5,70,5,5">
                                                             <Grid>
                                                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Width="700" Height="30" VerticalAlignment="Top">
                                                                     <TextBlock Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
@@ -190,7 +348,7 @@
                                                                                 <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="2" Width="650" Height="30">
                                                                                     <TextBlock Foreground="{DynamicResource TextColor}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
                                                                                         <Run Text="{Binding Nom, Mode=OneWay}"/>
-                                                                                        <Run Text="{Binding note, Mode=OneWay, Converter={StaticResource DoubleToString}}"  Foreground="{Binding Path=note, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
+                                                                                        <Run Text="{Binding note, Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="{Binding Path=note, Mode=OneWay,Converter={StaticResource ColorNote}}"/>
                                                                                     </TextBlock>
                                                                                 </Border>
                                                                             </WrapPanel>
@@ -201,7 +359,7 @@
                                                         </Border>
                                                     </Grid>
                                                 </Border>
-                                            </WrapPanel>
+                                            </Grid>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
                                 </ListBox>

@@ -24,10 +24,11 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            
             <Style.Triggers>
 
                 <!-- Animates the button's opacity on mouse over. -->
-                <EventTrigger RoutedEvent="Button.MouseEnter">
+                <!--<EventTrigger RoutedEvent="Button.MouseEnter">
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard>
@@ -40,7 +41,7 @@
                     </EventTrigger.Actions>
                 </EventTrigger>
 
-                <!-- Returns the button's opacity to 1 when the mouse leaves. -->
+                --><!-- Returns the button's opacity to 1 when the mouse leaves. --><!--
                 <EventTrigger RoutedEvent="Button.MouseLeave">
                     <EventTrigger.Actions>
                         <BeginStoryboard>
@@ -51,7 +52,7 @@
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
-                </EventTrigger>
+                </EventTrigger>-->
             </Style.Triggers>
         </Style>
         <Style x:Key="ButtonFocusVisual">
@@ -73,56 +74,55 @@
 
         <Style TargetType="TextBlock" x:Key="checkButtonTextBlock">
             <Setter Property="FontFamily" Value="Batang"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
         </Style>
     </UserControl.Resources>
     <Viewbox>
-
         <Grid Width="1500" Height="750">
-            <Grid.Resources>
-                <Style TargetType="TextBlock">
-                    <Setter Property="FontSize" Value="30" />
-                    <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
-                    <Setter Property="TextWrapping" Value="Wrap"/>
-                </Style>
-            </Grid.Resources>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.7*"/>
-                <ColumnDefinition />
+                <ColumnDefinition Width="*"/>
+                <!-- Confirmer présence élèves -->
+                <ColumnDefinition Width="*"/>
+                <!-- EDT Aujourd'hui -->
             </Grid.ColumnDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.6*"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+            <Viewbox Grid.Column="0">
+                <Button Click="MaMessageBox" Foreground="Black" Background="#747795" 
+                FontSize="43" Width="650"  Height="800" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <!-- Confirmer présence -->
 
-            <Button Click="MaMessageBox" Foreground="Black" Background="#424549" Content="Confirmer la présence de tous les élèves"
-                FontSize="20" Width="450" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                    <TextBlock Style="{StaticResource ResourceKey=checkButtonTextBlock}"  Margin="40">
+                            <Bold>Confirmer la présence de tous les élèves</Bold>
+                    </TextBlock>
+                </Button>
+            </Viewbox>
 
-            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.RowSpan="2" >
-                <Grid >
+
+            <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="7"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" Grid.Column="2" CornerRadius="15">
+                <!-- EDT -->
+                <Grid Margin="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="0.2*"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0"/>
-                    <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="620" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="622" x:Name="ListBox_Edt" Grid.Row="1" ItemsSource="{Binding LesCoursDuJour}">
+
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDT d'aujourd'hui" Foreground="{DynamicResource TextColor}" Grid.Row="0" FontSize="35"/>
+                    <ListBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="Transparent" x:Name="ListBox_Edt" Grid.Row="1" ItemsSource="{Binding LesCoursDuJour}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <WrapPanel>
-                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="10,10,0,10" Width="550">
-                                        <StackPanel >
-                                            <TextBlock Foreground="Red" FontSize="20" HorizontalAlignment="Center">
+                                <StackPanel Width="660" HorizontalAlignment="Center">
+                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="3" Width="610" Margin="5, 10" HorizontalAlignment="Center" CornerRadius="15">
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                                            <TextBlock FontSize="30" Foreground="#DF5364" HorizontalAlignment="Center" Margin="0, 10" FontFamily="Courier new bold">
 							                            <Run Text="Le "/><Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:dd/MM/yyy\}}"/>
                                                         de
                                                         <Run Text="{Binding Date, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>                    
 									                    à
                                                         <Run Text="{Binding DateFin, Mode=OneWay,StringFormat=\{0:HH:mm\}}"/>
                                             </TextBlock>
-                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="15" HorizontalAlignment="Center">
-                                                        <Run Text="{Binding matière}"/>
-                                                        <Run Text="&#xA;Groupe : "/>
+                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="27" HorizontalAlignment="Center" Margin="5">
+                                                        <Run Text="{Binding matière}"/> <!-- Ne marche pas -->
+                                                        <Run Text="Groupe : "/>
                                                         <Run Text="{Binding Groupes[0].Num,Mode=OneWay, StringFormat=00}"/> 
                                                         <Run Text="{Binding Groupes[1].Num, Mode=OneWay, StringFormat=00}"/>
                                                         <Run Text="{Binding Groupes[2].Num, Mode=OneWay, StringFormat=00}"/>
@@ -138,12 +138,12 @@
                                             </TextBlock>
                                         </StackPanel>
                                     </Border>
-                                </WrapPanel>
+                                </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </Grid>
-            </Border>
+            </Border> 
         </Grid>
     </Viewbox>
 </UserControl>

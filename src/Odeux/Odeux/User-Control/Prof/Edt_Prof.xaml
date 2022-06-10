@@ -39,10 +39,10 @@ d:DesignHeight="750" d:DesignWidth="1500">
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
+            <!--<Style.Triggers>
 
-                <!-- Animates the button's opacity on mouse over. -->
-                <EventTrigger RoutedEvent="Button.MouseEnter">
+                Animates the button's opacity on mouse over. -->
+                <!--<EventTrigger RoutedEvent="Button.MouseEnter">
                     <EventTrigger.Actions>
                         <BeginStoryboard>
                             <Storyboard>
@@ -55,7 +55,7 @@ d:DesignHeight="750" d:DesignWidth="1500">
                     </EventTrigger.Actions>
                 </EventTrigger>
 
-                <!-- Returns the button's opacity to 1 when the mouse leaves. -->
+                --><!-- Returns the button's opacity to 1 when the mouse leaves. --><!--
                 <EventTrigger RoutedEvent="Button.MouseLeave">
                     <EventTrigger.Actions>
                         <BeginStoryboard>
@@ -67,7 +67,7 @@ d:DesignHeight="750" d:DesignWidth="1500">
                         </BeginStoryboard>
                     </EventTrigger.Actions>
                 </EventTrigger>
-            </Style.Triggers>
+            </Style.Triggers>-->
         </Style>
         <Style x:Key="ButtonFocusVisual">
             <Setter Property="Control.Template">
@@ -78,91 +78,142 @@ d:DesignHeight="750" d:DesignWidth="1500">
                 </Setter.Value>
             </Setter>
         </Style>
+            
         <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
             <Setter Property="Width" Value="150"/>
             <Setter Property="Height" Value="50"/>
             <Setter Property="RadiusX" Value="15"/>
             <Setter Property="RadiusY" Value="15"/>
         </Style>
-        <Style TargetType="TextBlock">
-            <Setter Property="TextWrapping" Value="Wrap"/>
+
+        <Style TargetType="DatePicker">
+            <!--<Setter Property=""/>-->
+            <Setter Property="IsTodayHighlighted" Value="True"/>
+
+        </Style>
+
+        <Style TargetType="Border" x:Key="ClassBorder">
+            <Setter Property="BorderBrush" Value="{DynamicResource TextColor}"/>
+            <Setter Property="BorderThickness" Value="4"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="EDT_TextBlock">
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20, 5"/>
+        </Style>
+
+        <Style TargetType="StackPanel" x:Key="EDT_StackPanel">
+            <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
     </UserControl.Resources>
-    <Viewbox>
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
-            <Grid>
-                <DockPanel>
-                    <DatePicker Width="400" VerticalAlignment="Top" Margin="300,30,-300,0" x:Name="DateSaisie"/>
-                    <Button VerticalAlignment="Top" Click="NouvelDate" Margin="20" Style="{StaticResource masterButton}">
-                        <!-- Bouton Notes -->
+    <Viewbox>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="600" Width="1000">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <!--Sélection Jour-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Viewbox Grid.Column="0">
+                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="5">
+                        <DatePicker x:Name="DateSaisie" FontSize="15" FontFamily="Arial" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </Viewbox>
+
+                <Viewbox Grid.Column="1">
+                    <Button VerticalAlignment="Stretch" HorizontalAlignment="Left" Click="NouvelDate" Style="{StaticResource masterButton}" Grid.Column="1" Margin="15">
+                        <!-- Bouton Entrer -->
                         <Grid>
-                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}" />
-                            <TextBlock Text="Entrer" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" ></TextBlock>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}" Height="80"/>
+                            <TextBlock Text="Entrer" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" FontSize="45"/>
                         </Grid>
                     </Button>
-                </DockPanel>
-                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="647" ItemsSource="{Binding LesCoursDuJour}" Margin="0,100,0,0" BorderBrush="{DynamicResource TextColor}" 
-                          ItemContainerStyle="{StaticResource ListBoxanimation}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <WrapPanel>
-                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
-                                    <StackPanel>
-                                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
-                                    <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding Date.Minute ,Mode=OneWay,StringFormat=00}"></Run><Run Text="-"></Run><Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}" /><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}" />
-                                        </TextBlock>
-                                    </StackPanel>
-                                </Border>
-                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
-                                    <StackPanel>
-                                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
-                                            <Run Text="{Binding Salle}"/>
-                                        </TextBlock>
-                                    </StackPanel>
-                                </Border>
-                                <StackPanel>
-                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,14,0,2" Width="800">
-                                        <WrapPanel>
-                                            <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                                <Run Text="{Binding Matière}"/>
-                                            </TextBlock>
-                                        </WrapPanel>
-                                    </Border>
-                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,2,0,10" Width="800">
-                                        <WrapPanel>
-                                            <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
-                                                <Run Text="{Binding Enseignant.Nom}"/>
-                                                <Run Text="- "/>
-                                            </TextBlock>
-                                            <ListBox ItemsSource="{Binding Groupes}" Background="Transparent" BorderBrush="Transparent" ItemContainerStyle="{StaticResource ListBoxanimation}" >
-                                                <ListBox.ItemsPanel>
-                                                    <ItemsPanelTemplate>
-                                                        <StackPanel Orientation="Horizontal" />
-                                                    </ItemsPanelTemplate>
-                                                </ListBox.ItemsPanel>
-                                                <ListBox.ItemTemplate>
-                                                    <DataTemplate  >
-                                                        <WrapPanel Orientation="Horizontal">
-                                                            <TextBlock Foreground="{DynamicResource TextColor}" FontSize="25" >
-                                                                    G<Run  Text="{Binding Num}"/>
-                                                            </TextBlock>
-                                                        </WrapPanel>
-                                                    </DataTemplate>
-                                                </ListBox.ItemTemplate>
-                                            </ListBox>
-                                        </WrapPanel>
-                                    </Border>
-                                </StackPanel>
-                            </WrapPanel>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                </Viewbox>
+
             </Grid>
-        </Border>
+
+            <!-- Binding Cours -->
+            <ListBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="Transparent" ItemsSource="{Binding LesCoursDuJour}" BorderBrush="{DynamicResource TextColor}" ItemContainerStyle="{StaticResource ListBoxanimation}" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel HorizontalAlignment="Stretch">
+                            <!-- Un cours -->
+
+                            <Border Style="{StaticResource ClassBorder}">
+                                <!-- Heure -->
+                                <StackPanel Style="{StaticResource EDT_StackPanel}">
+                                    <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                        <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding Date.Minute ,Mode=OneWay,StringFormat=00}"></Run><Run Text="-"></Run><Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}" /><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}" />
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+
+                            <Border Style="{StaticResource ClassBorder}">
+                                <!-- Salle -->
+                                <StackPanel Style="{StaticResource EDT_StackPanel}">
+                                    <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                            <Run Text="{Binding Salle}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+
+                            <StackPanel Style="{StaticResource EDT_StackPanel}" Width="550">
+                                <!-- Matière, professeur et groupe -->
+
+                                <Border Style="{StaticResource ClassBorder}">
+                                    <!-- Matière -->
+                                    <WrapPanel>
+                                        <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                                <Run Text="{Binding Matière}"/>
+                                        </TextBlock>
+                                    </WrapPanel>
+                                </Border>
+
+                                <Border Style="{StaticResource ClassBorder}">
+                                    <WrapPanel>
+                                        <TextBlock Style="{StaticResource EDT_TextBlock}"> <!-- Nom de l'enseignant -->
+                                                <Run Text="{Binding Enseignant.Nom}"/> -
+                                        </TextBlock>
+                                        <ListBox ItemsSource="{Binding Groupes}" Background="Transparent" BorderBrush="Transparent">
+                                            <!-- Groupe TP/TD -->
+                                            <ListBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal" />
+                                                </ItemsPanelTemplate>
+                                            </ListBox.ItemsPanel>
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate >
+                                                    <WrapPanel Orientation="Horizontal">
+                                                        <TextBlock Style="{StaticResource EDT_TextBlock}" Margin="0" Width="Auto">
+                                                                    G<Run Text="{Binding Num}"/>
+                                                        </TextBlock>
+                                                    </WrapPanel>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                    </WrapPanel>
+                                </Border>
+                            </StackPanel>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+
     </Viewbox>
 </UserControl>

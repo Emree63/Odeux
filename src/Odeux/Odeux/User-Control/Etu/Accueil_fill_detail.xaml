@@ -196,8 +196,6 @@
                         </ListBox>
                     </Grid>
                 </Border>
-
-
             </Grid>
         </Grid>
     </Viewbox>
