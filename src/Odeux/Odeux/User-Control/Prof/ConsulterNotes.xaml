@@ -276,7 +276,7 @@
 
 
                 <ListBox  ScrollViewer.VerticalScrollBarVisibility="Visible" ItemContainerStyle="{StaticResource ListBoxanimation}"
-                      Background="Transparent" Height="580" x:Name="ListBox" ItemsSource="{Binding EtuUESélectionné.Ressources}" BorderBrush="{DynamicResource TextColor}" Grid.Row="1">
+                      Background="Transparent" Height="1000" x:Name="ListBox" ItemsSource="{Binding EtuUESélectionné.Ressources}" BorderBrush="{DynamicResource TextColor}" Grid.Row="1">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <WrapPanel>
