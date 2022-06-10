@@ -98,9 +98,9 @@
                 </ListBox>
             </Border>
         </Viewbox>
-        <Button Click="Declarer" Style="{StaticResource masterButton}" HorizontalAlignment="Right" Margin="-320,0">
+        <Button Click="Declarer" Style="{StaticResource masterButton}" HorizontalAlignment="Right" Margin="-320,0" Height="170">
             <Grid>
-                <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}"/>
+                <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}" Height="170"/>
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}">
                         Déclarer
                 </TextBlock>

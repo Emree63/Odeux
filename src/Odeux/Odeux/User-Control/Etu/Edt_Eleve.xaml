@@ -94,7 +94,7 @@
         
         <Style TargetType="Border" x:Key="ClassBorder">
             <Setter Property="BorderBrush" Value="{DynamicResource TextColor}"/>
-            <Setter Property="BorderThickness" Value="10"/>
+            <Setter Property="BorderThickness" Value="4"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -180,7 +180,7 @@
                                 <Border Style="{StaticResource ClassBorder}">
                                     <WrapPanel>
                                         <TextBlock Style="{StaticResource EDT_TextBlock}"> <!-- Nom de l'enseignant -->
-                                                <Run Text="{Binding Enseignant.Nom}"/> --
+                                                <Run Text="{Binding Enseignant.Nom}"/> -
                                         </TextBlock>
                                         <ListBox ItemsSource="{Binding Groupes}" Background="Transparent" BorderBrush="Transparent"> <!-- Groupe TP/TD -->
                                             <ListBox.ItemsPanel>

@@ -6,36 +6,59 @@
              xmlns:local="clr-namespace:Odeux.User_Control.General"
              mc:Ignorable="d" 
  d:DesignHeight="750" d:DesignWidth="1500">
+
+    <Control.Resources>
+        <Style TargetType="TextBlock" x:Key="TitleTextBlock">
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="FontFamily" Value="Batang"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="ArticleTextBlock">
+            <Setter Property="TextAlignment" Value="Justify"/>
+            <Setter Property="FontFamily" Value="Courier new"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="65, 10"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="ArticleBorder">
+            <Setter Property="Width" Value="1500"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="15"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource TextColor}"/>
+            <Setter Property="BorderThickness" Value="2"/>
+        </Style>
+    </Control.Resources>
+
+
     <Viewbox>
+        <Border Width="1600" Height="1000">
+            <ListBox ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" x:Name="ListBox">
 
-        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
-            <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
-                      Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                      Background="Transparent" Height="750" x:Name="ListBox">
-
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,20" >
+                <Border Style="{StaticResource ArticleBorder}">
                     <StackPanel>
-                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <TextBlock Style="{StaticResource TitleTextBlock}">
                     Nouveau logiciel disponible<LineBreak/>
                         </TextBlock>
 
-                        <TextBlock  FontSize="26" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="100,0,0,30">
-                    Un nouvel outil est disponible pour les étudiants et les professeurs<LineBreak/>
-                    du département informatique ! Directement inspiré de son "grand frère" <LineBreak/>
-                    Odin et conçu par deux étudiants de première année,<LineBreak/>
-                    Odeux va permettre un plus grand confort d'utilisation et <LineBreak/>
-                    bénéficie d'une ergonomie renforcée afin de rendre son usage quotidien plus efficace et plus fluide.
+                        <TextBlock Style="{StaticResource ArticleTextBlock}">
+                    Un nouvel outil est disponible pour les étudiants et les professeurs du département informatique ! Directement inspiré de son "grand frère" Odin et conçu par deux étudiants de première année, Odeux va permettre un plus grand confort d'utilisation et bénéficie d'une ergonomie renforcée afin de rendre son usage quotidien plus efficace et plus fluide.
                         </TextBlock>
                     </StackPanel>
 
                 </Border>
 
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,0,0,0" >
+                <Border Style="{StaticResource ArticleBorder}">
                     <StackPanel>
-                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <TextBlock Style="{StaticResource TitleTextBlock}">
                     Nouveau logiciel disponible<LineBreak/>
                         </TextBlock>
-                        <TextBlock FontSize="26" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="100,0,20,30">
+                        <TextBlock Style="{StaticResource ArticleTextBlock}">
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <LineBreak/>
                     labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<LineBreak/>
                     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor<LineBreak/>
@@ -45,11 +68,9 @@
                         </TextBlock>
                     </StackPanel>
                 </Border>
-                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="20,20,0,0">
+                <Border Style="{StaticResource ArticleBorder}">
                     <StackPanel>
-                        <TextBlock FontSize="35" 
-                                       Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" 
-                                       VerticalAlignment="Center" Margin="505,10,480,0">
+                        <TextBlock Style="{StaticResource TitleTextBlock}">
                     LISEZ VOS MAILS<LineBreak/>
                         </TextBlock>
                     </StackPanel>
