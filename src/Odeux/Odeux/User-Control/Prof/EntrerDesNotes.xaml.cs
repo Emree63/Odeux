@@ -232,10 +232,7 @@ namespace Odeux.User_Control.Prof
             NewNom.Foreground = new SolidColorBrush(Color.FromArgb(255,0,0,0));
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
-        }
 
         void dt_Tick(object sender, EventArgs e)
         {

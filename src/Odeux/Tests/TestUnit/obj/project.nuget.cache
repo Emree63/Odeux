@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wtWHUqTZhLOJ8QW+Styv6J9iE6D9WwffrFTzj18npqyN61NKvSePzAKjz26+yYuwUaeO6piYhGm+NTMCKHE+4Q==",
+  "dgSpecHash": "5I69ONsMbKeJjTitOMTI6QVD+F7WeE8zV1domREETRJxlZth9D4ZPWx66iPOG/kiWpg+VqGG303KSnd4qJWCrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\TestUnit\\TestUnit.csproj",
+  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\TestUnit\\TestUnit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emkartal1\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\emkartal1\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
@@ -97,12 +97,5 @@
     "C:\\Users\\emkartal1\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\emkartal1\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\TestUnit\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

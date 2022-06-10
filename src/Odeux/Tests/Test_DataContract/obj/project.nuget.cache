@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ukTvWcIZwzE5X3cUNpw4JxW+ZCA4e4e3OHhrZHgNqVIPERZokOirhM+o0zYpZZSUDPWUaeEaqN0u+Dxi3oXjpA==",
+  "dgSpecHash": "p2qFFuYlGMk+VGuFIxTknXH3d+C4k3HkMmRPEPlP8j9obZK5E2jsn8LKArGA9QYHwHaRmtE3JVQfBRKULu0h3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
+  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
