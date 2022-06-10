@@ -9,7 +9,9 @@
         <SolidColorBrush Color="#066A91" x:Key="BackgroundColor2"/>
         <SolidColorBrush Color="Black" x:Key="BackgroundDeco"/>
         <SolidColorBrush Color="#F1FBFE" x:Key="TextDeco"/>
-        
+        <SolidColorBrush Color="White" x:Key="TextEdt"/>
+        <SolidColorBrush Color="Black" x:Key="BackgroundEdt"/>
+
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="FontFamily" Value="Courier New"/>
         </Style>

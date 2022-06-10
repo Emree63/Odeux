@@ -308,7 +308,7 @@
                                     </TextBlock>
                                 </Grid>
                             </Button>
-                            <ProgressBar Name="mProgressBar" Height="0"/>
+                            <ProgressBar Name="mProgressBar" Height="0" Margin="0, 0,0,-60" Grid.Row="2"/>
                         </Grid>
 
                     </Grid>

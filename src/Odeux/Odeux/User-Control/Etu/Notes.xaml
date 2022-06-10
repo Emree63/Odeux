@@ -142,7 +142,8 @@
 
                                 <TextBlock Style="{StaticResource AverageGradesTextBlock}">
                                     <Run Text="Moyenne Générale :"/>
-                                    <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="#DF5364"/>
+                                    <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="#DF5364" FontWeight="Bold"/>
+                                    
                                 </TextBlock>
                             </Grid>
 
@@ -152,7 +153,7 @@
 
                                 <TextBlock TextAlignment="Center"  Style="{StaticResource AverageGradesTextBlock}">
                                     <Run Text="Moyenne Classe :" />
-                                    <Run Text="{Binding MoyGeneral,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="#DF5364"/>
+                                    <Run Text="{Binding MoyGeneral,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="#DF5364" FontWeight="Bold"/>
                                 </TextBlock>
                             </Grid>
                         </Grid>

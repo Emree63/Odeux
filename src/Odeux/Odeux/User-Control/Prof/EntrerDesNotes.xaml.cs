@@ -215,7 +215,7 @@ namespace Odeux.User_Control.Prof
             mProgressBar.Value = 0;
             mProgressBar.Height = 20;
             dt.Tick += dt_Tick;
-            dt.Interval = TimeSpan.FromMilliseconds(20);
+            dt.Interval = TimeSpan.FromMilliseconds(1);
             dt.Start();
             
         }
