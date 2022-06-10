@@ -7,7 +7,7 @@
         xmlns:User_Control="clr-namespace:Odeux.User_Control.General"        
         mc:Ignorable="d"
         Title="LoginPage" MinWidth="480" MinHeight="360" MaxHeight="1080" MaxWidth="1920"
-        Icon="Images/Logo-Odeux.png">
+        Icon="Images/Icon_Logo-Odeux.png">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Template">
