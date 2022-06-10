@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zfzd+MifbKmnDmp5nGUytVbYfoCvEB1hb5eiNttPhtTuCK9zuju46mDido+dNw7d1zQYUOq3uLEEKU1gApBLeQ==",
+  "dgSpecHash": "DhRGkGdgwC6rAZBDphpy2DgzqZDQ0arLKaf0ilG/NTQPVkbuNA7ESxzfzBLXktRfewuO+b1wrZyueHUhp1cokQ==",
   "success": true,
-  "projectFilePath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.02\\src\\Odeux\\Modele\\Modele.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
