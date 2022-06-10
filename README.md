@@ -1,20 +1,72 @@
-# SAE2.01
+# Presentation SAE2.01
 
-En tant qu'élèves, nous avons choisi de développer une version refondue d'Odin, en prenant en compte les attentes des différents élèves sur le site.
+**Nom de l’application** : Odeux 
+</br>
 
-Contexte:
-https://docs.google.com/document/d/19J6Oa5jlo8XkRHzoZ_vrHqEbvjeFevenoI3BWHR92zo/edit
+**Thème de l’application** : Espace numérique de travail
 
-git clone https://gitlab.iut-clermont.uca.fr//sae-1.02.git
+**Récapitulation de notre application** :
 
-(dans le dossier voulu)
+</br>
 
-git add .  (ajouter les fichiers)
+:information_source: Nous cherchons à réaliser une application qui reprend “Odin”, avec de nouvelles options et une page d'accueil bien plus complète et intuitive, où l’on retrouve les salles et horaires du prochain cours, des notes directement affichées, les dernières absences ... Nous cherchons à ce que les utilisateurs (étudiants, professeurs) se sentent bien organisés, en prenant en compte les retours d’expérience de différents élèves sur la conception, pour créer de nouvelles fonctionnalités comme des pop-ups de rappels pour déclarer sa présence, par exemple. 
 
-git status (Regarder les changements)
 
-git commit -m ‘_’  (message)
+# Repartition du Gitlab
 
-git push (envoyer)
-.
-git pull  (récupérer)
+La racine de notre gitlab est composé de deux dossier essentielles au projet:
+
+[**src**](src/Odeux) : **Toute la partie codage de l'application C# et WPF**
+
+[**doc**](doc) : **Documentation de l'application, englobant la première phase avant le commencement de l'application (Personna, Use case, sketch, Contexte...), suivi de la seconde phase qui est la présentation de la structure de l'application choisi (diagramme de paquetage, diagramme(s) de classes accompagné(s) de descriptions...)**
+
+# Avancement du projet
+
+Où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x: non commencer )
+
+</br>
+
+:warning: [**Partie 1**](src/doc/phase_1) : **Définition de l'application et Vues**
+</br>
+
+:information_source: _Quelque point Xaml non fini(détourage,Responsive...)_
+</br>
+
+:warning: [**Partie 2**](src/Odeux/Modele) : **Conception et Programmation du modèle de votre application prenant en compte les critères métier**
+
+</br>
+
+:information_source: _Diagramme de Séquence et de classes presque fini_
+
+</br>
+
+:warning: [**Partie 3**](src/Odeux) : **Lien entre les vues et le modèle de votre application**
+</br>
+
+:information_source: _Binding sur les notes(Profs et élèves) non fini_
+
+</br>
+
+:white_check_mark: [**Partie 4**](src/Odeux/DataContractPersistance) : **Persistance des données**
+
+</br>
+
+:white_check_mark: [**Partie 5**](src/Odeux/Tests) : **Tests, Documentation et Intégration Continue**
+
+</br>
+
+:x: Partie 6 : **Déploiement**
+
+</br>
+
+:x: Partie 7 : **Réalisation de votre vidéo promotionnelle**
+
+# Environnement de Travail
+
+Notre environnement de travail se base essentiellement sur du c# et du WPF.
+
+# Technicien en charge de l'application
+
+La composition pour le projet se voit fait par deux élèves de l'IUT d'aubière:
+- Emre KARTAL (Groupe 3)
+- Hugo THIBON (Groupe 3)

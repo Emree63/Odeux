@@ -1,0 +1,159 @@
+﻿<UserControl x:Class="Odeux.User_Control.Prof.Edt_Prof"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Odeux.User_Control.Prof"
+             mc:Ignorable="d" 
+d:DesignHeight="750" d:DesignWidth="1500">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="masterButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="1" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+
+                <!-- Animates the button's opacity on mouse over. -->
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                  Storyboard.TargetProperty="(Button.Opacity)"
+                  From="1.0" To="0.5" Duration="0:0:0.5" AutoReverse="True"
+                  RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+
+                <!-- Returns the button's opacity to 1 when the mouse leaves. -->
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                  Storyboard.TargetProperty="(Button.Opacity)"
+                  To="1" Duration="0:0:0.1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="RadiusX" Value="15"/>
+            <Setter Property="RadiusY" Value="15"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <Viewbox>
+
+        <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="10,10" Width="1375" Height="750">
+            <Grid>
+                <DockPanel>
+                    <DatePicker Width="400" VerticalAlignment="Top" Margin="300,30,-300,0" x:Name="DateSaisie"/>
+                    <Button VerticalAlignment="Top" Click="NouvelDate" Margin="20" Style="{StaticResource masterButton}">
+                        <!-- Bouton Notes -->
+                        <Grid>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}" />
+                            <TextBlock Text="Entrer" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" ></TextBlock>
+                        </Grid>
+                    </Button>
+                </DockPanel>
+                <ListBox  HorizontalAlignment="Left" VerticalAlignment="Top" 
+                      Width="1375" ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                      Background="Transparent" Height="647" ItemsSource="{Binding LesCoursDuJour}" Margin="0,100,0,0" ItemContainerStyle="{StaticResource ListBoxanimation}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
+                                    <StackPanel>
+                                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                                    <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding Date.Minute ,Mode=OneWay,StringFormat=00}"></Run><Run Text="-"></Run><Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}" /><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}" />
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="40,10,0,10">
+                                    <StackPanel>
+                                        <TextBlock FontSize="35" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,20,20,20">
+                                            <Run Text="{Binding Salle}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Border>
+                                <StackPanel>
+                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,14,0,2" Width="800">
+                                        <WrapPanel>
+                                            <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
+                                                <Run Text="{Binding matière}"/>
+                                            </TextBlock>
+                                        </WrapPanel>
+                                    </Border>
+                                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="4" Margin="60,2,0,10" Width="800">
+                                        <WrapPanel>
+                                            <TextBlock FontSize="25" Foreground="{DynamicResource TextColor}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,0,0,0">
+                                                <Run Text="{Binding Enseignant.nom}"/>
+                                                <Run Text="-"/>
+                                                 G<Run Text="{Binding Groupes[0].num,Mode=OneWay, StringFormat=00}"/> 
+                                                <Run Text="{Binding Groupes[1].num, Mode=OneWay, StringFormat=00}"/>
+                                                <Run Text="{Binding Groupes[2].num, Mode=OneWay, StringFormat=00}"/>
+                                                <Run Text="{Binding Groupes[3].num, Mode=OneWay, StringFormat=00}"/>
+                                                <Run Text="{Binding Groupes[4].num, Mode=OneWay, StringFormat=00}"/>
+                                                <Run Text="{Binding Groupes[5].num, Mode=OneWay, StringFormat=00}"/>
+                                                <Run Text="{Binding Groupes[6].num, Mode=OneWay, StringFormat=00}"/> 
+                                                <Run Text="{Binding Groupes[7].num, Mode=OneWay, StringFormat=00}"/>
+                                            </TextBlock>
+                                        </WrapPanel>
+                                    </Border>
+                                </StackPanel>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Border>
+    </Viewbox>
+</UserControl>

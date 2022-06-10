@@ -1,0 +1,212 @@
+﻿<UserControl x:Class="Odeux.User_Control.Etu.Edt_Eleve"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Odeux.User_Control.Etu"
+             mc:Ignorable="d" 
+             >
+    <UserControl.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="masterButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="1" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <!--<Style.Triggers>
+
+                --><!-- Animates the button's opacity on mouse over. --><!--
+                <EventTrigger RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                  Storyboard.TargetProperty="(Button.Opacity)"
+                  From="1.0" To="0.5" Duration="0:0:0.5" AutoReverse="True"
+                  RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+
+                --><!-- Returns the button's opacity to 1 when the mouse leaves. --><!--
+                <EventTrigger RoutedEvent="Button.MouseLeave">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                  Storyboard.TargetProperty="(Button.Opacity)"
+                  To="1" Duration="0:0:0.1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>-->
+        </Style>
+        <Style x:Key="ButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="Rectangle" x:Key="masterButtonRectangle">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="RadiusX" Value="15"/>
+            <Setter Property="RadiusY" Value="15"/>
+        </Style>
+        
+        <Style TargetType="DatePicker">
+            <!--<Setter Property=""/>-->
+            <Setter Property="IsTodayHighlighted" Value="True"/>
+
+        </Style>
+        
+        <Style TargetType="Border" x:Key="ClassBorder">
+            <Setter Property="BorderBrush" Value="{DynamicResource TextColor}"/>
+            <Setter Property="BorderThickness" Value="10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
+        
+        <Style TargetType="TextBlock" x:Key="EDT_TextBlock">
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextColor}"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20, 5"/>
+        </Style>
+
+        <Style TargetType="StackPanel" x:Key="EDT_StackPanel">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Viewbox>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="600" Width="1000">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0"> <!--Sélection Jour-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Viewbox Grid.Column="0">
+                    <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="5">
+                        <DatePicker x:Name="DateSaisie" FontSize="15" FontFamily="Arial" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </Viewbox>
+
+                <Viewbox Grid.Column="1">
+                    <Button VerticalAlignment="Stretch" HorizontalAlignment="Left" Click="NouvelDate" Style="{StaticResource masterButton}" Grid.Column="1" Margin="15">
+                        <!-- Bouton Entrer -->
+                        <Grid>
+                            <Rectangle Fill="{DynamicResource BackgroundColor2}" Style="{StaticResource masterButtonRectangle}" Height="80"/>
+                            <TextBlock Text="Entrer" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}" FontSize="45"/>
+                        </Grid>
+                    </Button>
+                </Viewbox>
+
+            </Grid>
+            
+            <!-- Binding Cours -->
+            <ListBox VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="Transparent" ItemsSource="{Binding LesCoursDuJour}" BorderBrush="{DynamicResource TextColor}" ItemContainerStyle="{StaticResource ListBoxanimation}" Grid.Row="1">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel HorizontalAlignment="Stretch"> <!-- Un cours -->
+                            
+                            <Border Style="{StaticResource ClassBorder}"> <!-- Heure -->
+                                <StackPanel Style="{StaticResource EDT_StackPanel}">
+                                    <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                        <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding Date.Minute ,Mode=OneWay,StringFormat=00}"></Run><Run Text="-"></Run><Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}" /><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}" />
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+                            
+                            <Border Style="{StaticResource ClassBorder}"> <!-- Salle -->
+                                <StackPanel Style="{StaticResource EDT_StackPanel}">
+                                    <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                            <Run Text="{Binding Salle}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+                            
+                            <StackPanel Style="{StaticResource EDT_StackPanel}" Width="550"> <!-- Matière, professeur et groupe -->
+                                
+                                <Border Style="{StaticResource ClassBorder}"> <!-- Matière -->
+                                    <WrapPanel>
+                                        <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                                <Run Text="{Binding Matière}"/>
+                                        </TextBlock>
+                                    </WrapPanel>
+                                </Border>
+                                
+                                <Border Style="{StaticResource ClassBorder}">
+                                    <WrapPanel>
+                                        <TextBlock Style="{StaticResource EDT_TextBlock}"> <!-- Nom de l'enseignant -->
+                                                <Run Text="{Binding Enseignant.Nom}"/> --
+                                        </TextBlock>
+                                        <ListBox ItemsSource="{Binding Groupes}" Background="Transparent" BorderBrush="Transparent"> <!-- Groupe TP/TD -->
+                                            <ListBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal" />
+                                                </ItemsPanelTemplate>
+                                            </ListBox.ItemsPanel>
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate >
+                                                    <WrapPanel Orientation="Horizontal">
+                                                        <TextBlock Style="{StaticResource EDT_TextBlock}" Margin="0" Width="Auto">
+                                                                    G<Run Text="{Binding Num}"/>
+                                                        </TextBlock>
+                                                    </WrapPanel>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                    </WrapPanel>
+                                </Border>
+                            </StackPanel>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
+
+    </Viewbox>
+</UserControl>
