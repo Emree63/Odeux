@@ -37,6 +37,8 @@ namespace Odeux.User_Control.General
             Application.Current.Resources["TextColor"] = new SolidColorBrush(Color.FromRgb(2, 27, 34));
             Application.Current.Resources["BackgroundDeco"] = new SolidColorBrush(Color.FromRgb(0, 0, 0));
             Application.Current.Resources["TextDeco"] = new SolidColorBrush(Color.FromRgb(205, 202, 228));
+            Application.Current.Resources["BackgroundEdt"] = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+            Application.Current.Resources["TextEdt"] = new SolidColorBrush(Color.FromRgb(255, 255, 255));
         }
         private void Sombre_button(object sender, RoutedEventArgs e)
         {
@@ -48,6 +50,8 @@ namespace Odeux.User_Control.General
             Application.Current.Resources["TextColor"] = new SolidColorBrush(Color.FromRgb(241, 251, 254));
             Application.Current.Resources["BackgroundDeco"] = new SolidColorBrush(Color.FromRgb(0, 0, 0));
             Application.Current.Resources["TextDeco"] = new SolidColorBrush(Color.FromRgb(241, 251, 254));
+            Application.Current.Resources["BackgroundEdt"] = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            Application.Current.Resources["TextEdt"] = new SolidColorBrush(Color.FromRgb(0, 0, 0));
         }
         private void Oled_button(object sender, RoutedEventArgs e)
         {
@@ -59,6 +63,8 @@ namespace Odeux.User_Control.General
             Application.Current.Resources["TextColor"] = new SolidColorBrush(Color.FromRgb(241, 251, 254));
             Application.Current.Resources["BackgroundDeco"] = new SolidColorBrush(Color.FromRgb(165, 28, 28));
             Application.Current.Resources["TextDeco"] = new SolidColorBrush(Color.FromRgb(2, 27, 34));
+            Application.Current.Resources["BackgroundEdt"] = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+            Application.Current.Resources["TextEdt"] = new SolidColorBrush(Color.FromRgb(0, 0, 0));
         }
 
     }

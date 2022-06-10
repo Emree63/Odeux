@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "jsrHM3rW+kNX65Tzt0W1a91mxLz/eVFIkAt2hmedsZQCLKV+JyCUtLOcniiOB6LUpQbzie2kynpoe+i4tFBmYg==",
+  "dgSpecHash": "ukTvWcIZwzE5X3cUNpw4JxW+ZCA4e4e3OHhrZHgNqVIPERZokOirhM+o0zYpZZSUDPWUaeEaqN0u+Dxi3oXjpA==",
   "success": true,
-  "projectFilePath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
-  "logs": []
+  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\Test_DataContract.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\Test_DataContract\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

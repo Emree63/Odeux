@@ -136,7 +136,7 @@
                                                 <TextBlock Foreground="{DynamicResource TextColor}" FontSize="40" HorizontalAlignment="Center">
                                                         <Run Text="{Binding Nom}"/>                    
 									                    - 
-                                                        <Run Text="{Binding note}" Foreground="Red"/>
+                                                        <Run Text="{Binding note}" Foreground="#DF5364"/>
                                                 </TextBlock>
                                             </StackPanel>
                                         </WrapPanel>

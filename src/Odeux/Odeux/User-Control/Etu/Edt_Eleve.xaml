@@ -4,8 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Odeux.User_Control.Etu"
-             mc:Ignorable="d" 
-             >
+             mc:Ignorable="d" >
     <UserControl.Resources>
         <Style TargetType="{x:Type Button}" x:Key="masterButton">
             <Setter Property="Template">
@@ -151,17 +150,17 @@
                     <DataTemplate>
                         <WrapPanel HorizontalAlignment="Stretch"> <!-- Un cours -->
                             
-                            <Border Style="{StaticResource ClassBorder}"> <!-- Heure -->
+                            <Border BorderThickness="4" Margin="5" Background="{DynamicResource BackgroundEdt}"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="15"> <!-- Heure -->
                                 <StackPanel Style="{StaticResource EDT_StackPanel}">
-                                    <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                    <TextBlock FontSize="35" Foreground="{DynamicResource TextEdt}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="20,5" >
                                         <Run Text="{Binding Date.Hour,Mode=OneWay,StringFormat=00}"/><Run Text="h"/><Run Text="{Binding Date.Minute ,Mode=OneWay,StringFormat=00}"></Run><Run Text="-"></Run><Run Text="{Binding DateFin.Hour,Mode=OneWay,StringFormat=00}" /><Run Text="h"/><Run Text="{Binding DateFin.Minute,Mode=OneWay,StringFormat=00}" />
                                     </TextBlock>
                                 </StackPanel>
                             </Border>
-                            
-                            <Border Style="{StaticResource ClassBorder}"> <!-- Salle -->
+
+                            <Border BorderThickness="4" Margin="5" Background="{DynamicResource BackgroundEdt}"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="15"> <!-- Salle -->
                                 <StackPanel Style="{StaticResource EDT_StackPanel}">
-                                    <TextBlock Style="{StaticResource EDT_TextBlock}">
+                                    <TextBlock FontSize="35" Foreground="{DynamicResource TextEdt}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="20,5" >
                                             <Run Text="{Binding Salle}"/>
                                     </TextBlock>
                                 </StackPanel>

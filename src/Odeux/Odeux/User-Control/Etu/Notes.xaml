@@ -142,7 +142,8 @@
 
                                 <TextBlock Style="{StaticResource AverageGradesTextBlock}">
                                     <Run Text="Moyenne Générale :"/>
-                                    <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="red"/>
+                                    <Run Text="{Binding EtuMoySemestre,Mode=OneWay, Converter={StaticResource DoubleToString}}" Foreground="#DF5364" FontWeight="Bold"/>
+                                    
                                 </TextBlock>
                             </Grid>
 
@@ -152,7 +153,7 @@
 
                                 <TextBlock TextAlignment="Center"  Style="{StaticResource AverageGradesTextBlock}">
                                     <Run Text="Moyenne Classe :" />
-                                    <Run Text="{Binding MoyGeneral,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="red"/>
+                                    <Run Text="{Binding MoyGeneral,Mode=OneWay,  Converter={StaticResource DoubleToString}}" Foreground="#DF5364" FontWeight="Bold"/>
                                 </TextBlock>
                             </Grid>
                         </Grid>
@@ -199,7 +200,7 @@
                             <Rectangle Style="{StaticResource AverageGradesTextBlockBackgroundRectangle}"/>
                             <TextBlock Style="{StaticResource AverageGradesTextBlock}" Grid.Column="1">
                                 <Run Text="Moy. Classe UE:" FontWeight="Bold" />
-                                <Run  Text="{Binding MoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="Red"/>
+                                <Run  Text="{Binding MoyUE, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="#DF5364"/>
                             </TextBlock>
                         </Grid>
 
@@ -262,7 +263,7 @@
                                                     <Grid>
                                                         <TextBlock TextAlignment="Center"  Foreground="{DynamicResource TextColor}" Width="250" Height="30" Background="{DynamicResource BackgroundColor2}" Margin="10,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="25">
                                                             <Run Text="Moyenne:" FontWeight="Bold" />
-                                                            <Run  Text="{Binding MoyMat, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="Red"/>
+                                                            <Run  Text="{Binding MoyMat, Mode=OneWay, Converter={StaticResource DoubleToString}}" FontWeight="Bold" Foreground="#DF5364"/>
                                                         </TextBlock>
                                                         <Border BorderBrush="{DynamicResource TextColor}" BorderThickness="1" Margin="5,70,5,5">
                                                             <Grid>
