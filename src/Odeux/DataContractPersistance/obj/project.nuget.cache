@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "rvdB8cmuqpZInE0RO+qREOH0xIebn9bR7Rn/SaB8q9vhHr/gOvqPhKO7En+lmoYz0WEYmKWkp7NGzzkeXK/wWw==",
+  "dgSpecHash": "9Dd7+s13JTbnWdrbLbTUQhLNfXKehTEmwk3SNXh5cAwLUM+yGo3uMJUdpsyfTi2aciQoAHj9Px/y1Zk1Gf74wA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\src\\Odeux\\DataContractPersistance\\DataContractPersistance.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

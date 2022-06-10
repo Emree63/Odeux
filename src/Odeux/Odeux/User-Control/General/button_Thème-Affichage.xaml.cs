@@ -36,7 +36,7 @@ namespace Odeux.User_Control.General
             Application.Current.Resources["BackgroundColor2"] = new SolidColorBrush(Color.FromRgb(198, 238, 253));
             Application.Current.Resources["TextColor"] = new SolidColorBrush(Color.FromRgb(2, 27, 34));
             Application.Current.Resources["BackgroundDeco"] = new SolidColorBrush(Color.FromRgb(0, 0, 0));
-            Application.Current.Resources["TextDeco"] = new SolidColorBrush(Color.FromRgb(2, 27, 34));
+            Application.Current.Resources["TextDeco"] = new SolidColorBrush(Color.FromRgb(205, 202, 228));
         }
         private void Sombre_button(object sender, RoutedEventArgs e)
         {
