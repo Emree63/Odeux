@@ -23,8 +23,8 @@
         <Button HorizontalAlignment="Center" Background="Transparent"
                  VerticalAlignment="Center" Width="287" Height="62" FontSize="30" Opacity="0.8" BorderBrush="Transparent" Foreground="#FF39B872" Click="Deco">
             <Grid>
-                <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="Black"/>
-                <TextBlock Text="Se Déconnecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextColor}"/>
+                <Rectangle  RadiusX="15" RadiusY="15" Width="283" Height="52" Fill="{DynamicResource BackgroundDeco}"/>
+                <TextBlock Text="Se Déconnecter" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource TextDeco}"/>
             </Grid>
         </Button>
     </Grid>
