@@ -180,7 +180,7 @@
                                 <Border Style="{StaticResource ClassBorder}">
                                     <WrapPanel>
                                         <TextBlock Style="{StaticResource EDT_TextBlock}"> <!-- Nom de l'enseignant -->
-                                                <Run Text="{Binding Enseignant.Nom}"/> --
+                                                <Run Text="{Binding Enseignant.Nom}"/> -
                                         </TextBlock>
                                         <ListBox ItemsSource="{Binding Groupes}" Background="Transparent" BorderBrush="Transparent"> <!-- Groupe TP/TD -->
                                             <ListBox.ItemsPanel>
