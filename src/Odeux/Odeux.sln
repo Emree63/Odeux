@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test_Semestre", "Test_Semes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test_Manager", "Test_Manager", "{80B0B93C-7023-4F02-8E90-2DFCE820B438}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Matière", "Tests\Test_Semestre\Test_Matière\Test_Matière.csproj", "{9AD1C3B0-2231-464F-B202-AE779F2EC9E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Matiere", "Tests\Test_Semestre\Test_Matière\Test_Matiere.csproj", "{9AD1C3B0-2231-464F-B202-AE779F2EC9E6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_UE", "Tests\Test_Semestre\Test_UE\Test_UE.csproj", "{B8D986E5-C1B0-4F15-8E21-5AF7F7DFDC16}"
 EndProject
@@ -33,11 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stub", "Stub\Stub.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odeux", "Odeux\Odeux.csproj", "{89F6B380-5FB5-4F63-A9A9-DBD66FCEF206}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnit", "Tests\TestUnit\TestUnit.csproj", "{C2708C68-27FA-4FE3-AD91-C45657D28507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestUnit", "Tests\TestUnit\TestUnit.csproj", "{C2708C68-27FA-4FE3-AD91-C45657D28507}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContractPersistance", "DataContractPersistance\DataContractPersistance.csproj", "{E02FC179-63F6-48F7-8239-CCEA67C1D940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataContractPersistance", "DataContractPersistance\DataContractPersistance.csproj", "{E02FC179-63F6-48F7-8239-CCEA67C1D940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_DataContract", "Tests\Test_DataContract\Test_DataContract.csproj", "{7C184886-F26A-4DFF-900E-8C05BB93A496}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_DataContract", "Tests\Test_DataContract\Test_DataContract.csproj", "{7C184886-F26A-4DFF-900E-8C05BB93A496}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,19 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "7rwGMYWpqNv/7uJGj8+nuU6L8QuMFp0vE3fSPHXVjjWIAHEFusLVqNiYgNRu4SVHRkXuNKFx0qdENoSx/RpEYg==",
+  "dgSpecHash": "ezKwpcmEVf0CLxHLC+oTWovwh8LolROtTfOGWOPsuJJWX7PzvAaiJwRjfHfAVXQL1r6yaqkHUiAQwWG1dupNIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
+  "projectFilePath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
   "expectedPackageFiles": [],
-=======
-  "dgSpecHash": "aLxbAz4KwuJkXq30xcUkRn0y4Sg6F0yZTu6vsCiq+b2qBbuxcV5wVa899YJsIR43qO/ragQ+EpfH099D7QgzvQ==",
-  "success": true,
-  "projectFilePath": "D:\\le_folder\\Etudes\\Cours\\SAE\\201\\sae2.01\\src\\Odeux\\Tests\\Test_Humain\\Test_Professeur\\Test_Professeur.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\inkug\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
->>>>>>> e81dc273304065991fbd3b200cc047c3b628c530
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Tests\\Test_Humain\\Test_Professeur\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

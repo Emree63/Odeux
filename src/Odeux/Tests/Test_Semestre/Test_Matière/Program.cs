@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Modele;
 using static System.Console;
 
-namespace Test_Matière
+namespace Test_Matiere
 {
     class Program
     {

@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
+      "projectUniqueName": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
       "projectName": "Modele",
-      "projectPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
+      "projectPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj",
       "packagesPath": "C:\\Users\\emkartal1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\obj\\",
+      "outputPath": "C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Modele\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -71,5 +71,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache C:\\Users\\emkartal1\\source\\repos\\sae2.01\\src\\Odeux\\Modele\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
