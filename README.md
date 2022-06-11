@@ -14,36 +14,31 @@
 
 # Repartition du Gitlab
 
-La racine de notre gitlab est composé de deux dossier essentielles au projet:
+La racine de notre gitlab est composé de deux dossiers principaux :
 
-[**src**](src/Odeux) : **Toute la partie codage de l'application C# et WPF**
+[**src**](src/Odeux) : **Toute la partie codage de l'application WPF**
 
-[**doc**](doc) : **Documentation de l'application, englobant la première phase avant le commencement de l'application (Personna, Use case, sketch, Contexte...), suivi de la seconde phase qui est la présentation de la structure de l'application choisi (diagramme de paquetage, diagramme(s) de classes accompagné(s) de descriptions...)**
+[**doc**](doc) : **Documentation de l'application, englobant la première phase de conceptualisation de l'application (Personna, Use case, sketch, Contexte...), suivie de la seconde phase qui est la présentation de la structure de l'application choisie (diagramme de paquetage, diagramme(s) de classes accompagné(s) de descriptions...)**
 
 # Avancement du projet
 
-Où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x: non commencer )
+Où en sommes-nous?! (:white_check_mark: réalisé, :warning: presque abouti, :x: non commencé )
 
 </br>
 
-:warning: [**Partie 1**](src/doc/phase_1) : **Définition de l'application et Vues**
+:white_check_mark: [**Partie 1**](src/doc/phase_1) : **Définition de l'application et Vues**
 </br>
-
-:information_source: _Quelque point Xaml non fini(détourage,Responsive...)_
-</br>
-
-:warning: [**Partie 2**](src/Odeux/Modele) : **Conception et Programmation du modèle de votre application prenant en compte les critères métier**
 
 </br>
 
-:information_source: _Diagramme de Séquence et de classes presque fini_
+:white_check_mark: [**Partie 2**](src/Odeux/Modele) : **Conception et Programmation du modèle de votre application prenant en compte les critères métier**
 
 </br>
 
-:warning: [**Partie 3**](src/Odeux) : **Lien entre les vues et le modèle de votre application**
 </br>
 
-:information_source: _Binding sur les notes(Profs et élèves) non fini_
+:white_check_mark: [**Partie 3**](src/Odeux) : **Lien entre les vues et le modèle de votre application**
+</br>
 
 </br>
 
@@ -55,18 +50,18 @@ Où en sommes-nous?! (:white_check_mark: réaliser, :warning: presque abouti, :x
 
 </br>
 
-:x: Partie 6 : **Déploiement**
+:white_check_mark: **Partie 6**: **Déploiement**
 
 </br>
 
-:x: Partie 7 : **Réalisation de votre vidéo promotionnelle**
+:white_check_mark: [**Partie 7**](https://youtu.be/RDu4TNyizC8) : **Réalisation de votre vidéo promotionnelle**
 
 # Environnement de Travail
 
-Notre environnement de travail se base essentiellement sur du c# et du WPF.
+Nous utilisons Visual Studio 2019/2022 et le framework .NET 5.X .
 
-# Technicien en charge de l'application
+# Développeurs en charge de l'application
 
-La composition pour le projet se voit fait par deux élèves de l'IUT d'aubière:
-- Emre KARTAL (Groupe 3)
-- Hugo THIBON (Groupe 3)
+Le groupe est composé de deux étudiants de l'IUT d'Informatique de l'UCA :
+- Emre KARTAL (1AG3)
+- Hugo THIBON (1AG3)
