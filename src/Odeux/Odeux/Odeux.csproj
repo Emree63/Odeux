@@ -17,6 +17,7 @@
     <None Remove="Images\Icon2.png" />
     <None Remove="Images\Icon_Logo-Odeux.png" />
     <None Remove="Images\Logo-Odeux.png" />
+    <None Remove="User-Control\Etu\099i7v9c.bmp" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +37,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Logo-Odeux.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="User-Control\Etu\099i7v9c.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

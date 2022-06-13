@@ -113,7 +113,6 @@
                                     <Border Style="{StaticResource SemesterButtonBorder}"/>
                                 </Grid>
                             </Button>
-
                             <TextBlock Style="{StaticResource TopText}"> <!-- Semestre sélectionné -->
                                 <Run Text=" Semestre "/><Run Text="{Binding EtuSemestreSélectionné.NumSemestre,Mode=OneWay}"/>
                             </TextBlock>
@@ -219,7 +218,7 @@
                                     <StackPanel>
                                         
                                         <!-- Titre de la ressource/matière, coeff et moyenne dans celle-ci -->
-                                        
+                                        <Image Source="099i7v9c.bmp" Width="100" Margin="0,20,0,-20" />
                                         <TextBlock Style="{StaticResource MatterTextBlockTitle}" FontSize="45">
                                             <Run Text="&#xA;"/>
                                             <Run Text="{Binding Num,Mode=OneWay}"/>

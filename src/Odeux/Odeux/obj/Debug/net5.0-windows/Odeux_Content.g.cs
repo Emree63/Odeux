@@ -14,5 +14,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icon1.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icon2.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logo-odeux.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("user-control/etu/099i7v9c.bmp")]
 
 

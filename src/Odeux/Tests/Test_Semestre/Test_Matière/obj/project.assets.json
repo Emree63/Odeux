@@ -27,20 +27,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\emkartal1\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_Semestre\\Test_Matière\\Test_Matiere.csproj",
+      "projectUniqueName": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Semestre\\Test_Matière\\Test_Matiere.csproj",
       "projectName": "Test_Matiere",
-      "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_Semestre\\Test_Matière\\Test_Matiere.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Tests\\Test_Semestre\\Test_Matière\\obj\\",
+      "projectPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Semestre\\Test_Matière\\Test_Matiere.csproj",
+      "packagesPath": "C:\\Users\\emkartal1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Tests\\Test_Semestre\\Test_Matière\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\emkartal1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -53,8 +61,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
-              "projectPath": "D:\\IUT\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
+            "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj": {
+              "projectPath": "C:\\Users\\emkartal1\\Source\\Repos\\sae2.01\\src\\Odeux\\Modele\\Modele.csproj"
             }
           }
         }
@@ -83,7 +91,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
